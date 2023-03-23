@@ -185,11 +185,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="../../posts/I. Measure Theory/2023-03-21-3wk.html" class="sidebar-item-text sidebar-link active">3wk: 측도론 intro (3)</a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/I. Measure Theory/2023-03-28-4wk.html" class="sidebar-item-text sidebar-link">4wk: 측도론 intro (4)</a>
-  </div>
-</li>
       </ul>
   </li>
       </ul>
@@ -203,12 +198,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
-  <li><a href="#셀-수-있는" id="toc-셀-수-있는" class="nav-link" data-scroll-target="#셀-수-있는">셀 수 있는</a></li>
+  <li><a href="#셀-수-있는" id="toc-셀-수-있는" class="nav-link active" data-scroll-target="#셀-수-있는">셀 수 있는</a></li>
   <li><a href="#보충학습-집합정리" id="toc-보충학습-집합정리" class="nav-link" data-scroll-target="#보충학습-집합정리">보충학습: 집합정리</a></li>
   <li><a href="#지금까지의-스토리" id="toc-지금까지의-스토리" class="nav-link" data-scroll-target="#지금까지의-스토리">지금까지의 스토리</a></li>
   <li><a href="#시그마필드-motivation" id="toc-시그마필드-motivation" class="nav-link" data-scroll-target="#시그마필드-motivation">시그마필드 motivation</a></li>
   <li><a href="#시그마필드의-정의" id="toc-시그마필드의-정의" class="nav-link" data-scroll-target="#시그마필드의-정의">시그마필드의 정의</a></li>
+  <li><a href="#확률의-정의" id="toc-확률의-정의" class="nav-link" data-scroll-target="#확률의-정의">확률의 정의</a></li>
+  <li><a href="#확률변수의-정의" id="toc-확률변수의-정의" class="nav-link" data-scroll-target="#확률변수의-정의">확률변수의 정의</a>
+  <ul class="collapse">
+  <li><a href="#불완전한-정의" id="toc-불완전한-정의" class="nav-link" data-scroll-target="#불완전한-정의">불완전한 정의</a></li>
+  <li><a href="#헷갈려-1-starstarstar" id="toc-헷갈려-1-starstarstar" class="nav-link" data-scroll-target="#헷갈려-1-starstarstar">헷갈려 (1) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
+  <li><a href="#확률변수에-대한-통찰" id="toc-확률변수에-대한-통찰" class="nav-link" data-scroll-target="#확률변수에-대한-통찰">확률변수에 대한 통찰</a></li>
+  <li><a href="#확률변수의-정의-1" id="toc-확률변수의-정의-1" class="nav-link" data-scroll-target="#확률변수의-정의-1">확률변수의 정의</a></li>
+  <li><a href="#헷갈려-2-starstarstar" id="toc-헷갈려-2-starstarstar" class="nav-link" data-scroll-target="#헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -218,12 +221,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="강의영상" class="level1">
-<h1>강의영상</h1>
-<blockquote class="blockquote">
-<p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-yJdGySrpN1x55Vs6SRntEX" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-yJdGySrpN1x55Vs6SRntEX</a></p>
-</blockquote>
-</section>
 <section id="셀-수-있는" class="level1">
 <h1>셀 수 있는</h1>
 <p><code>-</code> 셀 수 있는 집합과 셀 수 없는 집합.</p>
@@ -487,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p>사실 납득이 되는건 아님. 그렇지만 일단은 “수학자들이 합의해서 이런건 잴 수 있다고 했어. 그러니까 잴 수 있어” 라고 이해하고 넘어가자.</p>
+<p>사실 둘 다 엄밀히 말하면 해설이라고 볼 수 없음. 해설1은 “우리가 잴 수 있는 방법을 이미 알어. 그러니까 잴 수 있어” 라는 뜻이고, 해설2는 “수학자들이 합의해서 이런건 잴 수 있다고 했어. 그러니까 잴 수 있어” 라는 뜻이다.</p>
 </blockquote>
 <hr>
 <p><strong><em>생각의 시간2</em></strong></p>
@@ -512,7 +509,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[\{1,2\} \cap \{1,3\} = \{1\}\]</span></p>
 <p>와 같은 집합이라든가,</p>
 <p><span class="math display">\[\{1,2\} \cup \{1,3\} = \{1,3,4\}\]</span></p>
-<p>와 같은 집합의 길이를 잴 수 없다. 따라서 아래와 같이 우리가 고등학교때 부터 써왔던 공식을 쓸 수 없다. (<a href="https://en.wikipedia.org/wiki/Probability_axioms">ref</a>, Further consequences)</p>
+<p>와 같은 집합의 길이를 잴 수 없다. 따라서 아래와 같이 우리가 고등학교때 부터 써왔던 공식을 쓸 수 없다. (ref: https://en.wikipedia.org/wiki/Probability_axioms, Further consequences)</p>
 <p><span class="math display">\[P(A\cup B) = P(A) + P(B) - P(A\cap B)\]</span></p>
 <p>이것은 불편하니까 <span class="math inline">\(A,B\)</span>가 잴 수 있다면, <span class="math inline">\(A,B\)</span>의 교집합이나 합집합따위도 잴 수 있다고 정하자.</p>
 <p>(해설1의 반론)</p>
@@ -595,8 +592,187 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[{\cal F}=\{\emptyset, \{H\}, \{T\}, \{H,T\}\}\]</span></p>
 <p>는 단지 그냥 시그마필드라고 주장하기 보다 <span class="math inline">\(\Omega=\{H,T\}\)</span>에 대한 시그마필드라고 해야 정확한 표현이다.</p>
 <p><code>-</code> 참고3: 참고2에 따라서 <span class="math inline">\({\cal F}\)</span> 단독으로 표기하는 것 보다 <span class="math inline">\(\Omega\)</span>를 붙여서 <span class="math inline">\((\Omega,{\cal F})\)</span>와 같이 쌍으로 표기하는게 더 합리적이다. 앞으로는 이러한 쌍을 <strong><em>measuralbe space</em></strong> 라고 부른다.</p>
+</section>
+<section id="확률의-정의" class="level1">
+<h1>확률의 정의</h1>
+<p><code>-</code> 지금까지의 이야기.</p>
+<ul>
+<li><strong><span class="math inline">\(\Omega\)</span>의 모든 부분집합에 대해서 확률을 “무모순”으로 정의</strong>하는게 엄청 쉬운일 인줄 알았는데,<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a></li>
+<li>사실은 그렇지가 않았다.<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a> 확률을 정의하는건 매우 까다로운 일이었다.</li>
+<li>이러한 까다로움을 해결하기 위해서 “르벡메져”라는 새로운 도구를 사용했다. 이 도구는 몇 가지 까다로운 집합에 대하여 확률을 무모순으로 정의할 수 있었다.</li>
+<li>르벡메져는 구간 <span class="math inline">\([0,2\pi)\)</span>의 모든 유리수 집합의 길이와 구간 <span class="math inline">\([0,2\pi)\)</span>의 모든 무리수 집합의 길이를 다르게 정의하는 신기한 방식을 사용하는데, 이러한 방식을 납득하기 위한 최소한의 노력으로 “셀 수 있는 무한”과 “셀 수 없는 무한”의 개념을 공부했다.</li>
+<li>하지만 르벡메져를 통해서도 <span class="math inline">\(\Omega\)</span>의 모든 부분집합에 대하여 길이를 잴 수 없는 집합<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>이 존재함이 밝혀졌다.</li>
+<li>따라서 <strong><span class="math inline">\(\Omega\)</span>의 모든 부분집합에 대해서 확률을 “무모순”으로 정의</strong>하는 일은 포기하였다.</li>
+<li>대신에 <strong><span class="math inline">\(\Omega\)</span>의 부분집합 중, 잴 수 있는 집합들에 대해서만 확률을 “무모순”으로 정의</strong>하는 일을 시도했다.</li>
+<li>이 잴 수 있는 집합들의 모임을 시그마필드라 칭하고 기호로는 <span class="math inline">\({\cal F}\)</span>라고 정의하였다.</li>
+</ul>
+<p><code>-</code> 이제 하고 싶은 것</p>
+<blockquote class="blockquote">
+<p>시그마필드에서 확률을 정의하자! <span class="math inline">\(\Leftrightarrow\)</span> 시그마필드를 정의역으로 하는 “확률”이라는 이름의 함수를 정의하자.</p>
+</blockquote>
+<p><code>-</code> 확률의 정의: 메져(measure)는 길이따위를 일반화한 개념이다. 확률은 메져의 특수한 형태이다.<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>메져와 확률은 아래와 같이 정의한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-03-21-3wk_files/figure-html/1bb6c9d9-1-2e3b6cdd-8339-4938-9606-9ceb390e6459.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림4: Durret책에서 정의한 measure와 probability measure의 정의, 드래그한 부분이 정의임.</figcaption><p></p>
+</figure>
+</div>
+<p>사실 잘 따져보면 이것은 우리가 아까 위키에서 찾아본 확률의 공리와 일치한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-03-21-3wk_files/figure-html/0a2213ff-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 확률의 공리, 아까 위키에서 캡쳐한 것 재사용</figcaption><p></p>
+</figure>
+</div>
+<p><code>-</code> 중요한 것: 확률은 “함수”이고 정의역이 “시그마필드”라는 것만 기억하면 된다. 즉 아래의 사실만 잘 이해하고 기억하면 된다.</p>
+<blockquote class="blockquote">
+<p>적당한 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>이 있다고 하자. 확률 <span class="math inline">\(P\)</span>는 정의역이 <span class="math inline">\({\cal F}\)</span>이며 치역이 <span class="math inline">\([0,1]\)</span>인 함수이다.</p>
+</blockquote>
+<p><code>-</code> 암기!! <span class="math inline">\(P: {\cal F} \to [0,1]\)</span></p>
+</section>
+<section id="확률변수의-정의" class="level1">
+<h1>확률변수의 정의</h1>
+<section id="불완전한-정의" class="level2">
+<h2 class="anchored" data-anchor-id="불완전한-정의">불완전한 정의</h2>
+<p><code>-</code> 확률변수: <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>인 <strong>조금 특별한 성질을 가진</strong> 함수</p>
+<ul>
+<li>정의역: <span class="math inline">\(\Omega\)</span></li>
+<li>치역: <span class="math inline">\(\mathbb{R}\)</span></li>
+</ul>
+<p><strong>(예제1)</strong> 동전예제</p>
+<p><code>1</code>. outcomes<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span>.</p>
+<p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{H,T\}\)</span></p>
+<p><code>3</code>. event<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span>.</p>
+<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=\)</span> <span class="math inline">\(\Omega\)</span>의 모든 부분집합의 모임</p>
+<p><code>5</code>. probability measure function: <span class="math inline">\(P: {\cal F} \to [0,1]\)</span> such that</p>
+<ul>
+<li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(P(\{H\}) = \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(P(\{T\}) = \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
+</ul>
+<p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that</p>
+<ul>
+<li><span class="math inline">\(X(H)=1\)</span></li>
+<li><span class="math inline">\(X(T)=0\)</span></li>
+</ul>
+<p>만약에 편의상 <span class="math inline">\(\Omega=\{H,T\}=\{\omega_1,\omega_2\}\)</span>와 같이 사용한다면</p>
+<ul>
+<li><span class="math inline">\(X(\omega_1)=1\)</span></li>
+<li><span class="math inline">\(X(\omega_2)=0\)</span></li>
+</ul>
+</section>
+<section id="헷갈려-1-starstarstar" class="level2">
+<h2 class="anchored" data-anchor-id="헷갈려-1-starstarstar">헷갈려 (1) (<span class="math inline">\(\star\star\star\)</span>)</h2>
+<p><code>-</code> 질문1: 아래의 표현 중 옳은 것은?</p>
+<ol type="1">
+<li><span class="math inline">\(X(H)=0\)</span><a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a></li>
+<li><span class="math inline">\(P(\{H\})=\frac{1}{2}\)</span><a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a></li>
+<li><span class="math inline">\(P(\{\omega_1\})=\frac{1}{2}\)</span><a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a></li>
+<li><span class="math inline">\(P(H)=\frac{1}{2}\)</span><a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a></li>
+<li><span class="math inline">\(P(\{H,T\})=1\)</span><a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a></li>
+<li><span class="math inline">\(P(\omega_1)=\frac{1}{2}\)</span><a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a></li>
+</ol>
+<p><code>-</code> 질문2: 질문1의 <code>4</code>번의 표현 나 많이 본적 있다. 예를들어서 고등학교에서 두 사건의 독립에 대해 배울때 아래와 같은 방식으로 표현했었다. // 출처: <a href="https://blog.naver.com/hawarjung2/222897509059">네이버 블로그</a></p>
+<blockquote class="blockquote">
+<p>두 사건 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>에 대하여 <span class="math inline">\(P(B|A) =P(B|A^c) =P(B)\)</span> 이면 두 사건이 독립이라고 한다~~</p>
+</blockquote>
+<p>그렇다면 이 표현은 틀린걸까?</p>
+<p>(해설)</p>
+<p>여기에서 사건 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>는 event을 의미하며 outcome을 의미하는게 아님. 즉 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>는 집합임.</p>
+<p><strong>암기</strong>: 확률은 항상 집합을 입력으로 받아야 함!!</p>
+<p><code>-</code> 질문3(<span class="math inline">\(\star\star\star\)</span>): 나 수리통계 시간에서 아래와 같음 표현 본 적 있다.</p>
+<p><span class="math display">\[P(X=1)=\frac{1}{2}\]</span></p>
+<p>그런데 <span class="math inline">\(P\)</span>의 입력으로는 집합이 들어가야하는데, <span class="math inline">\(X=1\)</span>은 그냥 수식임. 그렇다면 이 표현은 틀린 표현일까??</p>
+<p>(해설)</p>
+<p>사실 <span class="math inline">\(P(X=1)\)</span>의 의미는 아래와 같은 표현의 축약형이다.</p>
+<p><span class="math display">\[P\big(\{\omega: X(\omega)=1 \} \big)\]</span></p>
+<p><span class="math inline">\(\{\omega: X(\omega)=1\} = \{\omega_1\} = \{H\}\)</span> 를 의미하므로 결국</p>
+<p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
+<p>이 된다. 따라서 옳은 표현이다.</p>
+</section>
+<section id="확률변수에-대한-통찰" class="level2">
+<h2 class="anchored" data-anchor-id="확률변수에-대한-통찰">확률변수에 대한 통찰</h2>
+<p><code>-</code> 아래와 같은 표현을 다시 관찰하자.</p>
+<p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
+<p><code>통찰1</code>. 확률변수가 “함수”라는 사실을 떠올리고 <span class="math inline">\(1\)</span>이라는 값이 확률변수의 “상(image)” 라는 사실을 떠올리면, <span class="math inline">\(\{\omega: X(\omega)=1\}\)</span>은 1에 대한 “역상(inverse image)”이라고 해석할 수 있다.<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a></p>
+<p><code>통찰2</code>. 확률변수의 상은 <span class="math inline">\(\mathbb{R}\)</span>에 맺히게 되고, 확률변수의 역상은 <span class="math inline">\(\Omega\)</span>의 부분집합 중 하나에 맺히게 된다.</p>
+<p><code>통찰3</code>. 문제는 확률변수의 역상이 항상 잴 수 있는 집합에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
+<p><span class="math display">\[\{\omega: X(\omega)=1\} \in {\cal F}\]</span></p>
+<p>임을 보장해야 한다는 것이다.</p>
+<p><code>통찰4</code>. 당연히 이러한 보장을 할 수는 없어보인다. 따라서 <span class="math inline">\(X\)</span>를 단지 그냥</p>
+<ul>
+<li><span class="math inline">\(X: \mathbb{\Omega} \to \mathbb{R}\)</span>로 가는 함수</li>
+</ul>
+<p>가 아니라</p>
+<ul>
+<li><span class="math inline">\(X: \mathbb{\Omega} \to \mathbb{R}\)</span>로 가는 함수 &amp; 역상이 항상 잴 수 있는 집합이어야 함.</li>
+</ul>
+<p>이라는 조건이 필요하다.</p>
+<p><code>-</code> 역상이 잴 수 있는 집합인 함수를 간단히 잴 수 있는 함수 (measurable function) 라고 한다.</p>
+</section>
+<section id="확률변수의-정의-1" class="level2">
+<h2 class="anchored" data-anchor-id="확률변수의-정의-1">확률변수의 정의</h2>
+<p><code>-</code> 확률변수: <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span> 인 잴 수 있는 함수</p>
+<p><code>-</code> 사실 아직은 정의하기 어려워… (보렐셋을 잘 몰라서..)</p>
+<blockquote class="blockquote">
+<p>보렐셋: 보통 <span class="math inline">\({\cal B}\)</span>라고 표현하며 <span class="math inline">\(\mathbb{R}\)</span>의 부분집합 중 잴 수 있는 집합의 모임이라 보면 된다.</p>
+</blockquote>
+<p><code>-</code> 교재의 정의1</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-03-21-3wk_files/figure-html/792b623d-63c6-456d-93ea-946990d2a3a6-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
+<p><code>-</code> 교재의 정의2</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-03-21-3wk_files/figure-html/c1151446-e466-4aef-a0f0-e7be30606565-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
+<p><strong>(Def)</strong> Let <span class="math inline">\((\Omega,{\cal F}\)</span> and <span class="math inline">\((\mathbb{R},{\cal B})\)</span> be measurable spaces. A function <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> is said to be random variable if</p>
+<p><span class="math display">\[\forall B \in {\cal B}:~ \{\omega: X(\omega) \in B\}.\]</span></p>
+<p><code>-</code> <span class="math inline">\(X\)</span>가 랜덤변수라는 것을 기호로 간단하게 <span class="math inline">\(X \in {\cal F}\)</span> 혹은 <span class="math inline">\(X : (\Omega, {\cal F}) \to (\mathbb{R},{\cal B})\)</span>라고 쓴다.</p>
+</section>
+<section id="헷갈려-2-starstarstar" class="level2">
+<h2 class="anchored" data-anchor-id="헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</h2>
+<p><code>-</code> 확률변수에 대한 오해1: 학률변수 = 값이 랜덤으로 바뀌는 변수??</p>
+<ul>
+<li>함수: <span class="math inline">\(y=f(x)\)</span>, <span class="math inline">\(f\)</span>: function, <span class="math inline">\(x\)</span>: input <span class="math inline">\(y\)</span>: output</li>
+<li>확률변수: <span class="math inline">\(x=X(\omega)\)</span>, <span class="math inline">\(X\)</span>: function, <span class="math inline">\(\omega\)</span>: outcome<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>, <span class="math inline">\(x\)</span>: realization</li>
+<li>확률변수는 함수이지만 보통 <span class="math inline">\(X(\omega)\)</span>와 같이 쓰지 않고 <span class="math inline">\(X\)</span>라고 쓴다. <span class="math inline">\(\Rightarrow\)</span> 혼란의 이유</li>
+</ul>
+<p><code>-</code> 확률변수에 대한 오해2: 확률변수는 결과가 랜덤으로 변한다??</p>
+<ul>
+<li>확률변수는 함수일 뿐임. 입력이 정해지면 출력이 고정임!</li>
+<li>동전예제: 입력이 <span class="math inline">\(\omega=H\)</span>이면 출력은 <span class="math inline">\(X(\omega)=1\)</span>, 입력이 <span class="math inline">\(\omega=T\)</span>이면 출력은 <span class="math inline">\(X(\omega)=0\)</span>으로 고정임!</li>
+</ul>
+<p><code>-</code> 확률변수에 대한 오해3: 아니야.. 확률변수는 결과가 랜덤으로 바뀌는 느낌이 맞아. 아래의 예시를 봐!</p>
+<p><span class="math display">\[X = \begin{cases} 0 &amp; w.p. \frac{1}{2} \\ 1 &amp; w.p. \frac{1}{2} \end{cases}\]</span></p>
+<ul>
+<li><span class="math inline">\(X\)</span>는 진짜 변수처럼 보이긴함.</li>
+<li>심지어 변수의 값이 랜덤으로 변하는 것 같음.</li>
+</ul>
+<p>(해설)</p>
+<p>정확하게는 아래 표현이 맞다.</p>
+<p><span class="math display">\[X(\omega) = \begin{cases} 0 &amp; \omega \in \{H\} \\ 1 &amp; \omega \in \{T\} \end{cases}\]</span></p>
+<p>where <span class="math inline">\(P(\{H\}) = P(\{T\}) = \frac{1}{2}\)</span>.</p>
+<p><code>-</code> 확률변수에 대한 오해2에 대한 추가설명</p>
+<ul>
+<li>확률변수는 결과가 랜덤으로 변하는 함수가 아님, 확률변수는 함수일 뿐임. 입력이 정해지면 출력이 고정임!</li>
+<li>동전예제: 입력이 <span class="math inline">\(\omega=H\)</span>이면 출력은 <span class="math inline">\(X(\omega)=1\)</span>, 입력이 <span class="math inline">\(\omega=T\)</span>이면 출력은 <span class="math inline">\(X(\omega)=0\)</span>으로 고정임!</li>
+<li>단지 입력 outcome이 실험에 따라 랜덤으로 변할 수 있는 것임!!</li>
+</ul>
+<p><code>-</code> 요약해보면,</p>
+<ol type="1">
+<li>확률변수는 확률과 관련없다.</li>
+<li>간접적으로는 관련이 있다. <span class="math inline">\(\because\)</span> X의 역상 = <span class="math inline">\(\Omega\)</span>의 부분집합 = <span class="math inline">\(P\)</span>의 정의역</li>
+</ol>
 
 
+</section>
 </section>
 
 
@@ -630,6 +806,20 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn25"><p>교집합<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn26"><p>포함관계의 차집합<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn27"><p>countable union<a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn28"><p>동전예제<a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn29"><p>바늘이 하나 있는 시계예제<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn30"><p>비탈리집합<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn31"><p>메져의 조건에서 전체집합의 길이가 1이라는 제약만 있음<a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn32"><p>outcome 자체는 집합을 의미하는게 아님<a href="#fnref32" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn33"><p>event는 집합을 의미<a href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn34"><p>O<a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn35"><p>O<a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn36"><p>O<a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn37"><p>X<a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn38"><p>O<a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn39"><p>X<a href="#fnref39" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn40"><p>참고로 image는 수학책에서 3가지 뜻으로 혼용해서 쓰이는데, 이 문맥에서는 “Image of an element”를 의미함. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">ref</a><a href="#fnref40" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn41"><p>입력인데 outcome임, 여기서부터 너무 헷갈려!!<a href="#fnref41" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
