@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -407,9 +407,10 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 이러한 <span class="math inline">\({\cal F}\)</span>를 구하기는 것은 귀찮은 일인데, 이를 편리하게 해결하기 위해서 <span class="math inline">\(\sigma({\cal A})\)</span>라는 기호를 도입하고 이를 “<span class="math inline">\(\{1\}\)</span>, <span class="math inline">\(\{2\}\)</span>를 원소로 가지는 최소한의 <span class="math inline">\({\cal F}\)</span>” 라고 생각 하기로 하였다. 즉 앞으로는</p>
 <p><span class="math display">\[\sigma({\cal A})\]</span></p>
 <p>라고만 써도 위에서 명시한 <span class="math inline">\({\cal F}\)</span>를 의미한다고 알아서 생각하면 된다는 것이다.</p>
-<p><code>걱정</code>: 문제는 이러한 논리전개가 항상 가능하냐는 것이다.</p>
+<p><code>걱정1</code>: 문제는 이러한 논리전개가 항상 가능하냐는 것이다. 즉 임의의 <span class="math inline">\({\cal A}\)</span>에 대하여 언제나 이러한 <span class="math inline">\(\sigma({\cal A})\)</span>를 유일하게 정의할 수 있느냐라는 것이다.</p>
+<p><code>걱정2</code>: 두번째 문제는 <span class="math inline">\(\sigma({\cal A})\)</span>를 유일하게 정할 수 있냐는 것이다. <span class="math inline">\({\cal A}\)</span>를 포함하는 최소한의 시그마필드가 <span class="math inline">\(\sigma({\cal A})\)</span>가 여러개라면, <span class="math inline">\(\sigma({\cal A})\)</span>가 지칭하는 바가 모호해질 것이다.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <blockquote class="blockquote">
-<p>귀찮아서 만든 이론1: 걱정할 필요 없다. 언제나 <span class="math inline">\(\sigma({\cal A})\)</span>라는 표현은 가능하다. 즉 <span class="math inline">\(\Omega\)</span>의 임의의 부분집합에 대하여 우리가 관심있는 집합만 모은 것을 <span class="math inline">\({\cal A}\)</span>라고 할때, <span class="math inline">\({\cal A}\)</span>의 모든 원소를 포함하고 시그마필드의 정의를 만족하는 최소한의 시그마필드 <span class="math inline">\(\sigma({\cal A})\)</span>는 항상 존재한다.</p>
+<p>귀찮아서 만든 이론1: 걱정1,2 할 필요 없다. 언제나 <span class="math inline">\(\sigma({\cal A})\)</span>라는 표현은 가능하다. 즉 <span class="math inline">\(\Omega\)</span>의 임의의 부분집합에 대하여 우리가 관심있는 집합만 모은 것을 <span class="math inline">\({\cal A}\)</span>라고 할때, <span class="math inline">\({\cal A}\)</span>의 모든 원소를 포함하고 시그마필드의 정의를 만족하는 최소한의 시그마필드 <span class="math inline">\(\sigma({\cal A})\)</span>는 항상 존재하며 심지어 유일하게 존재한다.</p>
 </blockquote>
 <p><strong>(예제2)</strong></p>
 <p><span class="math inline">\(\Omega = \mathbb{R}\)</span> 이라고 하자. 이중에서 우리가 관심있는 집합들은 르벡메져로 길이를 명확하게 잴 수 있는 아래와 같은 형태이다.</p>
@@ -438,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심있는 집합의 모음은 아래와 같다.</p>
 <p><span class="math display">\[{\cal A} = \{\emptyset, \{1\},\{2\},\{3,4\},\Omega\}\]</span></p>
 <p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>는 시그마필드가 아니다. 따라서 <span class="math inline">\({\cal A}\)</span>에서는 확률을 정의할 수 없다. 확률을 정의하려면 <span class="math inline">\(\sigma({\cal A})\)</span>에서 정의해야 한다.</p>
-<p><code>-</code> 소망: 그래도 그냥 <span class="math inline">\({\cal A}\)</span>에서만 확률 비슷한걸<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> 잘 정의하면 안될까?</p>
+<p><code>-</code> 소망: 그래도 그냥 <span class="math inline">\({\cal A}\)</span>에서만 확률 비슷한걸<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> 잘 정의하면 안될까?</p>
 <p><code>-</code> 희망: 이게 될 것 같다. 예를들면 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 아래와 같이 정의하자.</p>
 <ul>
 <li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
@@ -779,7 +780,8 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn2"><p>바늘이 하나 있는 시계예제<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>비탈리집합<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>메져의 조건에서 전체집합의 길이가 1이라는 제약만 있음<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>정의역이 시그마필드가 아니므로 확률이라고 말할 수 없다<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><span class="math inline">\({\cal A}\)</span>를 포함하는 최소한의 시그마필드가 두 개만 있다고 쳐도 <span class="math inline">\({\cal F}_1\)</span>에서 확률을 정의한다는 건지 <span class="math inline">\({\cal F}_2\)</span>에서 정의한다는 건지 알 수 없다<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>정의역이 시그마필드가 아니므로 확률이라고 말할 수 없다<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
