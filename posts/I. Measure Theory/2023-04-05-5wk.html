@@ -272,9 +272,7 @@ ul.task-list li input[type="checkbox"] {
 <li>because: <span class="math inline">\(\because\)</span></li>
 <li>therefore: <span class="math inline">\(\therefore\)</span></li>
 <li>quod erat: <span class="math inline">\(\square\)</span>, <span class="math inline">\(\blacksquare\)</span></li>
-<li>contradiction: <span class="math inline">\(\contradiction\)</span></li>
 </ul>
-<p><code>-</code> 위는 수학기호로 해석하기보다 영어단어로 해석하는 것이 편리하다.</p>
 <p><code>-</code> 예시1: 모든 실수 <span class="math inline">\(x\)</span>에 대하여, <span class="math inline">\(x^2\)</span>은 양수이다.</p>
 <p><strong>언어</strong> - for any <span class="math inline">\(x\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(x^2 \geq 0\)</span>. - for arbitrary <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x^2 \geq 0\)</span>. - for any choice of <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x^2 \geq 0\)</span>. - for all <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x^2 \geq 0\)</span>. - if <span class="math inline">\(x \in \mathbb{R}\)</span>, then <span class="math inline">\(x^2 \geq 0\)</span>.</p>
 <p><strong>기호</strong> - <span class="math inline">\(\forall x \in \mathbb{R}\)</span>: <span class="math inline">\(x^2\geq 0\)</span>. - <span class="math inline">\(\forall x \in \mathbb{R}\)</span>, <span class="math inline">\(x^2\geq 0\)</span>. - <span class="math inline">\(x^2 \geq 0\)</span>, for all <span class="math inline">\(x \in \mathbb{R}\)</span>. - <span class="math inline">\(x^2 \geq 0\)</span>, <span class="math inline">\(\forall x \in \mathbb{R}\)</span>. - <span class="math inline">\(x \in \mathbb{R} \Rightarrow x^2 \geq 0\)</span>.</p>
@@ -288,8 +286,20 @@ ul.task-list li input[type="checkbox"] {
 <p>의미가 때로는 모호할때가 있지만 눈치껏 알아먹어야 한다.</p>
 </blockquote>
 <p><code>-</code> 예시3: <span class="math inline">\(ax^2+bx+c=0\)</span> 의 꼴에서 <span class="math inline">\(b^2-4ac&gt;0\)</span> 이라면 서로 다른 두 실근을 가진다. (단 <span class="math inline">\(a\)</span>,<span class="math inline">\(b\)</span>,<span class="math inline">\(c\)</span> 는 모두 실수)</p>
-<p><strong>언어</strong> - In <span class="math inline">\(ax^2+bx+c=0\)</span> where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span> if <span class="math inline">\(b^2-4ac&gt;0\)</span> - For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(b^2-4ac &gt;0\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span>. - For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots if <span class="math inline">\(b^2-4ac&gt;0\)</span>. - <span class="math inline">\(b^2-4ac &gt;0\)</span> implies the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots where <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>. - <span class="math inline">\(b^2-4ac &gt;0\)</span>, <span class="math inline">\(a,b,c \in \mathbb{R}\)</span> <span class="math inline">\(\Rightarrow\)</span> The equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distinct real roots.</p>
-<p><strong>기호</strong> - <span class="math inline">\(\forall a,b,c \in \mathbb{R}~s.t.~ b^2-4ac&gt;0:\)</span> <span class="math inline">\(~\exists x_1, x_2 \in \mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> (2) <span class="math inline">\(ax_1^2+bx_1+c = ax_2^2+bx_2+c =0\)</span>. - <span class="math inline">\(b^2-4ac&gt;0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\big(~\exists x_1, x_2 \in \mathbb{R}, x_1\neq x_2 ~ s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c\big)\)</span>, where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>. - <span class="math inline">\(\forall x_1,x_2 \in \mathbb{R}~s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c =0:~b^2 -4ac &gt;0 \Rightarrow x_1 \neq x_2\)</span></p>
+<p><strong>언어</strong></p>
+<ul>
+<li>In <span class="math inline">\(ax^2+bx+c=0\)</span> where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span> if <span class="math inline">\(b^2-4ac&gt;0\)</span></li>
+<li>For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(b^2-4ac &gt;0\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span>.</li>
+<li>For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots if <span class="math inline">\(b^2-4ac&gt;0\)</span>.</li>
+<li><span class="math inline">\(b^2-4ac &gt;0\)</span> implies the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots where <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(b^2-4ac &gt;0\)</span>, <span class="math inline">\(a,b,c \in \mathbb{R}\)</span> <span class="math inline">\(\Rightarrow\)</span> The equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distinct real roots.</li>
+</ul>
+<p><strong>기호</strong></p>
+<ul>
+<li><span class="math inline">\(\forall a,b,c \in \mathbb{R}~s.t.~ b^2-4ac&gt;0:\)</span> <span class="math inline">\(~\exists x_1, x_2 \in \mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> (2) <span class="math inline">\(ax_1^2+bx_1+c = ax_2^2+bx_2+c =0\)</span>.</li>
+<li><span class="math inline">\(b^2-4ac&gt;0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\big(~\exists x_1, x_2 \in \mathbb{R}, x_1\neq x_2 ~ s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c\big)\)</span>, where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(\forall x_1,x_2 \in \mathbb{R}~s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c =0:~b^2 -4ac &gt;0 \Rightarrow x_1 \neq x_2\)</span></li>
+</ul>
 <blockquote class="blockquote">
 <p>이런거 state하는 방법은 진짜 무궁무진할듯.</p>
 </blockquote>
@@ -305,10 +315,12 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\sf WTS}\)</span>: What/Want To Show</li>
 <li><span class="math inline">\({\sf iff}\)</span>: if and only if</li>
 <li><span class="math inline">\({\sf Q.E.D.}\)</span>: 증명완료 (쓰지마..)</li>
+<li><span class="math inline">\({\sf LHS}\)</span>: Left Hand Side</li>
+<li><span class="math inline">\({\sf RHS}\)</span>: Right Hand Side</li>
 </ul>
-<p><code>-</code> 자주쓰는 표현</p>
+<p><code>-</code> 상투적인 표현</p>
 <ul>
-<li>It</li>
+<li>It suffices to show that, It is sufficient to show that</li>
 </ul>
 </section>
 </section>
