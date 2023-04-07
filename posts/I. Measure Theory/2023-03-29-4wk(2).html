@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2023-03-28">
+
+<title>AP2023 - 4wk: 측도론 (1)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AP2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../about.html" aria-current="page">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">4wk: 측도론 (1)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">4wk: 측도론 (1)</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 28, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">I. Measure Theory</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-03-07-1wk.html" class="sidebar-item-text sidebar-link">1wk: 측도론 intro (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-03-14-2wk.html" class="sidebar-item-text sidebar-link">2wk: 측도론 intro (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-03-21-3wk.html" class="sidebar-item-text sidebar-link">3wk: 측도론 intro (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-03-29-4wk(2).html" class="sidebar-item-text sidebar-link active">4wk: 측도론 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-03-28-4wk.html" class="sidebar-item-text sidebar-link">4wk: 측도론 intro (4)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/Untitled.html" class="sidebar-item-text sidebar-link">rest</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#classes-of-sets" id="toc-classes-of-sets" class="nav-link active" data-scroll-target="#classes-of-sets">Classes of sets</a>
+  <ul class="collapse">
+  <li><a href="#귀찮아서-만든-이론1의-증명" id="toc-귀찮아서-만든-이론1의-증명" class="nav-link" data-scroll-target="#귀찮아서-만든-이론1의-증명">귀찮아서 만든 이론1의 증명</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="classes-of-sets" class="level1">
+<h1>Classes of sets</h1>
+<p><code>-</code> <span class="math inline">\(\Omega \neq \emptyset\)</span> 이고 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 라고 하자.</p>
+<p><code>-</code> 약속: 집합 <span class="math inline">\({\cal A} \subset 2^{\Omega}\)</span>에 대하여 아래와 같은 용어를 약속하자.</p>
+<ul>
+<li><span class="math inline">\(\cap\)</span>-closed (closed under intersection) or a <strong><span class="math inline">\(\pi\)</span>-system</strong>: <span class="math inline">\(\forall A,B \in {\cal A}:~ A \cap B \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\cap\)</span>-closed (closed under countable interserction): <span class="math inline">\(\forall \{A_i\}_{i=1}^{\infty} \subset {\cal A}:~ \cap_{i=1}^{\infty} A_i \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\cup\)</span>-closed (closed under unions): <span class="math inline">\(\forall A,B \in {\cal A}:~ A\cup B \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\cup\)</span>-closed (closed under countable unois): <span class="math inline">\(\forall \{A_i\}_{i=1}^{\infty} \subset {\cal A}:~ \cup_{i=1}^{\infty}A_i \in {\cal A}\)</span></li>
+<li><span class="math inline">\(-\)</span>closed (closed under differences): <span class="math inline">\(\forall A,B \in {\cal A}:~ A-B \in {\cal A}\)</span></li>
+<li><span class="math inline">\(^c\)</span>-closed (closed under complements): <span class="math inline">\(\forall A \in {\cal A}:~ A^c \in {\cal A}\)</span></li>
+</ul>
+<p><code>-</code> 우리만의 약속:</p>
+<ul>
+<li>앞으로 서로소인 집합들에 대한 합집합은 기호로 <span class="math inline">\(\uplus\)</span>라고 표현하겠다.</li>
+<li>따라서 앞으로 <span class="math inline">\(B_1 \uplus B_2\)</span>의 의미는 (1) <span class="math inline">\(B_1 \cup B_2\)</span> (2) <span class="math inline">\(B_1 \cap B_2 = \emptyset\)</span> 을 의미한다고 정의하겠다. (꼭 서로소임을 명시하지 않아도)</li>
+<li><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\uplus\)</span>-closed 의 의미는 <span class="math inline">\(\uplus_{i=1}^{\infty}B_i \in {\cal A}, \forall \{B_i\}_{i=1}^{\infty} \subset {\cal A}:\)</span> 의 의미이다.</li>
+</ul>
+<p><code>-</code> <strong><u>정의</u></strong>: 시그마필드 (<span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(\sigma\)</span>-algebra)</p>
+<p>집합 <span class="math inline">\({\cal F} \subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal F}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 시그마필드라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal F}\)</span>.</li>
+<li><span class="math inline">\({\cal F}\)</span>는 여집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal F}\)</span>는 가산합집합에 닫혀있다.</li>
+</ol>
+<p><code>-</code> 이론: <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span> 가 여집합에 닫혀있다면, 아래가 성립한다.</p>
+<ul>
+<li><span class="math inline">\({\cal A}\)</span>가 교집합<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>에 닫혀있음. <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\({\cal A}\)</span>가 합집합<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>에 닫혀있음.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 가산교집합<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>에 닫혀있음. <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\({\cal A}\)</span>가 가산합집합<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>에 닫혀있음.</li>
+</ul>
+<p>(증명) 생략</p>
+<p><code>-</code> 이론: <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 차집합에 닫혀있다면, 아래가 성립한다.</p>
+<ul>
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 가산합집합에 닫혀있다. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\({\cal A}\)</span>가 가산교집합에 닫혀있다.</li>
+<li><span class="math inline">\(\forall \{A_i\} \subset {\cal A},~ \exists \{B_i\} \subset {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \uplus_{i=1}^{\infty} B_i\)</span>.</li>
+</ul>
+<p>(증명) 생략</p>
+<blockquote class="blockquote">
+<p>차집합에 닫혀있다는게 엄청 좋은 거였음.</p>
+</blockquote>
+<p><code>-</code> <strong><u>정의</u>:</strong> 알지브라, 필드 (algebra, field)</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 대수라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 차집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 합집합에 닫혀있다.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Note: 전체집합을 포함하면 차집합에 닫혀있다면 여집합에 닫혀있게 된다. 따라서 대수는 여집합에 닫혀있다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Note: 여집합에 닫혀있고 합집합에 닫혀있다면 교집합에 닫혀있게 된다. // 차집합에만 닫혀있어도 교집합에 닫혀있게 된다.</p>
+</blockquote>
+<p><code>-</code> <strong><u>정의</u>:</strong> 알지브라의 또다른 정의</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 대수라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 여집합에 닫혀있다.</li>
+</ol>
+<p><code>-</code> <strong><u>정의</u>:</strong> 알지브라의 또 또 다른 정의 (교재의 정의)</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 대수라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 여집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 합집합에 닫혀있다.</li>
+</ol>
+<p><code>-</code> <strong><u>정의</u>:</strong> 링 (ring)</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 링이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 차집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 합집합에 닫혀있다.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Note: 차집합에 닫혀있으므로 교집합에도 닫혀있다. 따라서 링은 교집합과 합집합 모두에 닫혀 있다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Note: 링에는 전체집합이 없으므로 여집합의 개념이 없다.</p>
+</blockquote>
+<p><code>-</code> <strong><u>정의</u>:</strong> 세미알지브라 (semi-algebra) // ref : <a href="https://en.wikibooks.org/wiki/Measure_Theory/Basic_Structures_And_Definitions/Semialgebras,_Algebras_and_%CF%83-algebras">위키북스</a></p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 링이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset,\Omega \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+<li><span class="math inline">\(\forall A,B \in {\cal A}, \exists \{B_i\}_{i=1}^{n} \subset {\cal A}\)</span> such that <span class="math display">\[A-B = \uplus_{i=1}^{n} B_i.\]</span></li>
+</ol>
+<blockquote class="blockquote">
+<p>3번을 <span class="math inline">\({\cal A}\)</span>가 차집합에 반쯤 닫혀있다고 표현한다. 즉 차집합 자체가 <span class="math inline">\({\cal A}\)</span>에 들어가는건 아니지만 차집합의 disjoint한 조각들은 모두 <span class="math inline">\({\cal A}\)</span>에 들어간다.</p>
+</blockquote>
+<p><code>-</code> <strong><u>정의</u>:</strong> 세미알지브라의 또 다른 정의 // ref: <a href="https://en.wikipedia.org/wiki/Semiring">세미링의 위키에서 언급있음</a></p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 세미알지브라 라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset, \Omega \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+<li><span class="math inline">\(\forall A \in {\cal A}, \exists \{B_i\}_{i=1}^{n} \subset {\cal A}\)</span> such that <span class="math display">\[A^c = \uplus_{i=1}^{n} B_i.\]</span></li>
+</ol>
+<blockquote class="blockquote">
+<p>3번을 <span class="math inline">\({\cal A}\)</span>가 여집합에 반쯤 닫혀있다고 표현한다. 즉 여집합 자체가 <span class="math inline">\({\cal A}\)</span>에 들어가는건 아니지만 차집합의 disjoint한 조각들은 모두 <span class="math inline">\({\cal A}\)</span>에 들어간다.</p>
+</blockquote>
+<p><code>-</code> <strong><u>정의</u>:</strong> 세미링</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 세미링이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 차집합에 반쯤 닫혀있다.</li>
+</ol>
+<p><code>-</code> <strong><u>정의</u>:</strong> <span class="math inline">\(\pi\)</span>-system</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 파이스시템 이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
+</ol>
+<p><code>-</code> <strong><u>정의</u>:</strong> <span class="math inline">\(\lambda\)</span>-system</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 람다시스템 이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\forall A,B \in {\cal A}:~ A\subset B \Rightarrow B-A \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\forall B_1,B_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(B_1,B_2\dots\)</span> are disjoint: <span class="math display">\[\uplus_{i=1}^{\infty} B_i \in {\cal A}\]</span></li>
+</ol>
+<blockquote class="blockquote">
+<p>람다시스템은 1. 전체집합이 포함되고 2. 두 집합이 포함관계에 있는 경우 차집합에 닫혀있으며 3. 서로소인 가산합집합에 닫혀있다.</p>
+</blockquote>
+<p><code>-</code> 정리표 (hw): 물음표를 채워라</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(A \cap B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\emptyset\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A-B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\cup_iA_i=\uplus_i B_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\Omega\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A^c\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A\cup B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\cup_{i=1}^{\infty}A_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\uplus_{i=1}^{\infty}B_i\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\cap_{i=1}^{\infty}A_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\pi\)</span>-system</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">semi-ring</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">semi-algebra</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ring</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">algebra</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span>-ring</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span>-system</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span>’</td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span>-field</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+</tr>
+</tbody>
+</table>
+<section id="귀찮아서-만든-이론1의-증명" class="level2">
+<h2 class="anchored" data-anchor-id="귀찮아서-만든-이론1의-증명">귀찮아서 만든 이론1의 증명</h2>
+<p><code>-</code> 예제1: (<span class="math inline">\(\star\)</span>) 임의의 인덱스 집합 <span class="math inline">\(I\neq\emptyset\)</span>를 고려하자. 여기에서 <span class="math inline">\(I\)</span>는 uncountable set일 수도 있다. 아래의 사실에 대하여 참 거짓을 판단하라.</p>
+<ul>
+<li><span class="math inline">\({\cal F}_i\)</span>가 모두 시그마필드라면, <span class="math inline">\(\cap_{i \in I}{\cal F_i}\)</span> 역시 시그마필드이다.</li>
+</ul>
+<p><code>-</code> 귀찮아서 만든 이론1: 모든 <span class="math inline">\({\cal A} \subset 2^{\Omega}\)</span> 에 대하여 smallest <span class="math inline">\(\sigma\)</span>-field containing <span class="math inline">\({\cal A}\)</span>, 즉 <span class="math inline">\(\sigma({\cal A})\)</span>는 존재한다. (그리고 당연히 <code>smallest</code> 조건에 의에서 유일성이 보장됨)</p>
+<p>(증명) <span class="math inline">\({\cal A}\)</span>를 포함하는 모든 시그마필드를 교집합하면 <span class="math inline">\(\sigma({\cal A})\)</span>가 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-03-29-4wk(2)_files/figure-html/1db89614-5bfd-4df4-91bd-24ad812b9e69-1-31f7d231-d451-4723-948e-dd5b8dcec59a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: Durret교재에서 언급된 “귀찮아서 만든 이론1”</figcaption><p></p>
+</figure>
+</div>
+<p><code>-</code> 이론: 아래의 사실들이 성립한다.</p>
+<ul>
+<li><span class="math inline">\({\cal A}_1 \subset {\cal A}_2 \Rightarrow \sigma({\cal A}_1) \subset \sigma({\cal A}_2)\)</span>.</li>
+<li><span class="math inline">\({\cal A}\)</span> is <span class="math inline">\(\sigma\)</span>-field <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\sigma({\cal A})= {\cal A}\)</span>.</li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>finite<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>finite<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>countable infinite<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>countable infite<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
