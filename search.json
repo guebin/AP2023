@@ -25,7 +25,7 @@
     "href": "posts/I. Measure Theory/2023-04-05-5wk.html",
     "title": "5wk: 측도론 (1)",
     "section": "",
-    "text": "- 이론: \\(|x|<\\epsilon, ~\\forall \\epsilon>0 ~\\Leftrightarrow x=0\\)\n(증명)\n“\\(\\Leftarrow\\)” 자명함.\n“\\(\\Rightarrow\\)”\n\\({\\sf Suppose}: |x| > 0\\) – 귀류법\n\\({\\sf Choose}:~ \\epsilon=\\frac{1}{2}|x|\\)\n\\(\\Rightarrow\\) \\(0<\\frac{1}{2}|x|<|x|\\) – 모순"
+    "text": "- 이론: \\(|x|<\\epsilon, ~\\forall \\epsilon>0 ~\\Leftrightarrow x=0\\)\n(증명)\n“\\(\\Leftarrow\\)” 자명함.\n“\\(\\Rightarrow\\)”\n\\({\\sf Suppose}: |x| > 0\\) – 귀류법\n\\({\\sf Choose}:~ \\epsilon=\\frac{1}{2}|x|\\)\n\\(\\Rightarrow\\) \\(0<\\frac{1}{2}|x|<|x|\\)\n\\(\\Rightarrow\\) 모순\n- 이론: \\(|x| < \\frac{1}{n},~ \\forall n \\in \\mathbb{N} ~ \\Leftrightarrow ~x=0\\)\n(증명)\n“\\(\\Leftarrow\\)” 자명함.\n“\\(\\Rightarrow\\)”\n\\({\\sf Suppose}: |x| > 0\\) – 귀류법\n\\({\\sf Choose}:~ \\epsilon=\\frac{1}{2}|x|\\)\n\\(\\Rightarrow\\) \\(0<\\epsilon<|x|\\)\n\\(\\Rightarrow\\) \\(\\exists n: ~0<\\frac{1}{n}<\\epsilon<|x|\\) (\\(\\because\\) 아르키메데스의 성질)\n\\(\\Rightarrow\\) 모순"
   },
   {
     "objectID": "posts/I. Measure Theory/2023-04-05-5wk.html#수학과의-기호",
