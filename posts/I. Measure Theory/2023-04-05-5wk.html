@@ -213,7 +213,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#수학과의-표현" id="toc-수학과의-표현" class="nav-link active" data-scroll-target="#수학과의-표현">수학과의 표현</a>
+  <li><a href="#언젠가-필요할까" id="toc-언젠가-필요할까" class="nav-link active" data-scroll-target="#언젠가-필요할까">언젠가 필요할까</a></li>
+  <li><a href="#수학과의-표현" id="toc-수학과의-표현" class="nav-link" data-scroll-target="#수학과의-표현">수학과의 표현</a>
   <ul class="collapse">
   <li><a href="#수학과의-기호" id="toc-수학과의-기호" class="nav-link" data-scroll-target="#수학과의-기호">수학과의 기호</a></li>
   <li><a href="#기타-약어-및-상투적인-표현" id="toc-기타-약어-및-상투적인-표현" class="nav-link" data-scroll-target="#기타-약어-및-상투적인-표현">기타 약어 및 상투적인 표현</a></li>
@@ -222,13 +223,13 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#before" id="toc-before" class="nav-link" data-scroll-target="#before">Before</a></li>
   <li><a href="#시그마필드-starstarstar" id="toc-시그마필드-starstarstar" class="nav-link" data-scroll-target="#시그마필드-starstarstar">시그마필드 (<span class="math inline">\(\star\star\star\)</span>)</a></li>
-  <li><a href="#알지브라-필드" id="toc-알지브라-필드" class="nav-link" data-scroll-target="#알지브라-필드">알지브라, 필드</a></li>
+  <li><a href="#알지브라-필드-star" id="toc-알지브라-필드-star" class="nav-link" data-scroll-target="#알지브라-필드-star">알지브라, 필드 (<span class="math inline">\(\star\)</span>)</a></li>
   <li><a href="#링" id="toc-링" class="nav-link" data-scroll-target="#링">링</a></li>
   <li><a href="#시그마링" id="toc-시그마링" class="nav-link" data-scroll-target="#시그마링">시그마링</a></li>
-  <li><a href="#세미알지브라-star" id="toc-세미알지브라-star" class="nav-link" data-scroll-target="#세미알지브라-star">세미알지브라 (<span class="math inline">\(\star\)</span>)</a></li>
-  <li><a href="#세미링-star" id="toc-세미링-star" class="nav-link" data-scroll-target="#세미링-star">세미링 <span class="math inline">\((\star)\)</span></a></li>
+  <li><a href="#세미알지브라-starstarstar" id="toc-세미알지브라-starstarstar" class="nav-link" data-scroll-target="#세미알지브라-starstarstar">세미알지브라 (<span class="math inline">\(\star\star\star\)</span>)</a></li>
+  <li><a href="#세미링-starstarstar" id="toc-세미링-starstarstar" class="nav-link" data-scroll-target="#세미링-starstarstar">세미링 <span class="math inline">\((\star\star\star)\)</span></a></li>
   <li><a href="#파이시스템-starstar" id="toc-파이시스템-starstar" class="nav-link" data-scroll-target="#파이시스템-starstar">파이시스템 (<span class="math inline">\(\star\star\)</span>)</a></li>
-  <li><a href="#람다시스템-star" id="toc-람다시스템-star" class="nav-link" data-scroll-target="#람다시스템-star">람다시스템 (<span class="math inline">\(\star\)</span>)</a></li>
+  <li><a href="#람다시스템-starstar" id="toc-람다시스템-starstar" class="nav-link" data-scroll-target="#람다시스템-starstar">람다시스템 (<span class="math inline">\(\star\star\)</span>)</a></li>
   <li><a href="#정리" id="toc-정리" class="nav-link" data-scroll-target="#정리">정리</a></li>
   </ul></li>
   <li><a href="#귀찮아서-만든-이론1의-증명" id="toc-귀찮아서-만든-이론1의-증명" class="nav-link" data-scroll-target="#귀찮아서-만든-이론1의-증명">귀찮아서 만든 이론1의 증명</a>
@@ -258,6 +259,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="언젠가-필요할까" class="level1">
+<h1>언젠가 필요할까</h1>
+<p><code>-</code> 이론: <span class="math inline">\(|x|&lt;\epsilon, ~\forall \epsilon&gt;0 ~\Leftrightarrow x=0\)</span></p>
+<p>(증명)</p>
+<p>“<span class="math inline">\(\Leftarrow\)</span>” 자명함.</p>
+<p>“<span class="math inline">\(\Rightarrow\)</span>”</p>
+<p>귀류법: Suppose <span class="math inline">\(|x| &gt; 0\)</span></p>
+<p>그런데 <span class="math inline">\(\epsilon=\frac{1}{2}|x|\)</span>로 설정하면 <span class="math inline">\(0&lt;\frac{1}{2}|x|&lt;|x|\)</span>이 성립하는데 이는 모순임.</p>
+</section>
 <section id="수학과의-표현" class="level1">
 <h1>수학과의 표현</h1>
 <section id="수학과의-기호" class="level2">
@@ -285,27 +295,14 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>의미가 때로는 모호할때가 있지만 눈치껏 알아먹어야 한다.</p>
 </blockquote>
-<p><code>-</code> 예시3: <span class="math inline">\(ax^2+bx+c=0\)</span> 의 꼴에서 <span class="math inline">\(b^2-4ac&gt;0\)</span> 이라면 서로 다른 두 실근을 가진다. (단 <span class="math inline">\(a\)</span>,<span class="math inline">\(b\)</span>,<span class="math inline">\(c\)</span> 는 모두 실수)</p>
+<p><code>-</code> 예시3: 임의의 양수 <span class="math inline">\(\epsilon&gt;0\)</span>에 대하여 <span class="math inline">\(|x| \leq \epsilon\)</span>이라면 <span class="math inline">\(x=0\)</span>일 수 밖에 없다.</p>
 <p><strong>언어</strong></p>
 <ul>
-<li>In <span class="math inline">\(ax^2+bx+c=0\)</span> where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span> if <span class="math inline">\(b^2-4ac&gt;0\)</span></li>
-<li>For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(b^2-4ac &gt;0\)</span>, there exists <span class="math inline">\(x_1,x_2\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> and (2) <span class="math inline">\(ax_1^2+bx_1+c=ax_2^2+bx_2+c=0\)</span>.</li>
-<li>For any <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots if <span class="math inline">\(b^2-4ac&gt;0\)</span>.</li>
-<li><span class="math inline">\(b^2-4ac &gt;0\)</span> implies the equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distint real roots where <span class="math inline">\(a,b,c\)</span> in <span class="math inline">\(\mathbb{R}\)</span>.</li>
-<li><span class="math inline">\(b^2-4ac &gt;0\)</span>, <span class="math inline">\(a,b,c \in \mathbb{R}\)</span> <span class="math inline">\(\Rightarrow\)</span> The equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> has two distinct real roots.</li>
+<li>If <span class="math inline">\(|x|&lt; \epsilon\)</span> for all <span class="math inline">\(\epsilon&gt;0\)</span>, then <span class="math inline">\(x=0\)</span>.</li>
+<li>If <span class="math inline">\(|x|&lt; \epsilon\)</span>, <span class="math inline">\(\forall \epsilon&gt;0\)</span>, then <span class="math inline">\(x=0\)</span>.</li>
+<li>For all <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math inline">\(|x|&lt; \epsilon\)</span> implies <span class="math inline">\(x=0\)</span>. – 틀린표현</li>
 </ul>
-<p><strong>기호</strong></p>
-<ul>
-<li><span class="math inline">\(\forall a,b,c \in \mathbb{R}~s.t.~ b^2-4ac&gt;0:\)</span> <span class="math inline">\(~\exists x_1, x_2 \in \mathbb{R}\)</span> such that (1) <span class="math inline">\(x_1\neq x_2\)</span> (2) <span class="math inline">\(ax_1^2+bx_1+c = ax_2^2+bx_2+c =0\)</span>.</li>
-<li><span class="math inline">\(b^2-4ac&gt;0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\big(~\exists x_1, x_2 \in \mathbb{R}, x_1\neq x_2 ~ s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c\big)\)</span>, where <span class="math inline">\(a,b,c \in \mathbb{R}\)</span>.</li>
-<li><span class="math inline">\(\forall x_1,x_2 \in \mathbb{R}~s.t.~ ax_1^2+bx_1+c = ax_2^2+bx_2+c =0:~b^2 -4ac &gt;0 \Rightarrow x_1 \neq x_2\)</span></li>
-</ul>
-<blockquote class="blockquote">
-<p>이런거 state하는 방법은 진짜 무궁무진할듯.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>고백: 예전에 이런거 정리할 생각했었는데 어리석은 생각이었음.</p>
-</blockquote>
+<p><strong>기호</strong> - <span class="math inline">\(|x| &lt; \epsilon,~ \forall \epsilon&gt;0 \Rightarrow x=0\)</span> - <span class="math inline">\(\forall \epsilon&gt;0: |x| &lt; \epsilon \Rightarrow x=0\)</span> – 애매하다? - <span class="math inline">\(\big(\forall \epsilon&gt;0:|x| &lt; \epsilon\big) \Rightarrow x=0\)</span> - <span class="math inline">\(\big(\forall \epsilon&gt;0\big)\big(|x| &lt; \epsilon \Rightarrow x=0\big)\)</span> – 틀린표현</p>
 </section>
 <section id="기타-약어-및-상투적인-표현" class="level2">
 <h2 class="anchored" data-anchor-id="기타-약어-및-상투적인-표현">기타 약어 및 상투적인 표현</h2>
@@ -382,8 +379,8 @@ ul.task-list li input[type="checkbox"] {
 <li>시그마필드는 합집합에 닫혀있으므로 <span class="math inline">\(A\cup A^c \in {\cal F}\)</span>.</li>
 </ul>
 </section>
-<section id="알지브라-필드" class="level2">
-<h2 class="anchored" data-anchor-id="알지브라-필드">알지브라, 필드</h2>
+<section id="알지브라-필드-star" class="level2">
+<h2 class="anchored" data-anchor-id="알지브라-필드-star">알지브라, 필드 (<span class="math inline">\(\star\)</span>)</h2>
 <p><code>-</code> <strong><u>정의1</u>:</strong> 알지브라, 필드 (algebra, field)</p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 대수라고 부른다.</p>
 <ol type="1">
@@ -412,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal A}\)</span>는 여집합에 닫혀있다.</li>
 <li><span class="math inline">\({\cal A}\)</span>는 합집합에 닫혀있다.</li>
 </ol>
-<p><code>-</code> <strong>most important example</strong> of algebra</p>
+<p><code>-</code> 알지브라의 예시</p>
 <ul>
 <li><span class="math inline">\(\Omega = \{H,T\}\)</span>, <span class="math inline">\({\cal A} = 2^\Omega\)</span> 일때, <span class="math inline">\({\cal A}\)</span>는 알지브라이다. (<span class="math inline">\(|\Omega| &lt;\infty\)</span> 이라면 “시그마필드 = 알지브라(필드)” 이다.)</li>
 </ul>
@@ -446,8 +443,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><code>-</code> 여기에서 1의 조건을 생략할 수 있다.</p>
 </section>
-<section id="세미알지브라-star" class="level2">
-<h2 class="anchored" data-anchor-id="세미알지브라-star">세미알지브라 (<span class="math inline">\(\star\)</span>)</h2>
+<section id="세미알지브라-starstarstar" class="level2">
+<h2 class="anchored" data-anchor-id="세미알지브라-starstarstar">세미알지브라 (<span class="math inline">\(\star\star\star\)</span>)</h2>
 <p><code>-</code> <strong><u>정의1</u>:</strong> 세미알지브라 (semi-algebra) // ref : <a href="https://en.wikibooks.org/wiki/Measure_Theory/Basic_Structures_And_Definitions/Semialgebras,_Algebras_and_%CF%83-algebras">위키북스</a></p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 세미알지브라 라고 부른다.</p>
 <ol type="1">
@@ -460,8 +457,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p><code>-</code> 세미알지브라는 공집합을 포함한다. (이때 <span class="math inline">\({\cal A}\neq \emptyset\)</span>임을 강조함)</p>
 <ul>
-<li><span class="math inline">\({\cal A}\)</span>는 공집합이 아니므로 최소한 하나의 집합 <span class="math inline">\(A\)</span>는 포함해야 한다. 즉 <span class="math inline">\(A \in {\cal A}\)</span>.</li>
-<li><span class="math inline">\(A \in {\cal A}\)</span>이면 조건3에 의하여 <span class="math inline">\(A-A =\emptyset\)</span>을 <span class="math inline">\({\cal A}\)</span>의 원소들의 countable union으로 만들 수 있어야 한다. 이 조건을 만족하기 위해서는 <span class="math inline">\(\emptyset \in {\cal A}\)</span>이어야만 한다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 공집합이 아니므로 최소한 하나의 집합 <span class="math inline">\(A\)</span>는 포함해야 한다. 즉 <span class="math inline">\(A \in {\cal A}\)</span>.</li>
+<li><span class="math inline">\(A \in {\cal A}\)</span>이면 조건3에 의하여 <span class="math inline">\(\emptyset\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>을 <span class="math inline">\({\cal A}\)</span>의 원소들의 countable union으로 만들 수 있어야 한다. 이 조건을 만족하기 위해서는 <span class="math inline">\(\emptyset \in {\cal A}\)</span>이어야만 한다.</li>
 </ul>
 <p><code>-</code> <strong><u>정의2</u>:</strong> 세미알지브라의 또 다른 정의 // ref: <a href="https://en.wikipedia.org/wiki/Semiring">세미링의 위키에서 언급</a>, Durret의 정의.</p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 세미알지브라 라고 부른다.</p>
@@ -483,13 +480,15 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>왜 생략할 수 있는지 모르겠음. (교재가 틀렸을 수도 있음)</li>
 </ul>
-<p><code>-</code> <strong>most important example</strong> of semi-algebra</p>
-<ul>
-<li><span class="math inline">\(\Omega=\mathbb{R}\)</span>, <span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty \}\)</span> 일때 <span class="math inline">\({\cal A}\)</span>은 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 semi-algebra이다.</li>
-</ul>
+<p><code>-</code> 세미알지브라의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega\)</span>에 대한 세미알지브라이다. - 예시1: <span class="math inline">\(\Omega=\{a,b,c,d\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c,d\}, \Omega \}\)</span> - 예시2: <span class="math inline">\(\Omega=\{a,b,c,d\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c,d\}, \Omega \}\)</span> - 예시3: <span class="math inline">\(\Omega=\{a,b,c,d\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c\},\{d\}, \Omega \}\)</span> - 예시4: <span class="math inline">\(\Omega=\{a,b,c,d\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c\},\{d\}, \Omega \}\)</span> - 예시5: <span class="math inline">\(\Omega=\{a,b,c,d\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c\},\{d\}, \{a,b\},\{b,c\},\Omega \}\)</span></p>
+<blockquote class="blockquote">
+<p>세미알지브라는 전체집합이 몇개의 파티션으로 쪼개져서 원소로 들어가는 느낌이 있음.</p>
+</blockquote>
+<p><code>-</code> 세미알지브라의 예시<span class="math inline">\((\star)\)</span>: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라이다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty \leq a &lt; b \leq \infty \}\)</span></p>
+<p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty \leq a &lt; b \leq \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty \leq a &lt; b \leq \infty \}\)</span></p>
 </section>
-<section id="세미링-star" class="level2">
-<h2 class="anchored" data-anchor-id="세미링-star">세미링 <span class="math inline">\((\star)\)</span></h2>
+<section id="세미링-starstarstar" class="level2">
+<h2 class="anchored" data-anchor-id="세미링-starstarstar">세미링 <span class="math inline">\((\star\star\star)\)</span></h2>
 <p><code>-</code> <strong><u>정의</u>:</strong> 세미링</p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 세미링이라고 부른다.</p>
 <ol type="1">
@@ -497,6 +496,12 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
 <li><span class="math inline">\({\cal A}\)</span>는 차집합에 반쯤 닫혀있다.</li>
 </ol>
+<p><code>-</code> 세미알지브라의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega\)</span>에 대한 세미알지브라이다. - 예시1: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c,d\} \}\)</span> - 예시2: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c,d\} \}\)</span> - 예시3: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c\},\{d\}, \{a,b,c\},\{b,c,d\}\}\)</span></p>
+<blockquote class="blockquote">
+<p>전체집합이 포함될 필요가 없는 세미알지브라 느낌임.</p>
+</blockquote>
+<p><code>-</code> 세미알지브라의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라이다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></p>
+<p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></p>
 </section>
 <section id="파이시스템-starstar" class="level2">
 <h2 class="anchored" data-anchor-id="파이시스템-starstar">파이시스템 (<span class="math inline">\(\star\star\)</span>)</h2>
@@ -506,8 +511,8 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
 </ol>
 </section>
-<section id="람다시스템-star" class="level2">
-<h2 class="anchored" data-anchor-id="람다시스템-star">람다시스템 (<span class="math inline">\(\star\)</span>)</h2>
+<section id="람다시스템-starstar" class="level2">
+<h2 class="anchored" data-anchor-id="람다시스템-starstar">람다시스템 (<span class="math inline">\(\star\star\)</span>)</h2>
 <p><code>-</code> <strong><u>정의</u>:</strong> <span class="math inline">\(\lambda\)</span>-system</p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 람다시스템 이라고 부른다.</p>
 <ol type="1">
@@ -518,6 +523,11 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>람다시스템은 1. 전체집합이 포함되고 2. 두 집합이 포함관계에 있는 경우 차집합에 닫혀있으며 3. 서로소인 가산합집합에 닫혀있다.</p>
 </blockquote>
+<p><code>-</code> 람다시스템의 느낌: 3주차 시그마필의 motivation에서 소개한 거의 모든 예제는 사실 람다시스템이다.</p>
+<ul>
+<li>람다시스템의 원칙1,2,3은 사실 확률의 공리 그 자체임</li>
+</ul>
+<p><code>-</code> 아래는 모두 람다시스템의 예시이다. - <span class="math inline">\(\Omega=\{H,T\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset, \{H\},\{T\},\Omega\}\)</span> – 3주차 예제1 - <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\({\cal L}=2^\Omega\)</span> – 3주차 예제4 - <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset,\{6\},\{1,2,3,4,5\},\Omega\}\)</span> – 3주차 예제5 - <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset,\{1,2,3\},\{3,4,5\},\Omega\}\)</span> – 3주차 예제6 - <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset,\Omega\}\)</span> – 3주차 예제8 - <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset,\{1\}, \{2\}, \{2,3,4\}, \{1,3,4\}, \{3,4\}, \{1,2\},\Omega\}\)</span> – 3주차 예제9,10 - <span class="math inline">\(\Omega=(0,2\pi]\)</span>, <span class="math inline">\({\cal L}=\sigma({\cal A})\)</span> where <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q} \cap \Omega \}\)</span> – 3주차 예제11 - <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}, \Omega\}\)</span> – 3주차 예제12에서 교집합 안넣은 버전</p>
 </section>
 <section id="정리" class="level2">
 <h2 class="anchored" data-anchor-id="정리">정리</h2>
@@ -841,7 +851,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math inline">\({\cal P}\)</span>가 파이시스템이면 <span class="math inline">\(l({\cal P})=\sigma({\cal P})\)</span>이다.</p>
 <p>(증명)</p>
 <p><span class="math inline">\(l(\cal P) \subset \sigma({\cal P})\)</span> 임을 보이고, <span class="math inline">\(l(\cal P) \supset \sigma({\cal P})\)</span> 임을 보이면된다.</p>
-<p>“<strong><span class="math inline">\(\subset\)</span></strong>”: 당연하다.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>“<strong><span class="math inline">\(\subset\)</span></strong>”: 당연하다.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 <p>“<strong><span class="math inline">\(\supset\)</span></strong>”: <span class="math inline">\(l({\cal P})\)</span>가 시그마필드임을 보이면 자동으로 <span class="math inline">\(l({\cal P}) \supset \sigma({\cal P})\)</span>임이 보여진다.</p>
 <p><span class="math inline">\(l({\cal P})\)</span>이 시그마필드임은 아래를 조합하면 간단히 증명된다.</p>
 <ol type="1">
@@ -854,10 +864,17 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> <strong><u>이론</u></strong>: 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> 정리 ver2.</p>
 <p><span class="math inline">\({\cal P}\)</span>가 파이시스템이고 <span class="math inline">\({\cal L}\)</span>이 <span class="math inline">\({\cal P}\)</span>를 포함하는 람다시스템이라면 <span class="math inline">\(\sigma({\cal P}) \subset {\cal L}\)</span>이다.</p>
 <p>(설명)</p>
-<p>Durret에 나온 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> thm 이다. 굉장히 불친절한 편인데, ver2가 증명되면 ver1은 자명하게<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 임플라이 되므로 ver2를 대신 state한 것이다.</p>
+<p>Durret에 나온 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> thm 이다. 굉장히 불친절한 편인데, ver2가 증명되면 ver1은 자명하게<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> 임플라이 되므로 ver2를 대신 state한 것이다.</p>
 <blockquote class="blockquote">
 <p>ver2가 ver1를 임플라이 하는 이유: ver1의 <span class="math inline">\(l({\cal P}) \subset \sigma({\cal P})\)</span>은 당연하고 <span class="math inline">\(l({\cal P}) \supset \sigma({\cal P})\)</span>만 보이면 되는데, 이미 <span class="math inline">\(\sigma({\cal P}) \subset {\cal L}\)</span>임을 보였으므로 <span class="math inline">\(l({\cal P})\)</span>의 정의에 의하여 <span class="math inline">\({\cal L} \supset l({\cal P}) \supset \sigma({\cal P})\)</span>이 성립한다.</p>
 </blockquote>
+<p><code>-</code> 교재의 언급 (p 456)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-05-5wk_files/figure-html/aa997eba-feaf-41d5-856a-d7115772fc06-1-09e8bbac-a571-4f9d-9442-b25633c94686.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="귀찮아서-만든-이론-2의-유일성-증명" class="level1">
@@ -871,7 +888,13 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal F}\)</span>는 <span class="math inline">\(\Omega\)</span>에 대한 시그마필드이며,</li>
 <li><span class="math inline">\(P\)</span>는 <span class="math inline">\((\Omega, {\cal F})\)</span>에서의 확률측도임이 내포되어 있다.</li>
 </ul>
-<p><code>-</code> 교재의 언급 (p1)</p>
+<p><code>-</code> 교재의 언급 (p1) – 초록색부분</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-05-5wk_files/figure-html/56bc586e-dc71-46f4-87e1-15f7afbbf6ee-1-e3581262-f819-4e8e-8610-728f8502cc30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="귀찮아서-만든-이론2의-유일성" class="level2">
 <h2 class="anchored" data-anchor-id="귀찮아서-만든-이론2의-유일성">귀찮아서 만든 이론2의 “유일성”</h2>
@@ -881,7 +904,6 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><span class="math inline">\({\cal A}\)</span>가 파이시스템이라면, <span class="math inline">\({\cal A}\)</span>에서는 agree하지만 <span class="math inline">\(\sigma({\cal A})\)</span>에서는 agree하지 않는 확률측도 <span class="math inline">\(P:\sigma({\cal A}) \to [0,1]\)</span>는 존재할 수 없다는 의미이다.</p>
 </blockquote>
-<p><code>-</code> 교재의 언급</p>
 </section>
 <section id="활용예제-star" class="level2">
 <h2 class="anchored" data-anchor-id="활용예제-star">활용예제 (<span class="math inline">\(\star\)</span>)</h2>
@@ -1056,12 +1078,12 @@ ul.task-list li input[type="checkbox"] {
 <p>이번에는 <span class="math inline">\({\cal A}\)</span>는 파이시스템이 된다. 따라서 이 경우 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>의 값에 의하여 유일하게 결정된다.</p>
 <p><strong>(예제3)</strong></p>
 <p><code>-</code> <span class="math inline">\(\Omega=\{H,T\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{H\}\}\)</span> 라고 하자.</p>
-<p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이므로 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로만 정의해도 무방하다.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이므로 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로만 정의해도 무방하다.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 <p><strong>(예제4)</strong> – 통계학과라서 행복해</p>
 <p><code>-</code> <span class="math inline">\(\Omega=\{a,b\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\}\}\)</span> 라고 하자.</p>
 <p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이다.</p>
 <p><code>-</code> 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정된다.</p>
-<p><code>-</code> 그렇지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서 정의가능한 “측도” <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p><code>-</code> 그렇지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서 정의가능한 “측도” <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -1103,16 +1125,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="증명-1">증명</h2>
 <p><strong><em>증명을 하려는 이유</em></strong></p>
 <p><code>-</code> 안하려다가 합니다. 왜냐하면 이 증명이 “딘킨의 <span class="math inline">\(\pi-\lambda\)</span> 정리”를 활용하는 아주 유명한 증명이라서요.</p>
-<p><code>-</code> 교재의 언급</p>
+<p><code>-</code> 교재의 언급 (p 456)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-05-5wk_files/figure-html/f13ccd3a-f130-44f8-bbd9-8b329c8121c5-1-8e5ae6cb-854b-457b-b956-690a5bde6afe.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>교재의 <code>카라테오토리 확장정리</code>는 <code>귀찮아서 만든 이론2</code>의 엄밀한 state이다.</p>
+</blockquote>
 <p><strong><em>증명 (측도가 아닌 확률측도라는 가정을 추가하여 교재의 버전을 살짝 쉽게 만듬)</em></strong></p>
-<p><code>!</code> 아래와 같은 확률측도 <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>가 있다고 하자. (<span class="math inline">\(P_1,P_2\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 확률측도이다.)</p>
-<ol type="1">
-<li><span class="math inline">\(P_1(A) = P_2(A), \forall A \in {\cal A}\)</span></li>
-<li><span class="math inline">\(\exists B \in \sigma({\cal A}) ~{\sf st}~ P_1(B) \neq P_2(B)\)</span></li>
-</ol>
-<p>이제 아래와 같은 알고리즘을 이용하여 집합 <span class="math inline">\({\cal C}_B\)</span>를 만든다고 하자.</p>
-<p>for <span class="math inline">\(A\)</span> in <span class="math inline">\(\sigma({\cal A})\)</span>:</p>
-<pre><code>for</code></pre>
 
 
 </section>
@@ -1127,10 +1150,11 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn3"><p>countable infinite<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>countable infite<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>이건 차집합에 반쯤 닫혀있어도 성립함<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>직접 만들어봐, 시그마필드가 당연히 조건이 더 복잡하므로 이거저것 추가할 것이 많음<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>솔직히 그렇게 안자명해<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>그래도 유일하게 결정되니까<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>그렇지만 우리가 알바는 아님<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><span class="math inline">\(A-A\)</span><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>직접 만들어봐, 시그마필드가 당연히 조건이 더 복잡하므로 이거저것 추가할 것이 많음<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>솔직히 그렇게 안자명해<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>그래도 유일하게 결정되니까<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>그렇지만 우리가 알바는 아님<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
