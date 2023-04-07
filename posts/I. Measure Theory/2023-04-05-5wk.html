@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#언젠가-필요할까" id="toc-언젠가-필요할까" class="nav-link active" data-scroll-target="#언젠가-필요할까">언젠가 필요할까</a></li>
+  <li><a href="#언젠가-필요할까" id="toc-언젠가-필요할까" class="nav-link active" data-scroll-target="#언젠가-필요할까">언젠가 필요할까?</a></li>
   <li><a href="#수학과의-표현" id="toc-수학과의-표현" class="nav-link" data-scroll-target="#수학과의-표현">수학과의 표현</a>
   <ul class="collapse">
   <li><a href="#수학과의-기호" id="toc-수학과의-기호" class="nav-link" data-scroll-target="#수학과의-기호">수학과의 기호</a></li>
@@ -260,13 +260,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="언젠가-필요할까" class="level1">
-<h1>언젠가 필요할까</h1>
+<h1>언젠가 필요할까?</h1>
 <p><code>-</code> 이론: <span class="math inline">\(|x|&lt;\epsilon, ~\forall \epsilon&gt;0 ~\Leftrightarrow x=0\)</span></p>
 <p>(증명)</p>
 <p>“<span class="math inline">\(\Leftarrow\)</span>” 자명함.</p>
 <p>“<span class="math inline">\(\Rightarrow\)</span>”</p>
-<p>귀류법: Suppose <span class="math inline">\(|x| &gt; 0\)</span></p>
-<p>그런데 <span class="math inline">\(\epsilon=\frac{1}{2}|x|\)</span>로 설정하면 <span class="math inline">\(0&lt;\frac{1}{2}|x|&lt;|x|\)</span>이 성립하는데 이는 모순임.</p>
+<p><span class="math inline">\({\sf Suppose}: |x| &gt; 0\)</span> – 귀류법</p>
+<p><span class="math inline">\({\sf Choose}:~ \epsilon=\frac{1}{2}|x|\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(0&lt;\frac{1}{2}|x|&lt;|x|\)</span> – 모순</p>
 </section>
 <section id="수학과의-표현" class="level1">
 <h1>수학과의 표현</h1>
@@ -337,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\cap\)</span>-closed (closed under countable interserction): <span class="math inline">\(\forall \{A_i\}_{i=1}^{\infty} \subset {\cal A}:~ \cap_{i=1}^{\infty} A_i \in {\cal A}\)</span></li>
 <li><span class="math inline">\(\cup\)</span>-closed (closed under unions): <span class="math inline">\(\forall A,B \in {\cal A}:~ A\cup B \in {\cal A}\)</span></li>
 <li><span class="math inline">\(\sigma\)</span>-<span class="math inline">\(\cup\)</span>-closed (closed under countable unois): <span class="math inline">\(\forall \{A_i\}_{i=1}^{\infty} \subset {\cal A}:~ \cup_{i=1}^{\infty}A_i \in {\cal A}\)</span></li>
-<li><span class="math inline">\(-\)</span>closed (closed under differences): <span class="math inline">\(\forall A,B \in {\cal A}:~ A-B \in {\cal A}\)</span></li>
+<li>＼-closed (closed under differences): <span class="math inline">\(\forall A,B \in {\cal A}:~ A-B \in {\cal A}\)</span></li>
 <li><span class="math inline">\(^c\)</span>-closed (closed under complements): <span class="math inline">\(\forall A \in {\cal A}:~ A^c \in {\cal A}\)</span></li>
 </ul>
 <p><code>-</code> 우리만의 약속:</p>
