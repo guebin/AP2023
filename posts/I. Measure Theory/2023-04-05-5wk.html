@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="최규빈">
-<meta name="dcterms.date" content="2023-03-28">
+<meta name="dcterms.date" content="2023-04-04">
 
 <title>AP2023 - 5wk: 측도론 (1)</title>
 <style>
@@ -169,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-04-11-6wk.html" class="sidebar-item-text sidebar-link">6wk: 측도론 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../posts/I. Measure Theory/rest.html" class="sidebar-item-text sidebar-link">rest</a>
   </div>
 </li>
@@ -185,7 +190,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#언젠가-필요할까" id="toc-언젠가-필요할까" class="nav-link active" data-scroll-target="#언젠가-필요할까">언젠가 필요할까?</a></li>
+  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
+  <li><a href="#언젠가-필요할까" id="toc-언젠가-필요할까" class="nav-link" data-scroll-target="#언젠가-필요할까">언젠가 필요할까?</a></li>
   <li><a href="#수학과의-표현" id="toc-수학과의-표현" class="nav-link" data-scroll-target="#수학과의-표현">수학과의 표현</a>
   <ul class="collapse">
   <li><a href="#수학과의-기호" id="toc-수학과의-기호" class="nav-link" data-scroll-target="#수학과의-기호">수학과의 기호</a></li>
@@ -247,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 28, 2023</p>
+      <p class="date">April 4, 2023</p>
     </div>
   </div>
   
@@ -257,6 +263,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="강의영상" class="level1">
+<h1>강의영상</h1>
+</section>
 <section id="언젠가-필요할까" class="level1">
 <h1>언젠가 필요할까?</h1>
 <p><code>-</code> 이론: <span class="math inline">\(|x|&lt;\epsilon, ~\forall \epsilon&gt;0 ~\Leftrightarrow x=0\)</span></p>
@@ -539,14 +548,21 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p><code>-</code> 세미알지브라의 예시<span class="math inline">\((\star)\)</span>: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라이다.</p>
 <ul>
-<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty \}\)</span></li>
-<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty \leq a &lt; b \leq \infty \}\)</span></li>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty \}\cup \{\emptyset\}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty \leq a &lt; b \leq \infty \}\cup \{\emptyset\}\)</span></li>
 </ul>
 <p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다.</p>
 <ul>
-<li>예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty \leq a &lt; b \leq \infty \}\)</span></li>
-<li>예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty \leq a &lt; b \leq \infty \}\)</span></li>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty \leq a &lt; b \leq \infty \}\cup \{\emptyset\}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty \leq a &lt; b \leq \infty \}\cup \{\emptyset\}\)</span></li>
 </ul>
+<p><code>-</code> 교재의 언급 (p3)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-05-5wk_files/figure-html/0b8c7ded-3d4a-40d0-9583-b2ce545c3393-1-003fb509-9d2e-4940-ae04-b94564848690.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 교재에서의 세미알지브라 설명</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="세미링-starstarstar" class="level2">
 <h2 class="anchored" data-anchor-id="세미링-starstarstar">세미링 <span class="math inline">\((\star\star\star)\)</span></h2>
@@ -560,22 +576,22 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 세미링에서도 공집합포함 조건을 생략할 수 있다.</p>
 <p><code>-</code> 세미링의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega\)</span>에 대한 세미링이다.</p>
 <ul>
-<li>예시1: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c,d\} \}\)</span></li>
-<li>예시2: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c,d\} \}\)</span></li>
-<li>예시3: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset,\{a,b,c\},\{b,c,d\}, \{a\},\{b,c\},\{d\},\}\)</span></li>
+<li>예시1: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b,c,d\} \}\cup \{\emptyset\}\)</span></li>
+<li>예시2: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset, \{a\},\{b\},\{c,d\} \}\cup \{\emptyset\}\)</span></li>
+<li>예시3: <span class="math inline">\(\Omega=\{a,b,c,d,e,f\}\)</span>, <span class="math inline">\({\cal A} = \{\emptyset,\{a,b,c\},\{b,c,d\}, \{a\},\{b,c\},\{d\},\}\cup \{\emptyset\}\)</span></li>
 </ul>
 <blockquote class="blockquote">
 <p>전체집합이 포함될 필요가 없는 세미알지브라 느낌임.</p>
 </blockquote>
 <p><code>-</code> 세미링의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미링이다.</p>
 <ul>
-<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
-<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\cup \{\emptyset\}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\cup \{\emptyset\}\)</span></li>
 </ul>
 <p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다.</p>
 <ul>
-<li>예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
-<li>예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\cup \{\emptyset\}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\cup \{\emptyset\}\)</span></li>
 </ul>
 </section>
 <section id="파이시스템-starstar" class="level2">
@@ -631,6 +647,13 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\forall A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(A_1 \subset A_2 \subset \dots\)</span>: <span class="math display">\[\cup_{i=1}^{\infty} A_i = A \in {\cal A}\]</span></li>
 </ol>
 <p><code>-</code> Note: 정의1의 3번조건과 정의2의 3번조건은 서로 동치관계이다.</p>
+<p><code>-</code> 교재에서의 파이시스템, 람다시스템 설명</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-05-5wk_files/figure-html/e9c00cca-b7a6-4d6b-924d-389ad0758be6-1-5135f65d-640a-4f6e-9775-58145ad1c8f3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림2: 교재에서의 파이시스템과 람다시스템</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="정리" class="level2">
 <h2 class="anchored" data-anchor-id="정리">정리</h2>
@@ -683,7 +706,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
@@ -696,7 +719,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(?\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(O\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(?\)</span></td>
@@ -1005,8 +1028,8 @@ algebra-&gt;σ－algebra
 <p><code>-</code> 아래는 교재의 언급 (p3)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2023-04-05-5wk_files/figure-html/1db89614-5bfd-4df4-91bd-24ad812b9e69-1-31f7d231-d451-4723-948e-dd5b8dcec59a.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림1: Durret교재에서 언급된 “귀찮아서 만든 이론1”</figcaption><p></p>
+<p><img src="2023-04-05-5wk_files/figure-html/d44e8cbb-c28a-41d0-8960-54e1c2fd9778-1-31f7d231-d451-4723-948e-dd5b8dcec59a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림3: Durret교재에서 언급된 “귀찮아서 만든 이론1”</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1182,8 +1205,8 @@ algebra-&gt;σ－algebra
 <p><code>-</code> 교재의 언급 (p 456)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2023-04-05-5wk_files/figure-html/aa997eba-feaf-41d5-856a-d7115772fc06-1-09e8bbac-a571-4f9d-9442-b25633c94686.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림2: 교재에 언급된 딘킨의 정리, 부록에 있음</figcaption><p></p>
+<p><img src="2023-04-05-5wk_files/figure-html/5cede74e-21f9-4272-bcd8-a4f05838a820-1-09e8bbac-a571-4f9d-9442-b25633c94686.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림4: 교재에 언급된 딘킨의 정리, 부록에 있음</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1202,8 +1225,8 @@ algebra-&gt;σ－algebra
 <p><code>-</code> 교재의 언급 (p1) – 초록색부분</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2023-04-05-5wk_files/figure-html/56bc586e-dc71-46f4-87e1-15f7afbbf6ee-1-e3581262-f819-4e8e-8610-728f8502cc30.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림3: 교재에 언급된 확률공간, 잴 수 있는 공간의 정의</figcaption><p></p>
+<p><img src="2023-04-05-5wk_files/figure-html/bc3f5b19-f489-4330-991b-91a1cfef7690-1-e3581262-f819-4e8e-8610-728f8502cc30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림5: 교재에 언급된 확률공간, 잴 수 있는 공간의 정의</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -1439,8 +1462,8 @@ algebra-&gt;σ－algebra
 <p><code>-</code> 교재의 언급 (p 456)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2023-04-05-5wk_files/figure-html/f13ccd3a-f130-44f8-bbd9-8b329c8121c5-1-8e5ae6cb-854b-457b-b956-690a5bde6afe.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림4: 교재에서는 카라테오토리 정리의 유일성을 보이기 위해 딘킨의 <span class="math inline">\(\pi-\lambda\)</span>정리를 소개함</figcaption><p></p>
+<p><img src="2023-04-05-5wk_files/figure-html/21458ebe-4b77-47af-b532-6c5a88831bf5-1-8e5ae6cb-854b-457b-b956-690a5bde6afe.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림6: 교재에서는 카라테오토리 정리의 유일성을 보이기 위해 딘킨의 <span class="math inline">\(\pi-\lambda\)</span>정리를 소개함</figcaption><p></p>
 </figure>
 </div>
 <blockquote class="blockquote">
