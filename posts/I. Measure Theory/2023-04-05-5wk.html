@@ -263,16 +263,16 @@ ul.task-list li input[type="checkbox"] {
 <p>(증명)</p>
 <p>“<span class="math inline">\(\Leftarrow\)</span>” 자명함.</p>
 <p>“<span class="math inline">\(\Rightarrow\)</span>”</p>
-<p><span class="math inline">\({\sf Suppose}: |x| &gt; 0\)</span> – 귀류법</p>
-<p><span class="math inline">\({\sf Choose}:~ \epsilon=\frac{1}{2}|x|\)</span></p>
+<p><strong>SUPPOSE</strong>: |x| &gt; 0$ – 귀류법</p>
+<p><strong>CHOOSE</strong>: <span class="math inline">\(\epsilon=\frac{1}{2}|x|\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(0&lt;\frac{1}{2}|x|&lt;|x|\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> 모순</p>
 <p><code>-</code> 이론: <span class="math inline">\(|x| &lt; \frac{1}{n},~ \forall n \in \mathbb{N} ~ \Leftrightarrow ~x=0\)</span></p>
 <p>(증명)</p>
 <p>“<span class="math inline">\(\Leftarrow\)</span>” 자명함.</p>
 <p>“<span class="math inline">\(\Rightarrow\)</span>”</p>
-<p><span class="math inline">\({\sf Suppose}: |x| &gt; 0\)</span> – 귀류법</p>
-<p><span class="math inline">\({\sf Choose}:~ \epsilon=\frac{1}{2}|x|\)</span></p>
+<p><strong>SUPPOSE</strong>: <span class="math inline">\(|x| &gt; 0\)</span> – 귀류법</p>
+<p><strong>CHOOSE</strong>: <span class="math inline">\(\epsilon=\frac{1}{2}|x|\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(0&lt;\epsilon&lt;|x|\)</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\exists n: ~0&lt;\frac{1}{n}&lt;\epsilon&lt;|x|\)</span> (<span class="math inline">\(\because\)</span> 아르키메데스의 성질)</p>
 <p><span class="math inline">\(\Rightarrow\)</span> 모순</p>
@@ -990,10 +990,10 @@ algebra-&gt;σ－algebra
 <p>(엄밀하지 않은 증명)</p>
 <p><strong>존재성</strong></p>
 <p>존재야 하겠지..</p>
-<p><strong>유일성</strong></p>
-<p><span class="math inline">\({\sf LET}\)</span>: <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_1\)</span>이라고 하자. 또 <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_2\)</span>, <span class="math inline">\({\cal F}_3\)</span> 등으로 놓는다.</p>
-<p><span class="math inline">\({\sf LET}\)</span>: 이제 <span class="math inline">\({\cal F} = {\cal F}_1 \cap {\cal F}_2 \cap \dots = \bigcap_{i=1}^{\infty} {\cal F}_i\)</span>를 정의하자.</p>
-<p><span class="math inline">\({\sf WTS}\)</span>:</p>
+<p><strong>smallest(유일성)</strong></p>
+<p><strong>LET</strong>: <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_1\)</span>이라고 하자. 또 <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_2\)</span>, <span class="math inline">\({\cal F}_3\)</span> 등으로 놓는다.</p>
+<p><strong>LET</strong>: 이제 <span class="math inline">\({\cal F} = {\cal F}_1 \cap {\cal F}_2 \cap \dots = \bigcap_{i=1}^{\infty} {\cal F}_i\)</span>를 정의하자.</p>
+<p><strong>WTS</strong>:</p>
 <ol type="1">
 <li><span class="math inline">\({\cal F}\)</span>는 <span class="math inline">\({\cal A}\)</span>를 포함한다. 즉 <span class="math inline">\({\cal A} \subset {\cal F}\)</span> 이다.</li>
 <li><span class="math inline">\({\cal F}\)</span>는 시그마필드이다.</li>
@@ -1023,10 +1023,7 @@ algebra-&gt;σ－algebra
 <li><span class="math inline">\({\cal A}_i\)</span>가 모두 람다시스템이라면, <span class="math inline">\(\cap_{i \in I}{\cal A_i}\)</span> 역시 람다시스템이다.</li>
 </ol>
 <blockquote class="blockquote">
-<p>세미알지브라, 세미링은 성립안함.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>파이시스템은 애매함. <span class="math inline">\(\cap_{i \in I}{\cal A}_i\)</span>가 공집합이 아니면 성립함.</p>
+<p>세미알지브라, 세미링, 파이시스템은 성립안함.</p>
 </blockquote>
 <p><code>-</code> 예제1: 아래를 고려하자.</p>
 <ul>
@@ -1038,6 +1035,13 @@ algebra-&gt;σ－algebra
 <blockquote class="blockquote">
 <p>이 예제에서 <code>세미알지브라</code>를 <code>세미링</code>으로 바꾸고 읽어도 성립함.</p>
 </blockquote>
+<p><code>-</code> 예제2: 아래를 고려하자.</p>
+<ul>
+<li><span class="math inline">\(\Omega=\{H,T\}\)</span></li>
+<li><span class="math inline">\({\cal A}_1 = \{\{H\}\}\)</span></li>
+<li><span class="math inline">\({\cal A}_2 = \{\{T\}\}\)</span></li>
+</ul>
+<p><span class="math inline">\({\cal A}_1, {\cal A}_2\)</span>는 모두 파이시스템이다. 하지만 <span class="math inline">\({\cal A}_1 \cap {\cal A}_2 = \emptyset\)</span>은 파이시스템이 아니다.</p>
 <p><code>-</code> 이론: 임의의 <span class="math inline">\({\cal A}\)</span>에 대하여 아래는 존재한다.</p>
 <ul>
 <li><span class="math inline">\({\cal A}\)</span>를 포함하는 가장 작은 시그마필드, <span class="math inline">\(\sigma({\cal A})\)</span></li>
@@ -1047,7 +1051,7 @@ algebra-&gt;σ－algebra
 <li><span class="math inline">\({\cal A}\)</span>를 포함하는 가장 작은 람다시스템, <span class="math inline">\(l({\cal A})\)</span></li>
 </ul>
 <p><code>-</code> 참고: “<span class="math inline">\({\cal A}\)</span>를 포함하는 가장 작은 세미링”, 혹은 “<span class="math inline">\({\cal A}\)</span>를 포함하는 가장 작은 세미알지브라”와 같은 것은 존재하지 않음.</p>
-<p><code>-</code> 예제2: 아래를 고려하자.</p>
+<p><code>-</code> 예제3: 아래를 고려하자.</p>
 <ul>
 <li><span class="math inline">\(\Omega = \{1,2,3,4\}\)</span></li>
 <li><span class="math inline">\({\cal A} = \{\emptyset, \Omega, \{1\}\}\)</span></li>
@@ -1442,6 +1446,24 @@ algebra-&gt;σ－algebra
 <p>교재의 <code>카라테오토리 확장정리</code>는 <code>귀찮아서 만든 이론2</code>의 엄밀한 state이다.</p>
 </blockquote>
 <p><strong><em>증명 (확률측도라는 가정을 추가하여 교재의 버전을 살짝 쉽게 만듬)</em></strong></p>
+<p><strong>LET</strong></p>
+<ol type="1">
+<li><span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 는 잴 수 있는 공간임.</li>
+<li><span class="math inline">\(P_1,P_2\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 확률측도임.</li>
+<li><span class="math inline">\(P_1,P_2\)</span>는 “<span class="math inline">\(\forall A \in {\cal A}: P_1(A)=P_2(A)\)</span>”를 만족함.</li>
+</ol>
+<p><strong>전략</strong>: 잴 수 있는 공간 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 에서의 두 측도 <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>가 <span class="math inline">\({\cal A}\)</span>에서는 일치하지만 <span class="math inline">\(\sigma({\cal A})-{\cal A}\)</span>에서는 일치하지 않는 경우를 찾으려 해보고, 그것이 불가능함을 보이자.</p>
+<p><strong>LET</strong>: <span class="math inline">\({\cal D}'=\{A \in \sigma({\cal A}): P_1(A) \neq P_2(A)\}\)</span></p>
+<p><strong>WTS</strong>: <span class="math inline">\({\cal D}' =\emptyset\)</span></p>
+<p><strong>WTS</strong>: <span class="math inline">\({\cal D} = \{A \in \sigma({\cal A}): P_1(A) = P_2(A) \} = \sigma({\cal A})\)</span></p>
+<p><strong>WTS</strong>: (1) <span class="math inline">\({\cal D} \subset \sigma({\cal A})\)</span> (2) <span class="math inline">\({\cal D} \supset \sigma({\cal A})\)</span></p>
+<p><strong>WTS</strong>: <span class="math inline">\({\cal D} \supset \sigma({\cal A})\)</span></p>
+<p><strong>NOTE</strong>: <strong>IF</strong> (1) <span class="math inline">\({\cal D}\)</span> is containing <span class="math inline">\({\cal A}\)</span> (2) <span class="math inline">\({\cal D}\)</span> is <span class="math inline">\(\lambda\)</span>-system, <strong>THEN</strong> we can say <span class="math inline">\({\cal D} \supset \sigma({\cal A})=l({\cal A})\)</span></p>
+<p><strong>WTS</strong>: (1) <span class="math inline">\({\cal A} \subset {\cal D}\)</span> (2) <span class="math inline">\({\cal D}\)</span> is <span class="math inline">\(\lambda\)</span>-system.</p>
+<p><strong>WTS</strong>: 1. <span class="math inline">\(\Omega \in {\cal D}\)</span> 2. <span class="math inline">\(A,B \in {\cal D}, A\subset B\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(B-A \in {\cal D}\)</span> 3. <span class="math inline">\(\forall B_1,B_2,\dots, \in {\cal D}\)</span>, <span class="math inline">\(\uplus_{i=1}^{\infty} B_i \in {\cal D}\)</span></p>
+<p><strong>CHECK 1</strong>: <span class="math inline">\(P_1(\Omega) = P_2(\Omega)\)</span></p>
+<p><strong>CHECK 2</strong>: <span class="math inline">\(P_1(B-A) = P_1(B)-P_1(A) = P_2(B) - P_2(A) = P_2(B-A)\)</span></p>
+<p><strong>CHECK 3</strong>: <span class="math inline">\(P_1(\uplus_{i=1}^{\infty} B_i)=P_1(B_1)+P_1(B_2)\dots = P_2(B_1)+P_2(B_2) +\dots = P_2(\uplus_{i=1}^\infty B_i)\)</span></p>
 
 
 </section>
