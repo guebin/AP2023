@@ -518,7 +518,7 @@ ul.task-list li input[type="checkbox"] {
 <li>3에 의하여 <span class="math inline">\(A^c=\uplus_{i=1}^{n}B_i\)</span>를 만족하는 <span class="math inline">\(B_1,\dots, B_n\)</span> 역시 <span class="math inline">\({\cal A}\)</span>에 포함되어야 한다.</li>
 <li>2에 의하여 <span class="math inline">\(A \cap B_1=\emptyset\)</span> 역시 <span class="math inline">\({\cal A}\)</span>에 포함되어야 한다.</li>
 </ul>
-<p><code>-</code> 정의2의 3번조건은 정의1의 3번조건보다 강한 조건이다. (정의2의 조건3 <span class="math inline">\(\Rightarrow\)</span> 정의2의 조건3)</p>
+<p><code>-</code> Note: 정의2의 3번조건은 정의1의 3번조건보다 강한 조건이다. (정의2의 조건3 <span class="math inline">\(\Rightarrow\)</span> 정의1의 조건3)</p>
 <ul>
 <li>증명은 <a href="https://en.wikipedia.org/wiki/Semiring">세미링/위키</a> 에서 스스로 확인</li>
 </ul>
@@ -566,8 +566,16 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>전체집합이 포함될 필요가 없는 세미알지브라 느낌임.</p>
 </blockquote>
-<p><code>-</code> 세미알지브라의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라이다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></p>
-<p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다. - 예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span> - 예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></p>
+<p><code>-</code> 세미알지브라의 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라이다.</p>
+<ul>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+</ul>
+<p><code>-</code> 세미알지브라가 아닌 예시: 아래의 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 세미알지브라가 아니다.</p>
+<ul>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+</ul>
 </section>
 <section id="파이시스템-starstar" class="level2">
 <h2 class="anchored" data-anchor-id="파이시스템-starstar">파이시스템 (<span class="math inline">\(\star\star\)</span>)</h2>
@@ -577,10 +585,17 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal A}\)</span>는 교집합에 닫혀있다.</li>
 </ol>
 <p><code>-</code> 파이시스템임을 강조하기 위해서 <span class="math inline">\({\cal A}\)</span> 대신에 <span class="math inline">\({\cal P}\)</span> 라고 교재에서 표현하기도 한다.</p>
+<p><code>-</code> 파이시스템의 예시: 아래는 모두 <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 파이시스템이다.</p>
+<ul>
+<li>예시1: <span class="math inline">\({\cal A} = \{(a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시2: <span class="math inline">\({\cal A} = \{[a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시3: <span class="math inline">\({\cal A} = \{(a,b): -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+<li>예시4: <span class="math inline">\({\cal A} = \{[a,b]: -\infty &lt; a &lt; b &lt; \infty \}\)</span></li>
+</ul>
 </section>
 <section id="람다시스템-starstar" class="level2">
 <h2 class="anchored" data-anchor-id="람다시스템-starstar">람다시스템 (<span class="math inline">\(\star\star\)</span>)</h2>
-<p><code>-</code> <strong><u>정의</u>:</strong> <span class="math inline">\(\lambda\)</span>-system</p>
+<p><code>-</code> <strong><u>정의1</u>:</strong> <span class="math inline">\(\lambda\)</span>-system</p>
 <p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 람다시스템 이라고 부른다.</p>
 <ol type="1">
 <li><span class="math inline">\(\Omega \in {\cal A}\)</span></li>
@@ -607,6 +622,14 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\Omega=(0,2\pi]\)</span>, <span class="math inline">\({\cal L}=\sigma({\cal A})\)</span> where <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q} \cap \Omega \}\)</span> – 3주차 예제11</li>
 <li><span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>, <span class="math inline">\({\cal L}=\{\emptyset, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}, \Omega\}\)</span> – 3주차 예제12에서 교집합 안넣은 버전</li>
 </ul>
+<p><code>-</code> <strong><u>정의2</u>:</strong> <span class="math inline">\(\lambda\)</span>-system (교재의 정의)</p>
+<p>집합 <span class="math inline">\({\cal A}\subset 2^{\Omega}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal A}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 람다시스템 이라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\forall A,B \in {\cal A}:~ A\subset B \Rightarrow B-A \in {\cal A}\)</span></li>
+<li><span class="math inline">\(\forall A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(A_1 \subset A_2 \subset \dots\)</span>: <span class="math display">\[\cup_{i=1}^{\infty} A_i = A \in {\cal A}\]</span></li>
+</ol>
+<p><code>-</code> Note: 정의1의 3번조건과 정의2의 3번조건은 서로 동치관계이다.</p>
 </section>
 <section id="정리" class="level2">
 <h2 class="anchored" data-anchor-id="정리">정리</h2>
