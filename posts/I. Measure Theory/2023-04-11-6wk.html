@@ -194,6 +194,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#예비학습" id="toc-예비학습" class="nav-link" data-scroll-target="#예비학습">예비학습</a>
   <ul class="collapse">
   <li><a href="#약한조건-약한정리-강한조건-강한정리" id="toc-약한조건-약한정리-강한조건-강한정리" class="nav-link" data-scroll-target="#약한조건-약한정리-강한조건-강한정리">약한조건, 약한정리, 강한조건, 강한정리</a></li>
+  <li><a href="#쓸모없는-측도" id="toc-쓸모없는-측도" class="nav-link" data-scroll-target="#쓸모없는-측도">쓸모없는 측도</a></li>
+  <li><a href="#쓸모없는-가측공간" id="toc-쓸모없는-가측공간" class="nav-link" data-scroll-target="#쓸모없는-가측공간">쓸모없는 가측공간</a></li>
   <li><a href="#유한측도-시그마유한측도" id="toc-유한측도-시그마유한측도" class="nav-link" data-scroll-target="#유한측도-시그마유한측도">유한측도, 시그마유한측도</a></li>
   <li><a href="#확률공간" id="toc-확률공간" class="nav-link" data-scroll-target="#확률공간">확률공간</a></li>
   <li><a href="#시그마유한측도공간" id="toc-시그마유한측도공간" class="nav-link" data-scroll-target="#시그마유한측도공간">시그마유한측도공간</a></li>
@@ -287,6 +289,24 @@ ul.task-list li input[type="checkbox"] {
 <p>정리2의 결론이 만족되면 정리1의 결론은 자동으로 만족되므로 정리2의 결론이 더 강하다. 결론은 강할수록 유리하므로 정리2가 더 유리하다.</p>
 </blockquote>
 </section>
+<section id="쓸모없는-측도" class="level2">
+<h2 class="anchored" data-anchor-id="쓸모없는-측도">쓸모없는 측도</h2>
+<p><code>-</code> 세상엔 측도의 정의를 만족하지만 쓸모 없는 측도가 있다.</p>
+<ul>
+<li>예시1: <span class="math inline">\({\cal F}\)</span>의 모든 원소의 메져값은 0이다.</li>
+<li>예시2: <span class="math inline">\({\cal F}\)</span>의 모든 원소의 메져값은 무한대이다.</li>
+</ul>
+<p><code>-</code> 예시2와 같은 측도를 고려하고 싶지 않음 <span class="math inline">\(\Rightarrow\)</span> 유한측도, 시그마유한측도의 개발</p>
+</section>
+<section id="쓸모없는-가측공간" class="level2">
+<h2 class="anchored" data-anchor-id="쓸모없는-가측공간">쓸모없는 가측공간</h2>
+<p><code>-</code> 세상엔 쓸모없는 잴 수 없는 공간이 있다. (유의미한 측도를 주는게 불가능한 잴 수 있는 공간)</p>
+<ul>
+<li>예시1: <span class="math inline">\({\cal F}= \{\emptyset, \Omega\}\)</span></li>
+<li>예시2: <span class="math inline">\(\Omega =\mathbb{R}\)</span> 일때 <span class="math inline">\({\cal F}=2^{\mathbb{R}}\)</span> (르벡메져로 측정불가능함, 모든 원소의 메져를 0으로 잡으면 무모순으로 길이를 정의할 수는 있겠으나 무슨의미?)</li>
+</ul>
+<p><code>-</code> 예시2와 같은 <span class="math inline">\({\cal F}\)</span>는 고려하고 싶지 않음 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma({\cal A})\)</span>, 카라테오도리 확장정리의 고안.</p>
+</section>
 <section id="유한측도-시그마유한측도" class="level2">
 <h2 class="anchored" data-anchor-id="유한측도-시그마유한측도">유한측도, 시그마유한측도</h2>
 <p><code>-</code> <span class="math inline">\(m\)</span>이 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서의 측도라고 하자.</p>
@@ -301,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><code>-</code> 직관: 제 생각일 뿐이어요..</p>
 <ul>
-<li>원래 측도값은 유한해야 쓸모있음. (모든 원소를 쟀더니 무한대라고 하면 뭐하러 재냐)</li>
+<li>세상엔 측도의 정의는 만족하지만 쓸모없는 측도가 있다. (모든 원소를 쟀더니 0이더라, 모든 원소를 쟀더니 무한대더라)</li>
 <li>그래서 모든 원소값에 무한대를 주는 측도는 인정하고 싶은 마음이 별로 없음. (하지만 측도의 정의는 만족)</li>
 <li>그래서 그냥 유한측도만 생각하기로 했는데…</li>
 </ul>
@@ -312,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><code>-</code> 시그마유한측도의 느낌: 전체집합을 카운터블 유니온으로 커버하는 메져유한인 집합열이 1개만 있으면 된다.</p>
 <p><strong>(기억해둘만한 예시)</strong></p>
-<p><span class="math inline">\((\mathbb{Z}, 2^{\mathbb{Z}})\)</span> 를 잴 수 있는 공간이라고 하자.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="math inline">\(m\)</span>을 공간 <span class="math inline">\((\mathbb{Z}, 2^{\mathbb{Z}})\)</span>에서의 카운팅메져라고 하자.</p>
+<p><span class="math inline">\((\mathbb{Z}, 2^{\mathbb{Z}})\)</span> 를 잴 수 있는 공간이라고 하자. <span class="math inline">\(m\)</span>을 공간 <span class="math inline">\((\mathbb{Z}, 2^{\mathbb{Z}})\)</span>에서의 카운팅메져라고 하자.</p>
 <p><strong>집합열1</strong></p>
 <ul>
 <li><span class="math inline">\(A_1=\mathbb{N}\)</span></li>
@@ -396,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>(엄밀하지 않은 증명)</p>
 <p><strong>존재성</strong></p>
-<p>존재는 함.</p>
+<p>존재는 함. 수틀리면 <span class="math inline">\((\Omega, 2^\Omega)\)</span> 로 잡으면 된다.</p>
 <p><strong>smallest(유일성)</strong></p>
 <p><strong>LET</strong>: <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_1\)</span>이라고 하자. 또 <span class="math inline">\({\cal A}\)</span>를 포함하는 시그마필드를 구하고 <span class="math inline">\({\cal F}_2\)</span>, <span class="math inline">\({\cal F}_3\)</span> 등으로 놓는다.</p>
 <p><strong>LET</strong>: 이제 <span class="math inline">\({\cal F} = {\cal F}_1 \cap {\cal F}_2 \cap \dots = \bigcap_{i=1}^{\infty} {\cal F}_i\)</span>를 정의하자.</p>
@@ -559,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="증명-1">증명</h2>
 <p>(증명)</p>
 <p><span class="math inline">\(l(\cal P) \subset \sigma({\cal P})\)</span> 임을 보이고, <span class="math inline">\(l(\cal P) \supset \sigma({\cal P})\)</span> 임을 보이면된다.</p>
-<p>“<strong><span class="math inline">\(\subset\)</span></strong>”: 당연하다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>“<strong><span class="math inline">\(\subset\)</span></strong>”: 당연하다.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p>“<strong><span class="math inline">\(\supset\)</span></strong>”: <span class="math inline">\(l({\cal P})\)</span>가 시그마필드임을 보이면 자동으로 <span class="math inline">\(l({\cal P}) \supset \sigma({\cal P})\)</span>임이 보여진다.</p>
 <p><span class="math inline">\(l({\cal P})\)</span>이 시그마필드임은 아래를 조합하면 간단히 증명된다.</p>
 <ol type="1">
@@ -574,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 제 생각</p>
 <ul>
 <li>메져가 “선분의 길이”를 일반화 하는 개념이라 생각한다면 파이시스템에서 시작하여 시그마필드로 확장하는 것이 자연스럽다.</li>
-<li>메져가 “확률”을 일반화하는 개념이라 생각한다면 람다시스템에서 시작하는게 자연스럽다.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
+<li>메져가 “확률”을 일반화하는 개념이라 생각한다면 람다시스템에서 시작하는게 자연스럽다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
 <li>딘킨의 <span class="math inline">\(\pi-\lambda\)</span> 정리는 두 흐름을 합치는 정리이다.</li>
 </ul>
 </section>
@@ -583,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> <strong><u>이론</u></strong>: 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> 정리 ver2.</p>
 <p><span class="math inline">\({\cal P}\)</span>가 파이시스템이고 <span class="math inline">\({\cal L}\)</span>이 <span class="math inline">\({\cal P}\)</span>를 포함하는 람다시스템이라면 <span class="math inline">\(\sigma({\cal P}) \subset {\cal L}\)</span>이다.</p>
 <p>(설명)</p>
-<p>Durret에 나온 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> thm 이다. 굉장히 불친절한 편인데, ver2가 증명되면 ver1은 자명하게<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> 임플라이 되므로 ver2를 대신 state한 것이다.</p>
+<p>Durret에 나온 딘킨의 <span class="math inline">\(\pi-\lambda\)</span> thm 이다. 굉장히 불친절한 편인데, ver2가 증명되면 ver1은 자명하게<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> 임플라이 되므로 ver2를 대신 state한 것이다.</p>
 <blockquote class="blockquote">
 <p>ver2가 ver1를 임플라이 하는 이유: ver1의 <span class="math inline">\(l({\cal P}) \subset \sigma({\cal P})\)</span>은 당연하고 <span class="math inline">\(l({\cal P}) \supset \sigma({\cal P})\)</span>만 보이면 되는데, 이미 <span class="math inline">\(\sigma({\cal P}) \subset {\cal L}\)</span>임을 보였으므로 <span class="math inline">\(l({\cal P})\)</span>의 정의에 의하여 <span class="math inline">\({\cal L} \supset l({\cal P}) \supset \sigma({\cal P})\)</span>이 성립한다.</p>
 </blockquote>
@@ -784,12 +804,12 @@ ul.task-list li input[type="checkbox"] {
 <p>이번에는 <span class="math inline">\({\cal A}\)</span>는 파이시스템이 된다. 따라서 이 경우 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>의 값에 의하여 유일하게 결정된다.</p>
 <p><strong>(예제3)</strong></p>
 <p><code>-</code> <span class="math inline">\(\Omega=\{H,T\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{H\}\}\)</span> 라고 하자.</p>
-<p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이므로 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로만 정의해도 무방하다.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이므로 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로만 정의해도 무방하다.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
 <p><strong>(예제4)</strong> – 통계학과라서 행복해</p>
 <p><code>-</code> <span class="math inline">\(\Omega=\{a,b\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\}\}\)</span> 라고 하자.</p>
 <p><code>-</code> 여기에서 <span class="math inline">\({\cal A}\)</span>은 파이시스템이다.</p>
 <p><code>-</code> 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정된다.</p>
-<p><code>-</code> 그렇지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서 정의가능한 “측도” <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p><code>-</code> 그렇지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서 정의가능한 “측도” <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -1040,7 +1060,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span></li>
 </ul>
 <p>(의문2)</p>
-<p>심지어 <span class="math inline">\(m(\Omega) = \infty\)</span> 이어도 상관없다.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> 이 예제에서</p>
+<p>심지어 <span class="math inline">\(m(\Omega) = \infty\)</span> 이어도 상관없다.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> 이 예제에서</p>
 <ul>
 <li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
 <li><span class="math inline">\(m(\{-1\})=1\)</span></li>
@@ -1120,13 +1140,12 @@ ul.task-list li input[type="checkbox"] {
 <ol>
 <li id="fn1"><p>사실 그냥 <span class="math inline">\(m(\Omega)&lt;\infty\)</span>라는 소리야<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><span class="math inline">\(A_1=\Omega\)</span>로 잡으면 된다<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><span class="math inline">\(2^{\mathbb{Z}}\)</span>가 시그마필드가 되는건 일단 받아들이자.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>직접 만들어봐, 시그마필드가 당연히 조건이 더 복잡하므로 이거저것 추가할 것이 많음<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>딘킨도 이렇게 생각하지 않았을까<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>솔직히 그렇게 안자명해<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>그래도 유일하게 결정되니까<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>그렇지만 우리가 알바는 아님<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>그리고 애초에 <span class="math inline">\(\Omega \notin {\cal A}\)</span> 이므로, <span class="math inline">\({\cal A}\)</span> 에서는 <span class="math inline">\(m(\Omega)\)</span>의 값도 정의하지 않음.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>직접 만들어봐, 시그마필드가 당연히 조건이 더 복잡하므로 이거저것 추가할 것이 많음<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>딘킨도 이렇게 생각하지 않았을까<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>솔직히 그렇게 안자명해<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>그래도 유일하게 결정되니까<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>그렇지만 우리가 알바는 아님<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>그리고 애초에 <span class="math inline">\(\Omega \notin {\cal A}\)</span> 이므로, <span class="math inline">\({\cal A}\)</span> 에서는 <span class="math inline">\(m(\Omega)\)</span>의 값도 정의하지 않음.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
