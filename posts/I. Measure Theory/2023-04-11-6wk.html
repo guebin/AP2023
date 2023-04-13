@@ -111,7 +111,35 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">6wk: 측도론 (2)</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 11, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -174,6 +202,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../posts/I. Measure Theory/2023-04-18-7wk.html" class="sidebar-item-text sidebar-link">7wk: 측도론 (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../posts/I. Measure Theory/rest.html" class="sidebar-item-text sidebar-link">rest</a>
   </div>
 </li>
@@ -219,46 +252,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#활용예제-star" id="toc-활용예제-star" class="nav-link" data-scroll-target="#활용예제-star">활용예제 (<span class="math inline">\(\star\)</span>)</a></li>
   <li><a href="#증명-2" id="toc-증명-2" class="nav-link" data-scroll-target="#증명-2">증명</a></li>
   </ul></li>
-  <li><a href="#파이시스템에서의-확장이론-메져버전" id="toc-파이시스템에서의-확장이론-메져버전" class="nav-link" data-scroll-target="#파이시스템에서의-확장이론-메져버전">파이시스템에서의 확장이론 (메져버전)</a>
-  <ul class="collapse">
-  <li><a href="#복습-motivating-ex" id="toc-복습-motivating-ex" class="nav-link" data-scroll-target="#복습-motivating-ex">복습 &amp; Motivating EX</a></li>
-  <li><a href="#state-3" id="toc-state-3" class="nav-link" data-scroll-target="#state-3">state</a></li>
-  <li><a href="#증명-3" id="toc-증명-3" class="nav-link" data-scroll-target="#증명-3">증명</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">6wk: 측도론 (2)</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>최규빈 </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 11, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
 
 <section id="강의영상" class="level1">
 <h1>강의영상</h1>
@@ -867,263 +868,6 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>CHECK 1</strong>: <span class="math inline">\(P_1(\Omega) = P_2(\Omega)\)</span></p>
 <p><strong>CHECK 2</strong>: <span class="math inline">\(P_1(B-A) = P_1(B)-P_1(A) = P_2(B) - P_2(A) = P_2(B-A)\)</span></p>
 <p><strong>CHECK 3</strong>: <span class="math inline">\(P_1(\uplus_{i=1}^{\infty} B_i)=P_1(B_1)+P_1(B_2)\dots = P_2(B_1)+P_2(B_2) +\dots = P_2(\uplus_{i=1}^\infty B_i)\)</span></p>
-</section>
-</section>
-<section id="파이시스템에서의-확장이론-메져버전" class="level1">
-<h1>파이시스템에서의 확장이론 (메져버전)</h1>
-<section id="복습-motivating-ex" class="level2">
-<h2 class="anchored" data-anchor-id="복습-motivating-ex">복습 &amp; Motivating EX</h2>
-<p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률의 공리를 만족하는 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
-<p><code>-</code> <strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}), P)\)</span>를 확률공간이라고 하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 파이시스템이라고 가정하자. 그렇다면 확률측도 <span class="math inline">\(P:\sigma({\cal A}) \to [0,1]\)</span>의 값은 <span class="math inline">\(P: {\cal A} \to [0,1]\)</span>의 값에 의하여 유일하게 결정된다.</p>
-<p><code>-</code> 이 이론은 확률측도일 경우만 성립하고 측도일 경우는 실패했었다.</p>
-<p><strong>(예제1)</strong></p>
-<p><span class="math inline">\(\Omega=\{a,b\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\}\}\)</span> 라고 하자. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정됨을 확인하였다. 하지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><code>-</code> 직관: 그냥 <span class="math inline">\({\cal A}\)</span>에 <span class="math inline">\(\Omega\)</span>가 있었다면 되는거 아닌가? 예를들어 아래와 같이 설정한다면?</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(m_1(\{b\})=m_2(\{b\})=1\)</span> 일 수밖에 없지 않을까?</p>
-<p><code>-</code> 혹시 아래와 같이 이론을 수정하면 되지 않을까?</p>
-<blockquote class="blockquote">
-<p><span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 메져라고 하자. 만약에 <span class="math inline">\({\cal A}\)</span>가 “전체집합을 포함하는 파이시스템” 이라면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,1]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,1]\)</span>의 값에 의하여 유일하게 결정된다. (거의 맞는데 한 조건이 빠져서 틀렸음)</p>
-</blockquote>
-<p><strong>(예제2)</strong></p>
-<p><span class="math inline">\(\Omega=\{a,b,c\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\},\Omega\}\)</span> 라고 하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 “<span class="math inline">\(\Omega\)</span>가 포함된 파이시스템”이다. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정될까?</p>
-<p>(풀이) 아래의 반례가 존재함.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\{c\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{a,b\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\{a,c\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{11}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\{b,c\}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><code>-</code> <strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 유한측도라고 하자. 그리고 <span class="math inline">\({\cal A}\)</span>는 전제집합을 포함하는 파이시스템이라고 하자. 그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,M]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,M]\)</span>의 값에 의하여 유일하게 결정된다. (단, <span class="math inline">\(M=m(\Omega)&lt;\infty\)</span>)</p>
-<p><strong>(예제3)</strong> – <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지 않는데, 메져가 유일하게 결정될 것 같은 예제</p>
-<p><span class="math inline">\(\Omega = \mathbb{Z}\)</span> 이라고 하자. <span class="math inline">\(\Omega\)</span>의 부분집합들로 이루어진 수열 <span class="math inline">\(A_1,A_2,\dots\)</span> 를 아래와 같이 정의하자.</p>
-<ul>
-<li><p><span class="math inline">\(A_{1} = [-\frac{1}{2}, \frac{2}{2}] \cap \mathbb{Z} = \{0, 1\}\)</span></p></li>
-<li><p><span class="math inline">\(A_{2} = [-\frac{2}{2}, \frac{3}{2}] \cap \mathbb{Z} = \{-1, 0, 1\}\)</span></p></li>
-<li><p><span class="math inline">\(A_{3} = [-\frac{3}{2}, \frac{4}{2}] \cap \mathbb{Z} = \{-1, 0, 1, 2\}\)</span></p></li>
-<li><p><span class="math inline">\(A_{4} = [-\frac{4}{2}, \frac{5}{2}] \cap \mathbb{Z} = \{-2, -1, 0, 1, 2\}\)</span></p></li>
-<li><p><span class="math inline">\(A_{5} = [-\frac{5}{2}, \frac{6}{2}] \cap \mathbb{Z} = \{-2, -1, 0, 1, 2, 3\}\)</span></p></li>
-<li><p><span class="math inline">\(\dots\)</span></p></li>
-</ul>
-<p>관심있는 집합들의 모임은 <span class="math inline">\({\cal A}=\{A_n:n \in \mathbb{N}\}\)</span>로 정의하자. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>의 값으로 유일하게 결정될까?</p>
-<p>(관찰)</p>
-<p>풀이에 앞서서 아래의 사실을 관찰해보자.</p>
-<ol type="1">
-<li><span class="math inline">\({\cal A}\)</span>는 파이시스템이다.</li>
-<li>집합열 <span class="math inline">\(A_n\)</span>의 극한은 <span class="math inline">\(\Omega\)</span>이다. 집합열 <span class="math inline">\(A_n\)</span>은 증가하는 수열이므로 이 경우 <span class="math inline">\(A_n \uparrow \Omega\)</span>라고 표현할 수 있다.</li>
-<li>모든 <span class="math inline">\(A_n\)</span>이 <span class="math inline">\({\cal A}\)</span>의 멤버라고 했으나 <span class="math inline">\(A_n\)</span>의 극한 <span class="math inline">\(\Omega\)</span>가 <span class="math inline">\({\cal A}\)</span>의 멤버라고 한 적은 없다. 따라서 <span class="math inline">\({\cal A}\)</span>는 전체집합을 포함하지는 않는 파이시스템이다.</li>
-</ol>
-<p>(풀이)</p>
-<p>가능할 것 같다. (실제로 가능해) 왜냐하면</p>
-<ul>
-<li><span class="math inline">\(m(A_1),m(A_2), m(A_3) \dots\)</span> 의 값이 결정 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\{0,1\})\)</span>, <span class="math inline">\(m(\{-1\})\)</span>, <span class="math inline">\(m(\{2\})\)</span>, <span class="math inline">\(\dots\)</span> 의 값이 결정</li>
-</ul>
-<p>이므로, 0과 1을 제외한 <span class="math inline">\(\mathbb{Z}\)</span>의 모든 원소의 길이가 유일하게 결정되니까.</p>
-<p><strong><em>생각의 시간</em></strong></p>
-<p>아래의 이론을 다시 관찰하자.</p>
-<blockquote class="blockquote">
-<p><strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 유한측도라고 하자. 그리고 <span class="math inline">\({\cal A}\)</span>는 전제집합을 포함하는 파이시스템이라고 하자. 그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,M]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,M]\)</span>의 값에 의하여 유일하게 결정된다. (단, <span class="math inline">\(M=m(\Omega)&lt;\infty\)</span>)</p>
-</blockquote>
-<p>(의문1)</p>
-<p><span class="math inline">\({\cal A}\)</span>가 꼭 전체집합을 포함할 필요는 없어보인다. 즉 조건 <span class="math inline">\(\Omega \in {\cal A}\)</span>는 굳이 필요 없어보인다. 이 조건은 더 약한 아래의 조건으로 대치가능하다.</p>
-<ul>
-<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(A_i \uparrow \Omega\)</span></li>
-</ul>
-<p>만약에 <span class="math inline">\(\Omega \in {\cal A}\)</span>인 경우는 <span class="math inline">\(A_1=\Omega\)</span>로 잡으면 위 조건이 그냥 성립한다. 따라서 위의 조건은 <span class="math inline">\(\Omega \in {\cal A}\)</span> 보다 약한 조건이다. 그리고 심지어 위의 조건은 다시 아래의 더 약한 조건으로 바꿀 수 있다.</p>
-<ul>
-<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span></li>
-</ul>
-<p>(의문2)</p>
-<p>심지어 <span class="math inline">\(m(\Omega) = \infty\)</span> 이어도 상관없다.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> 이 예제에서</p>
-<ul>
-<li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
-<li><span class="math inline">\(m(\{-1\})=1\)</span></li>
-<li><span class="math inline">\(m(\{2\})=1\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p>이라고 하면 <span class="math inline">\(m\)</span>은 잴 수 있는 공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 카운팅메져가 되고, 그 <span class="math inline">\(m\)</span>은 <span class="math inline">\(A \in {\cal A}\)</span>에서의 값으로 유일하게 결정된다. 문제가 생길만한 것은</p>
-<ul>
-<li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
-<li><span class="math inline">\(m(\{-1\})=1\)</span></li>
-<li><span class="math inline">\(m(\{2\})=\infty\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p>와 같은 경우이므로, 이 경우만 제약하면 된다. 즉 <span class="math inline">\(m\)</span>이 시그마유한측도라고 제한하면 될 것 같다.</p>
-</section>
-<section id="state-3" class="level2">
-<h2 class="anchored" data-anchor-id="state-3">state</h2>
-<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}),m)\)</span>을 시그마유한측도공간(<span class="math inline">\(\sigma\)</span>-finite measure space)이라고 하자. <span class="math inline">\({\cal A}\)</span>은 아래를 만족하는 파이시스템이라고 하자.</p>
-<ol type="1">
-<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span></li>
-<li><span class="math inline">\(\forall i \in \mathbb{N}:~ m(A_i) &lt;\infty\)</span></li>
-</ol>
-<p>그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,\infty]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,\infty]\)</span>의 값에 의하여 유일하게 결정된다.</p>
-<blockquote class="blockquote">
-<p>조건 1,2는 결국 <span class="math inline">\(m\)</span>을 시그마유한측도로 만들어주는 그 집합열이 <span class="math inline">\(\sigma({\cal A})-{\cal A}\)</span>가 아니라 <span class="math inline">\({\cal A}\)</span>에 있어야 한다는 의미임.</p>
-</blockquote>
-</section>
-<section id="증명-3" class="level2">
-<h2 class="anchored" data-anchor-id="증명-3">증명</h2>
-<p><strong>LET</strong></p>
-<ol type="1">
-<li><span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 는 잴 수 있는 공간임.</li>
-<li><span class="math inline">\(m_1,m_2\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 시그마유한측도임.</li>
-<li><span class="math inline">\(m_1,m_2\)</span>는 “<span class="math inline">\(\forall A \in {\cal A}: m_1(A)=m_2(A)\)</span>”를 만족함.</li>
-</ol>
-<p><strong>WTS</strong>: <span class="math inline">\({\cal D} = \{B \in \sigma({\cal A}): m_1(B) = m_2(B) \} = \sigma({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: for all <span class="math inline">\(A \in {\cal A}\)</span>, <span class="math inline">\({\cal D}_A = \{B \in \sigma({\cal A}): m_1(A\cap B) = m_2(A \cap B)\} =\sigma({\cal A})\)</span></p>
-<p>왜??</p>
-<p>(경우1): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함한다고 하자. <span class="math inline">\(A =\Omega\)</span>를 대입하면 <span class="math inline">\({\cal D}_A = {\cal D}\)</span> 이다. 따라서 <span class="math inline">\({\cal D}_A =\sigma({\cal A})\)</span> 임을 보여도 <span class="math inline">\({\cal D}=\sigma({\cal A})\)</span> 임을 보이는 것과 같다.</p>
-<p>(경우2): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지는 않지만 <span class="math inline">\(A_i \uparrow \Omega\)</span> 인 <span class="math inline">\(A_1,A_2,\dots\)</span>을 모두 포함한다고 하자. 이제 <span class="math inline">\(A = \cup_{i=1}^{\infty}A_i = \uplus_{i=1}^{\infty} C_i\)</span> 를 대입하면</p>
-<ul>
-<li><span class="math inline">\(m_1(B)=m_1\big((\uplus_{i=1}^{\infty} C_i) \cap B\big)= m_1\big(\uplus_{i=1}^{\infty}( C_i \cap B)\big)=\sum_{i=1}^{\infty}m_1(C_i\cap B)\)</span></li>
-<li><span class="math inline">\(m_2(B)=m_2\big((\uplus_{i=1}^{\infty} C_i) \cap B\big)= m_2\big(\uplus_{i=1}^{\infty}( C_i \cap B)\big)=\sum_{i=1}^{\infty}m_2(C_i\cap B)\)</span></li>
-</ul>
-<p>이므로 다시 경우1과 유사한 논리로 <span class="math inline">\({\cal D}_A={\cal D}\)</span>가 되고, <span class="math inline">\({\cal D}_A=\sigma({\cal A})\)</span>를 보여도 충분하다.</p>
-<p>(경우3): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지 않고, <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span> 인 <span class="math inline">\(A_1,A_2,A_3\dots\)</span>를 모두 포함한다고 하자. 이러한 열을 이용하여 적당한 <span class="math inline">\(\tilde{A}_i\uparrow \Omega\)</span>를 만들 수 있으므로 경우2와 비슷한 논리로 <span class="math inline">\({\cal D}_A = \sigma(A)\)</span>를 보여도 충분하다.</p>
-<p><strong>ISTST</strong>: <span class="math inline">\(\forall A \in {\cal A}\)</span>: (1) <span class="math inline">\({\cal D}_A \subset \sigma({\cal A})\)</span> (2) <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})\)</span></p>
-<p><strong>NOTE</strong>: for any <span class="math inline">\(A\)</span> in <span class="math inline">\({\cal A}\)</span>: <strong>IF</strong> (1) <span class="math inline">\({\cal D}_A\)</span> is containing <span class="math inline">\({\cal A}\)</span> (2) <span class="math inline">\({\cal D}_A\)</span> is <span class="math inline">\(\lambda\)</span>-system, <strong>THEN</strong> we can say <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})=l({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: (1) <span class="math inline">\(\forall A \in {\cal A}: ~{\cal A} \subset {\cal D}_A\)</span> (2) <span class="math inline">\(\forall A \in {\cal A}:~ {\cal D}_A\)</span> is <span class="math inline">\(\lambda\)</span>-system.</p>
-<ul>
-<li>for all <span class="math inline">\(B \in \sigma({\cal A})\)</span>: <span class="math inline">\(B \in {\cal A} \Rightarrow m_1(A\cap B) = m_2(A\cap B) \Rightarrow B \in {\cal D}_A\)</span>. 따라서 (1)은 클리어.</li>
-</ul>
-<p><strong>ISTST</strong>: for all <span class="math inline">\(A \in {\cal A}\)</span>: 1. <span class="math inline">\(\Omega \in {\cal D}_A\)</span> 2. <span class="math inline">\(C,D \in {\cal D}_A, C\subset D\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(D-C \in {\cal D}\)</span> 3. <span class="math inline">\(\forall C_1,C_2,\dots, \in {\cal D}\)</span>, <span class="math inline">\(\uplus_{i=1}^{\infty} C_i \in {\cal D}\)</span></p>
-<p><strong>CHECK 1</strong>: <span class="math inline">\(\big(\forall A \in {\cal A}: \Omega \in {\cal D}_A\big) \Leftrightarrow \big(\forall A \in {\cal A}: m_1(A \cap \Omega) = m_2(A \cap \Omega)\big)\)</span></p>
-<p><strong>CHECK 2</strong>:</p>
-<ul>
-<li><span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(D-C \in {\cal D}\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(m_1(A \cap (D-C)) = m_2(A \cap (D-C))\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(m_1(A \cap D) - m_1( A\cap C) = m_2(A \cap D) - m_2(A \cap C)\big)\)</span></li>
-<li>그런데, <span class="math inline">\(C \in {\cal D}_A\)</span> 이므로 <span class="math inline">\(m_1(A\cap C) = m_2(A\cap C)\)</span> 이다. 또한 <span class="math inline">\(D \in {\cal D}_A\)</span> 이므로 <span class="math inline">\(m_1(A \cap D) = m_2(A \cap D)\)</span> 이다.</li>
-</ul>
-<p><strong>CHECK 3</strong>:</p>
-<ul>
-<li><span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow \big(\uplus_{i=1}^{\infty} C_i \in {\cal D}_A\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow m_1(A \cap (\uplus_{i=1}^{\infty} C_i)) = m_2(A\cap (\uplus_{i=1}^{\infty} C_i))\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow \sum_{i=1}^{\infty} m_1(A \cap C_i) = \sum_{i=1}^{\infty}m_2(A\cap C_i)\)</span></li>
-</ul>
 
 
 </section>
@@ -1140,7 +884,6 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn5"><p>솔직히 그렇게 안자명해<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>그래도 유일하게 결정되니까<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>그렇지만 우리가 알바는 아님<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>그리고 애초에 <span class="math inline">\(\Omega \notin {\cal A}\)</span> 이므로, <span class="math inline">\({\cal A}\)</span> 에서는 <span class="math inline">\(m(\Omega)\)</span>의 값도 정의하지 않음.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
