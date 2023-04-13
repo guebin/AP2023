@@ -39,7 +39,7 @@
     "href": "posts/I. Measure Theory/2023-04-11-6wk.html#state",
     "title": "6wk: 측도론 (2)",
     "section": "state",
-    "text": "state\n- Thm (귀찮아서 만든 이론1): 모든 \\({\\cal A} \\subset 2^{\\Omega}\\) 에 대하여 smallest \\(\\sigma\\)-field containing \\({\\cal A}\\), 즉 \\(\\sigma({\\cal A})\\)는 존재한다. (그리고 당연히 smallest 조건에 의에서 유일성이 보장됨)"
+    "text": "state\n- Thm (귀찮아서 만든 이론1): 모든 \\({\\cal A} \\subset 2^{\\Omega}\\) 에 대하여 smallest \\(\\sigma\\)-field containing \\({\\cal A}\\), 즉 \\(\\sigma({\\cal A})\\)는 존재한다.\n\n그리고 당연히 smallest 조건에 의에서 유일성이 보장됨"
   },
   {
     "objectID": "posts/I. Measure Theory/2023-04-11-6wk.html#증명을-위한-준비학습",
