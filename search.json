@@ -165,7 +165,7 @@
     "href": "posts/I. Measure Theory/2023-04-18-7wk.html#증명",
     "title": "7wk: 측도론 (3)",
     "section": "증명",
-    "text": "증명\n- 노트:\n- 교재의 증명: 교재의 증명은 좀 더 강한 조건에서 했음. (“\\(A_1,A_2,\\dots, {\\cal A}\\) with \\(m(A_i)<\\infty\\) such that \\(m(A_i)<\\infty\\)” 를 가정함.)\n\n\n\n그림2: 카라데오도리 확장정리의 유일성 part 증명, durret p457-8"
+    "text": "증명\n- 노트: supp_7wk.pdf\n- 교재의 증명: 교재의 증명은 좀 더 강한 조건에서 했음. (“\\(A_1,A_2,\\dots, {\\cal A}\\) with \\(m(A_i)<\\infty\\) such that \\(m(A_i)<\\infty\\)” 를 가정함.)\n\n\n\n그림2: 카라데오도리 확장정리의 유일성 part 증명, durret p457-8"
   },
   {
     "objectID": "posts/I. Measure Theory/2023-04-18-7wk.html#state-1",
