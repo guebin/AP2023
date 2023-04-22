@@ -234,9 +234,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#state" id="toc-state" class="nav-link" data-scroll-target="#state">state</a></li>
   <li><a href="#증명" id="toc-증명" class="nav-link" data-scroll-target="#증명">증명</a></li>
   </ul></li>
-  <li><a href="#카라테오도리-확장이론-starstarstar" id="toc-카라테오도리-확장이론-starstarstar" class="nav-link" data-scroll-target="#카라테오도리-확장이론-starstarstar">카라테오도리 확장이론 (<span class="math inline">\(\star\star\star\)</span>)</a>
+  <li><a href="#카라데오도리-확장정리" id="toc-카라데오도리-확장정리" class="nav-link" data-scroll-target="#카라데오도리-확장정리">카라데오도리 확장정리</a>
   <ul class="collapse">
   <li><a href="#state-1" id="toc-state-1" class="nav-link" data-scroll-target="#state-1">state</a></li>
+  <li><a href="#예제-3월28일-4wk-예제들" id="toc-예제-3월28일-4wk-예제들" class="nav-link" data-scroll-target="#예제-3월28일-4wk-예제들">예제: 3월28일 (4wk) 예제들</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -378,6 +379,13 @@ ul.task-list li input[type="checkbox"] {
 <li>continuous from below: <span class="math inline">\(A_i \uparrow A\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
 <li>continuous from above: (1) <span class="math inline">\(A_i \downarrow A\)</span> and (2) <span class="math inline">\(m(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
 </ul>
+<p><code>-</code> 교재의 언급 (p2. Thm 1.1.1)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-7wk_files/figure-html/6eca9be9-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 메져의 성질 durret p2</figcaption><p></p>
+</figure>
+</div>
 <p><code>-</code> <span class="math inline">\(\sigma\)</span>-finite msr 에 대한 동치조건: <span class="math inline">\(m\)</span>이 <span class="math inline">\((\Omega, {\cal F})\)</span>에서의 msr이라면, 아래는 동치이다. (ref: <a href="https://en.wikipedia.org/wiki/%CE%A3-finite_measure" class="uri">https://en.wikipedia.org/wiki/%CE%A3-finite_measure</a>)</p>
 <p><strong>언어버전</strong></p>
 <ul>
@@ -391,7 +399,6 @@ ul.task-list li input[type="checkbox"] {
 <li>There are sets <span class="math inline">\(B_1,B_2,\dots \in {\cal A}\)</span> with <span class="math inline">\(m(B_i)&lt;\infty\)</span> and <span class="math inline">\(B_1,B_2\dots\)</span> are disjoints such that <span class="math inline">\(\uplus_{i=1}^{\infty}B_i=\Omega\)</span></li>
 <li>There are sets <span class="math inline">\(C_1,C_2,\dots \in {\cal A}\)</span> with <span class="math inline">\(m(C_i)&lt;\infty\)</span> and $C_1 C_2 $ such that <span class="math inline">\(\cup_{i=1}^{\infty}C_i=\Omega\)</span></li>
 </ul>
-<p><code>-</code> 교재의 언급 (p2. Thm 1.1.1)</p>
 </section>
 </section>
 <section id="파이시스템에서의-확장이론-메져버전" class="level1">
@@ -610,12 +617,207 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="증명" class="level2">
 <h2 class="anchored" data-anchor-id="증명">증명</h2>
+<p><code>-</code> 노트:</p>
+<p><code>-</code> 교재의 증명: 교재의 증명은 좀 더 강한 조건에서 했음. (“<span class="math inline">\(A_1,A_2,\dots, {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(m(A_i)&lt;\infty\)</span>” 를 가정함.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-7wk_files/figure-html/c2dc66b2-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림2: 카라데오도리 확장정리의 유일성 part 증명, durret p457-8</figcaption><p></p>
+</figure>
+</div>
 </section>
 </section>
-<section id="카라테오도리-확장이론-starstarstar" class="level1">
-<h1>카라테오도리 확장이론 (<span class="math inline">\(\star\star\star\)</span>)</h1>
+<section id="카라데오도리-확장정리" class="level1">
+<h1>카라데오도리 확장정리</h1>
+<p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률비슷한 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 잘 정의한다면, 이 함수 <span class="math inline">\(\tilde{P}\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
 <section id="state-1" class="level2">
 <h2 class="anchored" data-anchor-id="state-1">state</h2>
+<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>에 대한 semiring이라고 하자. 함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span>가 1. <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span> 2. <span class="math inline">\(\tilde{m}(\uplus_{i=1}^{n} B_i)=\sum_{i=1}^{n}\tilde{m}(B_i)\)</span> 3. <span class="math inline">\(\tilde{m}(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty}\tilde{m}(A_i)\)</span> 4. <span class="math inline">\(\exists A_1,A_2 \dots \in {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty}A_i = \Omega\)</span></p>
+<p>를 만족한다면 <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서의 측도 <span class="math inline">\(m\)</span>으로 업그레이드 가능하며, 이 업그레이드 결과는 유일하다.</p>
+<blockquote class="blockquote">
+<p>이 결과를 ver1로 생각하자.</p>
+</blockquote>
+<p><code>-</code> 교재의 state (ver2, ver3)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-7wk_files/figure-html/566082ad-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림3: 카라데오도리 확장저정리 ver2, durret p456</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>ver1과의 비교: <span class="math inline">\({\cal A}\)</span>가 알지브라라는 것은 세미링보다 훨씬 강한 조건이다. 또한 measure on an algebra <span class="math inline">\({\cal A}\)</span>란 것은 1,2,3 조건을 다 합친것 보다 강한 조건이다. <span class="math inline">\(\sigma\)</span>-finite이라는 조건은 <span class="math inline">\({\cal A}\)</span>의 차이를 제외하면 동일하다.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-7wk_files/figure-html/ed25c258-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림4: 카라데오도리 확장정리 ver3, durret p5</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>ver1과의 비교: <span class="math inline">\({\cal A}\)</span>가 세미알지브라라는 조건은 세미링보다 강한 조건이다. (i), (ii)의 <span class="math inline">\({\cal A}\)</span>의 차이만 있을 뿐 거의 동일하다. 4의 조건도 <span class="math inline">\({\cal A}\)</span>의 차이를 제외하고는 동일하다.</p>
+</blockquote>
+</section>
+<section id="예제-3월28일-4wk-예제들" class="level2">
+<h2 class="anchored" data-anchor-id="예제-3월28일-4wk-예제들">예제: 3월28일 (4wk) 예제들</h2>
+<p><strong>(예제1)</strong> – motivating EX</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심있는 집합의 모음은 아래와 같다.</p>
+<p><span class="math display">\[{\cal A} = \{\emptyset, \{1\},\{2\},\{3,4\},\Omega\}\]</span></p>
+<p><code>-</code> 소망: 그래도 그냥 <span class="math inline">\({\cal A}\)</span>에서만 확률 비슷한 함수 <span class="math inline">\(\tilde{P}\)</span>를 잘 정의하면 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 확률측도로 업그레이드 가능하고 업그레이드 결과가 유일할까?</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{3,4\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 조건체크</p>
+<ul>
+<li><span class="math inline">\({\cal A}\)</span>는 세미알지브라(그러므로 세미링)이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 전체집합을 포함하고 있으며 <span class="math inline">\({\tilde P}(\Omega)=1\)</span>이다. <span class="math inline">\(\Rightarrow\)</span> 조건 (4)가 만족.</li>
+<li><span class="math inline">\({\tilde P}\)</span>는 (1) <span class="math inline">\(\tilde{P}(\emptyset)=0\)</span> 이고 (2) add 를 만족하며 (3) <span class="math inline">\(\sigma\)</span>-subadd 를 만족한다.</li>
+</ul>
+<blockquote class="blockquote">
+<p>참고: 이 예제의 경우 <span class="math inline">\(|\Omega|&lt;\infty\)</span> 이므로 <span class="math inline">\(\sigma\)</span>-subadd 는 subadd 와 같은 성질이다. 그리고 add 는 subadd를 imply 하므로 사실상 (2) 만 체크하면 끝난다.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p><strong>(예제2)</strong> – motivating EX (2)</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1\},\{2\}, \{3,4\}, \Omega\}\)</span> 라고 하자. 그리고 아래와 같은 <span class="math inline">\(\sigma({\cal A})\)</span>를 다시 상상하자.</p>
+<p><span class="math display">\[\sigma({\cal A}) = \big\{\emptyset, \{1\}, \{2\}, \{1,2\}, \{3,4\}, \{1,3,4\}, \{2,3,4\}, \Omega \big\}\]</span></p>
+<p><code>-</code> 위의 시그마필드에서 확률을 예제1과 다른 방식으로 정의할 수 도 있다. 예를들면 아래와 같은 방식으로 정의가능하다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(P_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\tilde{P}_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+</tbody>
+</table>
+<p>또한 아래와 같은 방식도 가능하다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\tilde{P}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+</tbody>
+</table>
+<p>어떠한 방식으로 정의하든 <span class="math inline">\({\cal A}\)</span>에서 확률 비슷한 것 <span class="math inline">\(\tilde{P}_1,\tilde{P}_2\)</span>를 잘 정의하기만 <span class="math inline">\(\sigma({\cal A})\)</span>에서의 확률 <span class="math inline">\(P\)</span>로 적절하게 확장할 수 있다. 심지어 이런 확장은 유일한 듯 하다.</p>
+<p><code>-</code> 당연함. 예제1과 동일하게 <span class="math inline">\(\tilde{P_1}\)</span>과 <span class="math inline">\(\tilde{P_2}\)</span>가 add 성질만 만족한다는 사실을 체크하면 끝난다.</p>
+<p><strong>(예제3)</strong> – 운이 안 좋은 경우</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1,2\},\{2,3\}, \Omega\}\)</span> 라고 하자.</p>
+<p><code>-</code> 아래와 같은 확률 비슷한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1,2\}) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2,3\}) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 체크: 일단 <span class="math inline">\({\cal A}\)</span>는 세미링이 아니다. 따라서 확장 불가능. 세미링이 맞다고 하여도 subadd가 성립하지 않는다.</p>
+<p><strong>(예제4)</strong> – 운이 안 좋은 경우</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1,2\},\{2,3\}, \Omega\}\)</span> 라고 하자.</p>
+<p><code>-</code> 아래와 같은 확률 비슷한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1,2\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2,3\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 체크: <span class="math inline">\(\tilde{P}\)</span>는 괜찮게 정의되었다. (1)-(4)가 모두 성립한다. (위의 예제와는 다르게 subadd 역시 성립함!!) 하지만 <span class="math inline">\({\cal A}\)</span>가 세미링이 아니어서 탈락.</p>
 
 
 </section>
@@ -626,6 +828,7 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>그리고 애초에 <span class="math inline">\(\Omega \notin {\cal A}\)</span> 이므로, <span class="math inline">\({\cal A}\)</span> 에서는 <span class="math inline">\(m(\Omega)\)</span>의 값도 정의하지 않음.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>(1)이랑 (4)는 너무 체크하기 쉬움<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
