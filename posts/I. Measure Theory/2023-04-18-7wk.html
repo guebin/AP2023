@@ -223,11 +223,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#파이시스템에서의-확장이론-메져버전" id="toc-파이시스템에서의-확장이론-메져버전" class="nav-link active" data-scroll-target="#파이시스템에서의-확장이론-메져버전">파이시스템에서의 확장이론 (메져버전)</a>
+  <li><a href="#예비학습" id="toc-예비학습" class="nav-link active" data-scroll-target="#예비학습">예비학습</a>
+  <ul class="collapse">
+  <li><a href="#헷갈리는-표현-infty의-포함" id="toc-헷갈리는-표현-infty의-포함" class="nav-link" data-scroll-target="#헷갈리는-표현-infty의-포함">헷갈리는 표현: <span class="math inline">\(\infty\)</span>의 포함</a></li>
+  <li><a href="#메져의-종류와-성질" id="toc-메져의-종류와-성질" class="nav-link" data-scroll-target="#메져의-종류와-성질">메져의 종류와 성질</a></li>
+  </ul></li>
+  <li><a href="#파이시스템에서의-확장이론-메져버전" id="toc-파이시스템에서의-확장이론-메져버전" class="nav-link" data-scroll-target="#파이시스템에서의-확장이론-메져버전">파이시스템에서의 확장이론 (메져버전)</a>
   <ul class="collapse">
   <li><a href="#복습-motivating-ex" id="toc-복습-motivating-ex" class="nav-link" data-scroll-target="#복습-motivating-ex">복습 &amp; Motivating EX</a></li>
   <li><a href="#state" id="toc-state" class="nav-link" data-scroll-target="#state">state</a></li>
   <li><a href="#증명" id="toc-증명" class="nav-link" data-scroll-target="#증명">증명</a></li>
+  </ul></li>
+  <li><a href="#카라테오도리-확장이론-starstarstar" id="toc-카라테오도리-확장이론-starstarstar" class="nav-link" data-scroll-target="#카라테오도리-확장이론-starstarstar">카라테오도리 확장이론 (<span class="math inline">\(\star\star\star\)</span>)</a>
+  <ul class="collapse">
+  <li><a href="#state-1" id="toc-state-1" class="nav-link" data-scroll-target="#state-1">state</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -238,6 +247,140 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="예비학습" class="level1">
+<h1>예비학습</h1>
+<section id="헷갈리는-표현-infty의-포함" class="level2">
+<h2 class="anchored" data-anchor-id="헷갈리는-표현-infty의-포함">헷갈리는 표현: <span class="math inline">\(\infty\)</span>의 포함</h2>
+<p><code>-</code> 자연수집합 <span class="math inline">\(\mathbb{N}\)</span>은 <span class="math inline">\(\{\infty\}\)</span>를 포함하지 않는다. 마찬가지로 실수집합 <span class="math inline">\(\mathbb{R}\)</span> 역시 <span class="math inline">\(\{-\infty\}, \{\infty\}\)</span>를 포함하지 않는다. 만약에 이를 포함하고 싶을 경우는 아래와 같이 표현한다.</p>
+<ul>
+<li><span class="math inline">\(\mathbb{R} \cup \{-\infty\} \cup \{\infty\} = \bar{\mathbb{R}}\)</span></li>
+<li><span class="math inline">\(\mathbb{N} \cup \{-\infty\}\)</span></li>
+</ul>
+<p>여기에서 <span class="math inline">\(\bar{\mathbb{R}}\)</span>은 확장된 실수라고 부르는데 교재에따라 사용하기도 하고 사용하지 않기도 한다.</p>
+<p><code>-</code> 만약에 <span class="math inline">\(\mathbb{N}\)</span>이 <span class="math inline">\(\{\infty\}\)</span>를 포함한다면</p>
+<ul>
+<li><span class="math inline">\(\forall n \in \mathbb{N}:~ 0&lt;\frac{1}{n} \leq 1\)</span></li>
+</ul>
+<p>와 같은 표현은 불가능할 것이다.</p>
+<p><code>-</code> 구간에 대한 표현들: 구간에 대한 몇가지 표현을 정리하면 아래와 같다.</p>
+<ul>
+<li><span class="math inline">\((-\infty, b] = \{x: x\leq b, ~x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\((-\infty, b) = \{x: x &lt; b,~ x,b \in \mathbb{R}\}\)</span></li>
+</ul>
+<p><code>-</code> 구긴에 대한 표현 응용: 아래와 같은 표현을 고려하자. (교재의 예제 1.1.8과 비슷한 표현)</p>
+<ul>
+<li><span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty\}\)</span></li>
+</ul>
+<p><span class="math inline">\({\cal A}\)</span>의 원소의 형태는</p>
+<ul>
+<li><span class="math inline">\(\{x: a&lt;x\leq b,~ a,x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: a&lt;x,~ a,x \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: x\leq b,~ x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: x \in \mathbb{R}\}\)</span></li>
+</ul>
+<p>이다.</p>
+<blockquote class="blockquote">
+<p>약간 무식하게 생각하면 <span class="math inline">\([-\infty, b) = (-\infty,b)\)</span> 로 해석하면 된다. 즉 <span class="math inline">\(\{-\infty\} \notin [-\infty,b)\)</span> 이라는 의미! 보는것 처럼 <span class="math inline">\([-\infty, b)\)</span>와 같은 표현은 엄청난 혼란을 불러오는 표현이므로 사용을 자제한다.</p>
+</blockquote>
+</section>
+<section id="메져의-종류와-성질" class="level2">
+<h2 class="anchored" data-anchor-id="메져의-종류와-성질">메져의 종류와 성질</h2>
+<p><code>-</code> 메져의 종류와 성질 요약</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">분류</th>
+<th style="text-align: center;"><span class="math inline">\(m(\emptyset)=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\sigma\)</span>-add</th>
+<th style="text-align: center;"><span class="math inline">\(A_i\uparrow \Omega\)</span>, <span class="math inline">\(m(A_i)&lt;\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m(\Omega)&lt;\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m(\Omega)=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(.\)</span></th>
+<th style="text-align: center;">monotone</th>
+<th style="text-align: center;"><span class="math inline">\(\sigma\)</span>-subadd</th>
+<th style="text-align: center;">conti-below</th>
+<th style="text-align: center;">conti-above</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span>-finite-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">finite-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">prob-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> 용어들</p>
+<ul>
+<li><span class="math inline">\(\sigma\)</span>-additive: <span class="math inline">\(m(\uplus_{i=1}^{\infty} B_i) = \sum_{i=1}^{\infty} m(B_i)\)</span></li>
+<li>monotone: <span class="math inline">\(A\subset B \Rightarrow m(A) \subset m(B)\)</span></li>
+<li><span class="math inline">\(\sigma\)</span>-subadditive: <span class="math inline">\(m(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty} m(A_i)\)</span></li>
+<li>continuous from below: <span class="math inline">\(A_i \uparrow A\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
+<li>continuous from above: (1) <span class="math inline">\(A_i \downarrow A\)</span> and (2) <span class="math inline">\(m(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
+</ul>
+<p><code>-</code> 교재의 언급 (p2. Thm 1.1.1)</p>
+</section>
+</section>
 <section id="파이시스템에서의-확장이론-메져버전" class="level1">
 <h1>파이시스템에서의 확장이론 (메져버전)</h1>
 <section id="복습-motivating-ex" class="level2">
@@ -245,7 +388,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률의 공리를 만족하는 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
 <p><code>-</code> <strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}), P)\)</span>를 확률공간이라고 하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 파이시스템이라고 가정하자. 그렇다면 확률측도 <span class="math inline">\(P:\sigma({\cal A}) \to [0,1]\)</span>의 값은 <span class="math inline">\(P: {\cal A} \to [0,1]\)</span>의 값에 의하여 유일하게 결정된다.</p>
 <p><code>-</code> 이 이론은 확률측도일 경우만 성립하고 측도일 경우는 실패했었다.</p>
-<p><strong>(예제1)</strong></p>
+<p><strong>(예제1)</strong> – 통계학과라서 행복했던 예제</p>
 <p><span class="math inline">\(\Omega=\{a,b\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\}\}\)</span> 라고 하자. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정됨을 확인하였다. 하지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.</p>
 <table class="table">
 <thead>
@@ -404,7 +547,7 @@ ul.task-list li input[type="checkbox"] {
 <li>모든 <span class="math inline">\(A_n\)</span>이 <span class="math inline">\({\cal A}\)</span>의 멤버라고 했으나 <span class="math inline">\(A_n\)</span>의 극한 <span class="math inline">\(\Omega\)</span>가 <span class="math inline">\({\cal A}\)</span>의 멤버라고 한 적은 없다. 따라서 <span class="math inline">\({\cal A}\)</span>는 전체집합을 포함하지는 않는 파이시스템이다.</li>
 </ol>
 <p>(풀이)</p>
-<p>가능할 것 같다. (실제로 가능해) 왜냐하면</p>
+<p>가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>의 값으로 유일하게 결정하는 것이 가능할 것 같다. (실제로 가능해) 왜냐하면</p>
 <ul>
 <li><span class="math inline">\(m(A_1),m(A_2), m(A_3) \dots\)</span> 의 값이 결정 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\{0,1\})\)</span>, <span class="math inline">\(m(\{-1\})\)</span>, <span class="math inline">\(m(\{2\})\)</span>, <span class="math inline">\(\dots\)</span> 의 값이 결정</li>
 </ul>
@@ -435,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
 <li><span class="math inline">\(m(\{-1\})=1\)</span></li>
-<li><span class="math inline">\(m(\{2\})=\infty\)</span></li>
+<li><span class="math inline">\(m(\{2\})=\infty\)</span> &lt;– 이러면 곤란</li>
 <li><span class="math inline">\(\dots\)</span></li>
 </ul>
 <p>와 같은 경우이므로, 이 경우만 제약하면 된다. 즉 <span class="math inline">\(m\)</span>이 시그마유한측도라고 제한하면 될 것 같다.</p>
@@ -454,45 +597,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="증명" class="level2">
 <h2 class="anchored" data-anchor-id="증명">증명</h2>
-<p><strong>LET</strong></p>
-<ol type="1">
-<li><span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 는 잴 수 있는 공간임.</li>
-<li><span class="math inline">\(m_1,m_2\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 시그마유한측도임.</li>
-<li><span class="math inline">\(m_1,m_2\)</span>는 “<span class="math inline">\(\forall A \in {\cal A}: m_1(A)=m_2(A)\)</span>”를 만족함.</li>
-</ol>
-<p><strong>WTS</strong>: <span class="math inline">\({\cal D} = \{B \in \sigma({\cal A}): m_1(B) = m_2(B) \} = \sigma({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: for all <span class="math inline">\(A \in {\cal A}\)</span>, <span class="math inline">\({\cal D}_A = \{B \in \sigma({\cal A}): m_1(A\cap B) = m_2(A \cap B)\} =\sigma({\cal A})\)</span></p>
-<p>왜??</p>
-<p>(경우1): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함한다고 하자. <span class="math inline">\(A =\Omega\)</span>를 대입하면 <span class="math inline">\({\cal D}_A = {\cal D}\)</span> 이다. 따라서 <span class="math inline">\({\cal D}_A =\sigma({\cal A})\)</span> 임을 보여도 <span class="math inline">\({\cal D}=\sigma({\cal A})\)</span> 임을 보이는 것과 같다.</p>
-<p>(경우2): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지는 않지만 <span class="math inline">\(A_i \uparrow \Omega\)</span> 인 <span class="math inline">\(A_1,A_2,\dots\)</span>을 모두 포함한다고 하자. 이제 <span class="math inline">\(A = \cup_{i=1}^{\infty}A_i = \uplus_{i=1}^{\infty} C_i\)</span> 를 대입하면</p>
-<ul>
-<li><span class="math inline">\(m_1(B)=m_1\big((\uplus_{i=1}^{\infty} C_i) \cap B\big)= m_1\big(\uplus_{i=1}^{\infty}( C_i \cap B)\big)=\sum_{i=1}^{\infty}m_1(C_i\cap B)\)</span></li>
-<li><span class="math inline">\(m_2(B)=m_2\big((\uplus_{i=1}^{\infty} C_i) \cap B\big)= m_2\big(\uplus_{i=1}^{\infty}( C_i \cap B)\big)=\sum_{i=1}^{\infty}m_2(C_i\cap B)\)</span></li>
-</ul>
-<p>이므로 다시 경우1과 유사한 논리로 <span class="math inline">\({\cal D}_A={\cal D}\)</span>가 되고, <span class="math inline">\({\cal D}_A=\sigma({\cal A})\)</span>를 보여도 충분하다.</p>
-<p>(경우3): <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지 않고, <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span> 인 <span class="math inline">\(A_1,A_2,A_3\dots\)</span>를 모두 포함한다고 하자. 이러한 열을 이용하여 적당한 <span class="math inline">\(\tilde{A}_i\uparrow \Omega\)</span>를 만들 수 있으므로 경우2와 비슷한 논리로 <span class="math inline">\({\cal D}_A = \sigma(A)\)</span>를 보여도 충분하다.</p>
-<p><strong>ISTST</strong>: <span class="math inline">\(\forall A \in {\cal A}\)</span>: (1) <span class="math inline">\({\cal D}_A \subset \sigma({\cal A})\)</span> (2) <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})\)</span></p>
-<p><strong>NOTE</strong>: for any <span class="math inline">\(A\)</span> in <span class="math inline">\({\cal A}\)</span>: <strong>IF</strong> (1) <span class="math inline">\({\cal D}_A\)</span> is containing <span class="math inline">\({\cal A}\)</span> (2) <span class="math inline">\({\cal D}_A\)</span> is <span class="math inline">\(\lambda\)</span>-system, <strong>THEN</strong> we can say <span class="math inline">\({\cal D}_A \supset \sigma({\cal A})=l({\cal A})\)</span></p>
-<p><strong>ISTST</strong>: (1) <span class="math inline">\(\forall A \in {\cal A}: ~{\cal A} \subset {\cal D}_A\)</span> (2) <span class="math inline">\(\forall A \in {\cal A}:~ {\cal D}_A\)</span> is <span class="math inline">\(\lambda\)</span>-system.</p>
-<ul>
-<li>for all <span class="math inline">\(B \in \sigma({\cal A})\)</span>: <span class="math inline">\(B \in {\cal A} \Rightarrow m_1(A\cap B) = m_2(A\cap B) \Rightarrow B \in {\cal D}_A\)</span>. 따라서 (1)은 클리어.</li>
-</ul>
-<p><strong>ISTST</strong>: for all <span class="math inline">\(A \in {\cal A}\)</span>: 1. <span class="math inline">\(\Omega \in {\cal D}_A\)</span> 2. <span class="math inline">\(C,D \in {\cal D}_A, C\subset D\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(D-C \in {\cal D}\)</span> 3. <span class="math inline">\(\forall C_1,C_2,\dots, \in {\cal D}\)</span>, <span class="math inline">\(\uplus_{i=1}^{\infty} C_i \in {\cal D}\)</span></p>
-<p><strong>CHECK 1</strong>: <span class="math inline">\(\big(\forall A \in {\cal A}: \Omega \in {\cal D}_A\big) \Leftrightarrow \big(\forall A \in {\cal A}: m_1(A \cap \Omega) = m_2(A \cap \Omega)\big)\)</span></p>
-<p><strong>CHECK 2</strong>:</p>
-<ul>
-<li><span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(D-C \in {\cal D}\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(m_1(A \cap (D-C)) = m_2(A \cap (D-C))\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}\)</span>: <span class="math inline">\(\big(C,D \in {\cal D}_A, C \subset D \big) \Rightarrow \big(m_1(A \cap D) - m_1( A\cap C) = m_2(A \cap D) - m_2(A \cap C)\big)\)</span></li>
-<li>그런데, <span class="math inline">\(C \in {\cal D}_A\)</span> 이므로 <span class="math inline">\(m_1(A\cap C) = m_2(A\cap C)\)</span> 이다. 또한 <span class="math inline">\(D \in {\cal D}_A\)</span> 이므로 <span class="math inline">\(m_1(A \cap D) = m_2(A \cap D)\)</span> 이다.</li>
-</ul>
-<p><strong>CHECK 3</strong>:</p>
-<ul>
-<li><span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow \big(\uplus_{i=1}^{\infty} C_i \in {\cal D}_A\big)\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow m_1(A \cap (\uplus_{i=1}^{\infty} C_i)) = m_2(A\cap (\uplus_{i=1}^{\infty} C_i))\)</span></li>
-<li><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\forall A \in {\cal A}:\)</span> <span class="math inline">\(\big(\forall C_1,C_2,\dots, \in {\cal D}_A\big) \Rightarrow \sum_{i=1}^{\infty} m_1(A \cap C_i) = \sum_{i=1}^{\infty}m_2(A\cap C_i)\)</span></li>
-</ul>
+</section>
+</section>
+<section id="카라테오도리-확장이론-starstarstar" class="level1">
+<h1>카라테오도리 확장이론 (<span class="math inline">\(\star\star\star\)</span>)</h1>
+<section id="state-1" class="level2">
+<h2 class="anchored" data-anchor-id="state-1">state</h2>
 
 
 </section>
