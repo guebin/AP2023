@@ -632,7 +632,13 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률비슷한 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 잘 정의한다면, 이 함수 <span class="math inline">\(\tilde{P}\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
 <section id="state-1" class="level2">
 <h2 class="anchored" data-anchor-id="state-1">state</h2>
-<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>에 대한 semiring이라고 하자. 함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span>가 1. <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span> 2. <span class="math inline">\(\tilde{m}(\uplus_{i=1}^{n} B_i)=\sum_{i=1}^{n}\tilde{m}(B_i)\)</span> 3. <span class="math inline">\(\tilde{m}(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty}\tilde{m}(A_i)\)</span> 4. <span class="math inline">\(\exists A_1,A_2 \dots \in {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty}A_i = \Omega\)</span></p>
+<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>에 대한 semiring이라고 하자. 함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span>가</p>
+<ol type="1">
+<li><span class="math inline">\(\tilde{m}(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\uplus_{i=1}^{n} B_i)=\sum_{i=1}^{n}\tilde{m}(B_i)\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty}\tilde{m}(A_i)\)</span></li>
+<li><span class="math inline">\(\exists A_1,A_2 \dots \in {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty}A_i = \Omega\)</span></li>
+</ol>
 <p>를 만족한다면 <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서의 측도 <span class="math inline">\(m\)</span>으로 업그레이드 가능하며, 이 업그레이드 결과는 유일하다.</p>
 <blockquote class="blockquote">
 <p>이 결과를 ver1로 생각하자.</p>
