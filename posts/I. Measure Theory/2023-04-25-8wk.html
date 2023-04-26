@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="최규빈">
-<meta name="dcterms.date" content="2023-03-28">
+<meta name="dcterms.date" content="2023-04-18">
 
-<title>AP2023 - rest</title>
+<title>AP2023 - 8wk: 확률공간,분포,확률변수</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">rest</h1>
+      <h1 class="quarto-secondary-nav-title">8wk: 확률공간,분포,확률변수</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">rest</h1>
+      <h1 class="title d-none d-lg-block">8wk: 확률공간,분포,확률변수</h1>
                       </div>
   </div>
     
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 28, 2023</p>
+        <p class="date">April 18, 2023</p>
       </div>
     </div>
     
@@ -207,12 +207,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. Measure Theory/2023-04-25-8wk.html" class="sidebar-item-text sidebar-link">8wk: 확률공간,분포,확률변수</a>
+  <a href="../../posts/I. Measure Theory/2023-04-25-8wk.html" class="sidebar-item-text sidebar-link active">8wk: 확률공간,분포,확률변수</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. Measure Theory/rest.html" class="sidebar-item-text sidebar-link active">rest</a>
+  <a href="../../posts/I. Measure Theory/rest.html" class="sidebar-item-text sidebar-link">rest</a>
   </div>
 </li>
       </ul>
@@ -228,7 +228,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#확률변수-오개념-정리" id="toc-확률변수-오개념-정리" class="nav-link active" data-scroll-target="#확률변수-오개념-정리">확률변수 오개념 정리</a>
+  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
+  <li><a href="#예비학습" id="toc-예비학습" class="nav-link" data-scroll-target="#예비학습">예비학습</a>
+  <ul class="collapse">
+  <li><a href="#cap_n1infty-frac1nfrac1n0" id="toc-cap_n1infty-frac1nfrac1n0" class="nav-link" data-scroll-target="#cap_n1infty-frac1nfrac1n0"><span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})=\{0\}\)</span></a></li>
+  <li><a href="#vacuous-truth" id="toc-vacuous-truth" class="nav-link" data-scroll-target="#vacuous-truth">Vacuous truth</a></li>
+  </ul></li>
+  <li><a href="#토폴로지" id="toc-토폴로지" class="nav-link" data-scroll-target="#토폴로지">토폴로지</a>
+  <ul class="collapse">
+  <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
+  <li><a href="#짧은지식" id="toc-짧은지식" class="nav-link" data-scroll-target="#짧은지식">짧은지식</a></li>
+  <li><a href="#시그마필드-vs-토폴로지" id="toc-시그마필드-vs-토폴로지" class="nav-link" data-scroll-target="#시그마필드-vs-토폴로지">시그마필드 vs 토폴로지</a></li>
+  </ul></li>
+  <li><a href="#측도론의-유산" id="toc-측도론의-유산" class="nav-link" data-scroll-target="#측도론의-유산">측도론의 유산</a>
+  <ul class="collapse">
+  <li><a href="#borel-sigma-field" id="toc-borel-sigma-field" class="nav-link" data-scroll-target="#borel-sigma-field">Borel <span class="math inline">\(\sigma\)</span>-field</a></li>
+  <li><a href="#르벡메져" id="toc-르벡메져" class="nav-link" data-scroll-target="#르벡메져">르벡메져</a></li>
+  </ul></li>
+  <li><a href="#확률공간과-용어들" id="toc-확률공간과-용어들" class="nav-link" data-scroll-target="#확률공간과-용어들">확률공간과 용어들</a></li>
+  <li><a href="#확률변수-오개념-정리" id="toc-확률변수-오개념-정리" class="nav-link" data-scroll-target="#확률변수-오개념-정리">확률변수 오개념 정리</a>
   <ul class="collapse">
   <li><a href="#불완전한-정의" id="toc-불완전한-정의" class="nav-link" data-scroll-target="#불완전한-정의">불완전한 정의</a></li>
   <li><a href="#헷갈려-1-starstarstar" id="toc-헷갈려-1-starstarstar" class="nav-link" data-scroll-target="#헷갈려-1-starstarstar">헷갈려 (1) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
@@ -236,16 +254,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#확률변수의-엄밀한-정의" id="toc-확률변수의-엄밀한-정의" class="nav-link" data-scroll-target="#확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</a></li>
   <li><a href="#헷갈려-2-starstarstar" id="toc-헷갈려-2-starstarstar" class="nav-link" data-scroll-target="#헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
   </ul></li>
-  <li><a href="#확률벡터-오개념-정리" id="toc-확률벡터-오개념-정리" class="nav-link" data-scroll-target="#확률벡터-오개념-정리">확률벡터 오개념 정리</a>
-  <ul class="collapse">
-  <li><a href="#기호표현" id="toc-기호표현" class="nav-link" data-scroll-target="#기호표현">기호표현</a></li>
-  <li><a href="#확률벡터의-예시" id="toc-확률벡터의-예시" class="nav-link" data-scroll-target="#확률벡터의-예시">확률벡터의 예시</a></li>
-  </ul></li>
-  <li><a href="#평균-star" id="toc-평균-star" class="nav-link" data-scroll-target="#평균-star">평균 (<span class="math inline">\(\star\)</span>)</a>
-  <ul class="collapse">
-  <li><a href="#확률변수의-평균" id="toc-확률변수의-평균" class="nav-link" data-scroll-target="#확률변수의-평균">확률변수의 평균</a></li>
-  <li><a href="#확률벡터의-평균" id="toc-확률벡터의-평균" class="nav-link" data-scroll-target="#확률벡터의-평균">확률벡터의 평균</a></li>
-  </ul></li>
+  <li><a href="#확률변수" id="toc-확률변수" class="nav-link" data-scroll-target="#확률변수">확률변수</a></li>
   </ul>
 </nav>
     </div>
@@ -255,6 +264,145 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="강의영상" class="level1">
+<h1>강의영상</h1>
+</section>
+<section id="예비학습" class="level1">
+<h1>예비학습</h1>
+<section id="cap_n1infty-frac1nfrac1n0" class="level2">
+<h2 class="anchored" data-anchor-id="cap_n1infty-frac1nfrac1n0"><span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})=\{0\}\)</span></h2>
+<p><code>-</code> <span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n}) =\{0\}\)</span>을 증명하라.</p>
+<p>(증명)</p>
+<p><strong>step1:</strong> <span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})\)</span>은 원소로 <span class="math inline">\(0\)</span>을 포함한다.</p>
+<p><span class="math inline">\(\forall n \in \mathbb{N}\)</span>: <span class="math inline">\(-\frac{1}{n} &lt; 0 &lt; \frac{1}{n}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \forall n \in \mathbb{N}\)</span>: <span class="math inline">\(0 \in (-\frac{1}{n},\frac{1}{n})\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(0 \in (-\frac{1}{1},\frac{1}{1})\)</span> and <span class="math inline">\(\{0\} \in (-\frac{1}{2},\frac{1}{2})\)</span> <span class="math inline">\(\dots\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(0 \in (-\frac{1}{1},\frac{1}{1}) \cap (-\frac{1}{2},\frac{1}{2}) \cap \dots\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(0 \in \cap_{n=1}^{\infty}(-\frac{1}{1},\frac{1}{1})\)</span></p>
+<p><strong>step2:</strong> <span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})\)</span>은 원소로 <span class="math inline">\(0\)</span>보다 큰 임의의 양수를 포함하지 않는다.</p>
+<p>포함한다고 가정하자. 즉</p>
+<p><span class="math inline">\(\exists \delta &gt;0\)</span> such that <span class="math inline">\(0+\delta \in \cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})\)</span></p>
+<p>NOTE: From <span class="math inline">\(\delta&gt;0\)</span>, <span class="math inline">\(\exists N \in \mathbb{N}\)</span> such that <span class="math inline">\(0&lt;\frac{1}{N}&lt;\delta\)</span></p>
+<p>THUS <span class="math inline">\(\delta \notin (-\frac{1}{N},\frac{1}{N})\)</span> <span class="math inline">\(\Rightarrow\)</span> CONTRADICTION! (<span class="math inline">\(\because \cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n}) \subset (-\frac{1}{N},\frac{1}{N}))\)</span></p>
+<p><strong>step3:</strong> <span class="math inline">\(\cap_{n=1}^{\infty}(-\frac{1}{n},\frac{1}{n})\)</span>은 원소로 <span class="math inline">\(0\)</span>보다 큰 임의의 음수를 포함하지 않는다.</p>
+</section>
+<section id="vacuous-truth" class="level2">
+<h2 class="anchored" data-anchor-id="vacuous-truth">Vacuous truth</h2>
+<p><code>-</code> <span class="math inline">\(P \Rightarrow Q\)</span> 에서, <span class="math inline">\(P\)</span>가 틀렸거나 <span class="math inline">\(P\)</span>를 만족하는 집합이 공집합일 경우 <span class="math inline">\(P\Rightarrow Q\)</span>라는 명제는 항상 참이되고 이러한 참을 배큐어스 트루 라고 말한다.</p>
+<p><code>-</code> 이해를 돕기 위한 예시</p>
+<ul>
+<li>명제1: 최규빈교수보다 나이 많은 학생은 A+를 받지 못했다.</li>
+<li>명제2: 최규빈교수보다 나이 많은 학생은 A+를 받았다.</li>
+</ul>
+<p>여기에서 명제1,명제2는 모두 참이어야 한다. 그래야 명제1,명제2의 대우는 모두 참이 되며</p>
+<ul>
+<li>대우1: A+를 받은 학생은 최규빈교수보다 나이가 적다.</li>
+<li>대우2: A+를 받지 못한 학생은 최규빈교수보다 나이가 적다.</li>
+</ul>
+<p>두 대우의 합성명제인 아래도 참이 된다.</p>
+<ul>
+<li>A+을 받거나 받지 못한 학생은 최규빈교수보다 나이가 적다.</li>
+</ul>
+</section>
+</section>
+<section id="토폴로지" class="level1">
+<h1>토폴로지</h1>
+<section id="정의" class="level2">
+<h2 class="anchored" data-anchor-id="정의">정의</h2>
+<p><code>-</code> 정의: <span class="math inline">\(\Omega\)</span>에 대한 부분집합의 모임 <span class="math inline">\({\cal T}\)</span>가 아래의 조건을 만족하면 <span class="math inline">\({\cal T}\)</span>를 <span class="math inline">\(\Omega\)</span>의 토폴로지라고 부른다.</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset, \Omega \in {\cal T}\)</span></li>
+<li><span class="math inline">\(\forall A,B \in {\cal T}:~ A\cap B \in {\cal T}\)</span> (finite intersection에 닫혀있음)</li>
+<li><span class="math inline">\(\forall {\cal A} \subset {\cal T}: ~ (\cup_{A \in {\cal A}}A ) \in {\cal T}\)</span> (uncoutable union, arbitrary union에 닫혀있음)</li>
+</ol>
+<p><code>-</code> <span class="math inline">\((\Omega,{\cal T})\)</span>를 위상공간 (topological space) 이라고 부른다. 그리고 <span class="math inline">\({\cal T}\)</span>의 원소를 <span class="math inline">\({\cal T}\)</span>-open set이라고 부른다.</p>
+<p><code>-</code> 모티브: 실수위에서의 열린구간 <span class="math inline">\((a,b)\)</span>의 개념을 추상화하고 싶음. 즉 open interval <span class="math inline">\(\overset{일반화}{\to}\)</span> open set 을 하고 싶음. 그리고 이러한 open set 만을 모은 collection <span class="math inline">\({\cal T}\)</span>라는 기호로 표현하고 싶음.</p>
+<ul>
+<li>관찰1: <span class="math inline">\((1,3) \cap (2,4) = (2,3)\)</span> // 2개의 open-interval을 교집합하니 open-interval이 나옴</li>
+<li>관찰2: <span class="math inline">\(\cap_{n=1}^{\infty}(1-\frac{1}{n},3+\frac{1}{n} =[1,3]\)</span> // countable many한 open-interval을 교집합하면 closed-interval이 나옴</li>
+<li>관찰3: <span class="math inline">\(\cup_{n=1}^{\infty}(1+\frac{1}{n},3-\frac{1}{n})= (1,3)\)</span> // countable many한 open-interval을 합집합하면 open-interval이 나옴</li>
+<li>관찰4: <span class="math inline">\(\cup_{\epsilon&gt;0}^{\infty}(1+\epsilon,3-\epsilon) =(1,3)\)</span> // uncountalbe many한 open-interval을 합집합해도 open-interval이 나옴</li>
+</ul>
+<p><code>-</code> 왜 open interval을 추상화하고 싶을까?</p>
+<ul>
+<li>open interval은 엄청 특이한 성질이 있음. 구간 <span class="math inline">\((a,b)\)</span>의 모든 점 <span class="math inline">\(x\)</span>는 점 <span class="math inline">\(x\)</span>를 포함하는 (아주 작은) 구간 <span class="math inline">\((x-\epsilon,x+\epsilon)\)</span> 이 <span class="math inline">\((a,b)\)</span>사이에 존재함.</li>
+<li>이 성질은 극한의 개념을 정의하기에 매우 유리하다. (따라서 연속, 끊어짐 등을 이해하기에도 좋다)</li>
+</ul>
+<p><code>-</code> <span class="math inline">\(\Omega=\mathbb{R}\)</span>일 경우 open-set</p>
+<ul>
+<li><span class="math inline">\((1,2)\)</span></li>
+<li><span class="math inline">\((1,2)\cup (5,6)\)</span></li>
+<li><span class="math inline">\((a-\epsilon, a+\epsilon)\)</span>, where <span class="math inline">\(\epsilon&gt;0\)</span> and <span class="math inline">\(a\in\mathbb{R}\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><code>-</code> 체크</p>
+<ul>
+<li><span class="math inline">\(\Omega=\mathbb{R}\)</span>, <span class="math inline">\({\cal T}=\{\emptyset, \Omega\}\)</span>라고 하자. <span class="math inline">\({\cal T}\)</span>는 <span class="math inline">\(\Omega\)</span>에 대한 토폴로지이며 따라서 <span class="math inline">\((\Omega, {\cal T})\)</span>는 위상공간이 된다.</li>
+<li><span class="math inline">\(\Omega=\mathbb{R}\)</span>, <span class="math inline">\({\cal T}=2^{\mathbb{R}}\)</span>라고 하자. 그렇다면 <span class="math inline">\({\cal T}\)</span>는 <span class="math inline">\(\Omega\)</span>에 대한 토폴로지이며 따라서 <span class="math inline">\((\Omega,{\cal T})\)</span>는 위상공간이 된다.<br>
+</li>
+<li>그렇지만 우린 이런걸 쓰고 싶은게 아니야 (<span class="math inline">\(\star\)</span>)</li>
+</ul>
+</section>
+<section id="짧은지식" class="level2">
+<h2 class="anchored" data-anchor-id="짧은지식">짧은지식</h2>
+<p><code>-</code> 이론: <span class="math inline">\(\Omega=\mathbb{R}\)</span> 일때 <span class="math inline">\({\cal U}=\{O:O = \cup_{i=1}^{\infty}(a_i, b_i),~ a_i\leq b_i \in \mathbb{R}\}\)</span>라고 하자. 즉 <span class="math inline">\({\cal U}\)</span>는 open interval의 countable union으로 표현가능한 집합들의 모임이다. 그렇다면 <span class="math inline">\((\mathbb{R}, {\cal U})\)</span>는 위상공간이 된다.</p>
+<blockquote class="blockquote">
+<p>그리고 특별히 이러한 위상 <span class="math inline">\({\cal O}\)</span>를 <span class="math inline">\(\mathbb{R}\)</span>에서의 standard topology, Euclidean topology, 혹은 usual topology 라고 부른다. 사실 <span class="math inline">\({\cal O}\)</span>가 바로 우리가 토폴로지를 정의하는 이유이다 (매우 중요하다는 뜻이에요)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><span class="math inline">\({\cal O}\)</span>의 원소를 원래 엄밀하게는 <span class="math inline">\({\cal O}\)</span>-open set이라고 불러야 하지만 이 경우는 <span class="math inline">\({\cal O}\)</span>를 생략하여 open set 이라고 부르기도 한다. 즉 우리가 일반적으로 말하는 “실수 <span class="math inline">\(\mathbb{R}\)</span>에서의 열린집합, 혹은 그냥 열린집합” 은 <span class="math inline">\({\cal O}\)</span>-open set을 의미한다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>이 이론이 의미하는 바는 (1) 실수에서의 열린구간의 일반화 버전은 열린집합이며 (2) 열린집합은 열린구간의 가산합집합으로 표현가능하다 라는 뜻이다.</p>
+</blockquote>
+<p><code>-</code> 이론: <span class="math inline">\((\mathbb{R},{\cal O})\)</span>를 usual topological space라고 하자. 모든 <span class="math inline">\(O \in {\cal O}\)</span> 는 아래를 만족한다.</p>
+<ul>
+<li><span class="math inline">\(\forall o \in O, \exists B \subset O\)</span> such that <span class="math inline">\(o \in B \subset O \quad \cdots (\star)\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>참고로 어떠한 집합 <span class="math inline">\(O\)</span>에 대하여 <span class="math inline">\((\star)\)</span>를 만족하는 원소 <span class="math inline">\(o\)</span>를 interior point of <span class="math inline">\(O\)</span> 라고 부른다. 따라서 어떤 집합의 모든 원소가 그 집합의 interior point라면 그 집합은 openset이라고 해석할 수 있다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>저는 나이테정리라고 외웠어요..</p>
+</blockquote>
+<p><code>-</code> 실수에서의 <span class="math inline">\({\cal O}\)</span>-openset 을 정의하는 방법</p>
+<ol type="1">
+<li>열린구간의 가산합집합</li>
+<li>모든원소가 interior point인 집합</li>
+</ol>
+<p><code>-</code> 위상공간 <span class="math inline">\((\mathbb{R},{\cal O})\)</span>를 고려하자. 여기에서 <span class="math inline">\({\cal U}=\{O: O=\cup_{i=1}^{\infty}(a_i, b_i), a_i, b_i \in \mathbb{R} \}\)</span>를 의미한다.</p>
+</section>
+<section id="시그마필드-vs-토폴로지" class="level2">
+<h2 class="anchored" data-anchor-id="시그마필드-vs-토폴로지">시그마필드 vs 토폴로지</h2>
+</section>
+</section>
+<section id="측도론의-유산" class="level1">
+<h1>측도론의 유산</h1>
+<section id="borel-sigma-field" class="level2">
+<h2 class="anchored" data-anchor-id="borel-sigma-field">Borel <span class="math inline">\(\sigma\)</span>-field</h2>
+</section>
+<section id="르벡메져" class="level2">
+<h2 class="anchored" data-anchor-id="르벡메져">르벡메져</h2>
+</section>
+</section>
+<section id="확률공간과-용어들" class="level1">
+<h1>확률공간과 용어들</h1>
+<p><code>-</code> 동전예제에서의 확률공간 <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 가정하고 용어를 정리해보자.</p>
+<ul>
+<li>outcomes: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span></li>
+<li>set of “outcomes”: <span class="math inline">\(\Omega=\{H,T\}\)</span></li>
+<li>event: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span></li>
+<li>set of “events”: <span class="math inline">\({\cal F}\)</span></li>
+<li>probabilites: <span class="math inline">\(P:{\cal F} \to [0,1]\)</span></li>
+</ul>
+<p><code>-</code> 교재의 언급</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/2253733f-22cb-4444-9864-7908790220f5-1-c8a4b443-0b7b-401a-87d9-a17a1c13f6d0.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 확률을 위한 기본용어</figcaption><p></p>
+</figure>
+</div>
+</section>
 <section id="확률변수-오개념-정리" class="level1">
 <h1>확률변수 오개념 정리</h1>
 <section id="불완전한-정의" class="level2">
@@ -268,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>1</code>. outcomes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span>.</p>
 <p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{H,T\}\)</span></p>
 <p><code>3</code>. event<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span>.</p>
-<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=\)</span> <span class="math inline">\(\Omega\)</span>의 모든 부분집합의 모임</p>
+<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=2^\Omega\)</span></p>
 <p><code>5</code>. probability measure function: <span class="math inline">\(P: {\cal F} \to [0,1]\)</span> such that</p>
 <ul>
 <li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
@@ -322,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
 <p><code>통찰1</code>. 확률변수가 “함수”라는 사실을 떠올리고 <span class="math inline">\(1\)</span>이라는 값이 확률변수의 “상(image)” 라는 사실을 떠올리면, <span class="math inline">\(\{\omega: X(\omega)=1\}\)</span>은 1에 대한 “역상(inverse image)”이라고 해석할 수 있다.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 <p><code>통찰2</code>. 확률변수의 상은 <span class="math inline">\(\mathbb{R}\)</span>에 맺히게 되고, 확률변수의 역상은 <span class="math inline">\(\Omega\)</span>의 부분집합 중 하나에 맺히게 된다.</p>
-<p><code>통찰3</code>. 문제는 확률변수의 역상이 항상 잴 수 있는 집합에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
+<p><code>통찰3</code>. 문제는 확률변수의 역상이 잴 수 있는 집합에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
 <p><span class="math display">\[\{\omega: X(\omega)=1\} \in {\cal F}\]</span></p>
 <p>임을 보장해야 한다는 것이다.</p>
 <p><code>통찰4</code>. 당연히 이러한 보장을 할 수는 없어보인다. 따라서 <span class="math inline">\(X\)</span>를 단지 그냥</p>
@@ -344,9 +492,6 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>Note1: <span class="math inline">\(\{\omega:X(\omega)\in B \} \in {\cal F}\)</span> for all <span class="math inline">\(B \in {\cal R}\)</span> 이라 쓰기도 함. 쓰는사람 마음~</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>Note2: <span class="math inline">\({\cal R}\)</span>은 Borel sets라고 부른다. 의미는 <span class="math inline">\(\mathbb{R}\)</span>의 부분집합중 잴 수 있는 부분집합의 모임이라는 뜻이다. (즉 <span class="math inline">\({\cal F}\)</span>의 의미와 같다) <span class="math inline">\({\cal B}\)</span>의 원소는 Borel set이라고 부른다.</p>
-</blockquote>
 <p><code>-</code> 왜 정의가 아래와 같지 않을까?</p>
 <p><span class="math display">\[\forall B \subset \mathbb{R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
 <hr>
@@ -355,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>1</code>. outcomes: <span class="math inline">\(0,1,\frac{\pi}{3},\frac{2\pi}{5},\pi\dots\)</span></p>
 <p><code>2</code>. sample space: <span class="math inline">\(\Omega = (0,2\pi]\)</span></p>
 <p><code>3</code>. event: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\([0,\frac{2}{\pi})\)</span>, <span class="math inline">\(\{2\pi\}\)</span>, <span class="math inline">\(\dots\)</span></p>
-<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}\)</span>. <span class="math inline">\(\Omega\)</span>의 부분집합 중 잴 수 있는 집합의 모임.</p>
+<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}\)</span></p>
 <p><code>5</code>. probability measure function: <span class="math inline">\(P: \Omega \to [0,1]\)</span> such that</p>
 <ul>
 <li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
@@ -366,20 +511,20 @@ ul.task-list li input[type="checkbox"] {
 <p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that <span class="math inline">\(X(\omega)=\omega\)</span>. // 사실 <span class="math inline">\(X: (0,2\pi] \to (0,2\pi]\)</span></p>
 <p>위의 예제에서 6을 주목하자. 만약에 비탈리집합 <span class="math inline">\(V \subset \mathbb{R}\)</span>에 대한 inverse image는 비탈리집합 그 자체가 된다. 따라서 아래와 같이 된다.</p>
 <p><span class="math display">\[P(X \in V)=P\big(\{\omega: X(\omega) \in V\}\big)=P(V)\]</span></p>
-<p><span class="math inline">\(V\)</span>는 잴 수 없는 집합이므로 <span class="math inline">\(P(V)\)</span>와 같은 표현을 불가함.</p>
+<p><span class="math inline">\(V\)</span>는 르벡메져로는 잴 수 없으므로 <span class="math inline">\(P(V)\)</span>와 같은 표현을 불가함.</p>
 <p>결론: 확률변수 <span class="math inline">\(X\)</span>를 고려할때 정의역의 치역 양쪽의 measurable space를 고려해야함.</p>
 <hr>
 <p><code>-</code> 교재의 정의1</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rest_files/figure-html/bf034eb2-0837-40f0-9fc8-9cbc84176f7a-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
+<p><img src="2023-04-25-8wk_files/figure-html/577bd241-a5e1-4f3b-ba34-0861d4683142-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">그림1: Durret에서 긁어온 확률변수의 정의</figcaption><p></p>
 </figure>
 </div>
 <p><code>-</code> 교재의 정의2</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rest_files/figure-html/d81295fb-5fad-475e-879d-9ec1ee79cd52-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
+<p><img src="2023-04-25-8wk_files/figure-html/07383267-e9b6-4714-be86-8b6e57684364-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">그림2: Durret에서 긁어온 확률변수의 정의2</figcaption><p></p>
 </figure>
 </div>
@@ -387,7 +532,6 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>사실 <span class="math inline">\(X: (\Omega,{\cal F}) \to (\mathbb{R}, {\cal R})\)</span>은 <span class="math inline">\(X\)</span>가 잴 수 있는 함수 (measurable function, measurable map) 임을 나타내는 기호이다.</p>
 </blockquote>
-<p><code>-</code> “<span class="math inline">\(X\)</span>를 확률변수라고 하자.” 라는 의미? 지금 까지 해온 모든 논의가 압축된 표현…</p>
 </section>
 <section id="헷갈려-2-starstarstar" class="level2">
 <h2 class="anchored" data-anchor-id="헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</h2>
@@ -397,7 +541,7 @@ ul.task-list li input[type="checkbox"] {
 <li>확률변수: <span class="math inline">\(x=X(\omega)\)</span>, <span class="math inline">\(X\)</span>: function, <span class="math inline">\(\omega\)</span>: outcome<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>, <span class="math inline">\(x\)</span>: realization</li>
 <li>확률변수는 함수이지만 보통 <span class="math inline">\(X(\omega)\)</span>와 같이 쓰지 않고 <span class="math inline">\(X\)</span>라고 쓴다. <span class="math inline">\(\Rightarrow\)</span> 혼란의 이유</li>
 </ul>
-<p><code>-</code> 확률변수에 대한 오해2: 확률변수는 결과가 랜덤으로 변한다??</p>
+<p><code>-</code> 확률변수에 대한 오해2: 확률변수는 결과가 랜덤으로 변하는 함수??</p>
 <ul>
 <li>확률변수는 함수일 뿐임. 입력이 정해지면 출력이 고정임!</li>
 <li>동전예제: 입력이 <span class="math inline">\(\omega=H\)</span>이면 출력은 <span class="math inline">\(X(\omega)=1\)</span>, 입력이 <span class="math inline">\(\omega=T\)</span>이면 출력은 <span class="math inline">\(X(\omega)=0\)</span>으로 고정임!</li>
@@ -420,227 +564,14 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 요약해보면,</p>
 <ol type="1">
 <li>확률변수는 확률과 관련없다.</li>
-<li>간접적으로는 관련이 있다. <span class="math inline">\(\because\)</span> X의 역상 = <span class="math inline">\(\Omega\)</span>의 부분집합 = <span class="math inline">\(P\)</span>의 정의역</li>
+<li>간접적으로는 관련이 있다. <span class="math inline">\(\because\)</span> <span class="math inline">\(X\)</span>의 역상 = <span class="math inline">\(\Omega\)</span>의 부분집합 = <span class="math inline">\(P\)</span>의 정의역</li>
 </ol>
-<p><code>-</code> 표현연습: <span class="math inline">\(P(X=1), P(X \in \{0,1\}),\dots ...\)</span></p>
 </section>
 </section>
-<section id="확률벡터-오개념-정리" class="level1">
-<h1>확률벡터 오개념 정리</h1>
-<section id="기호표현" class="level2">
-<h2 class="anchored" data-anchor-id="기호표현">기호표현</h2>
-<p><code>-</code> 확률변수와 확률벡터</p>
-<ul>
-<li>확률변수 <span class="math inline">\(X: (\Omega,{\cal F}) \to (\mathbb{R},{\cal R})\)</span></li>
-<li>확률벡터 <span class="math inline">\({\boldsymbol X}: (\Omega,{\cal F}) \to (\mathbb{R}^d,{\cal R}^d)\)</span></li>
-</ul>
-<p><code>-</code> 기호표현1</p>
-<ul>
-<li>확률변수: <span class="math inline">\(X(\omega)=x\)</span></li>
-<li>확률벡터: <span class="math inline">\({\boldsymbol X}(\omega)=(x_1,x_2,\dots,x_d)\)</span></li>
-</ul>
-<blockquote class="blockquote">
-<p>여기에서 <span class="math inline">\((x_1,x_2,\dots,x_d)\)</span>는 col-vec, row-vec 구분 없이 길이가 <span class="math inline">\(d\)</span>인 vector 라고 생각한다. 언제든 편의에 따라 row-vector 혹은 col-vector로 해석할 수 있다.</p>
-</blockquote>
-<p><code>-</code> 기호표현2</p>
-<ul>
-<li>확률변수 <span class="math inline">\(X\)</span></li>
-<li>확률벡터 <span class="math inline">\({\boldsymbol X}=(X_1,X_2,\dots,X_d)\)</span>, 여기에서 <span class="math inline">\(X_1,X_2,\dots, X_d\)</span>는 각각 r.v.</li>
-</ul>
-<p><code>-</code> 기호표현3 (외우세요!!)</p>
-<ul>
-<li><span class="math inline">\({\boldsymbol X}(\omega) = (X_1,X_2,\dots,X_d)(\omega) = \big(X_1(\omega),X_2(\omega),\dots,X_d(\omega)\big)=(x_1,x_2,\dots,x_d)\)</span></li>
-</ul>
-</section>
-<section id="확률벡터의-예시" class="level2">
-<h2 class="anchored" data-anchor-id="확률벡터의-예시">확률벡터의 예시</h2>
-<p><strong>(예제1)</strong> 동전을 2회 던지자!</p>
-<p><code>1</code>. outcomes: <span class="math inline">\(HH, HT, TH, TT\)</span></p>
-<p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{HH, HT, TH, TT\}\)</span></p>
-<p><code>3</code>. event: <span class="math inline">\(\emptyset, \{HH\}, \{HT\}, \{TH\}, \{TT\}, \{HH,HT\}, \dots, \Omega\)</span></p>
-<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=2^{\Omega}\)</span></p>
-<p><code>5</code>. probability measure function: <span class="math inline">\(P: \Omega \to [0,1]\)</span> such that</p>
-<ul>
-<li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
-<li><span class="math inline">\(P(HH) = \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(P(HT) = \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(P(TH) = \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(P(TT) = \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(P(\{HH,HT\}) = \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
-</ul>
-<p><code>6</code>. random vector: <span class="math inline">\(\boldsymbol{X}: \Omega \to \mathbb{R}^2\)</span> such that</p>
-<ul>
-<li><span class="math inline">\({\boldsymbol X}(HH) = (1,1)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(HT) = (1,0)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(TH) = (0,1)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(TT) = (0,0)\)</span></li>
-</ul>
-<p><strong><em>6의 다른표현들</em></strong></p>
-<ul>
-<li><span class="math inline">\({\boldsymbol X}(\omega_1) = (X_1,X_2)(\omega_1) = \big(X_1(\omega_1),X_2(\omega_1)\big) =(1,1)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(\omega_2) = (X_1,X_2)(\omega_2) = \big(X_1(\omega_2),X_2(\omega_2)\big) =(1,0)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(\omega_3) = (X_1,X_2)(\omega_3) = \big(X_1(\omega_3),X_2(\omega_3)\big) =(0,1)\)</span></li>
-<li><span class="math inline">\({\boldsymbol X}(\omega_4) = (X_1,X_2)(\omega_4) = \big(X_1(\omega_4),X_2(\omega_4)\big) =(0,0)\)</span></li>
-</ul>
-</section>
-</section>
-<section id="평균-star" class="level1">
-<h1>평균 (<span class="math inline">\(\star\)</span>)</h1>
-<section id="확률변수의-평균" class="level2">
-<h2 class="anchored" data-anchor-id="확률변수의-평균">확률변수의 평균</h2>
-<p><code>-</code> 예제1: 동전을 던지는 예제</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\omega\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(x=X(\omega)\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(P(X=x)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\therefore E(X)=\sum_{x=0}^{1}x P(X=x) = \big(0\times \frac{1}{2} + 1 \times \frac{1}{2} \big)=\frac{1}{2}(0+1)\]</span></p>
-<p><code>-</code> 예제2: 주사위를 던지는 예제</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\omega\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(x=X(\omega)\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(P(X=x)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_4\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_5\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_6\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(6\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\therefore E(X)=\sum_{x=1}^{6}xP(X=x)=\frac{1}{6}(1+2+3+4+5+6)=3\]</span></p>
-</section>
-<section id="확률벡터의-평균" class="level2">
-<h2 class="anchored" data-anchor-id="확률벡터의-평균">확률벡터의 평균</h2>
-<p><code>-</code> 예제1: 동전을 2회 던지는 예제</p>
-<table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\omega\)</span></th>
-<th style="text-align: center;"><span class="math inline">\({\boldsymbol x}={\boldsymbol X}(\omega)\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(P({\boldsymbol X}={\boldsymbol x})\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} 0 \\ 0 \end{bmatrix}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\therefore E({\boldsymbol X})=\frac{1}{4}\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix}+\begin{bmatrix} 0 \\ 1 \end{bmatrix}+\begin{bmatrix} 1 \\ 0 \end{bmatrix}+\begin{bmatrix} 1 \\ 1 \end{bmatrix}\right)=\begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \end{bmatrix} = \begin{bmatrix} E(X_1)\\ E(X_2) \end{bmatrix}\]</span></p>
-<blockquote class="blockquote">
-<p><span class="math inline">\(E(X_1)=E(X_2)\)</span>인 이유?? <code>iid</code> 이니까~</p>
-</blockquote>
-<p><code>-</code> 예제2: 동전을 10회 던지는 예제</p>
-<table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\omega\)</span></th>
-<th style="text-align: center;"><span class="math inline">\({\boldsymbol x}={\boldsymbol X}(\omega)\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(P({\boldsymbol X}={\boldsymbol x})\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\([0,0,\dots,0]^\top\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2^{10}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\([0,0,\dots,1]^\top\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2^{10}}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_{1024}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\([1,1,\dots,1]^\top\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2^{10}}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\therefore E({\boldsymbol X})=\begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \\ \dots \\ \frac{1}{2} \end{bmatrix} = \begin{bmatrix} E(X_1)\\ E(X_2) \\ \dots \\ E(X_{10}) \end{bmatrix}\]</span></p>
+<section id="확률변수" class="level1">
+<h1>확률변수</h1>
 
 
-</section>
 </section>
 
 
