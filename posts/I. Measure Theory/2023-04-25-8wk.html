@@ -9,7 +9,7 @@
 <meta name="author" content="최규빈">
 <meta name="dcterms.date" content="2023-04-18">
 
-<title>AP2023 - 8wk: 확률공간,분포,확률변수</title>
+<title>AP2023 - 8wk: 확률변수, 분포 (1)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">8wk: 확률공간,분포,확률변수</h1>
+      <h1 class="quarto-secondary-nav-title">8wk: 확률변수, 분포 (1)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">8wk: 확률공간,분포,확률변수</h1>
+      <h1 class="title d-none d-lg-block">8wk: 확률변수, 분포 (1)</h1>
                       </div>
   </div>
     
@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. Measure Theory/2023-04-25-8wk.html" class="sidebar-item-text sidebar-link active">8wk: 확률공간,분포,확률변수</a>
+  <a href="../../posts/I. Measure Theory/2023-04-25-8wk.html" class="sidebar-item-text sidebar-link active">8wk: 확률변수, 분포 (1)</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -245,16 +245,26 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#borel-sigma-field" id="toc-borel-sigma-field" class="nav-link" data-scroll-target="#borel-sigma-field">Borel <span class="math inline">\(\sigma\)</span>-field</a></li>
   <li><a href="#르벡메져" id="toc-르벡메져" class="nav-link" data-scroll-target="#르벡메져">르벡메져</a></li>
   </ul></li>
+  <li><a href="#자잘한-내용-모음" id="toc-자잘한-내용-모음" class="nav-link" data-scroll-target="#자잘한-내용-모음">자잘한 내용 모음</a>
+  <ul class="collapse">
+  <li><a href="#생략때문에-헷갈려" id="toc-생략때문에-헷갈려" class="nav-link" data-scroll-target="#생략때문에-헷갈려">생략때문에 헷갈려</a></li>
+  <li><a href="#토폴로지와-측도론의-논리전개" id="toc-토폴로지와-측도론의-논리전개" class="nav-link" data-scroll-target="#토폴로지와-측도론의-논리전개">토폴로지와 측도론의 논리전개</a></li>
   <li><a href="#확률공간과-용어들" id="toc-확률공간과-용어들" class="nav-link" data-scroll-target="#확률공간과-용어들">확률공간과 용어들</a></li>
+  </ul></li>
   <li><a href="#확률변수-오개념-정리" id="toc-확률변수-오개념-정리" class="nav-link" data-scroll-target="#확률변수-오개념-정리">확률변수 오개념 정리</a>
   <ul class="collapse">
   <li><a href="#불완전한-정의" id="toc-불완전한-정의" class="nav-link" data-scroll-target="#불완전한-정의">불완전한 정의</a></li>
   <li><a href="#헷갈려-1-starstarstar" id="toc-헷갈려-1-starstarstar" class="nav-link" data-scroll-target="#헷갈려-1-starstarstar">헷갈려 (1) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
   <li><a href="#확률변수에-대한-통찰" id="toc-확률변수에-대한-통찰" class="nav-link" data-scroll-target="#확률변수에-대한-통찰">확률변수에 대한 통찰</a></li>
-  <li><a href="#확률변수의-엄밀한-정의" id="toc-확률변수의-엄밀한-정의" class="nav-link" data-scroll-target="#확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</a></li>
   <li><a href="#헷갈려-2-starstarstar" id="toc-헷갈려-2-starstarstar" class="nav-link" data-scroll-target="#헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</a></li>
   </ul></li>
-  <li><a href="#확률변수" id="toc-확률변수" class="nav-link" data-scroll-target="#확률변수">확률변수</a></li>
+  <li><a href="#확률변수" id="toc-확률변수" class="nav-link" data-scroll-target="#확률변수">확률변수</a>
+  <ul class="collapse">
+  <li><a href="#확률변수의-엄밀한-정의" id="toc-확률변수의-엄밀한-정의" class="nav-link" data-scroll-target="#확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</a></li>
+  <li><a href="#정의에-대한-비판" id="toc-정의에-대한-비판" class="nav-link" data-scroll-target="#정의에-대한-비판">정의에 대한 비판</a></li>
+  <li><a href="#잴-수-있는-함수" id="toc-잴-수-있는-함수" class="nav-link" data-scroll-target="#잴-수-있는-함수">잴 수 있는 함수</a></li>
+  <li><a href="#확률변수의-체크" id="toc-확률변수의-체크" class="nav-link" data-scroll-target="#확률변수의-체크">확률변수의 체크</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -355,7 +365,10 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>이 이론이 의미하는 바는 (1) 실수에서의 열린구간의 일반화 버전은 열린집합이며 (2) 열린집합은 열린구간의 가산합집합으로 표현가능하다 라는 뜻이다.</p>
 </blockquote>
-<p><code>-</code> 이론: <span class="math inline">\((\mathbb{R},{\cal U})\)</span>를 usual topological space라고 하자. 모든 <span class="math inline">\(O \in {\cal U}\)</span> 는 아래를 만족한다.</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\({\cal U}\)</span>를 한글로는 <strong>보통위상</strong>이라고 표현하기도 하지만 그렇게 널리 사용되지는 않는다. 하지만 따로 지칭할 용어가 마땅치 않아서 나는 그냥 보통위상이라고 부르겠다.</p>
+</blockquote>
+<p><code>-</code> 이론: <span class="math inline">\((\mathbb{R},{\cal U})\)</span>를 보통위상공간 (usual topological space) 이라고 하자. 모든 <span class="math inline">\(O \in {\cal U}\)</span> 는 아래를 만족한다.</p>
 <ul>
 <li><span class="math inline">\(\forall o \in O, \exists B \subset O\)</span> such that <span class="math inline">\(o \in B \subset O \quad \cdots (\star)\)</span></li>
 </ul>
@@ -381,19 +394,167 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="시그마필드-vs-토폴로지" class="level2">
 <h2 class="anchored" data-anchor-id="시그마필드-vs-토폴로지">시그마필드 vs 토폴로지</h2>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">시그마필드</th>
+<th style="text-align: center;">토폴로지</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">시작</td>
+<td style="text-align: center;">“길이를 잴 수 있는 집합”이란 개념을 일반화 하고 싶다</td>
+<td style="text-align: center;">“열린구간”의 개념을 일반화 하고 싶다</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">기호</td>
+<td style="text-align: center;"><span class="math inline">\({\cal F}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({\cal T}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">공간</td>
+<td style="text-align: center;"><span class="math inline">\((\Omega,{\cal F})\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\Omega,{\cal T})\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">원소</td>
+<td style="text-align: center;"><span class="math inline">\({\cal F}\)</span>-measurable set, measurable set</td>
+<td style="text-align: center;"><span class="math inline">\({\cal T}\)</span>-open set</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">쓸모없는공간</td>
+<td style="text-align: center;"><span class="math inline">\((\mathbb{R},2^{\mathbb R})\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\mathbb{R},2^{\mathbb R})\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">쓸모있는공간</td>
+<td style="text-align: center;"><span class="math inline">\((\mathbb{R},{\cal R})\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((\mathbb{R},{\cal U})\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><span class="math inline">\({\cal R}\)</span>이 뭔데..?</p>
+</blockquote>
 </section>
 </section>
 <section id="측도론의-유산" class="level1">
 <h1>측도론의 유산</h1>
 <section id="borel-sigma-field" class="level2">
 <h2 class="anchored" data-anchor-id="borel-sigma-field">Borel <span class="math inline">\(\sigma\)</span>-field</h2>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\((\mathbb{R}, {\cal U})\)</span>를 보통위상공간이라고 하자. 아래와 같은 시그마필드를 Borel <span class="math inline">\(\sigma\)</span>-algebera on <span class="math inline">\(\mathbb{R}\)</span>이라고 한다.</p>
+<p><span class="math display">\[{\cal B}(\mathbb{R}):=\sigma({\cal U})\]</span></p>
+<p>그리고 <span class="math inline">\({\cal B}(\mathbb{R})\)</span>의 원소를 Borel measurable sets이라고 부른다.</p>
+<p><code>-</code> 참고: 교재에서는 <span class="math inline">\({\cal B}(\mathbb{R})\)</span>를 <span class="math inline">\({\cal R}\)</span>로 표현하기도 한다.</p>
+<p><code>-</code> <strong>이론</strong>: 아래와 같은 집합을 고려하자.</p>
+<ul>
+<li><span class="math inline">\({\cal A}_1:= \{A\subset \mathbb{R}: A \text{ is open}\}\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><span class="math inline">\({\cal A}_2:= \{(a,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_3:= \{[a,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_4:= \{(a,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_5:= \{[a,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_6:= \{(-\infty,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_7:= \{(-\infty,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_8:= \{(a,\infty): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_9:= \{[a,\infty): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+</ul>
+<p>아래가 성립한다.</p>
+<p><span class="math display">\[{\cal R}:={\cal B}(\mathbb{R}) = \sigma({\cal A}_1)=\sigma({\cal A}_2)=\dots=\sigma({\cal A}_9)\]</span></p>
+<p><code>-</code> <strong>이론</strong>: 위의 이론의 <span class="math inline">\({\cal A}_2,\dots,{\cal A}_9\)</span>에서 <span class="math inline">\(\mathbb{R}\)</span> 대신에 <span class="math inline">\(\mathbb{Q}\)</span>를 사용해도 성립한다.</p>
+<p><code>-</code> NOTE: <span class="math inline">\({\cal A}_1,\dots,{\cal A}_9\)</span>는 모두 파이시스템이다.</p>
+<p><code>-</code> NOTE: <span class="math inline">\({\cal A}_3,{\cal A}_4,{\cal A}_7,{\cal A}_9\)</span>는 세미링이다.</p>
+<p><code>-</code> NOTE: <span class="math inline">\({\cal A}_7,{\cal A}_9\)</span>는 세미알지브라이다.</p>
 </section>
 <section id="르벡메져" class="level2">
 <h2 class="anchored" data-anchor-id="르벡메져">르벡메져</h2>
+<p><code>-</code> <strong>Thm</strong>: <span class="math inline">\(\Omega=\mathbb{R}\)</span> 에 대하여 아래와 같은 collection <span class="math inline">\({\cal A}\)</span>를 고려하자.</p>
+<p><span class="math display">\[{\cal A}=\{(a,b]: a,b\in \mathbb{R}, a&lt;b\}\]</span></p>
+<p>그리고 아래와 같은 함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자.</p>
+<p><span class="math display">\[\tilde{m}((a,b]) = b-a\]</span></p>
+<p>이러한 함수 <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 메져 <span class="math inline">\(m:{\cal R} \to [0,\infty]\)</span>로 쉽게 업그레이드 가능하며 이 업그레이드 결과는 유일하다.</p>
+<p>(증명)</p>
+<p><code>-</code> <strong>정의</strong>: 위의 이론에 의하여 업그레이드 된 메져 <span class="math inline">\(m\)</span>을 르벡메져라고 한다.</p>
+<p><code>-</code> <strong>이론</strong>: <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 르벡메져라고 하자. 아래와 같은 집합들의 모임을 생각하자.</p>
+<ul>
+<li><span class="math inline">\({\cal A}_1:= \{A\subset \mathbb{R}: A \text{ is open}\}\)</span></li>
+<li><span class="math inline">\({\cal A}_2:= \{(a,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_3:= \{[a,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_4:= \{(a,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_5:= \{[a,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_6:= \{(-\infty,b): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_7:= \{(-\infty,b]: a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_8:= \{(a,\infty): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+<li><span class="math inline">\({\cal A}_9:= \{[a,\infty): a,b \in \mathbb{R}, a&lt;b\}\)</span></li>
+</ul>
+<p><span class="math inline">\({\cal A}_1,{\cal A}_2,\dots, {\cal A}_9\)</span>에서의 르벡메져와 그 값이 일치하지만 <span class="math inline">\({\cal R} - {\cal A}_1, \dots, {\cal R}-{\cal A}_9\)</span> 등에서는 일치하지 않는 새로운 메져 <span class="math inline">\(m'\)</span>은 존재할 수 없다. 즉 르벡메져는 <span class="math inline">\({\cal A}_1,\dots,{\cal A}_9\)</span>에서의 값으로 유일하게 결정된다.</p>
 </section>
 </section>
-<section id="확률공간과-용어들" class="level1">
-<h1>확률공간과 용어들</h1>
+<section id="자잘한-내용-모음" class="level1">
+<h1>자잘한 내용 모음</h1>
+<section id="생략때문에-헷갈려" class="level2">
+<h2 class="anchored" data-anchor-id="생략때문에-헷갈려">생략때문에 헷갈려</h2>
+<p><code>-</code> 어떠한 수학교재에서, 아무말 없이 <strong>open set</strong> 이라고만 하면 보통위상공간 (usual topological space) 으로부터 정의되는 open set을 의미한다. 즉 usual topological space <span class="math inline">\((\mathbb{R},{\cal U})\)</span>에서 <span class="math inline">\({\cal U}\)</span>의 원소를 의미한다.</p>
+<p><code>-</code> 어떠한 수학교재에서, 아무말 없이 <strong>measurable set</strong> 이라고 하면 르벡측도로 잴 수 있는 집합을 말한다. 즉 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span> 에서의 <span class="math inline">\({\cal R}\)</span>의 원소를 의미한다. 즉 일반적으로 정의하는 “잴 수 있는 집합”에서 “잴 수 있다”는 의미는 “르벡측도로 잴 수 있다”는 의미이다.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> 일반적인 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 <span class="math inline">\({\cal F}\)</span>의 원소는 ${F}-measurable set 이라고 표현해야 옳다.</p>
+<p><code>-</code> 하지만 때에 따라서는 <span class="math inline">\({\cal F}\)</span>의 원소를 그냥 measurable set이라고 부른다.</p>
+<p><strong>예시1</strong></p>
+<p>여기에서 measuralbe set은 앞에서 정의한 <span class="math inline">\({\cal F}\)</span>의 원소라는 의미이다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/0ae2ee63-9d61-4a06-a991-7a04aa4c03d2-1-51b5e818-bff5-4cd6-93a1-1772b2f1c2e2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: measurable set에 대한 교재의 언급, 눈치껏 그전의 문맥에서 정의한 <span class="math inline">\({\cal F}\)</span>-measurable set을 의미함을 알아들어야 함</figcaption><p></p>
+</figure>
+</div>
+<p><code>-</code> measure, measurable 등의 의미는 눈치껏 알아먹어야 한다.</p>
+<p><strong>예시2</strong></p>
+<p>일반적으로 measure라는 단어가 사용되면 “르벡측도로 재다”라는 의미를 지칭하는 경우가 많음</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/7af8fca9-f84b-4694-9d8e-7140d629e05d-1-76667c08-e828-4652-a375-4a7b5f26b7f1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림2: 여기에서 사용되는 “measure”의 의미는 문맥상 “르벡측도로 재다”라는 의미로 해석해야함</figcaption><p></p>
+</figure>
+</div>
+<p><strong>예시3</strong></p>
+<p><span class="math inline">\((\Omega, {\cal F})\)</span>를 잴 수 있는 공간이라고 할 때는 meaure의 의미가 꼭 “르벡측도로 재다” 라는 것을 의미하는 건 아님</p>
+<p><strong>예시4</strong></p>
+<p>비탈리집합이 nonmeasurable set이라는 의미는 르벡측도로 측정불가능한 집합이라는 것을 의미함.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/0d9faf76-149e-4348-90c3-d276a64a9365-1-871044bb-9385-4897-9f7b-1581b2f88cc2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림3: 여기에서 <span class="math inline">\(N\)</span>은 비탈리집합을 의미하며 여기에서 “nonmeasurable” 이라는 뜻은 르벡메져로 측정불가능한 집합이라는 의미</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="토폴로지와-측도론의-논리전개" class="level2">
+<h2 class="anchored" data-anchor-id="토폴로지와-측도론의-논리전개">토폴로지와 측도론의 논리전개</h2>
+<p><code>-</code> 토폴로지와 측도론을 공부하면서 비슷한점이 있다고 느낌</p>
+<p><code>-</code> 비슷한점1: 모두 어떠한 속성을 가지는 집합을 “일반화” 하기 위해서 생겨났다. 예를들면, 잴 수 있는 집합이라는 것은 “수직선에서 길이를 잴 수 있는 집합”의 개념을 일반화하고 싶었어서 만들었으며, 열린집합이라는 것은 “수직선에서의 열린구간”이라는 개념을 일반화하고 싶어서 만들었다.</p>
+<p><code>-</code> 비슷한점2: 따라서 “잴 수 있는 집합들의 모임”, “열린집합들의 모임” 이라는 집합들의 집합이라는 장치를 고안하였다. 그리고 이러한 과정에서 일반적인 “길이(length)를 잴 수 있는 집합”의 속성, “열린구간”의 속성을 모아 “잴 수 있는 집합의 모임”, “열린집합의 모임” 을 정의하는 재료로 사용하였다.</p>
+<p><code>-</code> 비슷한점3: “잴 수 있는 집합들의 모임”, “열린집합들의 모임”의 원소를 각각 <span class="math inline">\({\cal F}\)</span>-mesurable set, <span class="math inline">\({\cal T}\)</span>-open set이라고 부르는 것도 유사하다.</p>
+<p><code>-</code> 비슷한점4: <span class="math inline">\(\Omega=\mathbb{R}\)</span>에 대한 시그마필드와 토폴로지가 각각 <span class="math inline">\({\cal R}\)</span>이거나 <span class="math inline">\({\cal U}\)</span>이라면 그냥 <strong>잴 수 있는 집합</strong>, <strong>열린 집합</strong> 이라고 부르는 것도 유사하다.</p>
+<p><code>-</code> 비슷한점5: 비슷한점4의 경우를 제외하고는 <span class="math inline">\({\cal F}\)</span>-mesurable set, <span class="math inline">\({\cal T}\)</span>-open set이라고 부르는게 원칙인데 이것도 문맥에 따라서 그냥 생략하고 쓰는 것도 유사하다. (사실 매번 언급하는게 귀찮기는 해)</p>
+<p><code>-</code> 비슷한점6: 일반화의 과정에서 발생하는 이상한 개념의 충돌이 존재한다.</p>
+<ul>
+<li>잴 수 있는 집합의 모임을 <span class="math inline">\((\mathbb{R},2^\mathbb{R})\)</span>로 설정하면 비탈리집합도 잴 수 있다. (그렇지만 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서는 비탈리집합이 잴 수 없는 집합이므로 보통 책에서는 “잴 수 없는 집합”이라고 배운다)</li>
+<li>열린집합의 모임을 <span class="math inline">\((\mathbb{R},2^\mathbb{R})\)</span>로 설정하면 한점만 포함하는 집합 <span class="math inline">\(\{x\}\)</span>는 열린집합이 된다. (그렇지만 <span class="math inline">\((\mathbb{R},{\cal U})\)</span>에서는 한점만 포함하는 집합은 닫힌집합이므로 보통 책에서는 “한점만 포함하는 집합은 닫힌집합이다” 라고 배운다.</li>
+</ul>
+<blockquote class="blockquote">
+<p>제 생각: 사실 이는 일반화 과정이 겪는 불가피한 문제인듯 해요. “문자, 그림, 기호 따위를 쓸 수 있는 도구” 정도로 펜슬의 의미를 확장하면 손가락도 펜슬이 되고, 발가락도 펜슬이 됩니다.</p>
+</blockquote>
+<p><code>-</code> 비슷한점7: 열린집합과 토폴로지, 잴수있는 집합과 시그마필드를 정의하는 두가지 루트가 존재한다.</p>
+<ul>
+<li>루트1: 토폴로지를 먼저 정의하고 토폴로지의 원소가 열린집합이라고 정의한다. 혹은 시그마필드를 먼저 정의하고 시그마필드의 원소가 잴 수 있는 집합이라고 정의한다.</li>
+<li>루트2: 열린집합을 정의하고 (집합의 모든 원소가 interior point이면 열린집합), 열린집합의 모임으로 토폴로지를 정의한다. 혹은 잴 수 있는 집합을 정의하고, 잴 수 있는 집합의 모임으로 시그마필드를 정의한다.</li>
+</ul>
+</section>
+<section id="확률공간과-용어들" class="level2">
+<h2 class="anchored" data-anchor-id="확률공간과-용어들">확률공간과 용어들</h2>
 <p><code>-</code> 동전예제에서의 확률공간 <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 가정하고 용어를 정리해보자.</p>
 <ul>
 <li>outcomes: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span></li>
@@ -406,9 +567,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-04-25-8wk_files/figure-html/2253733f-22cb-4444-9864-7908790220f5-1-c8a4b443-0b7b-401a-87d9-a17a1c13f6d0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림1: 확률을 위한 기본용어</figcaption><p></p>
+<p></p><figcaption class="figure-caption">그림4: 확률을 위한 기본용어</figcaption><p></p>
 </figure>
 </div>
+</section>
 </section>
 <section id="확률변수-오개념-정리" class="level1">
 <h1>확률변수 오개념 정리</h1>
@@ -420,9 +582,9 @@ ul.task-list li input[type="checkbox"] {
 <li>치역: <span class="math inline">\(\mathbb{R}\)</span></li>
 </ul>
 <p><strong>(예제1)</strong> 동전예제</p>
-<p><code>1</code>. outcomes<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span>.</p>
+<p><code>1</code>. outcomes<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span>.</p>
 <p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{H,T\}\)</span></p>
-<p><code>3</code>. event<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span>.</p>
+<p><code>3</code>. event<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span>.</p>
 <p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=2^\Omega\)</span></p>
 <p><code>5</code>. probability measure function: <span class="math inline">\(P: {\cal F} \to [0,1]\)</span> such that</p>
 <ul>
@@ -446,12 +608,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="헷갈려-1-starstarstar">헷갈려 (1) (<span class="math inline">\(\star\star\star\)</span>)</h2>
 <p><code>-</code> 질문1: 아래의 표현 중 옳은 것은?</p>
 <ol type="1">
-<li><span class="math inline">\(X(H)=0\)</span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
-<li><span class="math inline">\(P(\{H\})=\frac{1}{2}\)</span><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
-<li><span class="math inline">\(P(\{\omega_1\})=\frac{1}{2}\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></li>
-<li><span class="math inline">\(P(H)=\frac{1}{2}\)</span><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
-<li><span class="math inline">\(P(\{H,T\})=1\)</span><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
-<li><span class="math inline">\(P(\omega_1)=\frac{1}{2}\)</span><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></li>
+<li><span class="math inline">\(X(H)=0\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></li>
+<li><span class="math inline">\(P(\{H\})=\frac{1}{2}\)</span><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
+<li><span class="math inline">\(P(\{\omega_1\})=\frac{1}{2}\)</span><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
+<li><span class="math inline">\(P(H)=\frac{1}{2}\)</span><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></li>
+<li><span class="math inline">\(P(\{H,T\})=1\)</span><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></li>
+<li><span class="math inline">\(P(\omega_1)=\frac{1}{2}\)</span><a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></li>
 </ol>
 <p><code>-</code> 질문2: 질문1의 <code>4</code>번의 표현 많이 본적 있다. 예를들어서 고등학교에서 두 사건의 독립에 대해 배울때 아래와 같은 방식으로 표현했었다. // 출처: <a href="https://blog.naver.com/hawarjung2/222897509059">네이버 블로그</a></p>
 <blockquote class="blockquote">
@@ -475,77 +637,28 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="확률변수에-대한-통찰">확률변수에 대한 통찰</h2>
 <p><code>-</code> 아래와 같은 표현을 다시 관찰하자.</p>
 <p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
-<p><code>통찰1</code>. 확률변수가 “함수”라는 사실을 떠올리고 <span class="math inline">\(1\)</span>이라는 값이 확률변수의 “상(image)” 라는 사실을 떠올리면, <span class="math inline">\(\{\omega: X(\omega)=1\}\)</span>은 1에 대한 “역상(inverse image)”이라고 해석할 수 있다.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p><code>통찰1</code>. 확률변수가 “함수”라는 사실을 떠올리고 <span class="math inline">\(1\)</span>이라는 값이 확률변수의 “상(image)” 라는 사실을 떠올리면, <span class="math inline">\(\{\omega: X(\omega)=1\}\)</span>은 1에 대한 “역상(inverse image)”이라고 해석할 수 있다.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
 <p><code>통찰2</code>. 확률변수의 상은 <span class="math inline">\(\mathbb{R}\)</span>에 맺히게 되고, 확률변수의 역상은 <span class="math inline">\(\Omega\)</span>의 부분집합 중 하나에 맺히게 된다.</p>
-<p><code>통찰3</code>. 문제는 확률변수의 역상이 잴 수 있는 집합에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
+<p><code>통찰3</code>. 문제는 확률변수의 역상이 잴 수 있는 집합<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
 <p><span class="math display">\[\{\omega: X(\omega)=1\} \in {\cal F}\]</span></p>
 <p>임을 보장해야 한다는 것이다.</p>
 <p><code>통찰4</code>. 당연히 이러한 보장을 할 수는 없어보인다. 따라서 <span class="math inline">\(X\)</span>를 단지 그냥</p>
 <ul>
-<li><span class="math inline">\(X: \mathbb{\Omega} \to \mathbb{R}\)</span>로 가는 함수</li>
+<li><span class="math inline">\(X: \Omega \to \mathbb{R}\)</span>로 가는 함수</li>
 </ul>
 <p>가 아니라</p>
 <ul>
-<li><span class="math inline">\(X: \mathbb{\Omega} \to \mathbb{R}\)</span>로 가는 함수 &amp; 역상이 항상 잴 수 있는 집합이어야 함.</li>
+<li><span class="math inline">\(X: \Omega \to \mathbb{R}\)</span>로 가는 함수 &amp; 역상이 항상 잴 수 있는 집합<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>이어야 함.</li>
 </ul>
 <p>이라는 조건이 필요하다.</p>
 <p><code>-</code> 역상이 잴 수 있는 집합인 함수를 간단히 잴 수 있는 함수 (measurable function) 라고 한다.</p>
-</section>
-<section id="확률변수의-엄밀한-정의" class="level2">
-<h2 class="anchored" data-anchor-id="확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</h2>
-<p><code>-</code> 확률변수 (머리속): <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span> 인 잴 수 있는 함수.</p>
-<p><code>-</code> 확률변수 (엄밀하게): 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega,{\cal F})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>이 있다고 하자. 확률변수 <span class="math inline">\(X\)</span>는 아래를 만족하는 함수 <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span> 이다.</p>
-<p><span class="math display">\[\forall B \in {\cal R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
-<blockquote class="blockquote">
-<p>Note1: <span class="math inline">\(\{\omega:X(\omega)\in B \} \in {\cal F}\)</span> for all <span class="math inline">\(B \in {\cal R}\)</span> 이라 쓰기도 함. 쓰는사람 마음~</p>
-</blockquote>
-<p><code>-</code> 왜 정의가 아래와 같지 않을까?</p>
-<p><span class="math display">\[\forall B \subset \mathbb{R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
-<hr>
-<p><strong><em>위의 질문을 위한 보충학습</em></strong></p>
-<p><strong>(예제)</strong> 바늘이 하나 있는 시계</p>
-<p><code>1</code>. outcomes: <span class="math inline">\(0,1,\frac{\pi}{3},\frac{2\pi}{5},\pi\dots\)</span></p>
-<p><code>2</code>. sample space: <span class="math inline">\(\Omega = (0,2\pi]\)</span></p>
-<p><code>3</code>. event: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\([0,\frac{2}{\pi})\)</span>, <span class="math inline">\(\{2\pi\}\)</span>, <span class="math inline">\(\dots\)</span></p>
-<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}\)</span></p>
-<p><code>5</code>. probability measure function: <span class="math inline">\(P: \Omega \to [0,1]\)</span> such that</p>
-<ul>
-<li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
-<li><span class="math inline">\(P([0,\frac{2}{\pi}) = \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(P(\{2\pi\}) = 0\)</span></li>
-<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
-</ul>
-<p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that <span class="math inline">\(X(\omega)=\omega\)</span>. // 사실 <span class="math inline">\(X: (0,2\pi] \to (0,2\pi]\)</span></p>
-<p>위의 예제에서 6을 주목하자. 만약에 비탈리집합 <span class="math inline">\(V \subset \mathbb{R}\)</span>에 대한 inverse image는 비탈리집합 그 자체가 된다. 따라서 아래와 같이 된다.</p>
-<p><span class="math display">\[P(X \in V)=P\big(\{\omega: X(\omega) \in V\}\big)=P(V)\]</span></p>
-<p><span class="math inline">\(V\)</span>는 르벡메져로는 잴 수 없으므로 <span class="math inline">\(P(V)\)</span>와 같은 표현을 불가함.</p>
-<p>결론: 확률변수 <span class="math inline">\(X\)</span>를 고려할때 정의역의 치역 양쪽의 measurable space를 고려해야함.</p>
-<hr>
-<p><code>-</code> 교재의 정의1</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="2023-04-25-8wk_files/figure-html/577bd241-a5e1-4f3b-ba34-0861d4683142-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림1: Durret에서 긁어온 확률변수의 정의</figcaption><p></p>
-</figure>
-</div>
-<p><code>-</code> 교재의 정의2</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="2023-04-25-8wk_files/figure-html/07383267-e9b6-4714-be86-8b6e57684364-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림2: Durret에서 긁어온 확률변수의 정의2</figcaption><p></p>
-</figure>
-</div>
-<p><code>-</code> <span class="math inline">\(X\)</span>가 랜덤변수라는 것을 기호로 간단하게 <span class="math inline">\(X \in {\cal F}\)</span> 혹은 <span class="math inline">\(X : (\Omega, {\cal F}) \to (\mathbb{R},{\cal R})\)</span>라고 쓴다.</p>
-<blockquote class="blockquote">
-<p>사실 <span class="math inline">\(X: (\Omega,{\cal F}) \to (\mathbb{R}, {\cal R})\)</span>은 <span class="math inline">\(X\)</span>가 잴 수 있는 함수 (measurable function, measurable map) 임을 나타내는 기호이다.</p>
-</blockquote>
 </section>
 <section id="헷갈려-2-starstarstar" class="level2">
 <h2 class="anchored" data-anchor-id="헷갈려-2-starstarstar">헷갈려 (2) (<span class="math inline">\(\star\star\star\)</span>)</h2>
 <p><code>-</code> 확률변수에 대한 오해1: 학률변수 = 값이 랜덤으로 바뀌는 변수??</p>
 <ul>
 <li>함수: <span class="math inline">\(y=f(x)\)</span>, <span class="math inline">\(f\)</span>: function, <span class="math inline">\(x\)</span>: input <span class="math inline">\(y\)</span>: output</li>
-<li>확률변수: <span class="math inline">\(x=X(\omega)\)</span>, <span class="math inline">\(X\)</span>: function, <span class="math inline">\(\omega\)</span>: outcome<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>, <span class="math inline">\(x\)</span>: realization</li>
+<li>확률변수: <span class="math inline">\(x=X(\omega)\)</span>, <span class="math inline">\(X\)</span>: function, <span class="math inline">\(\omega\)</span>: outcome<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>, <span class="math inline">\(x\)</span>: realization</li>
 <li>확률변수는 함수이지만 보통 <span class="math inline">\(X(\omega)\)</span>와 같이 쓰지 않고 <span class="math inline">\(X\)</span>라고 쓴다. <span class="math inline">\(\Rightarrow\)</span> 혼란의 이유</li>
 </ul>
 <p><code>-</code> 확률변수에 대한 오해2: 확률변수는 결과가 랜덤으로 변하는 함수??</p>
@@ -577,8 +690,142 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="확률변수" class="level1">
 <h1>확률변수</h1>
+<section id="확률변수의-엄밀한-정의" class="level2">
+<h2 class="anchored" data-anchor-id="확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</h2>
+<p><code>-</code> 확률변수 (머리속): <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span> 인 잴 수 있는 함수.</p>
+<p><code>-</code> 확률변수 (엄밀하게): 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega,{\cal F})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>이 있다고 하자. 확률변수 <span class="math inline">\(X\)</span>는 아래를 만족하는 함수 <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span> 이다.</p>
+<p><span class="math display">\[\forall B \in {\cal R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
+<blockquote class="blockquote">
+<p>Note: <span class="math inline">\(\{\omega:X(\omega)\in B \} \in {\cal F}\)</span> for all <span class="math inline">\(B \in {\cal R}\)</span> 이라 쓰기도 함. 쓰는사람 마음~</p>
+</blockquote>
+</section>
+<section id="정의에-대한-비판" class="level2">
+<h2 class="anchored" data-anchor-id="정의에-대한-비판">정의에 대한 비판</h2>
+<p><code>-</code> 왜 정의가 아래와 같지 않을까?</p>
+<p><span class="math display">\[\forall B \subset \mathbb{R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
+<p><strong><em>위의 질문을 위한 보충학습</em></strong></p>
+<p><strong>(예제)</strong> 바늘이 하나 있는 시계</p>
+<p><code>1</code>. outcomes: <span class="math inline">\(0,1,\frac{\pi}{3},\frac{2\pi}{5},\pi\dots\)</span></p>
+<p><code>2</code>. sample space: <span class="math inline">\(\Omega = (0,2\pi]\)</span></p>
+<p><code>3</code>. event: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\([0,\frac{2}{\pi})\)</span>, <span class="math inline">\(\{2\pi\}\)</span>, <span class="math inline">\(\dots\)</span></p>
+<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}\)</span></p>
+<p><code>5</code>. probability measure function: <span class="math inline">\(P: \Omega \to [0,1]\)</span> such that</p>
+<ul>
+<li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(P([0,\frac{2}{\pi}) = \frac{1}{4}\)</span></li>
+<li><span class="math inline">\(P(\{2\pi\}) = 0\)</span></li>
+<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
+</ul>
+<p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that <span class="math inline">\(X(\omega)=\omega\)</span>. // 사실 <span class="math inline">\(X: (0,2\pi] \to (0,2\pi]\)</span></p>
+<p>위의 예제에서 6을 주목하자. 만약에 비탈리집합 <span class="math inline">\(V \subset \mathbb{R}\)</span>에 대한 inverse image는 비탈리집합 그 자체가 된다. 따라서 아래와 같이 된다.</p>
+<p><span class="math display">\[P(X \in V)=P\big(\{\omega: X(\omega) \in V\}\big)=P(V)\]</span></p>
+<p><span class="math inline">\(V\)</span>는 르벡메져로는 잴 수 없으므로 <span class="math inline">\(P(V)\)</span>와 같은 표현을 불가함.</p>
+</section>
+<section id="잴-수-있는-함수" class="level2">
+<h2 class="anchored" data-anchor-id="잴-수-있는-함수">잴 수 있는 함수</h2>
+<p><code>-</code> 교재의 정의1</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/577bd241-a5e1-4f3b-ba34-0861d4683142-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림5: Durret에서 긁어온 확률변수의 정의</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(X\)</span>가 랜덤변수라는 것을 기호로 간단하게 <span class="math inline">\(X \in {\cal F}\)</span> 라고 씀.</li>
+<li>두개의 가측공간에 대한 언급은 매우 모호하게 되어있음.</li>
+</ul>
+<p><code>-</code> 교재의 정의2</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-25-8wk_files/figure-html/07383267-e9b6-4714-be86-8b6e57684364-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림6: Durret에서 긁어온 확률변수의 정의2</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>측도의 개념을 정의하고 그 특수한 케이스로 확률측도를 정의하였듯이, 잴 수 있는 함수(measurable map)라는 개념을 정의하고 그 특수한 케이스로 확률변수(혹은 확률벡터)를 정의한다.</li>
+<li>두개의 가측공간이 명확하게 명시되어 있어서 좀 더 이해하기 쉽다.</li>
+</ul>
+<p><code>-</code> 우리는 좀 더 명확한 의미전달을 위해</p>
+<ul>
+<li><span class="math inline">\(X\)</span>를 <span class="math inline">\((\Omega, {\cal F})\to (\mathbb{R},{\cal R})\)</span>인 확률변수라고 하자</li>
+<li><span class="math inline">\(X\)</span>를 <span class="math inline">\((\Omega, {\cal F})\to (S,{\cal S})\)</span>인 잴 수 있는 함수 (가측함수)라고 하자</li>
+</ul>
+<p>와 같은 문장을 쓰겠다.</p>
+</section>
+<section id="확률변수의-체크" class="level2">
+<h2 class="anchored" data-anchor-id="확률변수의-체크">확률변수의 체크</h2>
+<p><code>(1)</code> 아래와 같은 measurable space를 고려하자.</p>
+<ul>
+<li><span class="math inline">\(\Omega=\{a,b,c,d\}\)</span></li>
+<li><span class="math inline">\({\cal F} =\sigma({\cal A})\)</span> where <span class="math inline">\({\cal A} = \{\{a\}\}\)</span>.</li>
+</ul>
+<p>아래와 같은 function <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>, <span class="math inline">\(Y:\Omega \to \mathbb{R}\)</span>을 고려하자.</p>
+<ul>
+<li><span class="math inline">\(X(a)=1, X(b)=2, X(c)=3, X(d)=4\)</span></li>
+<li><span class="math inline">\(Y(a)=1, Y(b)=2, Y(c)=2, Y(c)=2\)</span></li>
+</ul>
+<p>아래의 물음에 답하라.</p>
+<ul>
+<li><span class="math inline">\(X\)</span>는 <span class="math inline">\((\Omega,{\cal F})\to (\mathbb{R},{\cal R})\)</span>인 확률변수인가?</li>
+<li><span class="math inline">\(Y\)</span>는 <span class="math inline">\((\Omega,{\cal F})\to (\mathbb{R},{\cal R})\)</span>인 확률변수인가?</li>
+</ul>
+<p>(풀이)</p>
+<p><strong><span class="math inline">\(X\)</span>는 확률변수가 아님</strong></p>
+<p>집합 <span class="math inline">\(\{2\} \in {\cal R}\)</span>에 대하여 <span class="math inline">\(\{\omega: X(\omega) \in \{2\}\}=\{b\} \not \in \sigma({\cal A})\)</span> 이므로 <span class="math inline">\(X\)</span>는 확률변수가 아님</p>
+<p><strong><span class="math inline">\(Y\)</span>는 확률변수임</strong></p>
+<p><span class="math inline">\(\forall B \in {\cal R}\)</span>에 대하여 <span class="math inline">\(X^{-1}(B)\in {\cal F}\)</span>가 성립함.</p>
+<ul>
+<li><span class="math inline">\(\{\omega: X(\omega) \in \emptyset\} = \emptyset \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(\{\omega: X(\omega) \in \{1\}\} = \{a\} \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(\{\omega: X(\omega) \in \{2\}\} = \{b,c,d\} \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(\{\omega: X(\omega) \in \{1,2\}\} = \{a,b,c,d\} \in \sigma({\cal A})\)</span></li>
+<li>위에서 언급되지 않은 <span class="math inline">\(B \in {\cal R}\)</span>에 대해서는 모두 <span class="math inline">\(X^{-1}(B)=\emptyset \in \sigma({\cal A})\)</span>가 성립함.</li>
+</ul>
+<p><code>(2)</code> 두개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>와 <span class="math inline">\((S,{\cal S})\)</span>를 고려하자. 단,</p>
+<ul>
+<li><span class="math inline">\(\Omega=\mathbb{R}\)</span>,</li>
+<li><span class="math inline">\({\cal F} =\sigma({\cal A})\)</span> where <span class="math inline">\({\cal A} = \{\mathbb{Q}\}\)</span>,</li>
+<li><span class="math inline">\(S = \{0,1\}\)</span>,</li>
+<li><span class="math inline">\({\cal S} = 2^{S}\)</span>.</li>
+</ul>
+<p>아래와 같은 함수 <span class="math inline">\(X:\Omega \to S\)</span>을 고려하라.</p>
+<p><span class="math display">\[X(\omega) = \begin{cases}
+0 &amp; \omega \in \mathbb{Q}\\
+1 &amp; \omega \in \mathbb{R} - \mathbb{Q}
+\end{cases}\]</span></p>
+<p><span class="math inline">\(X\)</span>는 <span class="math inline">\((\Omega,{\cal F})\to(S,{\cal S})\)</span>인 가측함수인가?</p>
+<p><code>(풀이)</code> 잴 수 있는 함수임.</p>
+<p>Note: <span class="math inline">\(\sigma({\cal A})=\{\emptyset, \mathbb{Q}, \mathbb{Q}^c, \mathbb{R} \}, 2^S = \{\emptyset, \{0\}, \{1\}, \{0,1\}\}\)</span></p>
+<p>잴 수 있는 함수임을 체크하기 위해서는 <span class="math inline">\(2^S\)</span>의 모든 원소 <span class="math inline">\(B\)</span>에 대하여 <span class="math inline">\(X^{-1}(B):= \{\omega : X(\omega) \in B\} \in {\cal F}\)</span> 임을 확인하면 된다.</p>
+<ul>
+<li><span class="math inline">\(B=\emptyset\)</span> 일 경우: <span class="math inline">\(\{\omega: X(\omega) \in \emptyset\}=\emptyset \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(B=\{0\}\)</span> 일 경우: <span class="math inline">\(\{\omega: X(\omega) \in \{0\}\}=\mathbb{Q} \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(B=\{1\}\)</span> 일 경우: <span class="math inline">\(\{\omega: X(\omega) \in \{1\}\}=\mathbb{Q}^c \in \sigma({\cal A})\)</span></li>
+<li><span class="math inline">\(B=\{0,1\}\)</span> 일 경우: <span class="math inline">\(\{\omega: X(\omega) \in \{0,1\}\}=\mathbb{R} \in \sigma({\cal A})\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>이 문제에서 <span class="math inline">\((S,{\cal S})\)</span>를 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span> 바꾸면 풀이의 약간만 수정하여 <span class="math inline">\(X \in {\cal F}\)</span>임을 보일 수 있다.</p>
+</blockquote>
+<p><code>(3)</code> 두개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>와 <span class="math inline">\((S,{\cal S})\)</span>를 고려하자. 단,</p>
+<ul>
+<li><span class="math inline">\(\Omega=\mathbb{R}\)</span>,</li>
+<li><span class="math inline">\({\cal F} =\sigma({\cal A})\)</span> where <span class="math inline">\({\cal A} = \{\mathbb{Q}\}\)</span>,</li>
+<li><span class="math inline">\(S = \{0,1\}\)</span>,</li>
+<li><span class="math inline">\({\cal S} = 2^S\)</span>.</li>
+</ul>
+<p>아래와 같은 함수 <span class="math inline">\(X:\Omega \to S\)</span>을 고려하라.</p>
+<p><span class="math display">\[X(\omega) = \begin{cases}
+0 &amp; \omega =0\\
+1 &amp; \omega \neq 0
+\end{cases}\]</span></p>
+<p>즉 <span class="math inline">\(X\)</span>는 <span class="math inline">\((\Omega,{\cal F})\to(S,{\cal S})\)</span>인 가측함수인가?</p>
+<p><code>(풀이)</code> 잴 수 있는 함수가 아님. <span class="math inline">\(B=\{0\}\)</span> 일 경우, <span class="math inline">\(\{\omega: X(\omega) \in B\}=\{0\} \notin \sigma({\cal A})\)</span> 이므로 잴 수 있는 함수의 정의에 만족하지 않음.</p>
+<blockquote class="blockquote">
+<p>이 문제에서 <span class="math inline">\((S,{\cal S})\)</span>를 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span> 바꾸면 풀이의 약간만 수정하여 <span class="math inline">\(X \in {\cal F}\)</span>임을 보일 수 있다.</p>
+</blockquote>
 
 
+</section>
 </section>
 
 
@@ -586,16 +833,20 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>위상공간의 정의에따라 열린집합이라 주장할 수 있음. 혹은 <span class="math inline">\(\mathbb{R}=\cup_{n=1}^{\infty}(-n,n)\)</span>이고 <span class="math inline">\(\emptyset=(0,0)\)</span>이므로 열린집합이라 주장할 수 있음. 혹은 <span class="math inline">\(\mathbb{R}\)</span>과 <span class="math inline">\(\emptyset\)</span>의 모든 원소가 내점이므로 (공집합의 경우는 배큐어스트루에 의하여 모든 원소가 내점이다) 열린집합이라 주장할 수 있음<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>outcome 자체는 집합을 의미하는게 아님<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>event는 집합을 의미<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>O<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>O<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>여기에서 open은 엄밀하게 말하면 usual topological spcace <span class="math inline">\((\mathbb{R},{\cal U})\)</span> 에서의 <span class="math inline">\({\cal U}\)</span>-open set을 의미한다. 즉 보통위상공간에서 정의가능한 openset을 의미한다.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>혹은 우리의 용어로는 “확률을 잴 수 있는” 정도의 뜻으로 받아들일 수 있다.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>outcome 자체는 집합을 의미하는게 아님<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>event는 집합을 의미<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>O<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>X<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>O<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>O<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>X<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>참고로 image는 수학책에서 3가지 뜻으로 혼용해서 쓰이는데, 이 문맥에서는 “Image of an element”를 의미함. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">ref</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>입력인데 outcome임, 여기서부터 너무 헷갈려!!<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>O<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>X<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>참고로 image는 수학책에서 3가지 뜻으로 혼용해서 쓰이는데, 이 문맥에서는 “Image of an element”를 의미함. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">ref</a><a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p><span class="math inline">\({\cal F}\)</span>-measurable<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p><span class="math inline">\({\cal F}\)</span>-measurable<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>입력인데 outcome임, 여기서부터 너무 헷갈려!!<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
