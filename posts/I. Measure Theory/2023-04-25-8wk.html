@@ -467,6 +467,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>아래가 성립한다.</p>
 <p><span class="math display">\[{\cal R}:={\cal B}(\mathbb{R}) = \sigma({\cal A}_1)=\sigma({\cal A}_2)=\dots=\sigma({\cal A}_9)\]</span></p>
+<p>(증명??) – 증명까지는 아니고 그냥 설명..</p>
+<p><strong>예비학습1:</strong> countable union의 countable union은 countable union이다.</p>
+<p><span class="math display">\[\mathbb{Q} = \cup_{q \in \mathbb{Q}} \{q\} =\cup_{q \in \mathbb{Q}}\big( \cup_{n=1}^{\infty}(q-\frac{1}{n}, q+\frac{1}{n})\big)\]</span></p>
+<p><strong>예비학습2:</strong> “<span class="math inline">\(\sigma({\cal A}_1)\)</span>의 모든원소는 <span class="math inline">\({\cal A}_1\)</span>의 원소를 재료로하여 만들수 있다” 라고 표현할 수 있으며, 여기에서 “만들 수 있다” 라는 의미는 <span class="math inline">\({\cal A}_1\)</span>의 원소에 가산합집합, 가산교집합, 여집합, 차집합등의 연산을 적용하여 <span class="math inline">\(\sigma({\cal A})\)</span>의 원소를 만들 수 있다라는 의미이다.</p>
+<p><strong>예비학습3</strong>: 아래의 연산들은 모두 시그마필드에서 닫혀있다.</p>
+<ul>
+<li>가산합집합의 가산합집합</li>
+<li>가산합집합의 가산합집합의 가산합집합</li>
+<li>여집합의 가산교집합의 가산합집합의 차집합</li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>즉 시그마필드는 가산합집합과, 여집합에 닫혀있고 그들의 합성연산에 닫혀있다고 해석할 수 있다. 이제 아래가 성립한다고 가정해보자.</p>
+<ul>
+<li><span class="math inline">\(\sigma({\cal A}_1)\)</span>의 모든 원소는 <span class="math inline">\({\cal A}_1\)</span>의 원소를 이용하여 만들 수 있다. 즉 <span class="math inline">\({\cal A}_1\)</span>의 모든원소에 가산합집합, 여집합, 혹은 그들의 합성연산을 적용하여 <span class="math inline">\(\sigma({\cal A}_1)\)</span>의 모든 원소를 나타낼 수 있다.</li>
+<li><span class="math inline">\({\cal A}_1\)</span>의 모든 원소는 <span class="math inline">\({\cal A}_2\)</span>의 원소를 이용하여 만들 수 있다. 즉 <span class="math inline">\({\cal A}_1\)</span>의 모든원소에 가산합집합, 여집합 혹은 그들의 합성연산을 적용하여 <span class="math inline">\({\cal A}_2\)</span>의 모든 원소를 나타낼 수 있다.</li>
+</ul>
+<p>그렇다면 궁극적으로는 <span class="math inline">\({\cal A}_2\)</span>의 원소를 가산합집합, 여집합, 혹은 그들의 합성연산을 적용하여 <span class="math inline">\(\sigma({\cal A}_1)\)</span>를 표현할 수 있다는 의미이고 이는 <span class="math inline">\(\sigma({\cal A}_1)=\sigma({\cal A}_2)\)</span>를 의미한다.</p>
 <p><code>-</code> <strong>이론</strong>: 위의 이론의 <span class="math inline">\({\cal A}_2,\dots,{\cal A}_9\)</span>에서 <span class="math inline">\(\mathbb{R}\)</span> 대신에 <span class="math inline">\(\mathbb{Q}\)</span>를 사용해도 성립한다.</p>
 <p><code>-</code> NOTE: <span class="math inline">\({\cal A}_1,\dots,{\cal A}_9\)</span>는 모두 파이시스템이다.</p>
 <p><code>-</code> NOTE: <span class="math inline">\({\cal A}_3,{\cal A}_4,{\cal A}_7,{\cal A}_9\)</span>는 세미링이다.</p>
