@@ -1,0 +1,10 @@
+---
+title: "9wk: 확률변수, 분포 (1)"
+author: "최규빈"
+title-block-style: default
+title-block-banner: true
+format:
+  revealjs:
+    chalkboard: true
+    slide-number: true
+---
