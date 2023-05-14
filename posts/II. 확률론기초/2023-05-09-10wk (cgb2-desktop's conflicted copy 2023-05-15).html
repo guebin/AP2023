@@ -243,15 +243,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
-  <li><a href="#preview" id="toc-preview" class="nav-link" data-scroll-target="#preview">Preview</a></li>
+  <li><a href="#preview" id="toc-preview" class="nav-link active" data-scroll-target="#preview">Preview</a></li>
   <li><a href="#분포와-분포함수" id="toc-분포와-분포함수" class="nav-link" data-scroll-target="#분포와-분포함수">분포와 분포함수</a>
   <ul class="collapse">
   <li><a href="#분포-distribution" id="toc-분포-distribution" class="nav-link" data-scroll-target="#분포-distribution">분포 (distribution)</a></li>
-  <li><a href="#분포-distribution-1" id="toc-분포-distribution-1" class="nav-link" data-scroll-target="#분포-distribution-1">분포 (distribution)</a></li>
-  <li><a href="#분포-distribution-2" id="toc-분포-distribution-2" class="nav-link" data-scroll-target="#분포-distribution-2">분포 (distribution)</a></li>
-  <li><a href="#분포-distribution-3" id="toc-분포-distribution-3" class="nav-link" data-scroll-target="#분포-distribution-3">분포 (distribution)</a></li>
   <li><a href="#분포함수-distribution-function" id="toc-분포함수-distribution-function" class="nav-link" data-scroll-target="#분포함수-distribution-function">분포함수 (distribution function)</a></li>
+  <li><a href="#분포함수의-성질" id="toc-분포함수의-성질" class="nav-link" data-scroll-target="#분포함수의-성질">분포함수의 성질</a></li>
   <li><a href="#밀도함수-density-function" id="toc-밀도함수-density-function" class="nav-link" data-scroll-target="#밀도함수-density-function">밀도함수 (density function)</a></li>
   </ul></li>
   </ul>
@@ -263,12 +260,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="강의영상" class="level1">
-<h1>강의영상</h1>
-<blockquote class="blockquote">
-<p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-ymuuOEv4Zru7SF5duhH7dC" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-ymuuOEv4Zru7SF5duhH7dC</a></p>
-</blockquote>
-</section>
 <section id="preview" class="level1">
 <h1>Preview</h1>
 <p><code>-</code> 확률변수 <span class="math inline">\(X\)</span>는 <span class="math inline">\(\Omega\)</span>의 모든 원소를 적절한 숫자로 “잘” 연결하는 어떠한 맵핑이라는 느낌은 이해했다. 하지만 말 그대로 확률변수 <span class="math inline">\(X\)</span>는 두 measurable space <span class="math inline">\((\Omega, {\cal F})\)</span>와 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>을 잘 연결하는 어떠한 맵핑일 뿐이라서 우리가 그동안 가지고 있던 “랜덤성”에 대한 정의는 <span class="math inline">\(X\)</span>에서 빠져있다. 즉 <span class="math inline">\(\omega \in \Omega\)</span>의 값이 고정이면 <span class="math inline">\(X(\omega)\)</span>의 값도 고정이다. 하지만 우리는 <span class="math inline">\(X\)</span>가 랜덤으로 숫자가 바뀌는 (잘못된) 느낌을 가지고 살고 있었는데, 그렇다면 이러한 “랜덤성”은 어디에서 비롯한 것일까?</p>
@@ -287,9 +278,6 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\({\cal F} = 2^\Omega\)</span></li>
 <li><span class="math inline">\(P(\{H\})=P(\{T\})=\frac{1}{2}\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 </ul>
-</section>
-<section id="분포-distribution-1" class="level2">
-<h2 class="anchored" data-anchor-id="분포-distribution-1">분포 (distribution)</h2>
 <p>확률변수 <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>를 아래와 같이 정의하자.</p>
 <ul>
 <li><span class="math inline">\(X(H)=1\)</span></li>
@@ -302,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(P(X^{-1}(B))\)</span> // 표현2의 다른 버전, inverse image의 느낌이 확 살아 있음</li>
 <li><span class="math inline">\((P \circ X^{-1})(B)\)</span> // 생각해보니까 이것도 가능함. <span class="math inline">\(P\)</span>, <span class="math inline">\(X\)</span> 모두 함수였잖아?</li>
 </ol>
-<p>표현4를 좀 더 살펴보자. 기호를 간단하게 하기위해서 <span class="math inline">\(\mu_X:=P\circ X^{-1}\)</span>로 정의하자.</p>
+<p>표현1과 표현4를 대응하여 좀 더 살펴보자. 기호를 간단하게 하기위해서 <span class="math inline">\(\mu_X:=P\circ X^{-1}\)</span>로 정의하자.</p>
 <ul>
 <li><span class="math inline">\(P(\emptyset) = 0 \Leftrightarrow \mu_X(\emptyset) = 0\)</span></li>
 <li><span class="math inline">\(P(\{H\}) = \frac{1}{2} \Leftrightarrow \mu_X(\{0\}) = \frac{1}{2}\)</span></li>
@@ -333,17 +321,11 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(P(\{W\}) = \frac{1}{2} \Leftrightarrow \mu_X(\{1\}) = \frac{1}{2}\)</span></li>
 <li><span class="math inline">\(P(\{R,W\}) = 1 \Leftrightarrow \mu_X(\{0,1\}) = 1\)</span></li>
 </ul>
-</section>
-<section id="분포-distribution-2" class="level2">
-<h2 class="anchored" data-anchor-id="분포-distribution-2">분포 (distribution)</h2>
 <p><code>-</code> 생각의 시간1: 예제1,2를 관찰하며 생각</p>
 <ul>
 <li>예제1,2의 공통속성: 제1과 예제2는 어떠한 공통점이 있다. 비록 outcome, event, <span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(P\)</span>, <span class="math inline">\(X\)</span> 가 모두 다르지만 사실 어떻게 보면 기호의 차이만 있을 뿐 “확률과 관련된 시행이 어떠한 결과로 나타나는지”에 관련한 본질적인 면에서 같다고 볼 수 있다.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li><strong><span class="math inline">\(\mu_X\)</span>가 <span class="math inline">\(P\)</span>보다 예제1,2의 공통속성<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>을 나타내기에 유리한 것 같은데?</strong></li>
 </ul>
-</section>
-<section id="분포-distribution-3" class="level2">
-<h2 class="anchored" data-anchor-id="분포-distribution-3">분포 (distribution)</h2>
 <p><code>-</code> 생각의 시간2: <span class="math inline">\(\mu_X\)</span>는 언제나 잘 정의되는가?</p>
 <p><span class="math inline">\((\Omega,{\cal F}, P)\)</span>가 확률공간이고 <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>이 확률변수라면, <span class="math inline">\(\mu_X:=P\circ X^{-1}\)</span>는 언제나 잘 정의된다.</p>
 <ul>
@@ -358,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\sigma\)</span>-add: <span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\({\cal R}\)</span>의 모든 서로소인 집합에 대하여 <span class="math inline">\(\sigma\)</span>-additivity 가 성립한다.</li>
 </ol>
 <p>따라서 <span class="math inline">\(P\)</span>가 <span class="math inline">\((\Omega,{\cal F})\)</span>에서의 확률측도이듯이 <span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서의 확률측도이다.</p>
-<p><code>-</code> <strong>(정의)</strong>: <span class="math inline">\(X\)</span>를 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서 정의된 확률변수라고 하자. 이때 <span class="math inline">\(\mu_X:=P \circ X^{-1}\)</span>로 정의가능한 함수 <span class="math inline">\(\mu_X: {\cal R} \to [0,1]\)</span> 를 <span class="math inline">\(X\)</span>의 distribution 라고 부른다.</p>
+<p><code>-</code> <strong>(정의)</strong>: <span class="math inline">\(X\)</span>를 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서 정의된 확률변수라고 하자. 이때 <span class="math inline">\(\mu_X:=X^{-1}\circ P\)</span>로 정의가능한 함수 <span class="math inline">\(\mu_X: {\cal R} \to [0,1]\)</span> 를 <span class="math inline">\(X\)</span>의 distribution 라고 부른다.</p>
 <blockquote class="blockquote">
 <p>여기에서 “<span class="math inline">\(X\)</span>를 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서의 확률변수”라는 말이 얼마나 많은 구질구질한 선언을 대신 하는지 생각해보라. 제대로 쓰려면 아마 “<span class="math inline">\(\Omega\)</span>를 어떠한 실험에 의하여 발생한 outcome들의 집합이라고 하자. 그리고 <span class="math inline">\({\cal F}\)</span>를 <span class="math inline">\(\Omega\)</span>에 대한 시그마필드라고 하자. 즉 <span class="math inline">\({\cal F}\)</span>는 … 을 만족하는 집합이다. <span class="math inline">\((\Omega, {\cal F})\)</span>을 묶어서 가측공간이라고 하자. <span class="math inline">\(P\)</span>는 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에 대한 확률측도라고 하자. 즉 <span class="math inline">\(P\)</span>는 … 를 만족하는 함수이다. 그리고 <span class="math inline">\(X\)</span>는 <span class="math inline">\((\Omega,{\cal F}) \to (\mathbb{R}, {\cal R})\)</span>인 확률변수라고 하자. 즉 <span class="math inline">\(X\)</span>는 임의의 <span class="math inline">\(B \in {\cal R}\)</span>에 대하여 … 를 만족하는 함수이다. 여기에서 <span class="math inline">\({\cal R}\)</span>은 Borel sets이다. 즉 <span class="math inline">\({\cal R}\)</span>은 … 를 만족하는 집합이다.” 와 같은 방식으로 써야할 것이다.</p>
 </blockquote>
@@ -434,6 +416,9 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>만약에 랜덤성을 기술하는 언어가 <span class="math inline">\(P\)</span>하나 뿐이었다면 “같은 분포를 가진다”와 같은 개념을 수식화 하기 불리하다.</p>
 </blockquote>
+</section>
+<section id="분포함수의-성질" class="level2">
+<h2 class="anchored" data-anchor-id="분포함수의-성질">분포함수의 성질</h2>
 <p><code>-</code> <strong>Thm</strong>: 임의의 분포함수 <span class="math inline">\(F:\mathbb{R} \to [0,1]\)</span>는 (1) 비감소 (2) <span class="math inline">\(\lim_{x \to -\infty}F(x)=0\)</span> and <span class="math inline">\(\lim_{x \to \infty}F(x)=1\)</span> (3) 오른쪽연속의 성질을 가진다.</p>
 <p><code>-</code> <strong>Thm</strong>: 임의의 함수 <span class="math inline">\(F:\mathbb{R} \to \mathbb{R}\)</span>가 (1) 비감소 (2) <span class="math inline">\(\lim_{x \to -\infty}F(x)=0\)</span> and <span class="math inline">\(\lim_{x \to \infty}F(x)=1\)</span> (3) 오른쪽연속의 성질을 가진다면, <span class="math inline">\(F\)</span>는 어떠한 확률변수 <span class="math inline">\(X\)</span>의 분포함수이다.</p>
 </section>
