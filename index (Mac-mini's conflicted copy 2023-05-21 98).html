@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AP2023 - About</title>
+<title>AP2023 - 고급확률론 (2023)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,9 +30,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -57,12 +60,42 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">About</h1>
+      <h1 class="quarto-secondary-nav-title">고급확률론 (2023)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -107,7 +140,23 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">고급확률론 (2023)</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -119,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">About</a>
+  <a href="./about.html" class="sidebar-item-text sidebar-link">About</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -132,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">I. 측도론</a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">I. 측도론</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -140,49 +189,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  <a href="./posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  <a href="./posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
+  <a href="./posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  <a href="./posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  <a href="./posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  <a href="./posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
+  <a href="./posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  <a href="./posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">II. 확률론기초</a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">II. 확률론기초</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -190,27 +239,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
+  <a href="./posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  <a href="./posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분</a>
+  <a href="./posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 밀도함수</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./posts/II. 확률론기초/Untitled.html" class="sidebar-item-text sidebar-link">Untitled</a>
+  <a href="./posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 밀도함수</a>
   </div>
 </li>
       </ul>
@@ -221,37 +265,189 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div></div></div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>고급확률론</p>
-<p><a href="mailto:guebin@jbnu.ac.kr" class="email">guebin@jbnu.ac.kr</a></p>
-<p>자연과학대학 본관 205호</p>
+<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2" class="about-link">
-    <i class="bi bi-youtube"></i>
-     <span class="about-link-text">Youtube</span>
-  </a>
-  <a href="https://github.com/guebin/AP2023" class="about-link">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+
+
+<p><strong>질문하는 방법</strong></p>
+<ul>
+<li>카카오톡: <a href="http://pf.kakao.com/_IhJDxj/chat">질문하러 가기</a> // 학기종료이후 폐쇄함</li>
+<li>이메일: <a href="mailto:guebin@jbnu.ac.kr" class="email">guebin@jbnu.ac.kr</a></li>
+<li>직접방문: 자연과학대학 본관 205호</li>
+<li>Zoom: <em>카카오톡이나 이메일로 미리 시간을 정할 것</em></li>
+<li>LMS:</li>
+</ul>
+<p><strong>강의교재</strong></p>
+<ul>
+<li>Durrett, R. (2019). Probability: theory and examples, (Vol. 49). Cambridge university press.</li>
+<li>url: <a href="https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf" class="uri">https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf</a></li>
+</ul>
+<p><strong>강의노트</strong></p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1684767600000" data-listing-file-modified-sort="1684629969000" data-listing-reading-time-sort="10.04" data-listing-title-sort="12wk: 밀도함수" data-listing-filename-sort="2023-05-23-12wk.ipynb">
+<td class="listing-date">
+May 23, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/II. 확률론기초/2023-05-23-12wk.html" class="title">12wk: 밀도함수</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1684162800000" data-listing-file-modified-sort="1684644534000" data-listing-reading-time-sort="16.985" data-listing-title-sort="11wk: 적분" data-listing-filename-sort="2023-05-16-11wk.ipynb">
+<td class="listing-date">
+May 16, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/II. 확률론기초/2023-05-16-11wk.html" class="title">11wk: 적분</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1683558000000" data-listing-file-modified-sort="1684576443000" data-listing-reading-time-sort="7.14" data-listing-title-sort="10wk: 분포, 분포함수" data-listing-filename-sort="2023-05-09-10wk.ipynb">
+<td class="listing-date">
+May 9, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/II. 확률론기초/2023-05-09-10wk.html" class="title">10wk: 분포, 분포함수</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1682953200000" data-listing-file-modified-sort="1684576535000" data-listing-reading-time-sort="6.615" data-listing-title-sort="09wk: 확률변수" data-listing-filename-sort="2023-05-02-09wk.ipynb">
+<td class="listing-date">
+May 2, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/II. 확률론기초/2023-05-02-09wk.html" class="title">09wk: 확률변수</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1682348400000" data-listing-file-modified-sort="1683790287000" data-listing-reading-time-sort="9.165" data-listing-title-sort="08wk: 측도론 (4)" data-listing-filename-sort="2023-04-25-08wk.ipynb">
+<td class="listing-date">
+Apr 25, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-04-25-08wk.html" class="title">08wk: 측도론 (4)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="5" data-listing-date-sort="1681743600000" data-listing-file-modified-sort="1683790277000" data-listing-reading-time-sort="8.225" data-listing-title-sort="07wk: 측도론 (3)" data-listing-filename-sort="2023-04-18-07wk.ipynb">
+<td class="listing-date">
+Apr 18, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-04-18-07wk.html" class="title">07wk: 측도론 (3)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="6" data-listing-date-sort="1681138800000" data-listing-file-modified-sort="1683790265000" data-listing-reading-time-sort="10.71" data-listing-title-sort="06wk: 측도론 (2)" data-listing-filename-sort="2023-04-11-06wk.ipynb">
+<td class="listing-date">
+Apr 11, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-04-11-06wk.html" class="title">06wk: 측도론 (2)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="7" data-listing-date-sort="1680534000000" data-listing-file-modified-sort="1683790247000" data-listing-reading-time-sort="11.715" data-listing-title-sort="05wk: 측도론 (1)" data-listing-filename-sort="2023-04-05-05wk.ipynb">
+<td class="listing-date">
+Apr 4, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-04-05-05wk.html" class="title">05wk: 측도론 (1)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="8" data-listing-date-sort="1679929200000" data-listing-file-modified-sort="1683790241000" data-listing-reading-time-sort="8.885" data-listing-title-sort="04wk: 측도론 intro (4)" data-listing-filename-sort="2023-03-28-04wk.ipynb">
+<td class="listing-date">
+Mar 28, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-03-28-04wk.html" class="title">04wk: 측도론 intro (4)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="9" data-listing-date-sort="1679324400000" data-listing-file-modified-sort="1683790222000" data-listing-reading-time-sort="12.895" data-listing-title-sort="03wk: 측도론 intro (3)" data-listing-filename-sort="2023-03-21-03wk.ipynb">
+<td class="listing-date">
+Mar 21, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-03-21-03wk.html" class="title">03wk: 측도론 intro (3)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="10" data-listing-date-sort="1678719600000" data-listing-file-modified-sort="1683790227000" data-listing-reading-time-sort="4.84" data-listing-title-sort="02wk: 측도론 intro (2)" data-listing-filename-sort="2023-03-14-02wk.ipynb">
+<td class="listing-date">
+Mar 14, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-03-14-02wk.html" class="title">02wk: 측도론 intro (2)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+<tr data-index="11" data-listing-date-sort="1677596400000" data-listing-file-modified-sort="1683790237000" data-listing-reading-time-sort="4.955" data-listing-title-sort="01wk: 측도론 intro (1)" data-listing-filename-sort="2023-03-07-01wk.ipynb">
+<td class="listing-date">
+Mar 1, 2023
+</td>
+<td class="listing-title">
+<a href="./posts/I. 측도론/2023-03-07-01wk.html" class="title">01wk: 측도론 intro (1)</a>
+</td>
+<td class="listing-author">
+최규빈
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
-</div>
- <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -272,6 +468,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
