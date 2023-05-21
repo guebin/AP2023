@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2023-05-16">
+
+<title>AP2023 - 11wk: 적분</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AP2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../about.html" aria-current="page">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">11wk: 적분</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">11wk: 적분</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 16, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">I. 측도론</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">II. 확률론기초</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link active">11wk: 적분</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#약속" id="toc-약속" class="nav-link active" data-scroll-target="#약속">약속</a>
+  <ul class="collapse">
+  <li><a href="#기호에-대한-암묵적-약속" id="toc-기호에-대한-암묵적-약속" class="nav-link" data-scroll-target="#기호에-대한-암묵적-약속">기호에 대한 암묵적 약속</a></li>
+  <li><a href="#확장된-실수공간" id="toc-확장된-실수공간" class="nav-link" data-scroll-target="#확장된-실수공간">확장된 실수공간</a></li>
+  </ul></li>
+  <li><a href="#로드맵" id="toc-로드맵" class="nav-link" data-scroll-target="#로드맵">로드맵</a></li>
+  <li><a href="#예비학습" id="toc-예비학습" class="nav-link" data-scroll-target="#예비학습">예비학습</a>
+  <ul class="collapse">
+  <li><a href="#mathbbrd-cal-rd" id="toc-mathbbrd-cal-rd" class="nav-link" data-scroll-target="#mathbbrd-cal-rd"><span class="math inline">\((\mathbb{R}^d, {\cal R}^d)\)</span></a></li>
+  <li><a href="#sup-inf" id="toc-sup-inf" class="nav-link" data-scroll-target="#sup-inf">sup, inf</a></li>
+  <li><a href="#잴-수-있는-함수들" id="toc-잴-수-있는-함수들" class="nav-link" data-scroll-target="#잴-수-있는-함수들">잴 수 있는 함수들</a></li>
+  </ul></li>
+  <li><a href="#적분-intro" id="toc-적분-intro" class="nav-link" data-scroll-target="#적분-intro">적분 intro</a>
+  <ul class="collapse">
+  <li><a href="#르벡적분-맛보기" id="toc-르벡적분-맛보기" class="nav-link" data-scroll-target="#르벡적분-맛보기">르벡적분 맛보기</a></li>
+  <li><a href="#그림을-통한-이해" id="toc-그림을-통한-이해" class="nav-link" data-scroll-target="#그림을-통한-이해">그림을 통한 이해</a></li>
+  <li><a href="#dx-대신-dlambda를" id="toc-dx-대신-dlambda를" class="nav-link" data-scroll-target="#dx-대신-dlambda를"><span class="math inline">\(dx\)</span> 대신 <span class="math inline">\(d\lambda\)</span>를</a></li>
+  <li><a href="#dlambda-대신-dmu를" id="toc-dlambda-대신-dmu를" class="nav-link" data-scroll-target="#dlambda-대신-dmu를"><span class="math inline">\(d\lambda\)</span> 대신 <span class="math inline">\(d\mu\)</span>를</a></li>
+  <li><a href="#모든-곳에서-거의-모든-곳에서" id="toc-모든-곳에서-거의-모든-곳에서" class="nav-link" data-scroll-target="#모든-곳에서-거의-모든-곳에서">모든 곳에서, 거의 모든 곳에서</a></li>
+  </ul></li>
+  <li><a href="#적분" id="toc-적분" class="nav-link" data-scroll-target="#적분">적분</a>
+  <ul class="collapse">
+  <li><a href="#simple-function" id="toc-simple-function" class="nav-link" data-scroll-target="#simple-function">simple function</a></li>
+  <li><a href="#non-negative-function" id="toc-non-negative-function" class="nav-link" data-scroll-target="#non-negative-function">non-negative function</a></li>
+  <li><a href="#measurable-function" id="toc-measurable-function" class="nav-link" data-scroll-target="#measurable-function">measurable function</a></li>
+  <li><a href="#notations-starstarstarstarstar" id="toc-notations-starstarstarstarstar" class="nav-link" data-scroll-target="#notations-starstarstarstarstar">NOTATIONS (<span class="math inline">\(\star\star\star\star\star\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#칸토어집합" id="toc-칸토어집합" class="nav-link" data-scroll-target="#칸토어집합">칸토어집합</a>
+  <ul class="collapse">
+  <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
+  <li><a href="#성질" id="toc-성질" class="nav-link" data-scroll-target="#성질">성질</a></li>
+  </ul></li>
+  <li><a href="#밀도함수-density-function" id="toc-밀도함수-density-function" class="nav-link" data-scroll-target="#밀도함수-density-function">밀도함수 (density function)</a>
+  <ul class="collapse">
+  <li><a href="#정의-1" id="toc-정의-1" class="nav-link" data-scroll-target="#정의-1">정의</a></li>
+  <li><a href="#다양한-밀도함수-예시" id="toc-다양한-밀도함수-예시" class="nav-link" data-scroll-target="#다양한-밀도함수-예시">다양한 밀도함수 예시</a></li>
+  <li><a href="#칸토어함수-칸토어분포" id="toc-칸토어함수-칸토어분포" class="nav-link" data-scroll-target="#칸토어함수-칸토어분포">칸토어함수, 칸토어분포</a></li>
+  <li><a href="#라돈-니코딤-정리" id="toc-라돈-니코딤-정리" class="nav-link" data-scroll-target="#라돈-니코딤-정리">라돈-니코딤 정리</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="약속" class="level1">
+<h1>약속</h1>
+<section id="기호에-대한-암묵적-약속" class="level2">
+<h2 class="anchored" data-anchor-id="기호에-대한-암묵적-약속">기호에 대한 암묵적 약속</h2>
+<p><code>-</code> 르벡메져: 르벡메져는 지금까지 <span class="math inline">\(m\)</span>으로 표현 <span class="math inline">\(\Rightarrow\)</span> 앞으로는 <span class="math inline">\(\lambda\)</span>로 표현.</p>
+<p><code>-</code> 메져: <span class="math inline">\(\mu,\nu\)</span> 등으로 표현.</p>
+<p><code>-</code> 분포, 분포함수, 밀도함수: 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서 정의된 확률변수 <span class="math inline">\(X\)</span>에 대응하는 분포는 <span class="math inline">\(\mu_X\)</span>, 그에 대응하는 분포함수는 <span class="math inline">\(F_X\)</span>, 그에 대응하는 밀도함수는 <span class="math inline">\(f_X\)</span>라고 표현.</p>
+<p><code>-</code> 일반적인 교재의 표기법</p>
+<ul>
+<li>르벡메져: <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(m\)</span></li>
+<li>메져: <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\nu\)</span>, <span class="math inline">\(m\)</span></li>
+<li>분포: <span class="math inline">\(\mu\)</span></li>
+<li>분포함수: <span class="math inline">\(F\)</span>, <span class="math inline">\(F_X\)</span></li>
+<li>밀도함수: <span class="math inline">\(f\)</span>, <span class="math inline">\(f_X\)</span></li>
+</ul>
+<p><code>-</code> 잴 수 있는 함수의 표현 (아래는 모두 같은말)</p>
+<ul>
+<li>두 개의 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((S, {\cal S})\)</span>을 고려하자. 함수 <span class="math inline">\(f:\Omega \to S\)</span>는 <span class="math inline">\(\forall B \in {\cal S}:~\{\omega: f(\omega) \in B\} \in {\cal F}\)</span> 을 만족한다.</li>
+<li>두 개의 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((S, {\cal S})\)</span>을 고려하자. <span class="math inline">\(f:\Omega \to S\)</span>는 잴 수 있는 함수이다.</li>
+<li><span class="math inline">\(f:(\Omega,{\cal F}) \to (S, {\cal S})\)</span></li>
+<li><span class="math inline">\(f\)</span>는 <span class="math inline">\({\cal F}-{\cal S}\)</span> measurable 하다.</li>
+<li><span class="math inline">\(f \in {\cal F}\)</span>, 이 표기법은 <span class="math inline">\((S,{\cal S})=(\mathbb{R}, {\cal R})\)</span>일 경우에 한정하여 사용할 수 있음.</li>
+<li><span class="math inline">\(f\)</span>는 <span class="math inline">\(S\)</span>-valued measurable map</li>
+</ul>
+</section>
+<section id="확장된-실수공간" class="level2">
+<h2 class="anchored" data-anchor-id="확장된-실수공간">확장된 실수공간</h2>
+<p><code>-</code> 교재에 따라서 확장된 실수공간 <span class="math inline">\(\bar{\mathbb{R}}\)</span>를 고려하기도 한다. <span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019, 49:p14</a>)</span></p>
+<p><span class="math display">\[\bar{\mathbb{R}} = \mathbb{R} \cup \{-\infty\} \cup \{\infty\}\]</span></p>
+<p><code>-</code> 또한 확장된 실수공간에 대응하는 보렐셋을 정의하기도 한다.</p>
+<p><span class="math display">\[{\cal B}(\bar{\mathbb{R}})=\bar{\cal R}\]</span></p>
+<p><code>-</code> <span class="math inline">\(\infty\)</span>, <span class="math inline">\(-\infty\)</span>는 실수가 아니다. 따라서 <span class="math inline">\(x\in \mathbb{R}\)</span> 인 경우는 <span class="math inline">\(x\)</span>를 <strong><em>real-valued</em></strong> 라고 표현하지만 <span class="math inline">\(x \in \bar{\mathbb{R}}\)</span> 인 경우는 <span class="math inline">\(x\)</span>를 <strong><em><span class="math inline">\(\bar{\mathbb{R}}\)</span>-valued</em></strong> 라고 표현한다.</p>
+</section>
+</section>
+<section id="로드맵" class="level1">
+<h1>로드맵</h1>
+<p><code>-</code> 목표: 밀도함수에 대한 소개</p>
+<p><code>-</code> 로드맵: (적분, 칸토어집합) <span class="math inline">\(\to\)</span> 밀도함수</p>
+</section>
+<section id="예비학습" class="level1">
+<h1>예비학습</h1>
+<section id="mathbbrd-cal-rd" class="level2">
+<h2 class="anchored" data-anchor-id="mathbbrd-cal-rd"><span class="math inline">\((\mathbb{R}^d, {\cal R}^d)\)</span></h2>
+<p><code>-</code> <strong>정의</strong>: 두개의 집합 <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>가 있을때 두집합의 곱집합 (cartesian product) <span class="math inline">\(A\times B\)</span>를 아래와 같이 정의한다.</p>
+<p><span class="math display">\[A\times B=\{(a,b): a \in A, b \in B\}\]</span></p>
+<p><code>-</code> <strong>정의</strong>: 수직선상의 두 열린구간 <span class="math inline">\((a_1,b_1)\)</span>, <span class="math inline">\((a_2,b_2)\)</span> 의 곱집합</p>
+<p><span class="math display">\[({\boldsymbol a},{\boldsymbol b}) = \bigtimes_{i=1}^{2}(a_i,b_i)= (a_1,b_1) \times (a_2,b_2)\]</span></p>
+<p>을 open rantangle 이라고 한다. 비슷한 논리전개로 <span class="math inline">\(({\boldsymbol a},{\boldsymbol b}],[{\boldsymbol a},{\boldsymbol b}),[{\boldsymbol a},{\boldsymbol b}]\)</span> 역시 정의할 수 있다.</p>
+<p><code>-</code> <strong>이론</strong>: 아래와 같은 집합들의 모임 <span class="math inline">\({\cal A}\)</span>를 생각하자.</p>
+<p><span class="math display">\[{\cal A}=\{({\boldsymbol a}, {\boldsymbol b}]: {\boldsymbol a} &lt; {\boldsymbol b},~ {\boldsymbol a}, {\boldsymbol b} \in \mathbb{R}^2\}\]</span></p>
+<p>여기에서 <span class="math inline">\({\boldsymbol a}&lt; {\boldsymbol b}\)</span>는 “<span class="math inline">\(a_1&lt;b_1\)</span> and <span class="math inline">\(a_2 &lt; b_2\)</span>” 를 의미한다.</p>
+<ol type="1">
+<li>시그마필드 <span class="math inline">\(\sigma({\cal A})\)</span>는 잘 정의된다. (귀찮아서 만든 이론1)</li>
+<li><span class="math inline">\(\sigma({\cal A})\)</span>은 <span class="math inline">\({\cal R}\)</span>의 2차원버전이라 해석할 수 있다.</li>
+<li>이러한 의미에서 <span class="math inline">\({\cal R}^2=\sigma({\cal A})\)</span>라는 기호를 쓰기도 한다.</li>
+<li><span class="math inline">\((\mathbb{R}^2, {\cal R}^2)\)</span> 는 잴 수 있는 공간이다.</li>
+<li>함수 <span class="math inline">\(\tilde{\lambda}: {\cal A} \to [0,\infty]\)</span>를 아래와 같이 정의하자. 카라테오도리의 확장정리에 의하여 <span class="math inline">\(\tilde{\lambda}\)</span>는 <span class="math inline">\((\mathbb{R}^2,{\cal R}^2)\)</span> 에서의 메져가 된다. <span class="math display">\[\tilde{\lambda}(({\boldsymbol a},{\boldsymbol b}])=\prod_{i=1}^{2}(b_i-a_i)\]</span></li>
+<li>08주차에 정리된 모든 <span class="math inline">\({\cal A}_i\)</span>에 대하여, <span class="math inline">\(\sigma({\cal A}_i)={\cal R}^2\)</span> 을 만족한다.</li>
+</ol>
+<p><code>-</code> 체크: <span class="math inline">\((\mathbb{R}^2, {\cal R}^2)\)</span> 와 동일한 논리전개가 <span class="math inline">\((\mathbb{R}^d, {\cal R}^d)\)</span> 에서도 성립한다.</p>
+</section>
+<section id="sup-inf" class="level2">
+<h2 class="anchored" data-anchor-id="sup-inf">sup, inf</h2>
+<p><code>-</code> 집합 <span class="math inline">\(A=\{1,2,3\}\)</span>에 대하여 아래의 표현을 살펴보자.</p>
+<ul>
+<li><span class="math inline">\(\max A =3\)</span></li>
+<li><span class="math inline">\(\min A =1\)</span></li>
+</ul>
+<p><code>-</code> 집합 <span class="math inline">\(A=[0,2]\)</span>에 대하여 아래의 표현을 살펴보자.</p>
+<ul>
+<li><span class="math inline">\(\max A =2\)</span></li>
+<li><span class="math inline">\(\min A =0\)</span></li>
+</ul>
+<p><code>-</code> 집합 <span class="math inline">\(A=(0,2)\)</span>라면?</p>
+<ul>
+<li><span class="math inline">\(\max A =???\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><span class="math inline">\(\min A =???\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><span class="math inline">\(\sup A = 2\)</span></li>
+<li><span class="math inline">\(\inf A = 0\)</span></li>
+</ul>
+<p><code>-</code> 가짜정의: 어떠한 집합 <span class="math inline">\(A\)</span>가 있다고 할떄 <span class="math inline">\(\sup A\)</span>와 <span class="math inline">\(\inf A\)</span>는 각각 <span class="math inline">\(\max A\)</span>와 <span class="math inline">\(\min A\)</span>의 개념을 좀 더 업그레이드 한것이다. <span class="math inline">\(\max A\)</span>는 <span class="math inline">\(A\)</span>의 원소중 최대값을 의미하는데 이러한 <span class="math inline">\(\max\)</span>의 정의는 구간 <span class="math inline">\([0,2)\)</span>의 최대값은 <span class="math inline">\(2\)</span>라고 주장할 수 없어 쓰기에 불편할 때가 있다. <span class="math inline">\(\min\)</span> 역시 마찬가지의 불편함이 있다. 이를 보완하기 위해 등장한 개념이 <span class="math inline">\(\sup\)</span>과 <span class="math inline">\(\inf\)</span>이다.</p>
+<p><code>-</code> 트릭: 증가하는 수열 <span class="math inline">\(a_n\)</span>의 경우 <span class="math inline">\(\sup\{a_n\}\)</span>은 수열 <span class="math inline">\(\{a_n\}\)</span>의 극한을 의미하기도 한다. 반대로 감소하는 수열 <span class="math inline">\(\{a_n\}\)</span>의 경우 <span class="math inline">\(\inf \{a_n\}\)</span>이 <span class="math inline">\(\{a_n\}\)</span>의 극한을 의미하기도 한다.</p>
+<p><code>-</code> 집합들의 집합에서 <span class="math inline">\(\inf,\sup\)</span>의 의미: 부등호 <span class="math inline">\(&lt;\)</span>를 <span class="math inline">\(\subset\)</span>으로 해석</p>
+<ul>
+<li>예시1: <span class="math inline">\(\inf\big\{(-\frac{1}{n},0]: n \in \mathbb{N}\big\}=\{0\}\)</span></li>
+<li>예시2: <span class="math inline">\(\sup\big\{[0,1-\frac{1}{n}]: n \in \mathbb{N}\big\}=[0,1]\)</span></li>
+</ul>
+<p><code>-</code> 함수들의 집합에서 <span class="math inline">\(\inf,\sup\)</span>의 의미: 부등호 <span class="math inline">\(f&lt;g\)</span> 를 “<span class="math inline">\(\forall x: f(x)&lt;g(x)\)</span>” 로 해석</p>
+<ul>
+<li>예시1: <span class="math inline">\(f(x)=x\)</span> 일때, <span class="math inline">\(\sup\big\{f_n: f_n(x)=x-\frac{1}{n}, n \in \mathbb{n} \big\}=f\)</span></li>
+</ul>
+</section>
+<section id="잴-수-있는-함수들" class="level2">
+<h2 class="anchored" data-anchor-id="잴-수-있는-함수들">잴 수 있는 함수들</h2>
+<p><code>-</code> 이론: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\({\cal F}\)</span>-measurable 한 집합 <span class="math inline">\(A\)</span>에 대하여<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> 함수 <span class="math inline">\(f:\Omega \to \mathbb{R}\)</span>을 아래와 같이 정의한다고 하자.</p>
+<p><span class="math display">\[f(\omega) = \begin{cases} 1 &amp; \omega \in A \\ 0 &amp; \omega \not \in A \end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable function 이다.</p>
+<p>(해설)</p>
+<ol type="1">
+<li><span class="math inline">\(B \in {\cal R}\)</span>를 고정하자.</li>
+<li>만약에 <span class="math inline">\(\{1\} \notin B\)</span> 이라면 <span class="math inline">\(\{\omega: f(\omega) \in B\}=\emptyset \in {\cal F}\)</span> 이다.</li>
+<li>만약에 <span class="math inline">\(\{1\} \in B\)</span> 이라면 <span class="math inline">\(B=\{1\} \cup (B-\{1\})\)</span> 와 같이 분해한다.</li>
+<li><span class="math inline">\(f\)</span>는 함수이므로 <span class="math inline">\(f^{-1}(B)=f^{-1}(\{1\}) \cup f^{-1}(B-\{1\})\)</span>를 만족한다.</li>
+<li><span class="math inline">\(f^{-1}(\{1\})=A\)</span>이고 <span class="math inline">\(f^{-1}(B-\{1\})=\emptyset\)</span> 이므로 <span class="math inline">\(f^{-1}(B)=A \in {\cal F}\)</span> 를 만족한다.</li>
+<li>2와 5를 종합하면 <span class="math inline">\(B\)</span>가 1을 포함하든 포함하지 않든 <span class="math inline">\(f^{-1}(B) \in {\cal F}\)</span> 이다.</li>
+<li>1-6의 논의가 임의의 <span class="math inline">\(B\)</span>에 대하여 모두 성립하므로 <span class="math inline">\(\forall B \in {\cal R}:~f^{-1}(B) \in {\cal F}\)</span> 이다.</li>
+<li>따라서 <span class="math inline">\(f\)</span>는 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable function 이다.</li>
+</ol>
+<p><code>-</code> 이론: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. 함수 <span class="math inline">\(f\)</span>가 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이라면 임의의 <span class="math inline">\(\alpha \in \mathbb{R}\)</span>에 대하여 함수</p>
+<p><span class="math display">\[g(\omega)=\alpha f(\omega)\]</span></p>
+<p>역시 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이다.</p>
+<p>(해설)</p>
+<ol type="1">
+<li><span class="math inline">\(\alpha=0\)</span> 이라면, 자명하게 성립. 따라서 <span class="math inline">\(\alpha\neq 0\)</span> 일 경우만 증명하면 된다.</li>
+<li><span class="math inline">\(B \in {\cal R}\)</span>를 고정하자.</li>
+<li><span class="math inline">\(g^{-1}(B)=f^{-1}(\frac{1}{\alpha}B)\)</span> 가 성립한다. 여기에서 <span class="math inline">\(\frac{1}{\alpha}B =: \{x: x=\frac{y}{\alpha}, y\in B\}\)</span>.</li>
+<li><span class="math inline">\(f\)</span>는 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable map</em></strong> 이므로 <span class="math inline">\(f^{-1}(\frac{1}{\alpha}B) \in {\cal F}\)</span>.</li>
+<li>임의의 <span class="math inline">\(B\)</span>에 대하여 2-4의 논의가 성립하므로 <span class="math inline">\(g\)</span> 역시 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable 이다.</li>
+</ol>
+<p><code>-</code> 이론: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. 함수 <span class="math inline">\(f,g\)</span>가 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이라면 <span class="math inline">\(f+g\)</span> 역시 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이다.</p>
+<p>(해설) – 그냥 외우세여. (정의대로 넣고 따지면 되기는하는데 더 쉽게 따지는 테크닉이 있어요)</p>
+<p><code>-</code> <strong>Thm</strong> <span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019</a>, Thm 1.3.2)</span>: 세 개의 잴 수 있는 공간 <span class="math inline">\((\Omega,{\cal F})\)</span>, <span class="math inline">\((S,{\cal S})\)</span>, <span class="math inline">\((T,{\cal T})\)</span>를 고려하자. <span class="math inline">\(f:(\Omega,{\cal F}) \to (S,{\cal S})\)</span> 이고 <span class="math inline">\(g:(S,{\cal S}) \to (T,{\cal T})\)</span> 이면 <span class="math inline">\(g\circ f: (\Omega, {\cal F}) \to (T,{\cal T})\)</span> 이다.</p>
+<p><code>-</code> 이론: 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>가 연속함수라면 <span class="math inline">\(f:(\mathbb{R},{\cal R}) \to (\mathbb{R},{\cal R})\)</span> 이다.</p>
+<p>(해설) – 연속함수의 정의 + <span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019</a>, Thm 1.3.1)</span> 를 알면 이해하기 쉬운데…</p>
+<p><code>-</code> 이론: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. 함수 <span class="math inline">\(f,g\)</span>가 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이라고 하자. 아래는 모두 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이다.</p>
+<ol type="1">
+<li><span class="math inline">\(f+g\)</span></li>
+<li><span class="math inline">\(f-g\)</span></li>
+<li><span class="math inline">\(\max(f,g)\)</span></li>
+<li><span class="math inline">\(\min(f,g)\)</span></li>
+</ol>
+<p><code>-</code> <strong>이론</strong> <span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019</a>, Thm 1.3.5)</span>: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. 함수열 <span class="math inline">\(\{f_n: n \in \mathbb{N}\}\)</span>의 모든 원소가 <strong><em><span class="math inline">\(\mathbb{R}\)</span>-valued measurable function</em></strong> 이라고 하자. 그렇다면 아래는 모두 <strong><em><span class="math inline">\({\cal F}-{\cal R}\)</span> measurable</em></strong> 한 함수이다.</p>
+<ul>
+<li><span class="math inline">\(\inf\{f_n\}\)</span></li>
+<li><span class="math inline">\(\sup\{f_n\}\)</span></li>
+</ul>
+</section>
+</section>
+<section id="적분-intro" class="level1">
+<h1>적분 intro</h1>
+<section id="르벡적분-맛보기" class="level2">
+<h2 class="anchored" data-anchor-id="르벡적분-맛보기">르벡적분 맛보기</h2>
+<p><code>-</code> <strong>(예제1)</strong> – 사각형의 넓이</p>
+<p>좌표평면위에 아래와 같은 영역 <span class="math inline">\(R\)</span>을 생각하자.</p>
+<p><span class="math display">\[R_1 = \{(a,b): 0 \leq a \leq 1, 0 \leq b \leq 1\}\]</span></p>
+<p>이 영역의 넓이는 1이다. 이것을 적분을 이용하여 구하는 과정을 서술하고 기호를 살펴보자.</p>
+<p>(서술1)</p>
+<p>적분을 사용하기 위해 아래와 같은 함수를 정의하고 밑면적을 계산하자.</p>
+<p><span class="math display">\[f(x)= \begin{cases} 1 &amp;  0 \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p>여기에서 집합 <span class="math inline">\(R'=\{(x,y): 0\leq x \leq 1, 0\leq y \leq f(x)\}\)</span> 는 집합 <span class="math inline">\(R_1\)</span>과 같다고 볼 수 있다. 즉 <span class="math inline">\(R_1=R'\)</span>이다. 이제 <span class="math inline">\(R_1\)</span>의 면적을 구하는 과정을 기호로 표현하면 아래와 같이 쓸 수 있다.</p>
+<p><span class="math display">\[S(R_1)=S(R')=\int_{-\infty}^{\infty} f(x)dx = \int_0^1 f(x) dx = \int_{0}^{1}dx = 1\]</span></p>
+<p>여기에서 <span class="math inline">\(S(R_1),S(R')\)</span>는 각각 <span class="math inline">\(R_1\)</span>과 <span class="math inline">\(R'\)</span>의 넓이를 뜻하는 기호이다.</p>
+<p>(서술2)</p>
+<p>그런데 이 예제의 경우 구간 <span class="math inline">\([0,1]\)</span>에서 함수 <span class="math inline">\(f(x)\)</span>의 값이 모두 <span class="math inline">\(f(x)=1\)</span>로 같고 그 외의 구간에서는 모두 <span class="math inline">\(f(x)=0\)</span>이므로 아래와 같이 수식을 쓰는 것도 가능하다.</p>
+<p><span class="math display">\[\lambda([0,1]) \times 1= 1\]</span></p>
+<p><code>-</code> <strong>(예제2)</strong> – 사각형의 넓이 (2)</p>
+<p>좌표평면위에 아래와 같은 영역 <span class="math inline">\(R_2\)</span>을 생각하자.</p>
+<p><span class="math display">\[R_2 = \{(x,y): 0&lt; x &lt; 1, 0 &lt; y &lt; 1\}\]</span></p>
+<p>이 영역의 넓이 역시 1이다. 이것을 적분을 이용하여 구하는 과정을 서술하고 기호를 살펴보자.</p>
+<p>(서술1)</p>
+<p><span class="math inline">\(R_2\neq R'\)</span> 이지만, 어차피 경계의 넓이는 0이라고 생각할 수 있으므로 아래과 같이 생각해도 무방하다.</p>
+<p><span class="math display">\[S(R_2)=S(R')\]</span></p>
+<p>따라서</p>
+<p><span class="math display">\[S(R_2)=S(R')=\int_{-\infty}^{\infty} f(x)dx = \int_0^1 f(x) dx = \int_{0}^{1}dx = 1\]</span></p>
+<p>(서술2)</p>
+<p>아래와 같은 새로운 함수를 정의하자.</p>
+<p><span class="math display">\[g(x)= \begin{cases} 1 &amp;  0 &lt; x &lt; 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p>이 예제의 경우 구간 <span class="math inline">\((0,1)\)</span>에서 함수 <span class="math inline">\(g(x)\)</span>의 값이 모두 <span class="math inline">\(g(x)=1\)</span>로 같고 그 외의 구간에서는 모두 <span class="math inline">\(g(x)=0\)</span>이므로 아래와 같이 수식을 쓸 수 있다.</p>
+<p><span class="math display">\[\lambda((0,1)) \times 1= 1\]</span></p>
+<p><code>-</code> <strong>(예제3)</strong> – 사각형의 넓이 (3)</p>
+<p>이제 아래와 같은 함수 <span class="math inline">\(f(x)\)</span>에 대한 밑면적을 계산하고 싶다고 생각해보자.</p>
+<p><span class="math display">\[f(x)= \begin{cases}
+1 &amp; 0&lt;x&lt;1/2 \\
+2 &amp; 1/2 \leq x &lt; 1 \\
+\frac{1}{3} &amp; 1&lt;x&lt;3 \\
+0 &amp; o.w
+\end{cases}\]</span></p>
+<p>예제1,2에서 소개한 서술1,2에 근거하여 <span class="math inline">\(f\)</span>의 밑면적을 구하는 방법을 논의하라.</p>
+<p>(서술1)</p>
+<p><span class="math inline">\(f\)</span>의 밑면적 <span class="math inline">\(S\)</span>를 적분으로 나타내면</p>
+<p><span class="math display">\[S=\int_{0}^{\frac{1}{2}}dx + \int_{\frac{1}{2}}^{1} 2dx + \int_{1}^{3} \frac{1}{3}dx\]</span></p>
+<p>사실 <span class="math inline">\(\int_{a}^{b}f(x)dx\)</span> 와 같은 형태는 일반적으로 함수가 <span class="math inline">\(f\)</span>가 폐구간 <span class="math inline">\([a,b]\)</span> 에서 정의된다고 가정하고 사용하므로 위의 기호는 정확하지 않다.</p>
+<ol type="1">
+<li><span class="math inline">\(x=\frac{1}{2},1,3\)</span>에 해당하는 영역은 중복혜서 계산된다.</li>
+<li><span class="math inline">\(x=\frac{1}{2}\)</span>에 해당하는 영역은 함수값을 1로 보기도 하고 2로 보기도 한다.</li>
+<li><span class="math inline">\(x=1\)</span>에 해당하는 영역은 함수값을 2로 보기도 하고 3으로 보기도 한다.</li>
+<li><span class="math inline">\(x=0\)</span>에 해당하는 영역은 실제로는 함수값이 0이지만 계산상으로는 1로 생각한다.</li>
+<li><span class="math inline">\(x=1\)</span>에 해당하는 영역은 실제로는 함수값이 0이지만 계산상으로는 2 혹은 <span class="math inline">\(\frac{1}{3}\)</span>로 생각한다.</li>
+<li><span class="math inline">\(x=3\)</span>에 해당하는 영역은 실제로는 함수값이 0이지만 계산상으로는 <span class="math inline">\(\frac{1}{3}\)</span>로 생각한다.</li>
+</ol>
+<p>하지만 이러한 사소한점을 무시해도 계산결과는 여전히 <span class="math inline">\(S\)</span>이다.</p>
+<p>(서술2)</p>
+<p>함수 <span class="math inline">\(f\)</span>의 면적 <span class="math inline">\(S\)</span>는 아래와 같이 나타낼 수 있다.</p>
+<p><span class="math display">\[S = 1\times \lambda(A_1) + 2 \times \lambda(A_2) + \frac{1}{3} \lambda(A_3)\]</span></p>
+<p>단, 여기에서 <span class="math inline">\(A_1=(0,\frac{1}{2}), A_2=[\frac{1}{2},1), A_3=(1,3)\)</span> 이다.</p>
+<p>(소감)</p>
+<p>르벡메져를 이용하여 넓이를 정의하니까 애매한 점 없이 매우 깔끔하다. 단지 <span class="math inline">\(A_1,A_2,A_3\)</span>이 르벡측도로 잴 수 있는 집합이어야 하므로 <span class="math inline">\(A_1,A_2,A_3 \in {\cal R}\)</span> 정도만 체크해주면 될 것 같다.</p>
+<p><code>-</code> <strong>(예제4)</strong> – 리만적분 vs 르벡적분</p>
+<p>이제 아래와 같은 함수 <span class="math inline">\(f\)</span>의 밑면적을 계산하는 방식을 고려하여 보자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x \in [0,1] \cap \mathbb{Q}  \\ 2 &amp; x \in [0,1] \cap \mathbb{Q}^c \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p>(서술1) – 리만적분</p>
+<p><strong><em>적분이 불가능하다. 그 이유를 엄밀하지 않게 서술하면 아래와 같다.</em></strong></p>
+<ol type="1">
+<li>우리가 알고 있는 “적분”이라는 것은 본래 <span class="math inline">\(x\)</span>축을 잘게 쪼개서 아주 작은 구간을 만든뒤에 그 구간에서 <span class="math inline">\(f(x)\)</span>의 값들이 비슷함을 이용하여 <span class="math inline">\(f(x)\)</span>의 밑면적을 그림과 같이 사각형넓이들의 합으로 근사시키는 방식이다.</li>
+<li>이것은 아주 작은 구간에서는 <span class="math inline">\(f(x)\)</span>의 값이 다른값을 가져봤자 그 차이는 미미하고 그래서 거의 상수처럼 생각할 수 있다는 직관을 이용하는 것이다.</li>
+<li>일반적인 함수는 구간의 크기를 작게 만들수록 <span class="math inline">\(f(x)\)</span>의 값은 점점 상수화되고 그 결과 사각형들의 합으로 근사된 넓이는 함수 <span class="math inline">\(f\)</span>의 밑면적으로 수렴한다.</li>
+<li>그런데 이 예제의 경우 아무리 작은 구간을 잡아도 그 사이에는 수많은 유리수와 수많은 무리수가 있으므로 함수값 <span class="math inline">\(f(x)\)</span>은 안정화 되지 않으며 1과 2사이를 “널뛴다.”</li>
+<li>따라서 적분값은 안정화되지 않는다.</li>
+</ol>
+<blockquote class="blockquote">
+<p>구간에서의 <span class="math inline">\(f(x)\)</span>의 대표값을 양 끝점중 하나로 설정한다고 하자. 만약 구간이 유리수를 타고오면 넓이는 1로 계산되고, 무리수를 타고오면 0으로 계산될 것이다.</p>
+</blockquote>
+<p>(서술2) – 르벡적분</p>
+<p>함수 <span class="math inline">\(f\)</span>의 면적 <span class="math inline">\(S\)</span>는 아래와 같이 나타낼 수 있다.</p>
+<p><span class="math display">\[S = 1\times \lambda(A_1) + 2 \times \lambda(A_2)\]</span></p>
+<p>단, 여기에서 <span class="math inline">\(A_1=[0,1] \cap \mathbb{Q}, A_2=[0,1] \cap \mathbb{Q}^c\)</span> 이다. 집합 <span class="math inline">\(A_1,A_2\)</span> 는 모두 <span class="math inline">\({\cal R}\)</span>-measurable 하므로 <span class="math inline">\(\lambda(A_1), \lambda(A_2)\)</span>의 값이 각각 0과 1로 잘 정의된다. 따라서 <span class="math inline">\(S=2\)</span>로 계산할 수 있다.</p>
+</section>
+<section id="그림을-통한-이해" class="level2">
+<h2 class="anchored" data-anchor-id="그림을-통한-이해">그림을 통한 이해</h2>
+<p><code>-</code> 느낌: 리만적분은 정의역을 잘게 쪼개는 느낌이지만, 르벡적분은 치역을 잘게 쪼개는 느낌이다. (리만적분을 밑넓이를 세로나누어 계산하고, 르벡적분은 가로로 나누어 계산한다.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Riemann_vs_lebesgue_integration_of_serbian_covid_case_data.svg/800px-Riemann_vs_lebesgue_integration_of_serbian_covid_case_data.svg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">위키에서 긁은 그림: 왼쪽이 리만적분, 오른쪽이 르벡적분</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/RandLintegrals.svg/1024px-RandLintegrals.svg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">위키에서 긁은 그림: 위쪽이 리만적분, 아래가 르벡적분</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dx-대신-dlambda를" class="level2">
+<h2 class="anchored" data-anchor-id="dx-대신-dlambda를"><span class="math inline">\(dx\)</span> 대신 <span class="math inline">\(d\lambda\)</span>를</h2>
+<p><code>-</code> 리만적분(<span class="math inline">\(dx\)</span>)과 르벡적분(<span class="math inline">\(d\lambda\)</span>)를 연결하여 보자.</p>
+<p><code>-</code> 참고: 아래와 같은 함수 <span class="math inline">\(f(x)\)</span>를 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} \alpha &amp; x \in [0,1]  \\  o.w \end{cases}\]</span></p>
+<p>그리고 <span class="math inline">\(\lambda\)</span>를 르벡메져라고 하자. 아래는 모두 같은 표현이다.</p>
+<ol type="1">
+<li><span class="math inline">\(\int_{-\infty}^{\infty} f(x) dx\)</span></li>
+<li><span class="math inline">\(\int_0^1f(x)dx\)</span></li>
+<li><span class="math inline">\(\int_0^1 \alpha dx\)</span></li>
+<li><span class="math inline">\(\alpha \int_0^1 dx\)</span></li>
+<li><span class="math inline">\(\alpha\lambda(A)\)</span></li>
+<li><span class="math inline">\(\alpha\int_{A}d\lambda\)</span></li>
+<li><span class="math inline">\(\int_{A}\alpha d\lambda\)</span></li>
+<li><span class="math inline">\(\int_{A}f d\lambda\)</span></li>
+<li><span class="math inline">\(\int f d\lambda\)</span></li>
+</ol>
+</section>
+<section id="dlambda-대신-dmu를" class="level2">
+<h2 class="anchored" data-anchor-id="dlambda-대신-dmu를"><span class="math inline">\(d\lambda\)</span> 대신 <span class="math inline">\(d\mu\)</span>를</h2>
+<p><code>-</code> 위의 표현들에서 <span class="math inline">\(d\lambda\)</span>와 같은 표현은 르벡메져가 아닌 일반적인 메져에서도 표현가능하다. 만약 가측공간 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에 아래와 같은 메져 <span class="math inline">\(\nu\)</span>가 존재한다고 하자.</p>
+<p><span class="math display">\[\nu = 2\lambda\]</span></p>
+<p>여기에서 <span class="math inline">\(\lambda\)</span>는 르벡메져이다. 그렇다면, 임의의 <span class="math inline">\(A \in {\cal R}\)</span>에 대하여 아래가 성립한다.</p>
+<p><span class="math display">\[\int_A d\nu = 2\int_A d\lambda \]</span></p>
+</section>
+<section id="모든-곳에서-거의-모든-곳에서" class="level2">
+<h2 class="anchored" data-anchor-id="모든-곳에서-거의-모든-곳에서">모든 곳에서, 거의 모든 곳에서</h2>
+<p><code>-</code> 르벡측도 0인 곳을 제외하고는 어떠한 명제가 성립할때 <strong><em>거의 모든 곳에서</em></strong> 라는 수식어를 붙인다. 영어로는 <strong><em>almost everywhere</em></strong> 라고 하며 기호로는 <strong><em>a.e.</em></strong> 라고 표현한다.</p>
+<p><code>-</code> 예시1: 아래와 같은 함수 <span class="math inline">\(f\)</span>를 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x\in \mathbb{Q} \\ 0 &amp; x\in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p>이 함수는 <strong><em>거의 모든 곳에서</em></strong> 0이다.</p>
+<blockquote class="blockquote">
+<p>기호로는 <span class="math inline">\(f \overset{a.e.}{=} 0\)</span> 혹은 <span class="math inline">\(f \overset{a.e.}{=} 0\)</span> <strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 와 같이 표현한다.</p>
+</blockquote>
+<p><code>-</code> 예시2: 아래와 같은 함수 <span class="math inline">\(f,g\)</span>를 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x\in \mathbb{Q} \\ 0 &amp; x\in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p><span class="math display">\[g(x) = \begin{cases} 2 &amp; x\in \mathbb{Q} \\ 0 &amp; x \in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f\)</span>와 <span class="math inline">\(g\)</span>는 <strong><em>거의 모든 곳에서</em></strong> 같다.</p>
+<blockquote class="blockquote">
+<p>기호로는 <span class="math inline">\(f\overset{a.e.}{=} g\)</span> 혹은 <span class="math inline">\(f\overset{a.e.}{=} g\)</span> <strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 와 같이 표현한다.</p>
+</blockquote>
+<p><code>-</code> 예시3: 아래와 같은 함수 <span class="math inline">\(f,g\)</span>를 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 0 &amp; x\in \mathbb{Q} \\ 1 &amp; x\in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f\)</span>는 <strong><em>거의 모든 곳에서 양수이다.</em></strong></p>
+<blockquote class="blockquote">
+<p>기호로는 <span class="math inline">\(f\overset{a.e.}{&gt;} 0\)</span> 혹은 <span class="math inline">\(f\overset{a.e.}{&gt;} g\)</span> <strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 와 같이 표현한다.</p>
+</blockquote>
+<p><code>-</code> 예시4: 아래와 같은 함수 <span class="math inline">\(f,g\)</span>를 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 0 &amp; x\in \mathbb{Q} \\ 1 &amp; x\in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p><span class="math display">\[g(x) = \begin{cases} 0 &amp; x\in \mathbb{Q} \\ 2 &amp; x \in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f\)</span>는 <strong><em>거의 모든 곳에서</em></strong> <span class="math inline">\(g\)</span>보다 작다.</p>
+<blockquote class="blockquote">
+<p>기호로는 <span class="math inline">\(f\overset{a.e.}{&lt;} g\)</span> 혹은 <span class="math inline">\(f\overset{a.e.}{&lt;} g\)</span> <strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 와 같이 표현한다.</p>
+</blockquote>
+<p><code>-</code> 예시4: 만약에 아래와 같은 함수 <span class="math inline">\(f,g\)</span>가 있다면</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x\in \mathbb{Q} \\ 0 &amp; x\in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p><span class="math display">\[g(x) = \begin{cases} 1 &amp; x\in \mathbb{Q} \\ 0 &amp; x \in \mathbb{R}-\mathbb{Q} \end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f\)</span>와 <span class="math inline">\(g\)</span>는 <strong><em>모든 곳에서</em></strong> 같다라고 할 수 있겠다. (보통 그냥 같다라고 하죠..)</p>
+</section>
+</section>
+<section id="적분" class="level1">
+<h1>적분</h1>
+<p><code>-</code> ref: <span class="citation" data-cites="durrett2019probability">Durrett (<a href="#ref-durrett2019probability" role="doc-biblioref">2019</a>)</span>, Sec 1.4</p>
+<p><code>-</code> 개론: 두 개의 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>, <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. 함수 <span class="math inline">\(\mu:{\cal F} \to [0,\infty]\)</span>을 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 또한 함수 <span class="math inline">\(f\)</span>를 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable fucntion 이라고 하자. 이러한 공간에서 아래와 같은 표현</p>
+<p><span class="math display">\[\int f d\mu\]</span></p>
+<p>을 정의하고자 한다.</p>
+<section id="simple-function" class="level2">
+<h2 class="anchored" data-anchor-id="simple-function">simple function</h2>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\((\Omega,{\cal F})\)</span>가 잴 수 있는 공간이라고 하자. 함수 <span class="math inline">\(f:\Omega \to \mathbb{R}\)</span>가 아래와 같이 표현된다면 <span class="math inline">\(f\)</span>를 simple function 이라고 한다.</p>
+<p><span class="math display">\[f(\omega)=\sum_{i=1}^{n} \alpha_i \mathbb{1}_{A_i}(\omega)\]</span></p>
+<p>여기에서 <span class="math inline">\(A_1,A_2,\dots, A_n \in {\cal F}\)</span> 은 서로소인 집합열, <span class="math inline">\(\mathbb{1}_{A_1} = \begin{cases} 1 &amp; \omega \in A_1 \\ 0 &amp; \omega \not \in A_1 \end{cases}\)</span>, 그리고 <span class="math inline">\(\alpha_1,\alpha_2,\dots, \alpha_n \in \mathbb{R}\)</span> 이다. 보통은 위를 간단하게 아래와 같이 사용한다.</p>
+<p><span class="math display">\[f = \sum_{i=1}^{n} \alpha_i \mathbb{1}_{A_i}\]</span></p>
+<p><code>-</code> 이론: <span class="math inline">\(f\)</span>는 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable map 이다.</p>
+<p><code>-</code> Note: 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 가측함수 <span class="math inline">\(f\)</span>가 finite한 치역을 가진다면 <span class="math inline">\(f\)</span>는 simple function 이다.</p>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\((\Omega,{\cal F})\)</span>가 잴 수 있는 공간이라고 하자. 함수 <span class="math inline">\(\mu:{\cal F} \to [0,\infty]\)</span>을 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 또한 함수 <span class="math inline">\(f\)</span>를 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable fucntion 이라고 하자. 만약 <span class="math inline">\(f\)</span>가 아래와 같이 표현된다면</p>
+<p><span class="math display">\[f=\sum_{i=1}^{n}\alpha_i \mathbb{1}_{A_i}\]</span></p>
+<p>즉, <span class="math inline">\(f\)</span>가 simple function 이라면 “<span class="math inline">\(f\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong>”을 아래와 같이 정의한다.</p>
+<p><span class="math display">\[\int f d\mu = \sum_{i=1}^{n}\alpha_i \mu(A_i)\]</span></p>
+<p><code>-</code> 참고: 동일한 simple function <span class="math inline">\(f\)</span>에 대한 표현 <span class="math inline">\(\sum_{i=1}^{n}\alpha_i \mu(A_i)\)</span> 는 유일하지 않다. (왜냐하면 <span class="math inline">\(\alpha_i\)</span>가 서로 다른값이라는 가정을 한 것은 아니므로) 아래를 관찰하면 그 이유를 쉽게 알 수 있다.</p>
+<p><span class="math display">\[\alpha\mathbb{1}_{(0,2]}=\alpha\mathbb{1}_{(0,1]}+\alpha\mathbb{1}_{(1,2]}\]</span></p>
+<p>하지만 앞으로의 논리전개에서 이러한 점은 별로 문제되지 않는다. 찝찝하다면 아래의 이론을 확인하고 넘어가도 무방.</p>
+<p><code>-</code> <strong>이론</strong>: <span class="math inline">\((\Omega,{\cal F})\)</span>가 잴 수 있는 공간이라고 하자. 함수 <span class="math inline">\(\mu:{\cal F} \to [0,\infty]\)</span>을 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 또한 함수 <span class="math inline">\(f\)</span>를 <span class="math inline">\({\cal F}-{\cal R}\)</span> measurable fucntion 이라고 하자. 만약 <span class="math inline">\(f\)</span>를 아래와 같은 두가지 방법으로 표현 가능하다면</p>
+<p><span class="math display">\[f=\sum_{i=1}^{m}\alpha_i \mathbb{1}_{A_i}=\sum_{j=1}^{n}\beta_j \mathbb{1}_{B_j}\]</span></p>
+<p>아래가 성립한다.</p>
+<p><span class="math display">\[\sum_{i=1}^{m}\alpha_i\mu(A_i)=\sum_{j=1}^{n}\beta_j \mu(B_j)\]</span></p>
+<p>즉 <span class="math inline">\(f\)</span>가 서로 다른 형태의 simple function으로 표현될 수 있으나 <span class="math inline">\(\int f d\mu\)</span>가 지칭하는 값은 같다.</p>
+<p><code>-</code> 이 챕터의 결론: 아무튼 <span class="math inline">\(f\)</span>가 simple function일 경우는 <span class="math inline">\(\int f d\mu\)</span> 가 의미하는 것이 아주 명확하다는 의미.</p>
+<p><code>-</code> <strong>(예제1)</strong> – 사각형의 넓이</p>
+<p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; 0\leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p>이 함수는 잴 수 있는 함수인가? 즉 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 인가? 만약에 잴 수 있는 함수라면 <span class="math inline">\(f\)</span>의 <span class="math inline">\(\lambda\)</span>에 대한 적분값은 어떻게 되는가?</p>
+<p>note: 현재는 <span class="math inline">\((\Omega, {\cal F})=(\mathbb{R}, {\cal R})\)</span>인 상황이다.</p>
+<p>(해설)</p>
+<p>step1 – 잴 수 있는 함수를 따지자. <span class="math inline">\(A=[0,1]\)</span> 일때 함수 <span class="math inline">\(f\)</span>는</p>
+<p><span class="math display">\[f(x) = 1\times \mathbb{1}_A \]</span></p>
+<p>이므로 잴 수 있는 함수이다.</p>
+<p>step2 – <span class="math inline">\(\int f d\lambda\)</span>는 아래와 같이 계산할 수 있다.</p>
+<p><span class="math display">\[\int f d\lambda = 1\times \lambda(A)  = \lambda([0,1])=1\]</span></p>
+<p>이는 <span class="math inline">\(\int_0^1 f(x)dx\)</span> 의 계산결과와 일치한다.</p>
+<p><code>-</code> <strong>(예제2)</strong> –</p>
+<p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x \in [0,1] \cap \mathbb{Q}  \\ 2 &amp; x \in [0,1] \cap \mathbb{Q}^c \end{cases}\]</span></p>
+<p>이 함수는 잴 수 있는 함수인가? 즉 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 인가? 만약에 잴 수 있는 함수라면 <span class="math inline">\(f\)</span>의 <span class="math inline">\(\lambda\)</span>에 대한 적분값은 어떻게 되는가?</p>
+<p>(해설)</p>
+<p>step1 –</p>
+<p><span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}\)</span>, <span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}^c\)</span> 일때 함수 <span class="math inline">\(f\)</span>는</p>
+<p><span class="math display">\[f=1 \times \mathbb{1}_{A_1} + 2 \times \mathbb{1}_{A_2}\]</span></p>
+<p>와 같이 표현가능하다. <span class="math inline">\(A_1,A_2 \in {\cal R}\)</span> 이고 <span class="math inline">\(A_1,A_2\)</span> 는 서로소이며 <span class="math inline">\(1,2 \in \mathbb{R}\)</span> 이므로 <span class="math inline">\(f\)</span>는 simple function 이다. 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 이다.</p>
+<p>step2 –</p>
+<p><span class="math display">\[\int f d\lambda = 1\times \lambda(A_1) + 2\times \lambda(A_2) = 1\times 0 + 2 \times 1 =2\]</span></p>
+<p>이미 살펴보았듯이 <span class="math inline">\(\int_0^1 f(x)dx\)</span>는 계산불가능하지만 <span class="math inline">\(\int f d\lambda\)</span>는 계산가능함.</p>
+<p><code>-</code> 앞으로의 논리전개: <span class="math inline">\(f\)</span>를 simple function을 이용하여 근사할 수 있을 경우 르벡적분값 <span class="math inline">\(\int f d\mu\)</span>가 모순없이 잘 정의됨.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Lebesgueintegralsimplefunctions_finer-dotted.svg/800px-Lebesgueintegralsimplefunctions_finer-dotted.svg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">위키에서 긁은 그림: 구불구불한 <span class="math inline">\(f\)</span>를 simple function의 합으로 근사할 수 있다.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="non-negative-function" class="level2">
+<h2 class="anchored" data-anchor-id="non-negative-function">non-negative function</h2>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\((\Omega,{\cal F})\)</span>가 잴 수 있는 공간이라고 하자. 함수 <span class="math inline">\(\mu:{\cal F} \to [0,\infty]\)</span>을 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 또한 함수 <span class="math inline">\(f:(\Omega,{\cal F})\to(\mathbb{R},\bar{\cal R})\)</span> non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function 이라고 하고 <span class="math inline">\(\varphi:(\Omega,{\cal F})\to(\mathbb{R},{\cal R})\)</span> simple function이라고 하자. 그러면 “<span class="math inline">\(f\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong>”을 아래와 같이 정의할 수 있다.</p>
+<p><span class="math display">\[\int f d\mu := \sup\Big\{\int \varphi d\mu: 0\leq \varphi \leq f, ~\text{a.e. with respect to } \mu \Big\}\]</span></p>
+<p><code>-</code> 정의상 <span class="math inline">\(\int f d\mu\)</span>는 무한대의 값을 가질 수 있다. 이 경우에도 <span class="math inline">\(\int f d\mu\)</span>의 값은 모순 없이 잘 정의된다.</p>
+</section>
+<section id="measurable-function" class="level2">
+<h2 class="anchored" data-anchor-id="measurable-function">measurable function</h2>
+<p><code>-</code> 지금까지의 스토리: <span class="math inline">\(\sigma\)</span>-finite measurable space <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 를 고려하자. 아래의 경우 <span class="math inline">\(\int f d\mu\)</span> 의 값이 모순없이 잘 정의되었다.</p>
+<ol type="1">
+<li><span class="math inline">\(f:(\Omega, {\cal F}) \to (\mathbb{R}, {\cal R})\)</span>인 simple function</li>
+<li><span class="math inline">\(f:(\Omega, {\cal F}) \to (\bar{\mathbb{R}}, \bar{{\cal R}})\)</span>인 non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function</li>
+</ol>
+<p>이제 일반적인 <span class="math inline">\(f:(\Omega,{\cal F}) \to (\bar{\mathbb{R}}, \bar{\cal{R}})\)</span> 에 대하여 <span class="math inline">\(\int f d\mu\)</span> 의 값이 모순없이 잘 정의되는 조건을 살펴보겠다.</p>
+<p><code>-</code> 임의의 함수 <span class="math inline">\(f:\bar{\mathbb{R}} \to \bar{\mathbb{R}}\)</span>에 대하여 아래와 같은 함수를 관찰하자.</p>
+<ul>
+<li><span class="math inline">\(f^+ = \max(0,f)\)</span></li>
+<li><span class="math inline">\(f^- = \max(0,-f)\)</span></li>
+</ul>
+<p>함수 <span class="math inline">\(f^+\)</span> 와 <span class="math inline">\(f^-\)</span>는 아래의 성질이 성립한다.</p>
+<ol type="1">
+<li><span class="math inline">\(f^+, f^-\)</span> 는 모두 양수이다.</li>
+<li><span class="math inline">\(|f| = f^+ + f^-\)</span></li>
+<li><span class="math inline">\(f = f^+ - f^-\)</span></li>
+</ol>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\(\sigma\)</span>-finite measurable space <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 를 고려하자. 일반적인 가측함수 <span class="math inline">\(f:(\Omega, {\cal F}) \to (\bar{\mathbb{R}},\bar{\cal R})\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong> 은 아래와 같이 생각할 수 있다.</p>
+<p><span class="math display">\[\int f d\mu := \int f^+ d\mu - \int f^- d\mu\]</span></p>
+<p>이 값은 잘 정의될 수도 있고, 그렇지 않을 수도 있다. 구체적으로 아래와 같다.</p>
+<ol type="1">
+<li><span class="math inline">\(\int f^+ d\mu &lt; \infty\)</span> and <span class="math inline">\(\int f^- d\mu &lt; \infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\int f d\mu = \int f^+ d\mu - \int f^- d\mu\)</span> 로 정의</li>
+<li><span class="math inline">\(\int f^+ d\mu = \infty\)</span> and <span class="math inline">\(\int f^- d\mu &lt; \infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\int f d\mu = \infty\)</span> 로 정의</li>
+<li><span class="math inline">\(\int f^+ d\mu &lt; \infty\)</span> and <span class="math inline">\(\int f^- d\mu = \infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\int f d\mu = -\infty\)</span> 로 정의</li>
+<li><span class="math inline">\(\int f^+ d\mu = \infty\)</span> and <span class="math inline">\(\int f^- d\mu = \infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\int f d\mu\)</span> 는 정의할 수 없음.</li>
+</ol>
+<p>이중에서 1,2,3에 해당하는 경우는 <strong><em>“<span class="math inline">\(\int f d\mu\)</span>가 존재한다 (exist)”</em></strong> 고 표현하며, 4의 경우는 <strong><em>“<span class="math inline">\(\int f d\mu\)</span> 가 존재하지 않는다”</em></strong>고 표현한다. 이때 1의 경우를 특별하게 <strong><em>“<span class="math inline">\(f\)</span> is integrable w.r.t. <span class="math inline">\(\mu\)</span>”</em></strong> 라고 표현한다.</p>
+<blockquote class="blockquote">
+<p>헷갈려: 언뜻 생각하면 “<span class="math inline">\(f\)</span>가 <span class="math inline">\(\mu\)</span>에 대하여 적분가능하지 않다”라는 의미가 “<span class="math inline">\(\int f d\mu\)</span> 의 값을 모순없이 잘 정의할 수 없다” 라는 의미로 이해할 수 있는데 그렇지 않다.</p>
+</blockquote>
+</section>
+<section id="notations-starstarstarstarstar" class="level2">
+<h2 class="anchored" data-anchor-id="notations-starstarstarstarstar">NOTATIONS (<span class="math inline">\(\star\star\star\star\star\)</span>)</h2>
+<p><code>-</code> <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 가 <span class="math inline">\((\mathbb{R}, {\cal R}, \lambda)\)</span> 이면</p>
+<ol type="1">
+<li><span class="math inline">\(\int f(x)dx = \int f d\lambda\)</span></li>
+<li><span class="math inline">\(\int_a^b f(x)dx = \int_E fd\lambda\)</span></li>
+</ol>
+<p>와 같이 사용한다.</p>
+<p><code>-</code> <span class="math inline">\(\int_E fd\lambda\)</span>는 종종</p>
+<ul>
+<li><span class="math inline">\(\int_E f(x)d\lambda(x)\)</span></li>
+<li><span class="math inline">\(\int_E f(y)d\lambda(y)\)</span></li>
+</ul>
+<p>와 같이 표현하기도 한다. 이러한 표현은 너무 명시적일 떄도 있지만 때때로 유용하다. 예를들어</p>
+<ul>
+<li><span class="math inline">\(\int_{(0,1)}x^y d\lambda(x)\)</span> 는 함수 <span class="math inline">\(x \mapsto x^y\)</span> 에 대한 적분을</li>
+<li><span class="math inline">\(\int_{(0,1)}x^y d\lambda(y)\)</span> 는 함수 <span class="math inline">\(y \mapsto x^y\)</span> 에 대한 적분을</li>
+</ul>
+<p>의미한다.</p>
+<p><code>-</code> <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 가 <span class="math inline">\((\mathbb{R}, {\cal R}, \mu_X)\)</span> 이고 <span class="math inline">\(F_X = \mu_X((-\infty,x])\)</span> 라면</p>
+<ul>
+<li><span class="math inline">\(\int g d\mu_X= \int g(x) dF_X(x)\)</span></li>
+</ul>
+<p>와 같이 사용할 수 있다. 만약에 <span class="math inline">\(F_X(x)\)</span>가 <strong><em>density function</em></strong> <span class="math inline">\(f_X(x)\)</span>를 가진다면</p>
+<ul>
+<li><span class="math inline">\(\int g(x) dF_X(x) = \int g(x)f_X(x)dx\)</span></li>
+</ul>
+<p>와 같이 사용할 수 있다. 표현 <span class="math inline">\(\int g(x) dF_X(x)\)</span> 와 <span class="math inline">\(\int g(x)f_X(x)dx\)</span> 는 모두 <span class="math inline">\(\mathbb{E}(X)\)</span> 를 의미하지만 <span class="math inline">\(\int g(x) dF_X(x)\)</span>는 확률변수 <span class="math inline">\(X\)</span>의 density가 존재하지 않을 때에도 표현가능하다는 장점이 있다.</p>
+<p><code>-</code> <span class="math inline">\((\Omega,{\cal F},\mu)\)</span> 에서</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega\)</span>: a countable set<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li><span class="math inline">\({\cal F}\)</span>: <span class="math inline">\(2^\Omega\)</span></li>
+<li><span class="math inline">\(\mu\)</span>: counting measure</li>
+</ol>
+<p>라고 하자. 그러면</p>
+<ul>
+<li><span class="math inline">\(\int f \mu = \sum_{\omega \in \Omega} f(\omega)\)</span></li>
+</ul>
+<p>이 성립한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-05-16-11wk_files/figure-html/1d620483-9190-4c8e-97fd-3c5ec366799e-1-e3f09443-c6fa-4d8a-b6b0-c208573c4c19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-05-16-11wk_files/figure-html/25d306c9-929a-414e-837c-c7dd22801b57-1-61eef9dd-43a8-4043-8628-2e7e608f2098.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="칸토어집합" class="level1">
+<h1>칸토어집합</h1>
+<p>ref: <a href="https://en.wikipedia.org/wiki/Cantor_set" class="uri">https://en.wikipedia.org/wiki/Cantor_set</a></p>
+<section id="정의" class="level2">
+<h2 class="anchored" data-anchor-id="정의">정의</h2>
+<p><code>-</code> 아래의 집합열 <span class="math inline">\(C_n\)</span>의 극한 <span class="math inline">\({\cal C}=\lim_{n\to\infty} C_n\)</span>를 생각하자.</p>
+<p><strong>실제수열</strong></p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(C_1=[0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></li>
+<li><span class="math inline">\(C_2=\big([0,\frac{1}{9}]\cup[\frac{2}{9},\frac{1}{3}] \big) \cup \big([\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1] \big)\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><strong>언어버전:</strong> created by iteratively deleting the open middle third from a set of line segments.</p>
+<ul>
+<li><span class="math inline">\(C_0\)</span>: <span class="math inline">\([0,1]\)</span></li>
+<li><span class="math inline">\(C_1\)</span>: <span class="math inline">\(C_0\)</span>에서 정의된 line을 3등분한뒤 가운데를 제거</li>
+<li><span class="math inline">\(C_2\)</span>: <span class="math inline">\(C_1\)</span>에서 정의된 line segments를 각각 3등분한뒤 각각 가운데를 제거</li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><strong>수식버전</strong></p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(C_1=\frac{C_{0}}{3}\cup(\frac{2}{3}+\frac{C_{0}}{3})\)</span></li>
+<li><span class="math inline">\(C_2=\frac{C_{1}}{3}\cup(\frac{2}{3}+\frac{C_{1}}{3})\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+<li><span class="math inline">\(C_n=\frac{C_{n-1}}{3}\cup(\frac{2}{3}+\frac{C_{n-1}}{3})\)</span></li>
+</ul>
+<p>단, 여기에서</p>
+<ul>
+<li><span class="math inline">\(\frac{1}{3}[a,b]= [\frac{a}{3},\frac{b}{3}]\)</span></li>
+<li><span class="math inline">\(\frac{2}{3}+[a,b]= [\frac{2}{3}+a,\frac{2}{3}+b]\)</span></li>
+</ul>
+<p>와 같이 정의한다.</p>
+<p><strong>그림버전</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cantor_set_in_seven_iterations.svg/2880px-Cantor_set_in_seven_iterations.svg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 칸토어 집합</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="성질" class="level2">
+<h2 class="anchored" data-anchor-id="성질">성질</h2>
+<p><code>-</code> 3진법의 표기: 칸토어 집합의 원소는 <span class="math inline">\([0,1]\)</span>사이의 원소를 삼진법으로 표현할때 모든 자리수가 0 또는 2가 되는 수만 모은 집합이다.</p>
+<ol type="1">
+<li><span class="math inline">\([0,1]\)</span> 사이의 모든 실수를 3진법을 표현한다고 생각하자.</li>
+<li><span class="math inline">\(C_1\)</span>은 <span class="math inline">\(0.1xxxx\dots_{3}\)</span>와 같은 숫자가 빠지고, <span class="math inline">\(C_2\)</span>에서는 <span class="math inline">\(0.01xxx\dots_{3}\)</span> 혹은 <span class="math inline">\(0.21xxx\dots_{3}\)</span> 에 대응하는 숫자가 빠지는 과정이 반복적으로 일어난다고 볼 수 있다.</li>
+<li>2의 결과를 잘 생각하면 칸토어 집합에 포함되는 수는 삼전법 소수로 표기했을 때 모든 자리수가 0 또는 2가 된다는 점을 쉽게 눈치챌 수 있다.</li>
+</ol>
+<p><code>-</code> 카디널리티: 칸토어 집합의 카디널리티는 구간 <span class="math inline">\([0,1]\)</span>의 카디널리티와 같다. 즉 <span class="math inline">\(2^{\aleph_0}\)</span> 이다.</p>
+<ol type="1">
+<li><span class="math inline">\(y\in [0,1]\)</span> 사이의 모든 실수는 임의의 2진수로 표현할 수 있다.</li>
+<li>예를들어 <span class="math inline">\(y=\frac{3}{5}=0.100110011001..._{2}\)</span>와 같이 표현할 수 있다.</li>
+<li>만약에 2의 결과에서 <span class="math inline">\(1\)</span>을 모두 <span class="math inline">\(2\)</span>로 바꾸어 3진법수를 만들면 <span class="math inline">\(0.200220022002..._{3}=\frac{7}{10}\)</span>와 같이 쓸 수 있는데, 이는 칸토르 집합의 원소가 된다.</li>
+<li>2의 입력을 3의 출력으로 바꾸는 과정을 수행하는 함수 <span class="math inline">\(f\)</span>를 정의하자. 즉 이 예제의 경우 <span class="math inline">\(f(\frac{3}{5})=\frac{7}{10}\)</span>.</li>
+<li><span class="math inline">\(f\)</span>는 전사함수이므로 <span class="math inline">\({\sf card}([0,1]) \leq {\sf card}({\cal C})\)</span>.</li>
+</ol>
+<p><code>-</code> 잴 수 있는 집합: <span class="math inline">\({\cal C} \in {\cal R}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(C_0,C_1,C_2\dots \in {\cal R}\)</span></li>
+<li><span class="math inline">\({\cal C} = \lim_{n\to \infty} C_n = \cap_{n=0}^{\infty} C_n\)</span> (<span class="math inline">\(C_0,C_1,C_2,\dots\)</span> 이 감소하는 집합열임을 이용)</li>
+<li>시그마필드 <span class="math inline">\({\cal R}\)</span>은 countable intersection에 닫혀있으므로 <span class="math inline">\({\cal C} \in {\cal R}\)</span></li>
+</ol>
+<p><code>-</code> 르벡측도값(길이): <span class="math inline">\(m({\cal C})=0\)</span>이다. 여기에서 <span class="math inline">\(m\)</span>은 르벡측도이다. 즉 칸토어집합의 길이는 0이다.</p>
+<ol type="1">
+<li>칸토어 집합을 만드는 과정에서 제외되는 집합의 길이는 순서대로 <span class="math inline">\(\frac{1}{3}, \frac{2}{9}, \frac{4}{27} \dots\)</span> 이다.</li>
+<li>이것은 첫째항이 <span class="math inline">\(\frac{1}{3}\)</span>이고 공비가 <span class="math inline">\(\frac{2}{3}\)</span>인 등비수열이므로 무한등비급수의 합을 이용하면 제외되는 길이의 합은 <span class="math inline">\(1\)</span>이 됨을 계산할 수 있다.</li>
+</ol>
+<p><code>-</code> 표현: <span class="math inline">\(n\)</span>-stage 칸토어 집합은 <span class="math inline">\(2^n\)</span>개의 disjoint한 폐구간으로 표현가능하다.</p>
+<p><code>-</code> 굉장히 오래전에 만들었던 표</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">집합</th>
+<th style="text-align: center;">카디널리티</th>
+<th style="text-align: center;">분류</th>
+<th style="text-align: center;">르벡메져</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2,3\}\)</span></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cap \mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cup \mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cap \mathbb{Q}^c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,\infty)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">비탈리집합</td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">칸토어집합</td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="밀도함수-density-function" class="level1">
+<h1>밀도함수 (density function)</h1>
+<section id="정의-1" class="level2">
+<h2 class="anchored" data-anchor-id="정의-1">정의</h2>
+<p><code>-</code> <strong>(정의)</strong> <span class="math inline">\(X\)</span>를 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서 정의된 확률변수라고 하고 <span class="math inline">\(F_X\)</span>를 <span class="math inline">\(X\)</span>의 분포함수 라고 하자. 만약에 <span class="math inline">\(F_X\)</span>가 아래와 같은 방식으로 표현된다면 <span class="math inline">\(f_X\)</span>를 <span class="math inline">\(X\)</span>를 밀도함수 (density function) 이라고 한다.</p>
+<p><span class="math display">\[F_X(x)=\int_{-\infty}^xf_X(y)dy\]</span></p>
+<p><code>-</code> 저런 표현이 존재하지 않는다면 어쩌지?</p>
+<ul>
+<li><span class="math inline">\(F_X(x)\)</span>가 불연속인 경우: 미분 불가능</li>
+<li><span class="math inline">\(F_X(x)\)</span>가 연속인 경우: 미분가능할 수도 있고, 아닐 수도 있고</li>
+</ul>
+</section>
+<section id="다양한-밀도함수-예시" class="level2">
+<h2 class="anchored" data-anchor-id="다양한-밀도함수-예시">다양한 밀도함수 예시</h2>
+<p><code>-</code> 교양: 함수 <span class="math inline">\(F_X(x)\)</span>가 연속인 경우는 연속확률변수 <span class="math inline">\(X\)</span>의 분포함수 (distribution fucntion) 혹은 CDF라고 하고 함수 <span class="math inline">\(F_X(x)\)</span>가 불연속인 경우는 이산확률변수의 분포함수 (distribution function) 혹은 CDF라고 한다.</p>
+<p><strong>(예제1)</strong> – 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ x &amp; 0\leq x \leq 1 \\ 1 &amp; 1&lt;x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>의 density가 존재하는가?</p>
+<p>체크: 일단 <span class="math inline">\(F_x(x)\)</span>는 (1) 비감소하며 (2) <span class="math inline">\(\lim_{x\to -\infty}F_X(x) = F_X(0) = 0\)</span>, <span class="math inline">\(\lim_{x\to \infty}F_X(x) = F_X(1) = 1\)</span> (3) 오른쪽연속 (그냥 연속임) 이므로 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F_X(x)\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 있다.</p>
+<p>(해설)</p>
+<ol type="1">
+<li>대충 생각하면 (진짜 말 그대로 대충) 아래와 같이 생각할 수 있다.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \frac{d}{dx}F_x(x)\]</span></p>
+<ol start="2" type="1">
+<li>즉 <span class="math inline">\(f_X(x)\)</span>는 <span class="math inline">\(F_x(x)\)</span>의 도함수 같은 것으로 생각할 수 있다.</li>
+<li>문제는 <span class="math inline">\(F_X(x)\)</span>는 연속이지만 <span class="math inline">\(x=0\)</span>과 <span class="math inline">\(x=1\)</span>에서 미분가능하지는 않다는 점이다.</li>
+<li>그래서 <span class="math inline">\(F_X(x)\)</span>는 미분가능하지 않다.</li>
+<li>하지만 미분가능의 개념을 “함수”에 적용하는 것이 아니라 “하나의 포인트”에 적용한다면 어떨까?</li>
+<li><span class="math inline">\(F_X(x)\)</span>는 <span class="math inline">\(x=0\)</span>과 <span class="math inline">\(x=1\)</span>을 제외한 모든 점에서 미분가능하며 그 도함수는 대략적으로 아래와 같이 표현할 수 있다.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \begin{cases} 0 &amp; x&lt;0 \\ ?? &amp; x=0 \\ 1 &amp; 0&lt;x&lt;1 \\ ?? &amp; x=1 \\ 0 &amp; 1&lt;x \end{cases}\]</span></p>
+<ol start="7" type="1">
+<li>어차피 유한개의 점을 제외하여도 적분값에 영향이 없으므로 ??의 값은 아무값이나 넣어도 상관없다. 편의상 아래와 같은 <span class="math inline">\(f_X(x)\)</span>를 고려하자.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \begin{cases}  1 &amp; 0\leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<ol start="8" type="1">
+<li>위와 같은 <span class="math inline">\(f_X(x)\)</span>에 대하여 아래식이 성립한다고 볼 수 있다. <span class="math display">\[F_X(x) = \int_{-\infty}^x f_X(y)dy\]</span></li>
+</ol>
+<blockquote class="blockquote">
+<p><span class="math inline">\(F_X(x)\)</span>는 미분불가능하지만 또 어떠한 의미에서는 가능하다고 볼 수 도 있다.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-05-16-11wk_files/figure-html/091e4704-480a-4e8f-902d-1e53df50d585-1-79bc4019-1638-44ba-9716-36bb06a09918.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림2: 위키에서 긁어온 균등분포의 pdf, cdf 그림. 실제로는 <span class="math inline">\(x=0,1\)</span>에서 <span class="math inline">\(F_X'(x)\)</span>의 값이 존재하지 않으나 편의상 정의함</figcaption><p></p>
+</figure>
+</div>
+<p><strong>(예제1의 정답에 대한 의문)</strong></p>
+<p>만약에 누군가가 아래와 같은 <span class="math inline">\(f_X(x)\)</span>들이 pdf라고 주장한다면?</p>
+<ol type="1">
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0&lt; x &lt;1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0\leq x &lt; 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0&lt; x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+</ol>
+<p>별로 상관없을듯 하다. 어차피 <span class="math inline">\(m(\{0\})=m(\{1\})=0\)</span> 이므로 넓이에 영향이 없다. 위의 함수는 <span class="math inline">\(x=0,1\)</span>을 제외한 모든곳에서는 함수값이 일치하므로 거의 같다고 보아도 무방하다. 즉 아래의 함수들은 <strong><em>거의 모든 곳에서 같다.</em></strong></p>
+<ol type="1">
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0&lt; x &lt;1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0\leq x &lt; 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0&lt; x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases} 1 &amp; 0\leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+</ol>
+<p>여기에서 <strong><em>두 함수 <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>가 거의 모든 곳에서 같다</em></strong>라는 표현은</p>
+<p><span class="math display">\[m\big(\{x: f(x) \neq g(x)\}\big)=0\]</span></p>
+<p>을 의미한다. 즉 함수값이 다른 집합의 르벡측도값이 0이라는 의미이다.</p>
+<p><strong>(예제2)</strong> – 혼합된 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ \frac{3}{2}x &amp; 0\leq x &lt; \frac{1}{2} \\ \frac{1}{2}+\frac{1}{2}x &amp; \frac{1}{2}\leq x&lt;1 \\ 1 &amp; 1\leq x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>의 density가 존재하는가?</p>
+<p>체크: 일단 <span class="math inline">\(F_x(x)\)</span>는 (1) 비감소하며 (2) <span class="math inline">\(\lim_{x\to -\infty}F_X(x) = F_X(0) = 0\)</span>, <span class="math inline">\(\lim_{x\to \infty}F_X(x) = F_X(1) = 1\)</span> (3) 오른쪽연속 (그냥 연속임) 이므로 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F_X(x)\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 있다.</p>
+<p>(해설)</p>
+<p>함수 <span class="math inline">\(F_X(x)\)</span>는 <span class="math inline">\(x=0,\frac{1}{2},1\)</span> 에서 미분불가능하지만 어차피 미분불가능한 점이 countable 하므로 여기에서는 무시하고 <span class="math inline">\(f_X(x)\)</span> 값을 편의상 정의하여도 무방하다. 따라서 아래와 같은 함수 <span class="math inline">\(f_X(x)\)</span>가 pdf가 될 수 있다.</p>
+<p><span class="math display">\[f_X(x) = \begin{cases}  \frac{3}{2} &amp; 0 \leq x &lt;\frac{1}{2} \\ \frac{1}{2} &amp; \frac{1}{2}&lt; x &lt; 1 \end{cases}\]</span></p>
+<p>그 외에도 <span class="math inline">\(x=0,\frac{1}{2}, 1\)</span>에서의 함수값을 어떻게 정의하느냐에 따라서 여러개의 정답이 있을 수 있지만, 그러한 함수들은 <span class="math inline">\(f_X(x)\)</span>와 <strong><em>거의 모든 곳에서 같은</em></strong> 함수이다.</p>
+<blockquote class="blockquote">
+<p>여기서도 <span class="math inline">\(F_X(x)\)</span>는 미분불가능하지만 또 어떠한 의미에서는 가능하다고 볼 수 도 있다.</p>
+</blockquote>
+<p><code>-</code> 주장: <span class="math inline">\(F_X(x)\)</span>가 <strong><em>모든 곳에서 연속</em></strong> 이고 <strong><em>거의 모든 곳에서</em></strong> 미분가능하다고 가능하면 아래를 만족하는 (도함수 비스무리한) <span class="math inline">\(f_X(x)\)</span>가 존재한다.</p>
+<p><span class="math display">\[F_X(x) = \int_{-\infty}^{x} f_X(x) dx\]</span></p>
+<p>이때 <span class="math inline">\(F_X(x)\)</span>가 미분가능하지 않은 집합에 대하여서는 적분을 정의함에 있어서 제외하고 정의해도 무방하다.</p>
+<blockquote class="blockquote">
+<p>엄청 그럴듯해보이지만 칸토어함수의 존재로 인하여 이 주장은 틀렸다.</p>
+</blockquote>
+</section>
+<section id="칸토어함수-칸토어분포" class="level2">
+<h2 class="anchored" data-anchor-id="칸토어함수-칸토어분포">칸토어함수, 칸토어분포</h2>
+<p><code>-</code> 아래와 같은 과정으로 얻어지는 함수 <span class="math inline">\(F_0, F_1, F_2, \dots\)</span>를 고려하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Cantor_function_sequence.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림3: 위키에서 긁어온 칸토어함수의 생성예제</figcaption><p></p>
+</figure>
+</div>
+<p>그림에서는 <span class="math inline">\(f_0, f_1, f_2\)</span> 와 같이 표현하였지만 우리는 편의상 <span class="math inline">\(F_0, F_1, F_2\)</span>와 같이 표현하도록 하겠다.</p>
+<p><code>-</code> 이제 이러한 함수의 극한을 <span class="math inline">\(F\)</span>라고 하자. 즉</p>
+<p><span class="math display">\[F(x) = \lim_{n\to \infty} F_n(x)\]</span></p>
+<p>이다. 이것을 기호로 간단하기 <span class="math inline">\(F_n \to F\)</span> 와 같이 표현하기도 한다. 여기에서 <span class="math inline">\(F_n \to F\)</span>의 의미는 <span class="math inline">\(F_n\)</span>의 임의의 고정된 점 <span class="math inline">\(x^\star\)</span>에 대하여 <span class="math inline">\(F_n(x^\star) \to F(x^\star)\)</span>라는 의미이다.</p>
+<p><code>-</code> 함수 <span class="math inline">\(F_n\)</span>의 정의역을 칸토르 집합 <span class="math inline">\({\cal C}\)</span>와 연계하여 이해하면 아래와 같은 사실을 관찰할 수 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(F_0\)</span>은 <span class="math inline">\(C_0\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_0\)</span> 에서는 기울기가 0이다.</li>
+<li><span class="math inline">\(F_1\)</span>은 <span class="math inline">\(C_1\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_1\)</span> 에서는 기울기가 0이다.</li>
+<li><span class="math inline">\(F_2\)</span>은 <span class="math inline">\(C_2\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_2\)</span> 에서는 기울기가 0이다.</li>
+</ol>
+<p>따라서 아래의 사실을 유추할 수 있다.</p>
+<ul>
+<li><span class="math inline">\(F\)</span>는 <span class="math inline">\({\cal C}\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-{\cal C}\)</span> 에서는 기울기가 0이다.</li>
+</ul>
+<p><code>-</code> 함수 <span class="math inline">\(F\)</span>를 칸토어 함수라고 부른다. 칸토어함수는 아래와 같은 특징이 있다.</p>
+<ol type="1">
+<li>칸토어 함수는 <strong><em>모든 곳에서</em></strong> 연속이다.</li>
+<li>칸토어 집합의 외부 <span class="math inline">\([0,1]-{\cal C}\)</span>에서는 상수함수이다. 즉 칸토어집합의 외부에서는 기울기가 0이다. <span class="math inline">\(m({\cal C})=0\)</span> 이므로 이 함수는 <strong><em>거의 모든 곳에서</em></strong> 기울기가 0이다.</li>
+<li><span class="math inline">\(F\)</span>는 비감소함수이다.</li>
+<li><span class="math inline">\(F(0)=0\)</span> 이고 <span class="math inline">\(F(1)=1\)</span>이다.</li>
+</ol>
+<p><code>-</code> 1,3,4에 의하여 <span class="math inline">\(F\)</span>는 분포함수의 정의를 만족한다. 1에 의하여 <span class="math inline">\(F\)</span>는 연속형확률변수의 분포함수가 된다. 칸토어 집합의 외부에서 (그러니까 <strong><em>[0,1]의 거의 모든 점에서</em></strong>) 도함수는 <span class="math inline">\(0\)</span> 이므로</p>
+<p><span class="math display">\[\frac{d}{dx}F(x)=f(x)=0,\quad \sf{a.e.}\]</span></p>
+<p>이다. 하지만 <span class="math inline">\(f(x)\)</span>는 pdf의 정의를 만족하지 않는다.</p>
+<p><code>-</code> 요약</p>
+<ul>
+<li>칸토어함수 <span class="math inline">\(F\)</span>는 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 반드시 있다.</li>
+<li>심지어 칸토어함수는 연속함수이므로, <span class="math inline">\(F\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>는 연속형 확률변수가 된다.</li>
+<li><span class="math inline">\(F\)</span>는 <strong><em>거의 모든 점에서 도함수가 존재하지만</em></strong> 그 도함수의 적분이 아니다.</li>
+<li>그래서 <span class="math inline">\(X\)</span>의 pdf는 존재하지 않는다.</li>
+</ul>
+<blockquote class="blockquote">
+<p>칸토어함수는 미적분학의 기본정리 성립하지 않는 반례를 찾기 위해 고안되었다. 즉 어떠한 함수 <span class="math inline">\(F\)</span>가 <strong><em>거의 모든 곳에서</em></strong> 미분가능하며, 그 도함수를 <span class="math inline">\(f\)</span>가 <strong><em>르벡적분 가능</em></strong> 할지라도 <span class="math inline">\(\int_{-\infty}^{x} f(y) dy= F(x)\)</span> 가 성립하지 않을 수 있다.</p>
+</blockquote>
+</section>
+<section id="라돈-니코딤-정리" class="level2">
+<h2 class="anchored" data-anchor-id="라돈-니코딤-정리">라돈-니코딤 정리</h2>
+<p><code>-</code> 모티브</p>
+<ol type="1">
+<li><span class="math inline">\(F_X\)</span>의 “도함수 비슷한 함수”를 일반화 할 수 없을까? <span class="math inline">\(\Rightarrow\)</span> 라돈니코딤 도함수</li>
+<li><span class="math inline">\(F_X\)</span>의 1과 같이 도함수 비슷한 함수가 언제 존재하는지 조건을 알 수 있을까? <span class="math inline">\(\Rightarrow\)</span> 절대연속</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">함수</th>
+<th style="text-align: center;">도함수</th>
+<th style="text-align: center;">라돈니코딤 도함수</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">연속</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">절대연속</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">O</td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> <strong>정의</strong>: 함수 <span class="math inline">\(F_X(x)\)</span>가 분포함수의 정의를 만족한다고 가정하자.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="math inline">\(F_X(x)\)</span>에 대응하는 분포 <span class="math inline">\(\mu_X:{\cal R} \to [0,1]\)</span>를 생각하자. <span class="math inline">\(F_X(x)\)</span>가 절대연속이라는 뜻은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\forall B \in {\cal R}: m(B) =0 \Rightarrow \mu_X(B)=0\]</span></p>
+<p>이럴 경우 아래와 같이 표현한다.</p>
+<ul>
+<li>A measure <span class="math inline">\(\mu_X\)</span> is abosolutely continous with respect to Lebesgue measure <span class="math inline">\(m\)</span></li>
+<li><span class="math inline">\(\mu_X &lt;&lt; m\)</span></li>
+</ul>
+<p><code>-</code> <strong>정의:</strong> 좀 더 일반적으로는 아래와 같이 정의할 수 있다.</p>
+<p>공간 <span class="math inline">\((X,{\cal A})\)</span>가 measurable space라고 하자. 그리고 <span class="math inline">\(\mu\)</span>와 <span class="math inline">\(\lambda\)</span>가 <span class="math inline">\((X,{\cal A})\)</span>에서의 메져라고 하자. <span class="math inline">\(\mu\)</span>가 <strong><em>absolutely continuous w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 라는 의미는</p>
+<p><span class="math display">\[\forall A \in {\cal A}:~ \lambda(A) =0 \Rightarrow \mu(A)=0\]</span></p>
+<p>라는 의미이며 기호로는 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 와 같이 나타낸다.</p>
+<p><code>-</code> 절대연속의 예제를 살펴보기전에 필요한 예비학습</p>
+<p>이런게 있었거든요.. // 7주차 강의노트</p>
+<p>함수 <span class="math inline">\(\mu\)</span>가 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 메져라고 하자.</p>
+<ul>
+<li><span class="math inline">\(A_n \downarrow A\)</span> with <span class="math inline">\(\mu(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu(\lim_{n\to \infty}A_n) = \lim_{n \to \infty}\mu(A_n)\)</span></li>
+<li><span class="math inline">\(A_i \downarrow A\)</span> with <span class="math inline">\(\mu(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu(A_i) \downarrow \mu(A)\)</span></li>
+<li>감소하는 집합열에서는 <span class="math inline">\(\lim\)</span>을 넣거나 뺼 수 있다. (정확하지 않은 state, 그냥 기억을 위한 문장)</li>
+</ul>
+<p><code>-</code> 예제1: – 베르누이</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+\frac{1}{2} &amp; 0\leq x&lt; 1 \\
+1 &amp; x \geq 1 \\
+\end{cases}\]</span></p>
+<p>이 함수는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하지 않다.</p>
+<p>(해설)</p>
+<p>임의의 <span class="math inline">\(\{x\}\)</span>에 대하여 <span class="math inline">\(\mu_X(\{x\})\)</span>를 계산하기 위해서는 아래와 같이 하면 된다.</p>
+<ol type="1">
+<li><span class="math inline">\(\mu_{X}(\{x\})=\mu_{X}\big(\lim_{n\to\infty}(x,x+\frac{1}{n}]\big)=\lim_{n\to\infty}\mu_{X}\big((x,x+\frac{1}{n}]\big)\)</span></li>
+<li><span class="math inline">\((x, x+\frac{1}{n}]= (-\infty, x+\frac{1}{n}] - (-\infty,x]\)</span></li>
+<li><span class="math inline">\(\mu_{X}\big((x,x+\frac{1}{n}]\big)=F_X(x+\frac{1}{n})-F_X(x)\)</span></li>
+<li><span class="math inline">\(\mu_{X}(\{x\})=\lim_{n\to\infty}F_X(x+\frac{1}{n})-F_X(x)\)</span></li>
+</ol>
+<p>이를 이용하면</p>
+<ul>
+<li><span class="math inline">\(m(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=\lim_{n\to\infty}F_X(\frac{1}{n})-F_X(0)=\frac{1}{2}-0\)</span></li>
+<li><span class="math inline">\(m(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=\lim_{n\to\infty}F_X(1+\frac{1}{n})-F_X(1)=1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(m(\{0,1\})=0 \not \Rightarrow \mu_X(\{0,1\}) =\mu_X(\{0\})+\mu_X(\{1\})=1\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>위에서 언급한 경우 이외에서는 연속임. <span class="math inline">\(m(\{0.77\})=0 \Rightarrow \mu_X(\{0.77\})=\lim_{n\to\infty}F_X(0.77+\frac{1}{n})-F_X(0.77)=\frac{1}{2}-\frac{1}{2}\)</span></p>
+</blockquote>
+<p><code>-</code> 예제2: – 균등분포</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+x &amp; 0\leq  x \leq  1 \\
+1 &amp; x&gt; 1 \\
+\end{cases}\]</span></p>
+<p>이 함수는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하다.</p>
+<p>(해설)</p>
+<p><span class="math inline">\(\mu_X = m\)</span> 이므로 자명함</p>
+<p><code>-</code> 예제3 – 혼합된 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ \frac{3}{2}x &amp; 0\leq x &lt; \frac{1}{2} \\ \frac{1}{2}+\frac{1}{2}x &amp; \frac{1}{2}\leq x&lt;1 \\ 1 &amp; 1\leq x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>의 density가 존재하는가?</p>
+<p>(해설)</p>
+<p><span class="math inline">\(\forall B \in {\cal R}: \mu_X(B) \leq \frac{3}{2}m(B)\)</span> 이므로 자명함.</p>
+<p><code>-</code> 예제3 – 칸토어함수</p>
+<p>칸토어함수 <span class="math inline">\(F\)</span>는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하지 않다.</p>
+<p>(해설)</p>
+<p>칸토어함수 <span class="math inline">\(F\)</span>가 <strong><em>absolutely continuous</em></strong> 하다고 하자. 그러면 <span class="math inline">\(\mu((a,b]) = \mu([a,b])\)</span> 가 성립한다.</p>
+<p><span class="math inline">\(n=0\)</span>:</p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(\mu(C_0)=\mu((0,1])=F(1)-F(0)=1\)</span></li>
+</ul>
+<p><span class="math inline">\(n=1\)</span>:</p>
+<ul>
+<li><span class="math inline">\(C_1=[0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></li>
+<li><span class="math inline">\(\mu(C_1)=\mu((0,\frac{1}{3}])+\mu((\frac{2}{3},1])=F(\frac{1}{3})-F(0)+F(1)-F(\frac{2}{3})=1\)</span></li>
+</ul>
+<p>정리하면 아래와 같다.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(C_n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mu_X(C_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,\frac{1}{9}]\cup[\frac{2}{9},\frac{1}{3}] \cup[\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>그런데 <span class="math inline">\(m({\cal C})=0\)</span> 이지만 <span class="math inline">\(\mu(\lim_{n\to \infty}C_n)=\mu({\cal C})=1\)</span> 이므로 <span class="math inline">\(\mu&lt;&lt;m\)</span>에 모순이다.</p>
+<p><code>-</code> <strong>이론</strong>: 분포함수 <span class="math inline">\(F:\mathbb{R} \to [0,1]\)</span>가 (르벡메져에 대하여) 절대연속이라면 아래를 만족하는 함수 <span class="math inline">\(f\)</span>가 존재한다.</p>
+<p><span class="math display">\[F_X(x) = \int_{-\infty}^{x}f(x)dx\]</span></p>
+<p>여기에서 함수 <span class="math inline">\(f\)</span>를 <span class="math inline">\(F\)</span>의 밀도함수 (density function) 이라고 한다. 일반적으로 밀도함수 <span class="math inline">\(f\)</span>는 유일하지 않지만, 르벡측도로 재었을때 0인 집합을 제외한 부분에서는 유일하게 결정된다. (요약: 분포함수 <span class="math inline">\(F\)</span>가 절대연속이면 밀도함수 <span class="math inline">\(f\)</span>가 존재하고, <strong><em>거의</em></strong> 유일함)</p>
+<blockquote class="blockquote">
+<p>제 생각: 이것을 “르벡메져 <span class="math inline">\(\lambda\)</span>에 대하여 <strong><em>거의 유일하다</em></strong>” 라고 이해해도 무방. 물론 이러한 표현이 없기는 하지만 대충 그런식으로 이해해도 무방. 엄밀하게 쓰면 “분포함수 <span class="math inline">\(F_X\)</span>가 있다면 밀도함수의 정의하는 만족하는 함수가 반드시 하나는 존재한다. 만약에 두 함수 <span class="math inline">\(f\)</span>와 <span class="math inline">\(g\)</span>가 모두 밀도함수의 정의를 만족한다면 ‘<span class="math inline">\(f=g\)</span> <strong><em>a.e. with respect to</em></strong> <span class="math inline">\(\lambda\)</span>’ 가 성립한다.” 와 같은 식으로 쓸 수 있음.</p>
+</blockquote>
+<p><code>-</code> <strong>Thm</strong> (라돈니코딤 정리): 공간 <span class="math inline">\((X,{\cal A})\)</span>가 measurable space라고 하자. 그리고 <span class="math inline">\(\mu\)</span>와 <span class="math inline">\(\lambda\)</span>가 <span class="math inline">\((X,{\cal A})\)</span>에서의 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 만약에 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 이라면 아래를 만족하는 함수 <span class="math inline">\(f\)</span>가 존재한다.</p>
+<p><span class="math display">\[\forall A \in {\cal A}:~ \mu(A) = \int_A f d\lambda\]</span></p>
+<p>여기에서 <span class="math inline">\(f=\frac{d\mu}{d\lambda}\)</span> 로 생각할 수 있으며 <span class="math inline">\(f\)</span>를 <strong><em>Radon-Nikodym derivative of <span class="math inline">\(\mu\)</span> w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 라고 한다.</p>
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-durrett2019probability" class="csl-entry" role="doc-biblioentry">
+Durrett, Rick. 2019. <em>Probability: Theory and Examples</em>. Vol. 49. Cambridge university press.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>2라고 하고싶은데 2라고 할 수 없다. (즉 정의할 수 없다.)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>0이라 하고싶은데 0이라고 할 수 없다. (즉 정의할 수 없다.)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><span class="math inline">\(A \in {\cal F}\)</span>이라는 뜻<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><span class="math inline">\(\Omega = \{H,T\}, \Omega = \mathbb{N}\)</span> 과 같은 예시<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>칸토어함수!!!<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>원래는 이러한 가정이 없음<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
