@@ -309,13 +309,13 @@ div.csl-indent {
 <p>이는 <span class="math inline">\(\int_0^1 f(x)dx\)</span> 의 계산결과와 일치한다.</p>
 <p><code>-</code> <strong>(예제2)</strong> –</p>
 <p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
-<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x \in [0,1] \cap \mathbb{Q}  \\ 2 &amp; x \in [0,1] \cap \mathbb{Q}^c \end{cases}\]</span></p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x \in [0,1] \cap \mathbb{Q}  \\ 2 &amp; x \in [0,1] \cap \mathbb{Q}^c \\ 0 &amp; o.w. \end{cases}\]</span></p>
 <p>이 함수는 잴 수 있는 함수인가? 즉 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 인가? 만약에 잴 수 있는 함수라면 <span class="math inline">\(f\)</span>의 <span class="math inline">\(\lambda\)</span>에 대한 적분값은 어떻게 되는가?</p>
 <p>(해설)</p>
 <p>step1 –</p>
 <p><span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}\)</span>, <span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}^c\)</span> 일때 함수 <span class="math inline">\(f\)</span>는</p>
 <p><span class="math display">\[f=1 \times \mathbb{1}_{A_1} + 2 \times \mathbb{1}_{A_2}\]</span></p>
-<p>와 같이 표현가능하다. <span class="math inline">\(A_1,A_2 \in {\cal R}\)</span> 이고 <span class="math inline">\(A_1,A_2\)</span> 는 서로소이며 <span class="math inline">\(1,2 \in \mathbb{R}\)</span> 이므로 <span class="math inline">\(f\)</span>는 simple function 이다. 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 이다.</p>
+<p>와 같이 표현가능하다. 따라서 <span class="math inline">\(f\)</span>는 simple function 이다. 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 이다.</p>
 <p>step2 –</p>
 <p><span class="math display">\[\int f d\lambda = 1\times \lambda(A_1) + 2\times \lambda(A_2) = 1\times 0 + 2 \times 1 =2\]</span></p>
 <p>이미 살펴보았듯이 <span class="math inline">\(\int_0^1 f(x)dx\)</span>는 계산불가능하지만 <span class="math inline">\(\int f d\lambda\)</span>는 계산가능함.</p>
