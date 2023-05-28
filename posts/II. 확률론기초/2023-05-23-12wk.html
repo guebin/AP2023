@@ -298,40 +298,55 @@ div.csl-indent {
 <p><code>-</code> <strong>(예제1)</strong> – 사각형의 넓이</p>
 <p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
 <p><span class="math display">\[f(x) = \begin{cases} 1 &amp; 0\leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
-<p>이 함수는 잴 수 있는 함수인가? 즉 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 인가? 만약에 잴 수 있는 함수라면 <span class="math inline">\(f\)</span>의 <span class="math inline">\(\lambda\)</span>에 대한 적분값은 어떻게 되는가?</p>
+<p><span class="math inline">\(\int f d\lambda\)</span> 는 잘 정의되는가? 만약 그렇다면 <span class="math inline">\(\int f d\lambda\)</span>의 값은 어떻게 계산할 수 있는가?</p>
 <p>note: 현재는 <span class="math inline">\((\Omega, {\cal F})=(\mathbb{R}, {\cal R})\)</span>인 상황이다.</p>
 <p>(해설)</p>
-<p>step1 – 잴 수 있는 함수를 따지자. <span class="math inline">\(A=[0,1]\)</span> 일때 함수 <span class="math inline">\(f\)</span>는</p>
-<p><span class="math display">\[f(x) = 1\times \mathbb{1}_A \]</span></p>
-<p>이므로 잴 수 있는 함수이다.</p>
-<p>step2 – <span class="math inline">\(\int f d\lambda\)</span>는 아래와 같이 계산할 수 있다.</p>
-<p><span class="math display">\[\int f d\lambda = 1\times \lambda(A)  = \lambda([0,1])=1\]</span></p>
-<p>이는 <span class="math inline">\(\int_0^1 f(x)dx\)</span> 의 계산결과와 일치한다.</p>
+<ol type="1">
+<li><span class="math inline">\(\lambda\)</span>는 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서의 시그마유한측도이다.</li>
+<li><span class="math inline">\(A=[0,1]\)</span> 일때 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(f(x) = 1\times \mathbb{1}_A(x)\)</span> 이므로 <span class="math inline">\(f\)</span>는 simple function 이고 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> 가측함수이다.</li>
+<li>1-2에 의하여 우선 <span class="math inline">\(f\)</span>와 <span class="math inline">\(\lambda\)</span>는 <span class="math inline">\(\int f d\lambda\)</span>라는 기호를 논의할 자격이 있다.</li>
+<li><span class="math inline">\(f\)</span>가 simple function 일 경우는 <span class="math inline">\(\int f d\lambda\)</span> 의 값이 잘 정의되며 그 값은 <span class="math inline">\(\lambda(A)=1\)</span>이다.</li>
+</ol>
 <p><code>-</code> <strong>(예제2)</strong> –</p>
 <p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
 <p><span class="math display">\[f(x) = \begin{cases} 1 &amp; x \in [0,1] \cap \mathbb{Q}  \\ 2 &amp; x \in [0,1] \cap \mathbb{Q}^c \\ 0 &amp; o.w. \end{cases}\]</span></p>
-<p>이 함수는 잴 수 있는 함수인가? 즉 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 인가? 만약에 잴 수 있는 함수라면 <span class="math inline">\(f\)</span>의 <span class="math inline">\(\lambda\)</span>에 대한 적분값은 어떻게 되는가?</p>
+<p><span class="math inline">\(\int f d\lambda\)</span> 는 잘 정의되는가? 만약 그렇다면 <span class="math inline">\(\int f d\lambda\)</span>의 값은 어떻게 계산할 수 있는가?</p>
 <p>(해설)</p>
-<p>step1 –</p>
-<p><span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}\)</span>, <span class="math inline">\(A_1 = [0,1] \cap \mathbb{Q}^c\)</span> 일때 함수 <span class="math inline">\(f\)</span>는</p>
-<p><span class="math display">\[f=1 \times \mathbb{1}_{A_1} + 2 \times \mathbb{1}_{A_2}\]</span></p>
-<p>와 같이 표현가능하다. 따라서 <span class="math inline">\(f\)</span>는 simple function 이다. 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> measurable function 이다.</p>
-<p>step2 –</p>
-<p><span class="math display">\[\int f d\lambda = 1\times \lambda(A_1) + 2\times \lambda(A_2) = 1\times 0 + 2 \times 1 =2\]</span></p>
-<p>이미 살펴보았듯이 <span class="math inline">\(\int_0^1 f(x)dx\)</span>는 계산불가능하지만 <span class="math inline">\(\int f d\lambda\)</span>는 계산가능함.</p>
+<ol type="1">
+<li><span class="math inline">\(\lambda\)</span>는 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서의 시그마유한측도이다.</li>
+<li><span class="math inline">\(A_1=[0,1]\cap \mathbb{Q}\)</span>, <span class="math inline">\(A_2=[0,1]\cap \mathbb{Q}^c\)</span> 일때 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(f(x) = 1\times \mathbb{1}_{A_1}(x)+ 2\times \mathbb{1}_{A_2}(x)\)</span> 이므로 <span class="math inline">\(f\)</span>는 simple function 이고 따라서 <span class="math inline">\({\cal R}-{\cal R}\)</span> 가측함수이다.</li>
+<li>1-2에 의하여 우선 <span class="math inline">\(f\)</span>와 <span class="math inline">\(\lambda\)</span>는 <span class="math inline">\(\int f d\lambda\)</span>라는 기호를 논의할 자격이 있다.</li>
+<li><span class="math inline">\(f\)</span>가 simple function 일 경우는 <span class="math inline">\(\int f d\lambda\)</span> 의 값이 잘 정의되며 그 값은 <span class="math inline">\(\lambda(A_1)+2\lambda(A_2)=2\)</span>이다.</li>
+</ol>
 <p><code>-</code> 앞으로의 논리전개: <span class="math inline">\(f\)</span>를 simple function을 이용하여 근사할 수 있을 경우 르벡적분값 <span class="math inline">\(\int f d\mu\)</span>가 모순없이 잘 정의됨.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Lebesgueintegralsimplefunctions_finer-dotted.svg/800px-Lebesgueintegralsimplefunctions_finer-dotted.svg.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">위키에서 긁은 그림: 구불구불한 <span class="math inline">\(f\)</span>를 simple function의 합으로 근사할 수 있다.</figcaption><p></p>
-</figure>
-</div>
 </section>
 <section id="non-negative-function" class="level2">
 <h2 class="anchored" data-anchor-id="non-negative-function">non-negative function</h2>
 <p><code>-</code> <strong>정의</strong>: <span class="math inline">\((\Omega,{\cal F})\)</span>가 잴 수 있는 공간이라고 하자. 함수 <span class="math inline">\(\mu:{\cal F} \to [0,\infty]\)</span>을 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 또한 함수 <span class="math inline">\(f:(\Omega,{\cal F})\to(\mathbb{R},\bar{\cal R})\)</span> non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function 이라고 하고 <span class="math inline">\(\varphi:(\Omega,{\cal F})\to(\mathbb{R},{\cal R})\)</span> simple function이라고 하자. 그러면 “<span class="math inline">\(f\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong>”을 아래와 같이 정의할 수 있다.</p>
 <p><span class="math display">\[\int f d\mu := \sup\Big\{\int \varphi d\mu: 0\leq \varphi \leq f, ~\text{a.e. with respect to } \mu \Big\}\]</span></p>
 <p><code>-</code> 정의상 <span class="math inline">\(\int f d\mu\)</span>는 무한대의 값을 가질 수 있다. 이 경우에도 <span class="math inline">\(\int f d\mu\)</span>의 값은 모순 없이 잘 정의된다.</p>
+<p><code>-</code> <strong>(예제1)</strong></p>
+<p>두개의 잴 수 있는 공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>와 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>을 고려하자. <span class="math inline">\(\lambda:{\cal R} \to [0,\infty]\)</span>를 르벡메져라고 하자. 함수 <span class="math inline">\(f:\mathbb{R} \to \mathbb{R}\)</span>를 아래와 같이 표현하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} x &amp; x \in [0,1] \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p><span class="math inline">\(\int f d\lambda\)</span> 는 잘 정의되는가? 만약 그렇다면 <span class="math inline">\(\int f d\lambda\)</span>의 값은 어떻게 계산할 수 있는가?</p>
+<p>(해설)</p>
+<ol type="1">
+<li><span class="math inline">\(\lambda\)</span>는 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서의 시그마유한측도이다.</li>
+<li><span class="math inline">\(f(x)\)</span>는 가측함수이다.</li>
+<li>따라서 <span class="math inline">\(\int f d\mu\)</span>라는 기호를 논의할 자격은 있다.</li>
+<li>1에서 0으로 등간격으로 감소하고 길이가 <span class="math inline">\(n\)</span>인 적당한 수열 <span class="math inline">\(a_1,\dots,a_n\)</span>에 대하여 서로소인 집합열 <span class="math inline">\(A_n = \{x: f(x)&gt;a_n\}-A_{n-1}\)</span> 를 설정하자. 단 <span class="math inline">\(A_0=\emptyset\)</span>.</li>
+<li>함수 <span class="math inline">\(\varphi_n(x)=\sum_{k=1}^{n} a_k \times \mathbb{1}_{A_k}(x)\)</span>를 고려하자.</li>
+<li>이때 <span class="math inline">\(0\leq \varphi_n(x) \leq f\)</span> a.e. <strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong>.</li>
+<li>모든 <span class="math inline">\(n \in \mathbb{N}\)</span> 에 대하여 <span class="math inline">\(\int \varphi_nd \lambda\)</span>의 값은 잘 정의된다. (simple function 이므로)</li>
+<li>따라서 집합 <span class="math inline">\(\big\{\int \varphi_n(x)d\lambda\big\}\)</span> 역시 잘 정의되며 <span class="math inline">\(\sup\big\{\int \varphi_n(x)d\lambda\big\}=\frac{1}{2}\)</span> 역시 잘 정의된다.</li>
+</ol>
+<p><code>-</code> 임의의 양의함수에 대하여서도 아래와 같은 방식으로 근사할 수 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Lebesgueintegralsimplefunctions_finer-dotted.svg/800px-Lebesgueintegralsimplefunctions_finer-dotted.svg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">위키에서 긁은 그림: 구불구불한 <span class="math inline">\(f\)</span>를 simple function의 합으로 근사할 수 있다.</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="measurable-function" class="level2">
 <h2 class="anchored" data-anchor-id="measurable-function">measurable function</h2>
