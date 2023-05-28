@@ -255,6 +255,7 @@ div.csl-indent {
   <li><a href="#measurable-function" id="toc-measurable-function" class="nav-link" data-scroll-target="#measurable-function">measurable function</a></li>
   <li><a href="#notations-starstarstarstarstar" id="toc-notations-starstarstarstarstar" class="nav-link" data-scroll-target="#notations-starstarstarstarstar">NOTATIONS (<span class="math inline">\(\star\star\star\star\star\)</span>)</a></li>
   </ul></li>
+  <li><a href="#시벤코정리" id="toc-시벤코정리" class="nav-link" data-scroll-target="#시벤코정리">시벤코정리</a></li>
   </ul>
 </nav>
     </div>
@@ -353,10 +354,10 @@ div.csl-indent {
 <p><code>-</code> 지금까지의 스토리: <span class="math inline">\(\sigma\)</span>-finite measurable space <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 를 고려하자. 아래의 경우 <span class="math inline">\(\int f d\mu\)</span> 의 값이 모순없이 잘 정의되었다.</p>
 <ol type="1">
 <li><span class="math inline">\(f:(\Omega, {\cal F}) \to (\mathbb{R}, {\cal R})\)</span>인 simple function</li>
-<li><span class="math inline">\(f:(\Omega, {\cal F}) \to (\bar{\mathbb{R}}, \bar{{\cal R}})\)</span>인 non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function</li>
+<li><span class="math inline">\(f:(\Omega, {\cal F}) \to (\mathbb{R}, {\cal R})\)</span>인 non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function</li>
 </ol>
-<p>이제 일반적인 <span class="math inline">\(f:(\Omega,{\cal F}) \to (\bar{\mathbb{R}}, \bar{\cal{R}})\)</span> 에 대하여 <span class="math inline">\(\int f d\mu\)</span> 의 값이 모순없이 잘 정의되는 조건을 살펴보겠다.</p>
-<p><code>-</code> 임의의 함수 <span class="math inline">\(f:\Omega \to \bar{\mathbb{R}}\)</span>에 대하여 아래와 같은 함수를 관찰하자.</p>
+<p>이제 일반적인 <span class="math inline">\(f:(\Omega,{\cal F}) \to (\mathbb{R}, {\cal R})\)</span> 에 대하여 <span class="math inline">\(\int f d\mu\)</span> 의 값이 모순없이 잘 정의되는 조건을 살펴보겠다.</p>
+<p><code>-</code> 임의의 함수 <span class="math inline">\(f:\Omega \to \mathbb{R}\)</span>에 대하여 아래와 같은 함수를 관찰하자.</p>
 <ul>
 <li><span class="math inline">\(f^+ = \max(0,f)\)</span></li>
 <li><span class="math inline">\(f^- = \max(0,-f)\)</span></li>
@@ -367,13 +368,13 @@ div.csl-indent {
 <li><span class="math inline">\(|f| = f^+ + f^-\)</span></li>
 <li><span class="math inline">\(f = f^+ - f^-\)</span></li>
 </ol>
-<p><code>-</code> <strong>이론</strong> 만약에 <span class="math inline">\(f:(\Omega, {\cal F}) \to (\bar{\mathbb{R}},\bar{\cal R})\)</span> 이면</p>
+<p><code>-</code> <strong>이론</strong> 만약에 <span class="math inline">\(f:(\Omega, {\cal F}) \to (\mathbb{R},{\cal R})\)</span> 이면</p>
 <ul>
-<li><span class="math inline">\(f^+: (\Omega, {\cal F}) \to (\bar{\mathbb{R}},\bar{\cal R})\)</span></li>
-<li><span class="math inline">\(f^: (\Omega, {\cal F}) \to (\bar{\mathbb{R}},\bar{\cal R})\)</span></li>
+<li><span class="math inline">\(f^+: (\Omega, {\cal F}) \to (\mathbb{R},{\cal R})\)</span></li>
+<li><span class="math inline">\(f^: (\Omega, {\cal F}) \to (\mathbb{R},{\cal R})\)</span></li>
 </ul>
 <p>이다.</p>
-<p><code>-</code> <strong>정의</strong>: <span class="math inline">\(\sigma\)</span>-finite measurable space <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 를 고려하자. 일반적인 가측함수 <span class="math inline">\(f:(\Omega, {\cal F}) \to (\bar{\mathbb{R}},\bar{\cal R})\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong> 은 아래와 같이 생각할 수 있다.</p>
+<p><code>-</code> <strong>정의</strong>: <span class="math inline">\(\sigma\)</span>-finite measurable space <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span> 를 고려하자. 일반적인 가측함수 <span class="math inline">\(f:(\Omega, {\cal F}) \to (\mathbb{R},{\cal R})\)</span>의 <span class="math inline">\(\mu\)</span>에 대한 적분 <strong><em>(intergral of <span class="math inline">\(f\)</span> w.r.t. <span class="math inline">\(\mu\)</span>)</em></strong> 은 아래와 같이 생각할 수 있다.</p>
 <p><span class="math display">\[\int f d\mu := \int f^+ d\mu - \int f^- d\mu\]</span></p>
 <p>이 값은 잘 정의될 수도 있고, 그렇지 않을 수도 있다. 구체적으로 아래와 같다.</p>
 <ol type="1">
@@ -386,7 +387,7 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>헷갈려: 언뜻 생각하면 “<span class="math inline">\(f\)</span>가 <span class="math inline">\(\mu\)</span>에 대하여 적분가능하지 않다”라는 의미가 “<span class="math inline">\(\int f d\mu\)</span> 의 값을 모순없이 잘 정의할 수 없다” 라는 의미로 이해할 수 있는데 그렇지 않다.</p>
 </blockquote>
-<p><code>-</code> 위의 정의에서 <span class="math inline">\(\int f^+ d\mu\)</span> 혹은 <span class="math inline">\(\int f^- d\mu\)</span> 라는 표현이 잘 정의되는 이유는 <span class="math inline">\(f^+, f^-\)</span>이 모두 <span class="math inline">\((\Omega, {\cal F}) \to (\bar{\mathbb{R}}, \bar{{\cal R}})\)</span>인 non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function 이기 때문이다.</p>
+<p><code>-</code> 위의 정의에서 <span class="math inline">\(\int f^+ d\mu\)</span> 혹은 <span class="math inline">\(\int f^- d\mu\)</span> 라는 표현이 잘 정의되는 이유는 <span class="math inline">\(f^+, f^-\)</span>이 모두 <span class="math inline">\((\Omega, {\cal F}) \to \mathbb{R}, {\cal R})\)</span>인 non-negative (<strong><em>w.r.t. <span class="math inline">\(\mu\)</span></em></strong>) function 이기 때문이다.</p>
 </section>
 <section id="notations-starstarstarstarstar" class="level2">
 <h2 class="anchored" data-anchor-id="notations-starstarstarstarstar">NOTATIONS (<span class="math inline">\(\star\star\star\star\star\)</span>)</h2>
@@ -437,13 +438,20 @@ div.csl-indent {
 </ol>
 <p>의 과정을 수행한다는 사실을 떠올리면 쉽게 이해할 수 있다.</p>
 <p><code>-</code> 가장 중요한 응용: <span class="math inline">\((\Omega, {\cal F}, \mu)\)</span>가 확률공간일 경우!</p>
-
-
-
 </section>
+</section>
+<section id="시벤코정리" class="level1">
+<h1>시벤코정리</h1>
+<p><code>-</code> ref: <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/PAPER_Cybenko.pdf">Approximation by Superpositions of a Sigmoidal Function</a> <span class="citation" data-cites="cybenko1989approximation">(<a href="#ref-cybenko1989approximation" role="doc-biblioref">Cybenko 1989</a>)</span></p>
+
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-cybenko1989approximation" class="csl-entry" role="doc-biblioentry">
+Cybenko, George. 1989. <span>“Approximation by Superpositions of a Sigmoidal Function.”</span> <em>Mathematics of Control, Signals and Systems</em> 2 (4): 303–14.
+</div>
 <div id="ref-durrett2019probability" class="csl-entry" role="doc-biblioentry">
 Durrett, Rick. 2019. <em>Probability: Theory and Examples</em>. Vol. 49. Cambridge university press.
 </div>
