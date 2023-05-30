@@ -680,15 +680,15 @@ div.csl-indent {
 <p>(해설2)</p>
 <p>임의의 <span class="math inline">\(\{x\}\)</span>에 대하여 <span class="math inline">\(\mu_X(\{x\})\)</span>를 계산하기 위해서는 아래와 같이 하면 된다.</p>
 <ol type="1">
-<li><span class="math inline">\(\mu_{X}(\{x\})=\mu_{X}\big(\lim_{n\to\infty}(x,x+\frac{1}{n}]\big)=\lim_{n\to\infty}\mu_{X}\big((x,x+\frac{1}{n}]\big)\)</span></li>
-<li><span class="math inline">\((x, x+\frac{1}{n}]= (-\infty, x+\frac{1}{n}] - (-\infty,x]\)</span></li>
-<li><span class="math inline">\(\mu_{X}\big((x,x+\frac{1}{n}]\big)=F_X(x+\frac{1}{n})-F_X(x)\)</span></li>
-<li><span class="math inline">\(\mu_{X}(\{x\})=\lim_{n\to\infty}F_X(x+\frac{1}{n})-F_X(x)\)</span></li>
+<li><span class="math inline">\(\mu_{X}(\{x\})=\mu_{X}\big(\lim_{n\to\infty}(x-\frac{1}{n},x]\big)=\lim_{n\to\infty}\mu_{X}\big((x-\frac{1}{n},x]\big)\)</span></li>
+<li><span class="math inline">\((x-\frac{1}{n}, x]= (-\infty, x] - (-\infty,x-\frac{1}{n}]\)</span></li>
+<li><span class="math inline">\(\mu_{X}\big((x-\frac{1}{n},x]\big)=F_X(x)-F_X(x-\frac{1}{n})\)</span></li>
+<li><span class="math inline">\(\mu_{X}(\{x\})=\lim_{n\to\infty}F_X(x)-F_X(x-\frac{1}{n})\)</span></li>
 </ol>
 <p>이를 이용하면</p>
 <ul>
-<li><span class="math inline">\(m(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=\lim_{n\to\infty}F_X(\frac{1}{n})-F_X(0)=\frac{1}{2}-0\)</span></li>
-<li><span class="math inline">\(m(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=\lim_{n\to\infty}F_X(1+\frac{1}{n})-F_X(1)=1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(m(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=\lim_{n\to\infty}F_X(0)-F_X(-\frac{1}{n})=\frac{1}{2}-0\)</span></li>
+<li><span class="math inline">\(m(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=\lim_{n\to\infty}F_X(1)-F_X(1-\frac{1}{n})=1-\frac{1}{2}\)</span></li>
 <li><span class="math inline">\(m(\{0,1\})=0 \not \Rightarrow \mu_X(\{0,1\}) =\mu_X(\{0\})+\mu_X(\{1\})=1\)</span></li>
 </ul>
 <blockquote class="blockquote">
