@@ -683,16 +683,16 @@ div.csl-indent {
 <li><span class="math inline">\(\mu_{X}(\{x\})=\mu_{X}\big(\lim_{n\to\infty}(x-\frac{1}{n},x]\big)=\lim_{n\to\infty}\mu_{X}\big((x-\frac{1}{n},x]\big)\)</span></li>
 <li><span class="math inline">\((x-\frac{1}{n}, x]= (-\infty, x] - (-\infty,x-\frac{1}{n}]\)</span></li>
 <li><span class="math inline">\(\mu_{X}\big((x-\frac{1}{n},x]\big)=F_X(x)-F_X(x-\frac{1}{n})\)</span></li>
-<li><span class="math inline">\(\mu_{X}(\{x\})=\lim_{n\to\infty}F_X(x)-F_X(x-\frac{1}{n})\)</span></li>
+<li><span class="math inline">\(\mu_{X}(\{x\})=F_X(x)-\lim_{n\to\infty}F_X(x-\frac{1}{n})\)</span></li>
 </ol>
 <p>이를 이용하면</p>
 <ul>
-<li><span class="math inline">\(m(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=\lim_{n\to\infty}F_X(0)-F_X(-\frac{1}{n})=\frac{1}{2}-0\)</span></li>
-<li><span class="math inline">\(m(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=\lim_{n\to\infty}F_X(1)-F_X(1-\frac{1}{n})=1-\frac{1}{2}\)</span></li>
-<li><span class="math inline">\(m(\{0,1\})=0 \not \Rightarrow \mu_X(\{0,1\}) =\mu_X(\{0\})+\mu_X(\{1\})=1\)</span></li>
+<li><span class="math inline">\(\lambda(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=F_X(0)-\lim_{n\to\infty}F_X(-\frac{1}{n})=\frac{1}{2}-0\)</span></li>
+<li><span class="math inline">\(\lambda(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=F_X(1)-\lim_{n\to\infty}F_X(1-\frac{1}{n})=1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\lambda(\{0,1\})=0 \not \Rightarrow \mu_X(\{0,1\}) =\mu_X(\{0\})+\mu_X(\{1\})=1\)</span></li>
 </ul>
 <blockquote class="blockquote">
-<p>위에서 언급한 경우 이외에서는 연속임. <span class="math inline">\(m(\{0.77\})=0 \Rightarrow \mu_X(\{0.77\})=\lim_{n\to\infty}F_X(0.77+\frac{1}{n})-F_X(0.77)=\frac{1}{2}-\frac{1}{2}\)</span></p>
+<p>위에서 언급한 경우 이외에서는 연속임. <span class="math inline">\(\lambda(\{0.77\})=0 \Rightarrow \mu_X(\{0.77\})=F_X(0.77)-\lim_{n\to\infty}F_X(0.77-\frac{1}{n})=\frac{1}{2}-\frac{1}{2}\)</span></p>
 </blockquote>
 <p><code>-</code> 예제2: – 균등분포</p>
 <p>아래와 같은 함수를 고려하자.</p>
