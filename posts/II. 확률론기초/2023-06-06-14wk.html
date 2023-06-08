@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2023-06-06">
 
-<title>AP2023 – wk</title>
+<title>AP2023 - 14wk: 밀도함수</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">14wk: 밀도함수</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -109,7 +111,35 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">14wk: 밀도함수</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 6, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -217,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link active">일반화된 밀도함수</a>
+  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link active">14wk: 밀도함수</a>
   </div>
 </li>
       </ul>
@@ -237,19 +267,15 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#이산확률변수" id="toc-이산확률변수" class="nav-link" data-scroll-target="#이산확률변수">이산확률변수</a></li>
   <li><a href="#혼합형확률변수" id="toc-혼합형확률변수" class="nav-link" data-scroll-target="#혼합형확률변수">혼합형확률변수</a></li>
-  <li><a href="#조건부확률밀도함수" id="toc-조건부확률밀도함수" class="nav-link" data-scroll-target="#조건부확률밀도함수">조건부확률밀도함수</a></li>
   </ul></li>
-  <li><a href="#르벡분해정리" id="toc-르벡분해정리" class="nav-link" data-scroll-target="#르벡분해정리">르벡분해정리</a>
-  <ul class="collapse">
-  <li><a href="#르벡분해정리-1" id="toc-르벡분해정리-1" class="nav-link" data-scroll-target="#르벡분해정리-1">르벡분해정리</a></li>
-  <li><a href="#르벡분해정리의-응용" id="toc-르벡분해정리의-응용" class="nav-link" data-scroll-target="#르벡분해정리의-응용">르벡분해정리의 응용</a></li>
-  </ul></li>
-  <li><a href="#appendix-생존분석-강의노트" id="toc-appendix-생존분석-강의노트" class="nav-link" data-scroll-target="#appendix-생존분석-강의노트">Appendix: 생존분석 강의노트</a></li>
+  <li><a href="#르벡분해정리" id="toc-르벡분해정리" class="nav-link" data-scroll-target="#르벡분해정리">르벡분해정리</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -353,7 +379,6 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span></li>
 </ol>
 <p>따라서 <span class="math inline">\(\frac{d\mu_X}{d\delta_X}\)</span>는 언제나 잘 정의되며 이는 우리가 알고 있는 pmf의 정의와 일치한다.</p>
-<p>참고로 여기에서 <span class="math inline">\(\delta_X\)</span>는 디렉메져의 합으로 정의할 수 있다. 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 디렉메져는 <span class="math inline">\(\delta_{\omega}(A)=\mathbb{1}_A(\omega)\)</span>로 정의되는 메져이다. 여기에서 <span class="math inline">\(A\)</span>는 <span class="math inline">\({\cal F}\)</span>-measurable 한 집합이다. 이 예제의 경우 <span class="math inline">\(\delta_X = \delta_0 + \delta_1\)</span> 로 정의할 수 있다. 이 예제 뿐 아니라 임의의 이산확률변수에 대하여서도 <span class="math inline">\(\delta_X\)</span>를 정의할 수 있다. 예를들면 주사위를 던지는 예제라면</p>
 <p><code>-</code> 결국 이산형 확률변수의 밀도함수를 설명하는 방법은 크게 3가지가 있는 셈이다.</p>
 <ol type="1">
 <li>이산형확률변수는 밀도함수가 없다.</li>
@@ -361,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
 <li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d\mu_X}{d\delta_X}\)</span> 으로 정의할 수 있다.</li>
 </ol>
 <p>설명1,2,3은 각각의 장단점이 있다.</p>
-<p><strong>설명1</strong>: 라돈니코딤 도함수에 대한 이해가 없어도 된다는 점에서 장점이 있다. (그래서 가장 일반적으로 사용하는 설명)</p>
+<p><strong>설명1</strong>: 라돈니코딤 도함수에 대한 이해가 없어도 된다는 점에서 장점이 있다. (그래서 학부수준에서는 가장 일반적으로 사용하는 설명)</p>
 <p><strong>설명2</strong>: 연속형은 르벡메져에 대한 라돈니코딤 도함수, 이산형은 카운팅메져에 대한 라돈니코딤 도함수로 구분하여 설명할 수 있다는 점에서는 클리어하지만 분포함수 <span class="math inline">\(\mu_X\)</span>를 활용하지 못한다는 점과 그에 따라서 이산형 확률변수의 support <span class="math inline">\(S\)</span>에 맞추어 가측공간 <span class="math inline">\((S,{\cal S})\)</span>를 재설정해야한다는 불편함이 있다. 이러한 방식으로 유도되는 베르누이 분포의 pmf는 아래와 같이 정의된다.</p>
 <ul>
 <li><span class="math inline">\(f_X(x)=p_X(x)=\begin{cases} 1-p &amp; x=0 \\ p &amp; x=1 \end{cases}\)</span></li>
@@ -384,26 +409,32 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\nu\)</span>는 <span class="math inline">\(\sigma\)</span>-finite 하며 <span class="math inline">\(\mu_X &lt;&lt; \nu\)</span> 를 만족한다.</li>
 <li>함수 <span class="math inline">\(f_X(x)\)</span>는 <span class="math inline">\(\forall B \in {\cal R}\)</span>에 대하여 아래를 만족한다.</li>
 </ol>
-<p><span class="math display">\[\mu_X(B)=\int_B f_X d\nu =\int_B f_X d\nu=\int_B f_X d\lambda + \int_B f_X d\delta_X\]</span></p>
+<p><span class="math display">\[\mu_X(B)=\int_B f_X d\nu =\int_B f_X d(\lambda+\delta_0)=\int_B f_X d\lambda + \int_B f_X d\delta_0\]</span></p>
 <blockquote class="blockquote">
 <p><span class="math inline">\(B = (-\infty,x]\)</span>와 같은 꼴에서만 성립함을 보이고 나머지는 <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> thm 쓰면 되죠?</p>
 </blockquote>
 </section>
-<section id="조건부확률밀도함수" class="level2">
-<h2 class="anchored" data-anchor-id="조건부확률밀도함수">조건부확률밀도함수</h2>
-</section>
 </section>
 <section id="르벡분해정리" class="level1">
 <h1>르벡분해정리</h1>
-<section id="르벡분해정리-1" class="level2">
-<h2 class="anchored" data-anchor-id="르벡분해정리-1">르벡분해정리</h2>
+<p><code>-</code> <strong>Thm</strong>: 분포함수의 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>는 항상 아래와 같이 분해가능하다.</p>
+<p><span class="math display">\[F = F_{ac}+F_{pp}+F_{sing}\]</span></p>
+<p>여기에서 <span class="math inline">\(F_{ac}\)</span>는 르벡메져에 대하여 절대연속이고 <span class="math inline">\(F_{pp}\)</span>는 카운팅메져에 대하여 절대연속이다. 따라서 <span class="math inline">\(F_{ac}\)</span>와 <span class="math inline">\(F_{pp}\)</span>는 각각 르벡메져와 카운팅메져에 대응하는 밀도함수가 존재한다. <span class="math inline">\(F_{sing}\)</span>는 칸토어분포와 같이 밀도함수가 존재하지 않는 경우이다.</p>
+<p><code>-</code> 이론: 분포함수 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>가 아래와 같다면</p>
+<p><span class="math display">\[F=F_{ac}\]</span></p>
+<p><span class="math inline">\(F\)</span>에 대응하는 연속형 확률변수 <span class="math inline">\(X\)</span>가 존재하고 그에 대응하는 pdf가 존재한다.</p>
+<p><code>-</code> 이론: 분포함수 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>가 아래와 같다면</p>
+<p><span class="math display">\[F=F_{pp}\]</span></p>
+<p><span class="math inline">\(F\)</span>에 대응하는 이산형 확률변수 <span class="math inline">\(X\)</span>가 존재하고 그에 대응하는 (일반화된) pdf 혹은 pmf가 존재한다.</p>
+<p><code>-</code> 이론: 분포함수 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>가 아래와 같다면</p>
+<p><span class="math display">\[F=F_{ac}+F_{pp}\]</span></p>
+<p><span class="math inline">\(F\)</span>에 대응하는 혼합형 확률변수 <span class="math inline">\(X\)</span>가 존재하고 그에 대응하는 (일반화된) pdf가 존재한다.</p>
 </section>
-<section id="르벡분해정리의-응용" class="level2">
-<h2 class="anchored" data-anchor-id="르벡분해정리의-응용">르벡분해정리의 응용</h2>
-</section>
-</section>
-<section id="appendix-생존분석-강의노트" class="level1">
-<h1>Appendix: 생존분석 강의노트</h1>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<p><code>-</code> 생존분석 강의노트</p>
+<p><code>-</code> WGAN</p>
+<p><code>-</code> 시계열교재</p>
 
 
 </section>
