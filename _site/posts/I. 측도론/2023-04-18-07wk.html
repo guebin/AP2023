@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2023-04-18">
+
+<title>AP2023 - 07wk: 측도론 (3)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AP2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../about.html" aria-current="page">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">07wk: 측도론 (3)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">07wk: 측도론 (3)</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 18, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">I. 측도론</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link active">07wk: 측도론 (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">II. 확률론기초</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 적분 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">13wk: 밀도함수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">14wk: 밀도함수</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
+  <li><a href="#예비학습" id="toc-예비학습" class="nav-link" data-scroll-target="#예비학습">예비학습</a>
+  <ul class="collapse">
+  <li><a href="#헷갈리는-표현-infty의-포함" id="toc-헷갈리는-표현-infty의-포함" class="nav-link" data-scroll-target="#헷갈리는-표현-infty의-포함">헷갈리는 표현: <span class="math inline">\(\infty\)</span>의 포함</a></li>
+  <li><a href="#메져의-종류와-성질" id="toc-메져의-종류와-성질" class="nav-link" data-scroll-target="#메져의-종류와-성질">메져의 종류와 성질</a></li>
+  </ul></li>
+  <li><a href="#파이시스템에서의-확장이론-메져버전" id="toc-파이시스템에서의-확장이론-메져버전" class="nav-link" data-scroll-target="#파이시스템에서의-확장이론-메져버전">파이시스템에서의 확장이론 (메져버전)</a>
+  <ul class="collapse">
+  <li><a href="#복습-motivating-ex" id="toc-복습-motivating-ex" class="nav-link" data-scroll-target="#복습-motivating-ex">복습 &amp; Motivating EX</a></li>
+  <li><a href="#state" id="toc-state" class="nav-link" data-scroll-target="#state">state</a></li>
+  <li><a href="#증명" id="toc-증명" class="nav-link" data-scroll-target="#증명">증명</a></li>
+  </ul></li>
+  <li><a href="#카라데오도리-확장정리" id="toc-카라데오도리-확장정리" class="nav-link" data-scroll-target="#카라데오도리-확장정리">카라데오도리 확장정리</a>
+  <ul class="collapse">
+  <li><a href="#state-1" id="toc-state-1" class="nav-link" data-scroll-target="#state-1">state</a></li>
+  <li><a href="#예제-3월28일-4wk-예제들" id="toc-예제-3월28일-4wk-예제들" class="nav-link" data-scroll-target="#예제-3월28일-4wk-예제들">예제: 3월28일 (4wk) 예제들</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="강의영상" class="level1">
+<h1>강의영상</h1>
+<blockquote class="blockquote">
+<p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-yQ5IXoRW0pW0Gyd8MnRwaW" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-yQ5IXoRW0pW0Gyd8MnRwaW</a></p>
+</blockquote>
+</section>
+<section id="예비학습" class="level1">
+<h1>예비학습</h1>
+<section id="헷갈리는-표현-infty의-포함" class="level2">
+<h2 class="anchored" data-anchor-id="헷갈리는-표현-infty의-포함">헷갈리는 표현: <span class="math inline">\(\infty\)</span>의 포함</h2>
+<p><code>-</code> 자연수집합 <span class="math inline">\(\mathbb{N}\)</span>은 <span class="math inline">\(\{\infty\}\)</span>를 포함하지 않는다. 마찬가지로 실수집합 <span class="math inline">\(\mathbb{R}\)</span> 역시 <span class="math inline">\(\{-\infty\}, \{\infty\}\)</span>를 포함하지 않는다. 만약에 이를 포함하고 싶을 경우는 아래와 같이 표현한다.</p>
+<ul>
+<li><span class="math inline">\(\mathbb{R} \cup \{-\infty\} \cup \{\infty\} = \bar{\mathbb{R}}\)</span></li>
+<li><span class="math inline">\(\mathbb{N} \cup \{-\infty\}\)</span></li>
+</ul>
+<p>여기에서 <span class="math inline">\(\bar{\mathbb{R}}\)</span>은 확장된 실수라고 부르는데 교재에따라 사용하기도 하고 사용하지 않기도 한다.</p>
+<p><code>-</code> 만약에 <span class="math inline">\(\mathbb{N}\)</span>이 <span class="math inline">\(\{\infty\}\)</span>를 포함한다면</p>
+<ul>
+<li><span class="math inline">\(\forall n \in \mathbb{N}:~ 0&lt;\frac{1}{n} \leq 1\)</span></li>
+</ul>
+<p>와 같은 표현은 불가능할 것이다.</p>
+<p><code>-</code> 구간에 대한 표현들: 구간에 대한 몇가지 표현을 정리하면 아래와 같다.</p>
+<ul>
+<li><span class="math inline">\((-\infty, b] = \{x: x\leq b, ~x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\((-\infty, b) = \{x: x &lt; b,~ x,b \in \mathbb{R}\}\)</span></li>
+</ul>
+<p><code>-</code> 구긴에 대한 표현 응용: 아래와 같은 표현을 고려하자. (교재의 예제 1.1.8과 비슷한 표현)</p>
+<ul>
+<li><span class="math inline">\({\cal A} = \{(a,b]: -\infty \leq a &lt; b \leq \infty\}\)</span></li>
+</ul>
+<p><span class="math inline">\({\cal A}\)</span>의 원소의 형태는</p>
+<ul>
+<li><span class="math inline">\(\{x: a&lt;x\leq b,~ a,x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: a&lt;x,~ a,x \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: x\leq b,~ x,b \in \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\{x: x \in \mathbb{R}\}\)</span></li>
+</ul>
+<p>이다.</p>
+<blockquote class="blockquote">
+<p>약간 무식하게 생각하면 <span class="math inline">\([-\infty, b) = (-\infty,b)\)</span> 로 해석하면 된다. 즉 <span class="math inline">\(\{-\infty\} \notin [-\infty,b)\)</span> 이라는 의미! 보는것 처럼 <span class="math inline">\([-\infty, b)\)</span>와 같은 표현은 엄청난 혼란을 불러오는 표현이므로 사용을 자제한다.</p>
+</blockquote>
+</section>
+<section id="메져의-종류와-성질" class="level2">
+<h2 class="anchored" data-anchor-id="메져의-종류와-성질">메져의 종류와 성질</h2>
+<p><code>-</code> 메져의 종류와 성질 요약</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">분류</th>
+<th style="text-align: center;"><span class="math inline">\(m(\emptyset)=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\sigma\)</span>-add</th>
+<th style="text-align: center;"><span class="math inline">\(A_i\uparrow \Omega\)</span>, <span class="math inline">\(m(A_i)&lt;\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m(\Omega)&lt;\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m(\Omega)=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(.\)</span></th>
+<th style="text-align: center;">monotone</th>
+<th style="text-align: center;"><span class="math inline">\(\sigma\)</span>-subadd</th>
+<th style="text-align: center;">conti-below</th>
+<th style="text-align: center;">conti-above</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span>-finite-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">finite-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">prob-msr</td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(O\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> 용어들</p>
+<ul>
+<li><span class="math inline">\(\sigma\)</span>-additive: <span class="math inline">\(m(\uplus_{i=1}^{\infty} B_i) = \sum_{i=1}^{\infty} m(B_i)\)</span></li>
+<li>monotone: <span class="math inline">\(A\subset B \Rightarrow m(A) \subset m(B)\)</span></li>
+<li><span class="math inline">\(\sigma\)</span>-subadditive: <span class="math inline">\(m(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty} m(A_i)\)</span></li>
+<li>continuous from below: <span class="math inline">\(A_i \uparrow A\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
+<li>continuous from above: (1) <span class="math inline">\(A_i \downarrow A\)</span> and (2) <span class="math inline">\(m(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\lim_{n\to\infty}A_i)=\lim_{n\to\infty}m(A_i)\)</span></li>
+</ul>
+<p><code>-</code> 교재의 언급 (p2. Thm 1.1.1)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-07wk_files/figure-html/6eca9be9-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림1: 메져의 성질 durret p2</figcaption><p></p>
+</figure>
+</div>
+<p><code>-</code> <span class="math inline">\(\sigma\)</span>-finite msr 에 대한 동치조건: <span class="math inline">\(m\)</span>이 <span class="math inline">\((\Omega, {\cal F})\)</span>에서의 msr이라면, 아래는 동치이다. (ref: <a href="https://en.wikipedia.org/wiki/%CE%A3-finite_measure" class="uri">https://en.wikipedia.org/wiki/%CE%A3-finite_measure</a>)</p>
+<p><strong>언어버전</strong></p>
+<ul>
+<li>The set <span class="math inline">\(\Omega\)</span> can be covered with at most countably many measurable sets with finite measure.</li>
+<li>The set <span class="math inline">\(\Omega\)</span> can be covered with at most countably many measurable disjoint sets with finite measure.</li>
+<li>The set <span class="math inline">\(\Omega\)</span> can be covered with monotone sequence of measurable sets with finite measure.</li>
+</ul>
+<p><strong>수식버전</strong></p>
+<ul>
+<li>There are sets <span class="math inline">\(A_1,A_2,\dots \in {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty}A_i=\Omega\)</span></li>
+<li>There are sets <span class="math inline">\(B_1,B_2,\dots \in {\cal A}\)</span> with <span class="math inline">\(m(B_i)&lt;\infty\)</span> and <span class="math inline">\(B_1,B_2\dots\)</span> are disjoints such that <span class="math inline">\(\uplus_{i=1}^{\infty}B_i=\Omega\)</span></li>
+<li>There are sets <span class="math inline">\(C_1,C_2,\dots \in {\cal A}\)</span> with <span class="math inline">\(m(C_i)&lt;\infty\)</span> and $C_1 C_2 $ such that <span class="math inline">\(\cup_{i=1}^{\infty}C_i=\Omega\)</span></li>
+</ul>
+</section>
+</section>
+<section id="파이시스템에서의-확장이론-메져버전" class="level1">
+<h1>파이시스템에서의 확장이론 (메져버전)</h1>
+<section id="복습-motivating-ex" class="level2">
+<h2 class="anchored" data-anchor-id="복습-motivating-ex">복습 &amp; Motivating EX</h2>
+<p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률의 공리를 만족하는 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span> 에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
+<p><code>-</code> <strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}), P)\)</span>를 확률공간이라고 하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 파이시스템이라고 가정하자. 그렇다면 확률측도 <span class="math inline">\(P:\sigma({\cal A}) \to [0,1]\)</span>의 값은 <span class="math inline">\(P: {\cal A} \to [0,1]\)</span>의 값에 의하여 유일하게 결정된다.</p>
+<p><code>-</code> 이 이론은 확률측도일 경우만 성립하고 측도일 경우는 실패했었다.</p>
+<p><strong>(예제1)</strong> – 통계학과라서 행복했던 예제</p>
+<p><span class="math inline">\(\Omega=\{a,b\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\}\}\)</span> 라고 하자. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 모든 확률측도 <span class="math inline">\(P\)</span>는 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정됨을 확인하였다. 하지만 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정되지 않는다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> 직관: 그냥 <span class="math inline">\({\cal A}\)</span>에 <span class="math inline">\(\Omega\)</span>가 있었다면 되는거 아닌가? 예를들어 아래와 같이 설정한다면?</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(m_1(\{b\})=m_2(\{b\})=1\)</span> 일 수밖에 없지 않을까?</p>
+<p><code>-</code> 혹시 아래와 같이 이론을 수정하면 되지 않을까?</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 메져라고 하자. 만약에 <span class="math inline">\({\cal A}\)</span>가 “전체집합을 포함하는 파이시스템” 이라면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,1]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,1]\)</span>의 값에 의하여 유일하게 결정된다. (거의 맞는데 한 조건이 빠져서 틀렸음)</p>
+</blockquote>
+<p><strong>(예제2)</strong></p>
+<p><span class="math inline">\(\Omega=\{a,b,c\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\{a\},\Omega\}\)</span> 라고 하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 “<span class="math inline">\(\Omega\)</span>가 포함된 파이시스템”이다. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>에서의 값으로 유일하게 결정될까?</p>
+<p>(풀이) 아래의 반례가 존재함.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(m_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{a\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{b\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{c\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{a,b\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{a,c\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{11}{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{b,c\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><code>-</code> <strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 유한측도라고 하자. 그리고 <span class="math inline">\({\cal A}\)</span>는 전제집합을 포함하는 파이시스템이라고 하자. 그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,M]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,M]\)</span>의 값에 의하여 유일하게 결정된다. (단, <span class="math inline">\(M=m(\Omega)&lt;\infty\)</span>)</p>
+<p><strong>(예제3)</strong> – <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>를 포함하지 않는데, 메져가 유일하게 결정될 것 같은 예제</p>
+<p><span class="math inline">\(\Omega = \mathbb{Z}\)</span> 이라고 하자. <span class="math inline">\(\Omega\)</span>의 부분집합들로 이루어진 수열 <span class="math inline">\(A_1,A_2,\dots\)</span> 를 아래와 같이 정의하자.</p>
+<ul>
+<li><p><span class="math inline">\(A_{1} = [-\frac{1}{2}, \frac{2}{2}] \cap \mathbb{Z} = \{0, 1\}\)</span></p></li>
+<li><p><span class="math inline">\(A_{2} = [-\frac{2}{2}, \frac{3}{2}] \cap \mathbb{Z} = \{-1, 0, 1\}\)</span></p></li>
+<li><p><span class="math inline">\(A_{3} = [-\frac{3}{2}, \frac{4}{2}] \cap \mathbb{Z} = \{-1, 0, 1, 2\}\)</span></p></li>
+<li><p><span class="math inline">\(A_{4} = [-\frac{4}{2}, \frac{5}{2}] \cap \mathbb{Z} = \{-2, -1, 0, 1, 2\}\)</span></p></li>
+<li><p><span class="math inline">\(A_{5} = [-\frac{5}{2}, \frac{6}{2}] \cap \mathbb{Z} = \{-2, -1, 0, 1, 2, 3\}\)</span></p></li>
+<li><p><span class="math inline">\(\dots\)</span></p></li>
+</ul>
+<p>관심있는 집합들의 모임은 <span class="math inline">\({\cal A}=\{A_n:n \in \mathbb{N}\}\)</span>로 정의하자. 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>의 값으로 유일하게 결정될까?</p>
+<p>(관찰)</p>
+<p>풀이에 앞서서 아래의 사실을 관찰해보자.</p>
+<ol type="1">
+<li><span class="math inline">\({\cal A}\)</span>는 파이시스템이다.</li>
+<li>집합열 <span class="math inline">\(A_n\)</span>의 극한은 <span class="math inline">\(\Omega\)</span>이다. 집합열 <span class="math inline">\(A_n\)</span>은 증가하는 수열이므로 이 경우 <span class="math inline">\(A_n \uparrow \Omega\)</span>라고 표현할 수 있다.</li>
+<li>모든 <span class="math inline">\(A_n\)</span>이 <span class="math inline">\({\cal A}\)</span>의 멤버라고 했으나 <span class="math inline">\(A_n\)</span>의 극한 <span class="math inline">\(\Omega\)</span>가 <span class="math inline">\({\cal A}\)</span>의 멤버라고 한 적은 없다. 따라서 <span class="math inline">\({\cal A}\)</span>는 전체집합을 포함하지는 않는 파이시스템이다.</li>
+</ol>
+<p>(풀이)</p>
+<p>가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서 정의가능한 측도 <span class="math inline">\(m\)</span>은 <span class="math inline">\({\cal A}\)</span>의 값으로 유일하게 결정하는 것이 가능할 것 같다. (실제로 가능해) 왜냐하면</p>
+<ul>
+<li><span class="math inline">\(m(A_1),m(A_2), m(A_3) \dots\)</span> 의 값이 결정 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(m(\{0,1\})\)</span>, <span class="math inline">\(m(\{-1\})\)</span>, <span class="math inline">\(m(\{2\})\)</span>, <span class="math inline">\(\dots\)</span> 의 값이 결정</li>
+</ul>
+<p>이므로, 0과 1을 제외한 <span class="math inline">\(\mathbb{Z}\)</span>의 모든 원소의 길이가 유일하게 결정되니까.</p>
+<p><strong><em>생각의 시간</em></strong></p>
+<p>아래의 이론을 다시 관찰하자.</p>
+<blockquote class="blockquote">
+<p><strong><u>이론</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>을 잴 수 있는 공간이라고 하고, <span class="math inline">\(m\)</span>을 이 공간에서의 유한측도라고 하자. 그리고 <span class="math inline">\({\cal A}\)</span>는 전제집합을 포함하는 파이시스템이라고 하자. 그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,M]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,M]\)</span>의 값에 의하여 유일하게 결정된다. (단, <span class="math inline">\(M=m(\Omega)&lt;\infty\)</span>)</p>
+</blockquote>
+<p>(의문1)</p>
+<p><span class="math inline">\({\cal A}\)</span>가 꼭 전체집합을 포함할 필요는 없어보인다. 즉 조건 <span class="math inline">\(\Omega \in {\cal A}\)</span>는 굳이 필요 없어보인다. 이 조건은 더 약한 아래의 조건으로 대치가능하다.</p>
+<ul>
+<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(A_i \uparrow \Omega\)</span></li>
+</ul>
+<p>만약에 <span class="math inline">\(\Omega \in {\cal A}\)</span>인 경우는 <span class="math inline">\(A_1=\Omega\)</span>로 잡으면 위 조건이 그냥 성립한다. 따라서 위의 조건은 <span class="math inline">\(\Omega \in {\cal A}\)</span> 보다 약한 조건이다. 그리고 심지어 위의 조건은 다시 아래의 더 약한 조건으로 바꿀 수 있다.</p>
+<ul>
+<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span></li>
+</ul>
+<p>(의문2)</p>
+<p>심지어 <span class="math inline">\(m(\Omega) = \infty\)</span> 이어도 상관없다.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 이 예제에서</p>
+<ul>
+<li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
+<li><span class="math inline">\(m(\{-1\})=1\)</span></li>
+<li><span class="math inline">\(m(\{2\})=1\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>이라고 하면 <span class="math inline">\(m\)</span>은 잴 수 있는 공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 카운팅메져가 되고, 그 <span class="math inline">\(m\)</span>은 <span class="math inline">\(A \in {\cal A}\)</span>에서의 값으로 유일하게 결정된다. 문제가 생길만한 것은</p>
+<ul>
+<li><span class="math inline">\(m(\{0,1\})=2\)</span></li>
+<li><span class="math inline">\(m(\{-1\})=1\)</span></li>
+<li><span class="math inline">\(m(\{2\})=\infty\)</span> &lt;– 이러면 곤란</li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>와 같은 경우이므로, 이 경우만 제약하면 된다. 즉 <span class="math inline">\(m\)</span>이 시그마유한측도라고 제한하면 될 것 같다.</p>
+</section>
+<section id="state" class="level2">
+<h2 class="anchored" data-anchor-id="state">state</h2>
+<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\((\Omega, \sigma({\cal A}),m)\)</span>을 시그마유한측도공간(<span class="math inline">\(\sigma\)</span>-finite measure space)이라고 하자. <span class="math inline">\({\cal A}\)</span>은 아래를 만족하는 파이시스템이라고 하자.</p>
+<ol type="1">
+<li><span class="math inline">\(\exists A_1,A_2,\dots \in {\cal A}\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty} A_i = \Omega\)</span></li>
+<li><span class="math inline">\(\forall i \in \mathbb{N}:~ m(A_i) &lt;\infty\)</span></li>
+</ol>
+<p>그렇다면 메져 <span class="math inline">\(m:\sigma({\cal A}) \to [0,\infty]\)</span>의 값은 <span class="math inline">\(m: {\cal A} \to [0,\infty]\)</span>의 값에 의하여 유일하게 결정된다.</p>
+<blockquote class="blockquote">
+<p>조건 1,2는 결국 <span class="math inline">\(m\)</span>을 시그마유한측도로 만들어주는 그 집합열이 <span class="math inline">\(\sigma({\cal A})-{\cal A}\)</span>가 아니라 <span class="math inline">\({\cal A}\)</span>에 있어야 한다는 의미임.</p>
+</blockquote>
+</section>
+<section id="증명" class="level2">
+<h2 class="anchored" data-anchor-id="증명">증명</h2>
+<p><code>-</code> 노트: <a href="https://github.com/guebin/AP2023/blob/main/posts/I.%20Measure%20Theory/supp_7wk.pdf">supp_7wk.pdf</a></p>
+<p><code>-</code> 교재의 증명: 교재의 증명은 좀 더 강한 조건에서 했음. (“<span class="math inline">\(A_1,A_2,\dots, {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(A_i \uparrow \Omega\)</span>” 를 가정함.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-07wk_files/figure-html/c2dc66b2-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림2: 카라데오도리 확장정리의 유일성 part 증명, durret p457-8</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="카라데오도리-확장정리" class="level1">
+<h1>카라데오도리 확장정리</h1>
+<p><code>-</code> 귀찮아서 만든 이론2: 운이 좋다면, <span class="math inline">\({\cal A}\)</span> 에서 확률비슷한 적당한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 잘 정의한다면, 이 함수 <span class="math inline">\(\tilde{P}\)</span>는 <span class="math inline">\((\Omega, \sigma({\cal A}))\)</span>에서의 확률측도 <span class="math inline">\(P\)</span>로 업그레이드 할 수 있으며 업그레이드 결과는 유일하다.</p>
+<section id="state-1" class="level2">
+<h2 class="anchored" data-anchor-id="state-1">state</h2>
+<p><code>-</code> <strong><u>Thm</u></strong>: <span class="math inline">\({\cal A}\)</span>가 <span class="math inline">\(\Omega\)</span>에 대한 semiring이라고 하자. 함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span>가</p>
+<ol type="1">
+<li><span class="math inline">\(\tilde{m}(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\uplus_{i=1}^{n} B_i)=\sum_{i=1}^{n}\tilde{m}(B_i)\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\cup_{i=1}^{\infty} A_i) \leq \sum_{i=1}^{\infty}\tilde{m}(A_i)\)</span></li>
+<li><span class="math inline">\(\exists A_1,A_2 \dots \in {\cal A}\)</span> with <span class="math inline">\(m(A_i)&lt;\infty\)</span> such that <span class="math inline">\(\cup_{i=1}^{\infty}A_i = \Omega\)</span></li>
+</ol>
+<p>를 만족한다면 <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\((\Omega,\sigma({\cal A})\)</span>에서의 측도 <span class="math inline">\(m\)</span>으로 업그레이드 가능하며, 이 업그레이드 결과는 유일하다.</p>
+<blockquote class="blockquote">
+<p>이 결과를 ver1로 생각하자.</p>
+</blockquote>
+<p><code>-</code> 교재의 state (ver2, ver3)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-07wk_files/figure-html/566082ad-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림3: 카라데오도리 확장저정리 ver2, durret p456</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>ver1과의 비교: <span class="math inline">\({\cal A}\)</span>가 알지브라라는 것은 세미링보다 훨씬 강한 조건이다. 또한 measure on an algebra <span class="math inline">\({\cal A}\)</span>란 것은 1,2,3 조건을 다 합친것 보다 강한 조건이다. <span class="math inline">\(\sigma\)</span>-finite이라는 조건은 <span class="math inline">\({\cal A}\)</span>의 차이를 제외하면 동일하다.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2023-04-18-07wk_files/figure-html/ed25c258-1-image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림4: 카라데오도리 확장정리 ver3, durret p5</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>ver1과의 비교: <span class="math inline">\({\cal A}\)</span>가 세미알지브라라는 조건은 세미링보다 강한 조건이다. (i), (ii)의 <span class="math inline">\({\cal A}\)</span>의 차이만 있을 뿐 거의 동일하다. 4의 조건도 <span class="math inline">\({\cal A}\)</span>의 차이를 제외하고는 동일하다.</p>
+</blockquote>
+</section>
+<section id="예제-3월28일-4wk-예제들" class="level2">
+<h2 class="anchored" data-anchor-id="예제-3월28일-4wk-예제들">예제: 3월28일 (4wk) 예제들</h2>
+<p><strong>(예제1)</strong> – motivating EX</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심있는 집합의 모음은 아래와 같다.</p>
+<p><span class="math display">\[{\cal A} = \{\emptyset, \{1\},\{2\},\{3,4\},\Omega\}\]</span></p>
+<p><code>-</code> 소망: 그래도 그냥 <span class="math inline">\({\cal A}\)</span>에서만 확률 비슷한 함수 <span class="math inline">\(\tilde{P}\)</span>를 잘 정의하면 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 확률측도로 업그레이드 가능하고 업그레이드 결과가 유일할까?</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{3,4\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 조건체크</p>
+<ul>
+<li><span class="math inline">\({\cal A}\)</span>는 세미알지브라(그러므로 세미링)이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>는 전체집합을 포함하고 있으며 <span class="math inline">\({\tilde P}(\Omega)=1\)</span>이다. <span class="math inline">\(\Rightarrow\)</span> 조건 (4)가 만족.</li>
+<li><span class="math inline">\({\tilde P}\)</span>는 (1) <span class="math inline">\(\tilde{P}(\emptyset)=0\)</span> 이고 (2) add 를 만족하며 (3) <span class="math inline">\(\sigma\)</span>-subadd 를 만족한다.</li>
+</ul>
+<blockquote class="blockquote">
+<p>참고: 이 예제의 경우 <span class="math inline">\(|\Omega|&lt;\infty\)</span> 이므로 <span class="math inline">\(\sigma\)</span>-subadd 는 subadd 와 같은 성질이다. 그리고 add 는 subadd를 imply 하므로 사실상 (2) 만 체크하면 끝난다.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p><strong>(예제2)</strong> – motivating EX (2)</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1\},\{2\}, \{3,4\}, \Omega\}\)</span> 라고 하자. 그리고 아래와 같은 <span class="math inline">\(\sigma({\cal A})\)</span>를 다시 상상하자.</p>
+<p><span class="math display">\[\sigma({\cal A}) = \big\{\emptyset, \{1\}, \{2\}, \{1,2\}, \{3,4\}, \{1,3,4\}, \{2,3,4\}, \Omega \big\}\]</span></p>
+<p><code>-</code> 위의 시그마필드에서 확률을 예제1과 다른 방식으로 정의할 수 도 있다. 예를들면 아래와 같은 방식으로 정의가능하다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(P_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\tilde{P}_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2}{3}\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+</tbody>
+</table>
+<p>또한 아래와 같은 방식도 가능하다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\tilde{P}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\Omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\{1,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{2,3,4\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;">None</td>
+</tr>
+</tbody>
+</table>
+<p>어떠한 방식으로 정의하든 <span class="math inline">\({\cal A}\)</span>에서 확률 비슷한 것 <span class="math inline">\(\tilde{P}_1,\tilde{P}_2\)</span>를 잘 정의하기만 <span class="math inline">\(\sigma({\cal A})\)</span>에서의 확률 <span class="math inline">\(P\)</span>로 적절하게 확장할 수 있다. 심지어 이런 확장은 유일한 듯 하다.</p>
+<p><code>-</code> 당연함. 예제1과 동일하게 <span class="math inline">\(\tilde{P_1}\)</span>과 <span class="math inline">\(\tilde{P_2}\)</span>가 add 성질만 만족한다는 사실을 체크하면 끝난다.</p>
+<p><strong>(예제3)</strong> – 운이 안 좋은 경우</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1,2\},\{2,3\}, \Omega\}\)</span> 라고 하자.</p>
+<p><code>-</code> 아래와 같은 확률 비슷한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1,2\}) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2,3\}) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 체크: 일단 <span class="math inline">\({\cal A}\)</span>는 세미링이 아니다. 따라서 확장 불가능. 세미링이 맞다고 하여도 subadd가 성립하지 않는다.</p>
+<p><strong>(예제4)</strong> – 운이 안 좋은 경우</p>
+<p><code>-</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1,2\},\{2,3\}, \Omega\}\)</span> 라고 하자.</p>
+<p><code>-</code> 아래와 같은 확률 비슷한 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1,2\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{2,3\}) = 1/2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
+</ul>
+<p><code>-</code> 체크: <span class="math inline">\(\tilde{P}\)</span>는 괜찮게 정의되었다. (1)-(4)가 모두 성립한다. (위의 예제와는 다르게 subadd 역시 성립함!!) 하지만 <span class="math inline">\({\cal A}\)</span>가 세미링이 아니어서 탈락.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>그리고 애초에 <span class="math inline">\(\Omega \notin {\cal A}\)</span> 이므로, <span class="math inline">\({\cal A}\)</span> 에서는 <span class="math inline">\(m(\Omega)\)</span>의 값도 정의하지 않음.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>(1)이랑 (4)는 너무 체크하기 쉬움<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
