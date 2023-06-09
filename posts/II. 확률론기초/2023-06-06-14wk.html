@@ -263,7 +263,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#일반화된-밀도함수" id="toc-일반화된-밀도함수" class="nav-link active" data-scroll-target="#일반화된-밀도함수">일반화된 밀도함수</a>
+  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
+  <li><a href="#일반화된-밀도함수" id="toc-일반화된-밀도함수" class="nav-link" data-scroll-target="#일반화된-밀도함수">일반화된 밀도함수</a>
   <ul class="collapse">
   <li><a href="#이산확률변수" id="toc-이산확률변수" class="nav-link" data-scroll-target="#이산확률변수">이산확률변수</a></li>
   <li><a href="#혼합형확률변수" id="toc-혼합형확률변수" class="nav-link" data-scroll-target="#혼합형확률변수">혼합형확률변수</a></li>
@@ -281,6 +282,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="강의영상" class="level1">
+<h1>강의영상</h1>
+<blockquote class="blockquote">
+<p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-wThZpnzJAP_aOtJzBl1Ij_" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-wThZpnzJAP_aOtJzBl1Ij_</a></p>
+</blockquote>
+</section>
 <section id="일반화된-밀도함수" class="level1">
 <h1>일반화된 밀도함수</h1>
 <p><code>-</code> 라돈니코딤 정리는 꼭 르벡메져일 경우에만 성립하는 것이 아니다.</p>
@@ -620,9 +627,9 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[\mathbb{E}(X) = \int_{\mathbb{R}} x d\mu_X:=\int_{\mathbb{R}} x dF_X\]</span></p>
 <p>만약 <span class="math inline">\(F_X\)</span>가 절대연속인 경우 (즉 <span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span> 인 경우) 아래와 같이 표현가능하다.</p>
 <p><span class="math display">\[\mathbb{E}(X) = \int_{-\infty}^{\infty} xf_X(x)dx\]</span></p>
-<p>만약에 <span class="math inline">\(F_X\)</span>가 countable한 jump로만 구성되어 있다면 <span class="math inline">\(\mu_X\)</span>는 jump point에서 support로 가지는 수정된 카운팅메져 <span class="math inline">\(\#_X\)</span>에 대하여 절대연속이 되며 (즉 <span class="math inline">\(\mu_X &lt;&lt; \#_X\)</span>) 이 경우 기대값은 아래와 같이 표현가능하다.</p>
+<p>만약에 <span class="math inline">\(F_X\)</span>가 countable한 jump로만 구성되어 있다면 <span class="math inline">\(\mu_X\)</span>는 jump point에서 support로 가지는 디렉메져 <span class="math inline">\(\delta_X\)</span>에 대하여 절대연속이 되며 (즉 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span>) 이 경우 기대값은 아래와 같이 표현가능하다.</p>
 <p><span class="math display">\[\mathbb{E}(X) = \sum_{x}x p_X(x)\]</span></p>
-<p>여기에서 <span class="math inline">\(f_X(x)\)</span>와 <span class="math inline">\(p_X(x)\)</span>는 각각 확률변수 <span class="math inline">\(X\)</span>의 pdf, pmf가 된다. (혹은 <span class="math inline">\(\lambda\)</span>와 <span class="math inline">\(\#_X\)</span>에 대한 라돈니코딤 도함수)</p>
+<p>여기에서 <span class="math inline">\(f_X(x)\)</span>와 <span class="math inline">\(p_X(x)\)</span>는 각각 확률변수 <span class="math inline">\(X\)</span>의 pdf, pmf가 된다. (혹은 <span class="math inline">\(\lambda\)</span>와 <span class="math inline">\(\delta_X\)</span>에 대한 라돈니코딤 도함수)</p>
 <p><code>-</code> 요약</p>
 <ul>
 <li>학부수준: 연속형확률변수의 기대값과 이산형확률변수의 기대값이 서로 다르게 정의된다.</li>
