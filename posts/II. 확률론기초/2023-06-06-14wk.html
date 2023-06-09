@@ -395,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 디랙메져의 표현법에 따르면 예제2의 경우 <span class="math inline">\(\#_X := \delta_0 + \delta_1\)</span> 로 표현할 수 있다. 여기에서 <span class="math inline">\(\delta_x\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 디랙메져이다.</p>
 <p><code>-</code> 꼭 베르누이와 같은 상황이 아니라도 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대한 분포 <span class="math inline">\(\mu_X\)</span>를 dominating하는 적절한 <span class="math inline">\(\sigma\)</span>-finite한 메져 <span class="math inline">\(\#_X\)</span>를 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서 정의할 수 있다. 예를들면 주사위예제의 경우</p>
 <p><span class="math display">\[\#_X = \delta_1+\delta_2+\delta_3+\delta_4+\delta_5+\delta_6\]</span></p>
-<p>와 같은 방식으로 정의할 수 있다. 즉 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대하여 아래를 만족하는 <span class="math inline">\(\delta_X\)</span>를 항상 잡을 수 있다.</p>
+<p>와 같은 방식으로 정의할 수 있다. 즉 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대하여 아래를 만족하는 <span class="math inline">\(\#_X\)</span>를 항상 잡을 수 있다.</p>
 <ol type="1">
 <li><span class="math inline">\(\#_X\)</span> is <span class="math inline">\(\sigma\)</span>-finite</li>
 <li><span class="math inline">\(\mu_X &lt;&lt; \#_X\)</span></li>
@@ -424,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="혼합형확률변수" class="level2">
 <h2 class="anchored" data-anchor-id="혼합형확률변수">혼합형확률변수</h2>
 <p><code>-</code> 예제1: 아래와 같은 분포함수 <span class="math inline">\(F_X\)</span>를 고려하자.</p>
-<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt; 0 \\ \frac{1}{2} &amp; 0 \leq x &lt; \frac{1}{2} \\ x &amp; \frac{1}{2} \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt; 0 \\ \frac{1}{2} &amp; 0 \leq x &lt; \frac{1}{2} \\ x &amp; \frac{1}{2} \leq x \leq 1 \\ 1 &amp; x&gt;1  \end{cases}\]</span></p>
 <p>이 분포함수는 동전을 던져 앞면이 나오면 <span class="math inline">\(X=0\)</span>으로 결정하고 뒷면이 나오면 균등분포 <span class="math inline">\([0.5,1]\)</span>에서 확률변수 <span class="math inline">\(X\)</span>를 생성하는 실험을 상상하면 쉽게 이해할 수 있다. 아래와 같은 함수</p>
 <p><span class="math display">\[f_X(x) = \begin{cases} \frac{1}{2} &amp; x=0 \\ 1 &amp; \frac{1}{2} \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
 <p>가 <span class="math inline">\(F_X\)</span>의 밀도함수가 될 수 있음을 설명하라.</p>
@@ -438,6 +438,55 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><span class="math inline">\(B = (-\infty,x]\)</span>와 같은 꼴에서만 성립함을 보이고 나머지는 <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> thm 쓰면 되죠?</p>
 </blockquote>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+위의 3에 대한 추가설명.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>결국 임의의 <span class="math inline">\(B=(-\infty,x]\)</span>와 같은 꼴에서 <span class="math inline">\(\mu_X(B) = \int_Bf_Xd\lambda + \int_B f_Xd\delta_0\)</span> 임을 보이면 된다.</p>
+<p>편의상 아래와 같이 정의하자.</p>
+<ul>
+<li><span class="math inline">\(LHS = \mu_X(B)\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_B f_Xd\lambda\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_B f_Xd\delta_0\)</span></li>
+</ul>
+<p><strong>case1</strong>: <span class="math inline">\(x &lt; 0\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=0\)</span></li>
+<li><span class="math inline">\(RHS_1 = 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = 0\)</span></li>
+</ul>
+<p><strong>case2</strong>: <span class="math inline">\(x = 0\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_{-\infty}^0f_X(x)dx = 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case3</strong>: <span class="math inline">\(0&lt;x&lt; \frac{1}{2}\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_{-\infty}^{0}f_X(x)dx+ \int_{0}^{x}f_X(x)dx= 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case4</strong>: <span class="math inline">\(\frac{1}{2}&lt;x&lt; 1\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=x\)</span></li>
+<li><span class="math inline">\(RHS_1 =\int_{-\infty}^{1/2}f_X(x)dx+ \int_{1/2}^xf_X(x)dx = \int_{1/2}^xf_X(x)dx=\int_{1/2}^xdx= x-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case5</strong>: <span class="math inline">\(x&gt;1\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=1\)</span></li>
+<li><span class="math inline">\(RHS_1 =\int_{-\infty}^{1/2}f_X(x)dx+ \int_{1/2}^{1}f_X(x)dx = \int_{1/2}^1f_X(x)dx=\int_{1/2}^1dx= 1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+</div>
+</div>
 </section>
 </section>
 <section id="르벡분해정리" class="level1">
