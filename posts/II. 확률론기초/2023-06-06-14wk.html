@@ -9,7 +9,7 @@
 <meta name="author" content="최규빈">
 <meta name="dcterms.date" content="2023-06-06">
 
-<title>AP2023 - 14wk: 일반화된 밀도함수</title>
+<title>AP2023 - 14wk: 이산형과 연속형의 통합</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">14wk: 일반화된 밀도함수</h1>
+      <h1 class="quarto-secondary-nav-title">14wk: 이산형과 연속형의 통합</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">14wk: 일반화된 밀도함수</h1>
+      <h1 class="title d-none d-lg-block">14wk: 이산형과 연속형의 통합</h1>
                       </div>
   </div>
     
@@ -247,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link active">14wk: 일반화된 밀도함수</a>
+  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link active">14wk: 이산형과 연속형의 통합</a>
   </div>
 </li>
       </ul>
@@ -269,6 +269,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#혼합형확률변수" id="toc-혼합형확률변수" class="nav-link" data-scroll-target="#혼합형확률변수">혼합형확률변수</a></li>
   </ul></li>
   <li><a href="#르벡분해정리" id="toc-르벡분해정리" class="nav-link" data-scroll-target="#르벡분해정리">르벡분해정리</a></li>
+  <li><a href="#기대값" id="toc-기대값" class="nav-link" data-scroll-target="#기대값">기대값</a></li>
+  <li><a href="#마무리" id="toc-마무리" class="nav-link" data-scroll-target="#마무리">마무리</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
   </ul>
 </nav>
@@ -291,14 +293,14 @@ ul.task-list li input[type="checkbox"] {
 \frac{1}{2} &amp; 0 \leq  x &lt;1 \\
 1 &amp; x \geq 1
 \end{cases}\]</span></p>
-<p>이제 <span class="math inline">\(S=\{0,1\}\)</span>, <span class="math inline">\({\cal S}=\{\emptyset, \{0\},\{1\},\{1,2\}\}\)</span>로 구성된 measurable space <span class="math inline">\((S,{\cal S})\)</span>를 생각하자. 함수 <span class="math inline">\(\mu: {\cal S} \to [0,1]\)</span>를 아래와 같이 정의하면</p>
+<p>이제 <span class="math inline">\(S=\{0,1\}\)</span>, <span class="math inline">\({\cal S}=\{\emptyset, \{0\},\{1\},\{1,2\}\}\)</span>로 구성된 measurable space <span class="math inline">\((S,{\cal S})\)</span>를 생각하자. 함수 <span class="math inline">\(\tilde{\mu}_X: {\cal S} \to [0,1]\)</span>를 아래와 같이 정의하면</p>
 <ul>
-<li><span class="math inline">\(\mu(\emptyset)= 0\)</span></li>
-<li><span class="math inline">\(\mu(\{0\})= \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\mu(\{1\})= \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\mu(\{0,1\})= 1\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\emptyset)= 0\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{0\})= \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{1\})= \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{0,1\})= 1\)</span></li>
 </ul>
-<p>함수 <span class="math inline">\(\mu\)</span>는 <span class="math inline">\((S,{\cal S})\)</span>에서의 메져가 되며, 이것은 <span class="math inline">\(F_X\)</span>의 분포함수와 같은 역할을 한다. 이제 measurable space <span class="math inline">\((S,{\cal S})\)</span>에 대하여 아래와 같은 함수 <span class="math inline">\(\#: {\cal S} \to \mathbb{R}\)</span>을 고려하자.</p>
+<p>함수 <span class="math inline">\(\tilde{\mu}_X\)</span>는 <span class="math inline">\((S,{\cal S})\)</span>에서의 메져가 되며, 이것은 <span class="math inline">\(F_X\)</span>에 대응하는 분포 <span class="math inline">\({\mu}_X\)</span>와 같은 역할을 한다. 이제 measurable space <span class="math inline">\((S,{\cal S})\)</span>에 대하여 아래와 같은 함수 <span class="math inline">\(\#: {\cal S} \to \mathbb{R}\)</span>을 고려하자.</p>
 <ul>
 <li><span class="math inline">\(\#(\emptyset)=0\)</span></li>
 <li><span class="math inline">\(\#(\{0\})= 1\)</span></li>
@@ -310,22 +312,22 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(f_X(0)=\frac{1}{2}\)</span></li>
 <li><span class="math inline">\(f_X(1)=\frac{1}{2}\)</span></li>
 </ul>
-<p>함수 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\mu\)</span>의 라돈니코딤 도함수임을 보여라.</p>
+<p>함수 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\tilde{\mu}_X\)</span>의 라돈니코딤 도함수임을 보여라.</p>
 <p>(해설)</p>
 <ol type="1">
-<li><span class="math inline">\(\mu\)</span>, <span class="math inline">\(\#\)</span>는 모두 <span class="math inline">\((S,{\cal S})\)</span> 에서의 <span class="math inline">\(\sigma\)</span>-finite 메져이다.</li>
-<li><span class="math inline">\(\mu &lt;&lt; \#\)</span>이 성립한다. 따라서 적당한 <span class="math inline">\({\cal S} \to {\cal S}\)</span> measurable function이 존재하여 라돈니코딤 도함수의 조건을 만족함을 알 수 있다.</li>
-<li>우리가 생각하는 후보는 <span class="math inline">\(f_X\)</span>인데 이것이 만약에 (1) <span class="math inline">\({\cal S} \to {\cal S}\)</span> 가측함수이고 (2) 라돈니코딤 도함수의 조건을 만족한다면 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\mu\)</span>의 거의 유일한 (<strong><em>w.r.t. <span class="math inline">\(\#\)</span></em></strong>) 밀도함수라고 주장할 수 있다.</li>
+<li><span class="math inline">\(\tilde{\mu}_X\)</span>, <span class="math inline">\(\#\)</span>는 모두 <span class="math inline">\((S,{\cal S})\)</span> 에서의 <span class="math inline">\(\sigma\)</span>-finite 메져이다.</li>
+<li><span class="math inline">\(\tilde{\mu}_X &lt;&lt; \#\)</span>이 성립한다. 따라서 적당한 <span class="math inline">\({\cal S} \to {\cal S}\)</span> measurable function이 존재하여 라돈니코딤 도함수의 조건을 만족함을 알 수 있다.</li>
+<li>우리가 생각하는 후보는 <span class="math inline">\(f_X\)</span>인데 이것이 만약에 (1) <span class="math inline">\({\cal S} \to {\cal S}\)</span> 가측함수이고 (2) 라돈니코딤 도함수의 조건<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>을 만족한다면 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\mu\)</span>의 거의 유일한 (<strong><em>w.r.t. <span class="math inline">\(\#\)</span></em></strong>) 밀도함수라고 주장할 수 있다.</li>
 <li><span class="math inline">\(f_X\)</span>는 <span class="math inline">\({\cal S} \to {\cal S}\)</span> 가측함수이다.</li>
-<li><span class="math inline">\(\forall B \in {\cal S}: \mu(B)=\int_B f_X d\#=\sum_{x \in B} f_X(x)\)</span> 를 만족한다.</li>
+<li><span class="math inline">\(\forall B \in {\cal S}: \mu(B)=\int_B f_X d\#=\sum_{x \in B} f_X(x)\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 를 만족한다.</li>
 </ol>
 <p><code>-</code> 예제1에서 제안한 <span class="math inline">\(f_X\)</span>의 경우 어떠한 의미에서는 <strong>밀도함수</strong>라고 해석할 수 있다.</p>
 <ol type="1">
 <li>학부수준의 이해: 이산형확률변수는 확률질량함수를 가지며, 연속형확률변수는 확률밀도함수를 가진다.</li>
 <li>대학원수준의 이해: 이산형확률변수의 밀도함수는 <span class="math inline">\(\#\)</span>에 대한 라돈니코딤 도함수로 해석할 수 있으며, 연속형확률변수의 밀도함수는 <span class="math inline">\(\lambda\)</span>에 대한 라돈니코딤 도함수로 해석할 수 있다.</li>
 </ol>
-<p><code>-</code> 의문1: 예제1에서는 왜 <span class="math inline">\(\mu_X\)</span> 대신에 <span class="math inline">\(\mu\)</span>를 사용했을까?</p>
-<p>사실 예제1에서의 <span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\(F_X\)</span>에 대응하는 distribution 과 유사하지만 미세한 차이가 있음</p>
+<p><code>-</code> 찝찝한점1: 예제1에서는 왜 <span class="math inline">\(\mu_X\)</span> 대신에 <span class="math inline">\(\tilde{\mu}_X\)</span>를 사용했을까?</p>
+<p>사실 예제1에서의 <span class="math inline">\(\tilde{\mu}_X\)</span>는 <span class="math inline">\(F_X\)</span>에 대응하는 distribution <span class="math inline">\(\mu_X\)</span>와 유사하지만 미세한 차이가 있음</p>
 <p><strong><span class="math inline">\(\mu_X:{\cal R} \to [0,1]\)</span></strong></p>
 <ul>
 <li><span class="math inline">\(\mu_X(\emptyset)=0\)</span></li>
@@ -334,18 +336,26 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\mu_X(\{0,1\})=1\)</span></li>
 <li><span class="math inline">\(\mu_X(B)=0\)</span> , <span class="math inline">\(B \in {\cal R} - \{0,1\} - \{0\} - \{1\}\)</span></li>
 </ul>
-<p><strong><span class="math inline">\(\mu:{\cal S} \to [0,1]\)</span></strong></p>
+<p><strong><span class="math inline">\(\tilde{\mu}:{\cal S} \to [0,1]\)</span></strong></p>
 <ul>
 <li><span class="math inline">\(\mu(\emptyset)= 0\)</span></li>
 <li><span class="math inline">\(\mu(\{0\})= \frac{1}{2}\)</span></li>
 <li><span class="math inline">\(\mu(\{1\})= \frac{1}{2}\)</span></li>
 <li><span class="math inline">\(\mu(\{0,1\})= 1\)</span></li>
 </ul>
-<p><code>-</code> 의문2: 예제1에서는 왜 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 고려하지 않고 <span class="math inline">\((S,{\cal S})\)</span>를 고려하였을까?</p>
+<p><code>-</code> 찝찝한점2: 예제1에서는 왜 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 고려하지 않고 <span class="math inline">\((S,{\cal S})\)</span>를 고려하였을까?</p>
 <blockquote class="blockquote">
-<p>이건 사실 <span class="math inline">\(\mu_X\)</span>대신 <span class="math inline">\(\mu\)</span>를 쓴 이유와 연관이 있다. <span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\({\cal R}\)</span>에서 정의되고 <span class="math inline">\(\mu\)</span>는 <span class="math inline">\({\cal S}\)</span>에서 정의되는데 예제에서는 <span class="math inline">\(\mu_X\)</span>대신 <span class="math inline">\(\mu\)</span>를 썻기 때문에 자연스럽게 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span> 대신에 <span class="math inline">\((S,{\cal S})\)</span>를 고려하게 되는 것</p>
+<p>이건 사실 <span class="math inline">\(\mu_X\)</span>대신 <span class="math inline">\(\tilde{\mu}_X\)</span>를 쓴 이유와 연관이 있다. <span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\({\cal R}\)</span>에서 정의되고 <span class="math inline">\(\tilde{\mu}_X\)</span>는 <span class="math inline">\({\cal S}\)</span>에서 정의되는데 예제에서는 <span class="math inline">\(\mu_X\)</span>대신 <span class="math inline">\(\tilde{\mu}_X\)</span>를 썻기 때문에 자연스럽게 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span> 대신에 <span class="math inline">\((S,{\cal S})\)</span>를 고려하게 되는 것</p>
 </blockquote>
-<p><code>-</code> 해결: 예제1에서 <span class="math inline">\(\mu_X\)</span>를 쓰지 않은 이유는 카운팅메져 <span class="math inline">\(\#\)</span>이 <span class="math inline">\((S,{\cal S})\)</span> 에서는 <span class="math inline">\(\sigma\)</span>-finite 하지만 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 에서는 <span class="math inline">\(\sigma\)</span>-finite 하지 않기 때문이다. 따라서 이때는 라돈니코딤 도함수의 존재를 보장할 수 없다.</p>
+<p><code>-</code> 찝찝한점의 해결:</p>
+<ol type="1">
+<li>라돈니코딤 도함수의 존재에 필요한 조건중 하나는 두개의 메져 <span class="math inline">\(\mu_X, \lambda\)</span> 혹은 <span class="math inline">\(\tilde{\mu}_X, \#\)</span>가 같은 가측공간에서 정의되는<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="math inline">\(\sigma\)</span>-finite measure이어야 한다는 것이다.</li>
+<li><span class="math inline">\(\mu_X,\lambda\)</span> on <span class="math inline">\((\mathbb{R},{\cal R})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu_X,\lambda\)</span> 은 모두 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 조건을 만족함.</li>
+<li><span class="math inline">\(\tilde{\mu}_X,\#\)</span> on <span class="math inline">\((S,{\cal S})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\tilde{\mu}_X,\#\)</span> 은 모두 <span class="math inline">\((S,{\cal S})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 조건을 만족함.</li>
+<li><span class="math inline">\(\mu_X, \#\)</span> on <span class="math inline">\((\mathbb{R},{\cal R})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu_X\)</span> 는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 하지만 <span class="math inline">\(\#\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 하지 않음.</li>
+</ol>
+<p>따라서, <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 두 메져 <span class="math inline">\(\mu_X,\lambda\)</span>를 고려하거나, <span class="math inline">\((S,{\cal S})\)</span>에서의 두 메져 <span class="math inline">\(\tilde{\mu}_X,\#\)</span> 를 고려해야 라돈니코딤 도함수를 따져볼 수 있다.</p>
+<p>모티브: 그런데 <span class="math inline">\((S,{\cal S})\)</span> 말고 그냥 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 적당히 <span class="math inline">\(\mu_X, \tilde{\#}\)</span>를 고려할 수는 없을까?</p>
 <p><code>-</code> 예제2 – 베르누이 (with 디렉메져)</p>
 <p>아래와 같은 함수를 고려하자.</p>
 <p><span class="math display">\[F_X(x) = \begin{cases}
@@ -382,8 +392,8 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> 결국 이산형 확률변수의 밀도함수를 설명하는 방법은 크게 3가지가 있는 셈이다.</p>
 <ol type="1">
 <li>이산형확률변수는 밀도함수가 없다.</li>
-<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d\mu}{d\#}\)</span> 으로 정의할 수 있다.</li>
-<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d\mu_X}{d\delta_X}\)</span> 으로 정의할 수 있다.</li>
+<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d}{d\#}\tilde{\mu}_X\)</span> 으로 정의할 수 있다.</li>
+<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d}{d\delta_X}\mu_X\)</span> 으로 정의할 수 있다.</li>
 </ol>
 <p>설명1,2,3은 각각의 장단점이 있다.</p>
 <p><strong>설명1</strong>: 라돈니코딤 도함수에 대한 이해가 없어도 된다는 점에서 장점이 있다. (그래서 학부수준에서는 가장 일반적으로 사용하는 설명)</p>
@@ -395,6 +405,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><span class="math inline">\(f_X(x)=p_X(x)=\begin{cases} 1-p &amp; x=0 \\ p &amp; x=1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
 </ul>
+<blockquote class="blockquote">
+<p>여기에서 <span class="math inline">\(p_X(x)\)</span>는 학부때 배우는 pmf</p>
+</blockquote>
 </section>
 <section id="혼합형확률변수" class="level2">
 <h2 class="anchored" data-anchor-id="혼합형확률변수">혼합형확률변수</h2>
@@ -420,6 +433,8 @@ ul.task-list li input[type="checkbox"] {
 <p><code>-</code> <strong>Thm</strong>: 분포함수의 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>는 항상 아래와 같이 분해가능하다.</p>
 <p><span class="math display">\[F = F_{ac}+F_{pp}+F_{sing}\]</span></p>
 <p>여기에서 <span class="math inline">\(F_{ac}\)</span>는 르벡메져에 대하여 절대연속이고 <span class="math inline">\(F_{pp}\)</span>는 카운팅메져에 대하여 절대연속이다. 따라서 <span class="math inline">\(F_{ac}\)</span>와 <span class="math inline">\(F_{pp}\)</span>는 각각 르벡메져와 카운팅메져에 대응하는 밀도함수가 존재한다. <span class="math inline">\(F_{sing}\)</span>는 칸토어분포와 같이 밀도함수가 존재하지 않는 경우이다.</p>
+<p><code>-</code> 의미: <span class="math inline">\(F_{ac}\)</span>는 우리가 일반적으로 생각하는 singular하지 않은 연속함수를 상상하면 된다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> <span class="math inline">\(F_{pp}\)</span>는 완벽한 불연속이며 오직 jump를 통해서만 증가하는 함수라 생각하면 된다. 즉 우리가 익숙한 이산형확률변수의 cdf를 상상하면 된다.</p>
+<p><code>-</code> 이론: <span class="math inline">\(F_{pp}\)</span>는 기껏해야 countable한 불연속점을 가진다. (jump 하는 point는 countable이라는 의미, 결국 이산형확률변수의 support는 countable이라는 의미)</p>
 <p><code>-</code> 이론: 분포함수 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>가 아래와 같다면</p>
 <p><span class="math display">\[F=F_{ac}\]</span></p>
 <p><span class="math inline">\(F\)</span>에 대응하는 연속형 확률변수 <span class="math inline">\(X\)</span>가 존재하고 그에 대응하는 pdf가 존재한다.</p>
@@ -430,16 +445,133 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[F=F_{ac}+F_{pp}\]</span></p>
 <p><span class="math inline">\(F\)</span>에 대응하는 혼합형 확률변수 <span class="math inline">\(X\)</span>가 존재하고 그에 대응하는 (일반화된) pdf가 존재한다.</p>
 </section>
+<section id="기대값" class="level1">
+<h1>기대값</h1>
+<p><code>-</code> 예제1: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=\{H,T\}\)</span>, <span class="math inline">\({\cal F}=2^\Omega\)</span>, <span class="math inline">\(P(H)=P(T)=\frac{1}{2}\)</span>라고 하자.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> 확률변수 <span class="math inline">\(X(H)=0\)</span>, <span class="math inline">\(X(T)=1\)</span>를 정의하자. 이 확률변수의 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(X\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X=1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(P(X=x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>(풀이)</p>
+<p>아래와 같이 계산할 수 있다. (고등학교 수준)</p>
+<p><span class="math display">\[\mathbb{E}(X)= 0 \times \frac{1}{2} + 1\times \frac{1}{2}\]</span></p>
+<p>이를 다른표현으로 써보면</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{E}(X)= 0 \times (P\circ X^{-1})(\{0\}) + 1\times (P\circ X^{-1})(\{1\})\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= 0 \times \mu_X(\{0\}) + 1\times \mu_X(\{1\})\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \sum_{x=0}^{1} x \times \mu_X(\{x\})\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x d\mu_X:=\int_{\mathbb{R}}xdF_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x \frac{d\mu_X}{d \delta_X}d\delta_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x p_X(x) d\delta_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\{0,1\}} x p_X(x) d\delta_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \sum_{x=0}^{1} xp_X(x)\)</span></li>
+</ol>
+<p>또는 아래와 같이 볼 수 도 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{E}(X)= 0 \times (P\circ X^{-1})(\{0\}) + 1\times (P\circ X^{-1})(\{1\})\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= X(H) \times P(\{H\}) + X(T)\times P(\{T\})\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int X dP = \int_{\Omega} X dP = \int_{\omega \in \Omega}X(\omega)dP(\omega)\)</span></li>
+</ol>
+<p><code>-</code> 예제2: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=[0,2\pi)\)</span>, <span class="math inline">\({\cal F}={\cal R} \cap [0,2\pi)\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, <span class="math inline">\(P([0,x))=\frac{x}{2\pi}\)</span>라고 하자.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 확률변수 <span class="math inline">\(X(\omega)=\omega\)</span>에 대한 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
+<p>(풀이)</p>
+<p>아래와 같이 계산할 수 있다. (고등학교 수준)</p>
+<p><span class="math display">\[\mathbb{E}(X)=\int_0^{2\pi} x \frac{1}{2\pi}dx\]</span></p>
+<p>이는 아래와 같이 변형할 수 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{E}(X)= \int_0^{2\pi}xf_X(x)dx\)</span>, where <span class="math inline">\(f_X(x)=\frac{1}{2\pi}\)</span>.</li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}}xf_Xd\lambda\)</span>.</li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}}x\frac{d\mu_X}{d\lambda}d\lambda\)</span>.</li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}}xd\mu_X:=\int_{\mathbb{R}}xdF_X\)</span>.</li>
+</ol>
+<p>혹은 아래와 같이 변형할 수 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} xd\mu_X=\int_{[0,2\pi)}xd\mu_X(x)\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_\Omega X(\omega)dP(\omega)=\int X dP\)</span></li>
+</ol>
+<p><code>-</code> 정의: <span class="math inline">\(X\)</span>가 확률공간 <span class="math inline">\((\Omega,{\cal F},P)\)</span>에서 정의된 확률변수라고 할때 그 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>는 아래와 같이 정의한다.</p>
+<p><span class="math display">\[\mathbb{E}(X) = \int_{\Omega} X dP\]</span></p>
+<p>여기에서 <span class="math inline">\(X\)</span>는 이산형, 연속형, 혼합형등 어떠한 형태의 확률변수라도 상관없다. 위의 기대값은 항상 아래와 같이 표현할 수 있다.</p>
+<p><span class="math display">\[\mathbb{E}(X) = \int_{\mathbb{R}} x d\mu_X:=\int_{\mathbb{R}} x dF_X\]</span></p>
+<p>만약 <span class="math inline">\(F_X\)</span>가 절대연속인 경우 (즉 <span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span> 인 경우) 아래와 같이 표현가능하다.</p>
+<p><span class="math display">\[\mathbb{E}(X) = \int_{-\infty}^{\infty} xf_X(x)dx\]</span></p>
+<p>만약에 <span class="math inline">\(F_X\)</span>가 countable한 jump로만 구성되어 있다면 <span class="math inline">\(\mu_X\)</span>는 jump point에서 support로 가지는 디렉메져 <span class="math inline">\(\delta_X\)</span>에 대하여 절대연속이 되며 (즉 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span>) 이 경우 기대값은 아래와 같이 표현가능하다.</p>
+<p><span class="math display">\[\mathbb{E}(X) = \sum_{x}x p_X(x)\]</span></p>
+<p>여기에서 <span class="math inline">\(f_X(x)\)</span>와 <span class="math inline">\(p_X(x)\)</span>는 각각 확률변수 <span class="math inline">\(X\)</span>의 pdf, pmf가 된다. (혹은 <span class="math inline">\(\lambda\)</span>와 <span class="math inline">\(\delta_X\)</span>에 대한 라돈니코딤 도함수)</p>
+<p><code>-</code> 요약</p>
+<ul>
+<li>학부수준: 연속형확률변수의 기대값과 이산형확률변수의 기대값이 서로 다르게 정의된다.</li>
+<li>대학원수준: 두 경우 모두 <span class="math inline">\(\mathbb{E}(X) = \int X dP\)</span>로 정의된다.</li>
+</ul>
+</section>
+<section id="마무리" class="level1">
+<h1>마무리</h1>
+<p><code>-</code> 한 학기동안 수고하셨습니다.</p>
+<p><code>-</code> 강의의 의의</p>
+<ol type="1">
+<li><p>확률론<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>은 LLN, CLT 등을 엄밀하게 다루며<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> 이는 다른 통계 모든 과목을 이해하는데 밑바탕이 된다.</p></li>
+<li><p>그런데 그 확률론을 잘 이해하기 위해서는 해석학,실해석학(=측도론)을 중심으로 위상수학, 대수, 집합론 등 수학 전반에 대한 폭넓은 이해가 필요하다. 따라서 확률론을 원활하게 이해하기 위한 예비과정을 선행하기는 수학과 학생이 아니면 거의 불가능하다.</p></li>
+<li><p>본 교과의 목표는 이러한 수학적지식과 기초확률론을 소개함으로써 (1) 통계학과에서 필요한 여러 수학이론을 리뷰하고 (2) 확률, 확률변수, 기대값등을 엄밀한 언어로 재정의한다.</p></li>
+</ol>
+<p><code>-</code> 강의를 만든 진짜 목적: 공부를 함에 있어써 필요한 언어를 소개.</p>
+<ul>
+<li>공부를 할 때 내가 이해할 수 있는 언어가 많을 수록 유리함.</li>
+<li>예를들어 한국어만 읽을 수 있고 영어를 전혀 할 줄 모른다면 공부를 하기 힘듦. 내가 R코드만 이해할 수 있고 파이썬코드는 이해할 수 없다면 특정분야의 기술을 습득하는데 한계점이 존재함.</li>
+<li>경험1: 어떠한 증명을 위해서 다른 논문을 참고할 일이 있었는데 제목만 영어로 되어있고 내용을 보니 러시아로 되어있었음. (그래도 식만보면서 울면서 읽었음) 너무 힘들었음.</li>
+<li>경험2: R만 써서 박사학위 받았는데, 다른 연구하려고 참고자료를 찾아보니 다 파이썬으로 구현해놓음. 그래서 R로 구현된 코드를 찾으려 시도했으나 없어서 포기하고 내가 파이썬을 배웠음.</li>
+<li>경험3: 통계학 관련 공부나 연구활동을 할때마다 이상한 수학용어 및 기호때문에 막히는 적이 많았음. 그래서 쉬운언어로 쓰여진 책을 찾아서 공부하려다가 포기하고 내가 수학을 배웠음.</li>
+</ul>
+<p><code>-</code> 경험3의 예시: Appendix</p>
+<ul>
+<li>생존분석 강의노트: 갑자기 라돈니코딤 도함수..</li>
+<li>WGAN: 꼭 이렇게 쓸 필요가 있었을까 싶지만 이건 쓰는 사람 마음이지 않을까?</li>
+<li>시계열교재: 이 한줄 때문에 고생좀 했어요</li>
+<li>기타등등 무수히<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> 많음~</li>
+</ul>
+<p><code>-</code> 학습 및 연구에 필요한 언어를 배우는 것이 어려운점</p>
+<ol type="1">
+<li>시계열분석, 공간자료분석, 텍스트마이닝과 같이 “데이터”가 중심이 되는 다른 교과목과 다르게 독학이 어렵다. 즉 쪽집게처방(pinpoint remedy)을 독학하는 것은 수월하지만 상대적으로 이론교과를 독학하는 것에는 시간이 오래 걸린다.</li>
+<li>독학할 교재가 마땅치 않다. (통계에 잘쓰이는 영어가 따로 있고, 통계에 잘 쓰이는 파이썬 패키지가 따로 있으며, 통계에 잘 쓰이는 수학이 따로 있음) 그래서 여러교재를 참고해야 한다.</li>
+<li>교재들과의 연결, 그리고 본인연구와의 연결은 스스로 해야한다.</li>
+</ol>
+<p><code>-</code> 본인만의 무기</p>
+</section>
 <section id="appendix" class="level1">
 <h1>Appendix</h1>
-<p><code>-</code> 생존분석 강의노트</p>
-<p><code>-</code> WGAN</p>
-<p><code>-</code> 시계열교재</p>
+<p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_surv.pdf">생존분석 강의노트</a></p>
+<p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_WGAN.pdf">WGAN</a></p>
+<p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_ts.pdf">시계열교재</a></p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><span class="math inline">\(\forall B \in {\cal S}: \mu(B)=\int_B f_X d\#\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><span class="math inline">\(\int_B f_X d\#=f_X(0)\#(\{0\})+f_X(1)\#(\{1\})\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>같은 공간에서 정의되어야 <span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span> 혹은 <span class="math inline">\(\tilde{\mu}_X&lt;&lt;\#\)</span>와 같은 개념을 정의할 수 있음, 왜냐하면 <span class="math inline">\(\lambda(B)=0 \Rightarrow \mu_X(B)=0\)</span> 와 같은 조건을 따져야 하는데 <span class="math inline">\(\lambda(B)\)</span>는 정의되지만 <span class="math inline">\(\mu_X(B)\)</span>는 정의할 수 없으면 따짐자체가 성립하지 않기 때문<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>칸토어처럼 이상한 연속함수 말고 상식적인 수준의 연속함수라는 의미<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><span class="math inline">\({\cal R} \cap [0,2\pi) := \{B \cap [0,2\pi): B \in {\cal R}\}\)</span><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>학부의 확률론과 다릅니다<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>“대부분의 통계교재에서 조금 더 엄밀한 내용은 학부과정을 벗어나므로 이 교재에서는 생략한다.”라는식으로 써진경우가 많은데요, 이를 이해하기 위해서 필요한 과목이 확률론입니다<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>countable many?<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
