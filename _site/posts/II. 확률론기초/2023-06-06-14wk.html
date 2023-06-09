@@ -22,69 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -412,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><code>-</code> 찝찝한점의 해결:</p>
 <ol type="1">
-<li>라돈니코딤 도함수의 존재에 필요한 조건중 하나는 두개의 메져 <span class="math inline">\(\mu_X, \lambda\)</span> 혹은 <span class="math inline">\(\tilde{\mu}_X, \#\)</span>가 같은 가측공간에서 정의되는<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math inline">\(\sigma\)</span>-finite measure이어야 한다는 것이다.</li>
+<li>라돈니코딤 도함수의 존재에 필요한 조건 중 하나는 라돈니코딤 도함수를 정의하는 두개의 메져<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math inline">\(\sigma\)</span>-finite measure이어야 한다는 것임.</li>
 <li><span class="math inline">\(\mu_X,\lambda\)</span> on <span class="math inline">\((\mathbb{R},{\cal R})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu_X,\lambda\)</span> 은 모두 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 조건을 만족함.</li>
 <li><span class="math inline">\(\tilde{\mu}_X,\#\)</span> on <span class="math inline">\((S,{\cal S})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\tilde{\mu}_X,\#\)</span> 은 모두 <span class="math inline">\((S,{\cal S})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 조건을 만족함.</li>
 <li><span class="math inline">\(\mu_X, \#\)</span> on <span class="math inline">\((\mathbb{R},{\cal R})\)</span>을 고려 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu_X\)</span> 는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 하지만 <span class="math inline">\(\#\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 하지 않음.</li>
@@ -426,37 +363,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \frac{1}{2} &amp; 0 \leq  x &lt;1 \\
 1 &amp; x \geq 1
 \end{cases}\]</span></p>
-<p><span class="math inline">\(F_X\)</span>에 대응하는 분포 <span class="math inline">\(\mu_X:{\cal R} \to [0,1]\)</span>를 고려하자. 그리고 아래와 같은 메져를 고려하라. <span class="math inline">\(\delta_X: {\cal R} \to \mathbb{N}\)</span> 을 고려하자.</p>
+<p><span class="math inline">\(F_X\)</span>에 대응하는 분포 <span class="math inline">\(\mu_X:{\cal R} \to [0,1]\)</span>를 고려하자.</p>
 <ul>
-<li><span class="math inline">\(\delta_X(\emptyset)=0\)</span></li>
-<li><span class="math inline">\(\delta_X(\{0\})=1\)</span></li>
-<li><span class="math inline">\(\delta_X(\{1\})=1\)</span></li>
-<li><span class="math inline">\(\delta_X(\{0,1\})=2\)</span></li>
-<li><span class="math inline">\(\delta_X(B)=0\)</span>, <span class="math inline">\(B \in {\cal R}-\{0,1\}-\{0\}-\{1\}\)</span></li>
+<li><span class="math inline">\(\mu_X(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\mu_X(\{0\})=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\mu_X(\{1\})=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\mu_X(\{0,1\})=1\)</span></li>
+<li><span class="math inline">\(\mu_X(B)=0\)</span> , <span class="math inline">\(B \in {\cal R} - \{0,1\} - \{0\} - \{1\}\)</span></li>
 </ul>
-<p>이때 함수 <span class="math inline">\(\delta_X\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 에서의 메져가 된다. 이 경우 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span> 가 성립한다. 이제 아래의 함수 <span class="math inline">\(f_X:S \to \mathbb{R}^+\)</span>를 고려하자.</p>
+<p>그리고 아래와 같은 메져를 고려하라. <span class="math inline">\(\#_X: {\cal R} \to \mathbb{N}\)</span> 을 고려하자.</p>
 <ul>
-<li><span class="math inline">\(f_X(0)=\frac{1}{2}\)</span></li>
-<li><span class="math inline">\(f_X(1)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\#_X(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\#_X(\{0\})=1\)</span></li>
+<li><span class="math inline">\(\#_X(\{1\})=1\)</span></li>
+<li><span class="math inline">\(\#_X(\{0,1\})=2\)</span></li>
+<li><span class="math inline">\(\#_X(B)=0\)</span>, <span class="math inline">\(B \in {\cal R}-\{0,1\}-\{0\}-\{1\}\)</span></li>
 </ul>
-<p>함수 <span class="math inline">\(f_X\)</span>는 <span class="math inline">\(\delta_X\)</span>에 대한 <span class="math inline">\(\mu_X\)</span>의 라돈니코딤 도함수이다.</p>
-<p><code>-</code> <strong>정의</strong> (디렉메져): 가측공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 디렉메져는</p>
-<p><span class="math display">\[\delta_{\omega}(A)=\mathbb{1}_A(\omega)\]</span></p>
-<p>로 정의되는 메져이다. 여기에서 <span class="math inline">\(A\)</span>는 <span class="math inline">\({\cal F}\)</span>-measurable 한 집합이다.</p>
-<p><code>-</code> 디랙메져의 표현법에 따르면 예제2의 경우 <span class="math inline">\(\delta_X := \delta_0 + \delta_1\)</span> 로 표현할 수 있다. 여기에서 <span class="math inline">\(\delta_x\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 디랙메져이다.</p>
-<p><code>-</code> 꼭 베르누이와 같은 상황이 아니라도 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대한 분포 <span class="math inline">\(\mu_X\)</span>를 dominating하는 적절한 <span class="math inline">\(\sigma\)</span>-finite한 메져 <span class="math inline">\(\delta_X\)</span>를 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서 정의할 수 있다. 예를들면 주사위예제의 경우</p>
-<p><span class="math display">\[\delta_X = \delta_1+\delta_2+\delta_3+\delta_4+\delta_5+\delta_6\]</span></p>
-<p>와 같은 방식으로 정의할 수 있다. 즉 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대하여 아래를 만족하는 <span class="math inline">\(\delta_X\)</span>를 항상 잡을 수 있다.</p>
+<p>이때 함수 <span class="math inline">\(\#_X:{\cal R} \to \mathbb{N}\)</span> 는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 에서의 <span class="math inline">\(\sigma\)</span>-finite 메져가 된다. 또한 <span class="math inline">\(\mu_X &lt;&lt; \#_X\)</span> 가 성립한다.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> 이제 아래의 함수 <span class="math inline">\(f_X:\mathbb{R} \to \mathbb{R}^+\)</span>를 고려하자.</p>
+<p><span class="math display">\[f_X(x)=\begin{cases}
+\frac{1}{2} &amp; x=0,1 \\
+0 &amp; o.w.
+\end{cases}\]</span></p>
+<p>함수 <span class="math inline">\(f_X\)</span>는 <span class="math inline">\({\cal R}-{\cal R}^+\)</span> 가측함수이고 (simple function 이므로)</p>
+<p><span class="math display">\[\forall B \in {\cal R}: \mu_X(B)= \int fd\#_X\]</span></p>
+<p>를 만족한다. 따라서</p>
+<p><span class="math display">\[f_X=\frac{d\mu_X}{d\#_X}\]</span></p>
+<p>이다. 즉 <span class="math inline">\(f_X\)</span>는 <span class="math inline">\(\#_X\)</span>에 대한 <span class="math inline">\(\mu_X\)</span>의 라돈니코딤 도함수로 해석할 수 있다.</p>
+<p><code>-</code> <strong>정의</strong> (디렉메져): 가측공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서 디렉메져는</p>
+<p><span class="math display">\[\forall B \in {\cal R}: ~\delta_{x}(B)=\mathbb{1}_B(x)=\mathbb{1}(x \in B)\]</span></p>
+<p>로 정의되는 메져이다.</p>
+<p><code>-</code> 디랙메져의 표현법에 따르면 예제2의 경우 <span class="math inline">\(\#_X := \delta_0 + \delta_1\)</span> 로 표현할 수 있다. 여기에서 <span class="math inline">\(\delta_x\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 디랙메져이다.</p>
+<p><code>-</code> 꼭 베르누이와 같은 상황이 아니라도 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대한 분포 <span class="math inline">\(\mu_X\)</span>를 dominating하는 적절한 <span class="math inline">\(\sigma\)</span>-finite한 메져 <span class="math inline">\(\#_X\)</span>를 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서 정의할 수 있다. 예를들면 주사위예제의 경우</p>
+<p><span class="math display">\[\#_X = \delta_1+\delta_2+\delta_3+\delta_4+\delta_5+\delta_6\]</span></p>
+<p>와 같은 방식으로 정의할 수 있다. 즉 임의의 이산확률변수 <span class="math inline">\(X\)</span>에 대하여 아래를 만족하는 <span class="math inline">\(\#_X\)</span>를 항상 잡을 수 있다.</p>
 <ol type="1">
-<li><span class="math inline">\(\delta_X\)</span> is <span class="math inline">\(\sigma\)</span>-finite</li>
-<li><span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span></li>
+<li><span class="math inline">\(\#_X\)</span> is <span class="math inline">\(\sigma\)</span>-finite</li>
+<li><span class="math inline">\(\mu_X &lt;&lt; \#_X\)</span></li>
 </ol>
-<p>따라서 <span class="math inline">\(\frac{d\mu_X}{d\delta_X}\)</span>는 언제나 잘 정의되며 이는 우리가 알고 있는 pmf의 정의와 일치한다.</p>
+<p>따라서 <span class="math inline">\(\frac{d\mu_X}{d\#_X}\)</span>는 언제나 잘 정의되며 이는 우리가 알고 있는 pmf의 정의와 일치한다.</p>
 <p><code>-</code> 결국 이산형 확률변수의 밀도함수를 설명하는 방법은 크게 3가지가 있는 셈이다.</p>
 <ol type="1">
 <li>이산형확률변수는 밀도함수가 없다.</li>
 <li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d}{d\#}\tilde{\mu}_X\)</span> 으로 정의할 수 있다.</li>
-<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d}{d\delta_X}\mu_X\)</span> 으로 정의할 수 있다.</li>
+<li>이산형확률변수의 밀도함수는 <span class="math inline">\(\frac{d}{d\#_X}\mu_X\)</span> 으로 정의할 수 있다.</li>
 </ol>
 <p>설명1,2,3은 각각의 장단점이 있다.</p>
 <p><strong>설명1</strong>: 라돈니코딤 도함수에 대한 이해가 없어도 된다는 점에서 장점이 있다. (그래서 학부수준에서는 가장 일반적으로 사용하는 설명)</p>
@@ -464,7 +413,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><span class="math inline">\(f_X(x)=p_X(x)=\begin{cases} 1-p &amp; x=0 \\ p &amp; x=1 \end{cases}\)</span></li>
 </ul>
-<p><strong>설명3</strong>: 연속형은 르벡메져에 대한 라돈니코딤 도함수, 이산형은 카운팅메져에 대한 라돈니코딤 도함수로 구분하여 설명할 수는 없으며 확률변수 <span class="math inline">\(X\)</span>에 따라서 <span class="math inline">\(\delta_X\)</span>를 그때 그때 정의해야하는 지저분함이 있다. 하지만 분포함수 <span class="math inline">\(\mu_X\)</span>를 활용할 수 있고 가측공간 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 그대로 활용한다는 장점이 있다. 이러한 방식으로 유도되는 베르누이분포의 pmf는 아래와 같이 정의된다.</p>
+<p><strong>설명3</strong>: 연속형은 르벡메져에 대한 라돈니코딤 도함수, 이산형은 카운팅메져에 대한 라돈니코딤 도함수로 구분하여 설명할 수는 없으며 확률변수 <span class="math inline">\(X\)</span>에 따라서 <span class="math inline">\(\#_X\)</span>를 그때 그때 정의해야하는 지저분함이 있다. 하지만 분포함수 <span class="math inline">\(\mu_X\)</span>를 활용할 수 있고 가측공간 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 그대로 활용한다는 장점이 있다. 이러한 방식으로 유도되는 베르누이분포의 pmf는 아래와 같이 정의된다.</p>
 <ul>
 <li><span class="math inline">\(f_X(x)=p_X(x)=\begin{cases} 1-p &amp; x=0 \\ p &amp; x=1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
 </ul>
@@ -475,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="혼합형확률변수" class="level2">
 <h2 class="anchored" data-anchor-id="혼합형확률변수">혼합형확률변수</h2>
 <p><code>-</code> 예제1: 아래와 같은 분포함수 <span class="math inline">\(F_X\)</span>를 고려하자.</p>
-<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt; 0 \\ \frac{1}{2} &amp; 0 \leq x &lt; \frac{1}{2} \\ x &amp; \frac{1}{2} \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt; 0 \\ \frac{1}{2} &amp; 0 \leq x &lt; \frac{1}{2} \\ x &amp; \frac{1}{2} \leq x \leq 1 \\ 1 &amp; x&gt;1  \end{cases}\]</span></p>
 <p>이 분포함수는 동전을 던져 앞면이 나오면 <span class="math inline">\(X=0\)</span>으로 결정하고 뒷면이 나오면 균등분포 <span class="math inline">\([0.5,1]\)</span>에서 확률변수 <span class="math inline">\(X\)</span>를 생성하는 실험을 상상하면 쉽게 이해할 수 있다. 아래와 같은 함수</p>
 <p><span class="math display">\[f_X(x) = \begin{cases} \frac{1}{2} &amp; x=0 \\ 1 &amp; \frac{1}{2} \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
 <p>가 <span class="math inline">\(F_X\)</span>의 밀도함수가 될 수 있음을 설명하라.</p>
@@ -489,6 +438,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p><span class="math inline">\(B = (-\infty,x]\)</span>와 같은 꼴에서만 성립함을 보이고 나머지는 <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> thm 쓰면 되죠?</p>
 </blockquote>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+위의 3에 대한 추가설명.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>결국 임의의 <span class="math inline">\(B=(-\infty,x]\)</span>와 같은 꼴에서 <span class="math inline">\(\mu_X(B) = \int_Bf_Xd\lambda + \int_B f_Xd\delta_0\)</span> 임을 보이면 된다.</p>
+<p>편의상 아래와 같이 정의하자.</p>
+<ul>
+<li><span class="math inline">\(LHS = \mu_X(B)\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_B f_Xd\lambda\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_B f_Xd\delta_0\)</span></li>
+</ul>
+<p><strong>case1</strong>: <span class="math inline">\(x &lt; 0\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=0\)</span></li>
+<li><span class="math inline">\(RHS_1 = 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = 0\)</span></li>
+</ul>
+<p><strong>case2</strong>: <span class="math inline">\(x = 0\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_{-\infty}^0f_X(x)dx = 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case3</strong>: <span class="math inline">\(0&lt;x&lt; \frac{1}{2}\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_1 = \int_{-\infty}^{0}f_X(x)dx+ \int_{0}^{x}f_X(x)dx= 0\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case4</strong>: <span class="math inline">\(\frac{1}{2}&lt;x&lt; 1\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=x\)</span></li>
+<li><span class="math inline">\(RHS_1 =\int_{-\infty}^{1/2}f_X(x)dx+ \int_{1/2}^xf_X(x)dx = \int_{1/2}^xf_X(x)dx=\int_{1/2}^xdx= x-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+<p><strong>case5</strong>: <span class="math inline">\(x&gt;1\)</span></p>
+<ul>
+<li><span class="math inline">\(LHS = F_X(x)=1\)</span></li>
+<li><span class="math inline">\(RHS_1 =\int_{-\infty}^{1/2}f_X(x)dx+ \int_{1/2}^{1}f_X(x)dx = \int_{1/2}^1f_X(x)dx=\int_{1/2}^1dx= 1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(RHS_2 = \int_{\{0\}}f_Xd\delta_0 = f_X(0)\delta_0(\{0\}) = \frac{1}{2}\)</span></li>
+</ul>
+</div>
+</div>
 </section>
 </section>
 <section id="르벡분해정리" class="level1">
@@ -496,7 +494,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>-</code> <strong>Thm</strong>: 분포함수의 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>는 항상 아래와 같이 분해가능하다.</p>
 <p><span class="math display">\[F = F_{ac}+F_{pp}+F_{sing}\]</span></p>
 <p>여기에서 <span class="math inline">\(F_{ac}\)</span>는 르벡메져에 대하여 절대연속이고 <span class="math inline">\(F_{pp}\)</span>는 카운팅메져에 대하여 절대연속이다. 따라서 <span class="math inline">\(F_{ac}\)</span>와 <span class="math inline">\(F_{pp}\)</span>는 각각 르벡메져와 카운팅메져에 대응하는 밀도함수가 존재한다. <span class="math inline">\(F_{sing}\)</span>는 칸토어분포와 같이 밀도함수가 존재하지 않는 경우이다.</p>
-<p><code>-</code> 의미: <span class="math inline">\(F_{ac}\)</span>는 우리가 일반적으로 생각하는 singular하지 않은 연속함수를 상상하면 된다.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="math inline">\(F_{pp}\)</span>는 완벽한 불연속이며 오직 jump를 통해서만 증가하는 함수라 생각하면 된다. 즉 우리가 익숙한 이산형확률변수의 cdf를 상상하면 된다.</p>
+<p><code>-</code> 의미: <span class="math inline">\(F_{ac}\)</span>는 우리가 일반적으로 생각하는 singular하지 않은 연속함수를 상상하면 된다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> <span class="math inline">\(F_{pp}\)</span>는 완벽한 불연속이며 오직 jump를 통해서만 증가하는 함수라 생각하면 된다. 즉 우리가 익숙한 이산형확률변수의 cdf를 상상하면 된다.</p>
 <p><code>-</code> 이론: <span class="math inline">\(F_{pp}\)</span>는 기껏해야 countable한 불연속점을 가진다. (jump 하는 point는 countable이라는 의미, 결국 이산형확률변수의 support는 countable이라는 의미)</p>
 <p><code>-</code> 이론: 분포함수 정의를 만족하는 임의의 <span class="math inline">\(F\)</span>가 아래와 같다면</p>
 <p><span class="math display">\[F=F_{ac}\]</span></p>
@@ -510,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="기대값" class="level1">
 <h1>기대값</h1>
-<p><code>-</code> 예제1: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=\{H,T\}\)</span>, <span class="math inline">\({\cal F}=2^\Omega\)</span>, <span class="math inline">\(P(H)=P(T)=\frac{1}{2}\)</span>라고 하자.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> 확률변수 <span class="math inline">\(X(H)=0\)</span>, <span class="math inline">\(X(T)=1\)</span>를 정의하자. 이 확률변수의 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
+<p><code>-</code> 예제1: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=\{H,T\}\)</span>, <span class="math inline">\({\cal F}=2^\Omega\)</span>, <span class="math inline">\(P(H)=P(T)=\frac{1}{2}\)</span>라고 하자.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> 확률변수 <span class="math inline">\(X(H)=0\)</span>, <span class="math inline">\(X(T)=1\)</span>를 정의하자. 이 확률변수의 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -536,9 +534,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(\mathbb{E}(X)= 0 \times \mu_X(\{0\}) + 1\times \mu_X(\{1\})\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \sum_{x=0}^{1} x \times \mu_X(\{x\})\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x d\mu_X:=\int_{\mathbb{R}}xdF_X\)</span></li>
-<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x \frac{d\mu_X}{d \delta_X}d\delta_X\)</span></li>
-<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x p_X(x) d\delta_X\)</span></li>
-<li><span class="math inline">\(\mathbb{E}(X)= \int_{\{0,1\}} x p_X(x) d\delta_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x \frac{d\mu_X}{d \#_X}d\#_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} x p_X(x) d\#_X\)</span></li>
+<li><span class="math inline">\(\mathbb{E}(X)= \int_{\{0,1\}} x p_X(x) d\#_X\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \sum_{x=0}^{1} xp_X(x)\)</span></li>
 </ol>
 <p>또는 아래와 같이 볼 수 도 있다.</p>
@@ -547,7 +545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(\mathbb{E}(X)= X(H) \times P(\{H\}) + X(T)\times P(\{T\})\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \int X dP = \int_{\Omega} X dP = \int_{\omega \in \Omega}X(\omega)dP(\omega)\)</span></li>
 </ol>
-<p><code>-</code> 예제2: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=[0,2\pi)\)</span>, <span class="math inline">\({\cal F}={\cal R} \cap [0,2\pi)\)</span><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, <span class="math inline">\(P([0,x))=\frac{x}{2\pi}\)</span>라고 하자.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> 확률변수 <span class="math inline">\(X(\omega)=\omega\)</span>에 대한 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
+<p><code>-</code> 예제2: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=[0,2\pi)\)</span>, <span class="math inline">\({\cal F}={\cal R} \cap [0,2\pi)\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, <span class="math inline">\(P([0,x))=\frac{x}{2\pi}\)</span>라고 하자.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 확률변수 <span class="math inline">\(X(\omega)=\omega\)</span>에 대한 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
 <p>(풀이)</p>
 <p>아래와 같이 계산할 수 있다. (고등학교 수준)</p>
 <p><span class="math display">\[\mathbb{E}(X)=\int_0^{2\pi} x \frac{1}{2\pi}dx\]</span></p>
@@ -583,7 +581,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>-</code> 한 학기동안 수고하셨습니다.</p>
 <p><code>-</code> 강의의 의의</p>
 <ol type="1">
-<li><p>확률론<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>은 LLN, CLT 등을 엄밀하게 다루며<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> 이는 다른 통계 모든 과목을 이해하는데 밑바탕이 된다.</p></li>
+<li><p>확률론<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>은 LLN, CLT 등을 엄밀하게 다루며<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> 이는 다른 통계 모든 과목을 이해하는데 밑바탕이 된다.</p></li>
 <li><p>그런데 그 확률론을 잘 이해하기 위해서는 해석학,실해석학(=측도론)을 중심으로 위상수학, 대수, 집합론 등 수학 전반에 대한 폭넓은 이해가 필요하다. 따라서 확률론을 원활하게 이해하기 위한 예비과정을 선행하기는 수학과 학생이 아니면 거의 불가능하다.</p></li>
 <li><p>본 교과의 목표는 이러한 수학적지식과 기초확률론을 소개함으로써 (1) 통계학과에서 필요한 여러 수학이론을 리뷰하고 (2) 확률, 확률변수, 기대값등을 엄밀한 언어로 재정의한다.</p></li>
 </ol>
@@ -600,7 +598,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>생존분석 강의노트: 갑자기 라돈니코딤 도함수..</li>
 <li>WGAN: 꼭 이렇게 쓸 필요가 있었을까? 싶음. 그렇지만 이건 논문 쓰는 사람 마음이지 않을까? (이 사람은 이게 편할 수 있으니까)</li>
 <li>시계열교재: 이 한줄 때문에 고생좀 했어요</li>
-<li>기타등등 무수히<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> 많음~</li>
+<li>기타등등 무수히<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> 많음~</li>
 </ul>
 <p><code>-</code> 학습 및 연구에 필요한 언어를 배우는 것이 어려운점</p>
 <ol type="1">
@@ -612,7 +610,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>전제: 경쟁상대를 통계학과에서 한정짓지 말것</li>
 <li>경험1: 코드를 못 짜는 사람 -&gt; 잘하는 사람 옆에서 4~5년 지내면 잘해짐</li>
-<li>경험2: 데이터를 읽는 센스 + 시각화에 대한 감각이 없는 사람 -&gt; 잘하는 사람 옆에서 4~5년 지내면 잘해짐<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></li>
+<li>경험2: 데이터를 읽는 센스 + 시각화에 대한 감각이 없는 사람 -&gt; 잘하는 사람 옆에서 4~5년 지내면 잘해짐<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></li>
 <li>경험3: 논문을 못 읽는 사람 -&gt; 평생 못 읽음. CS출신은 WGAN와 같은 논문을 원문으로는 평생 읽을 수 없다고 생각함.</li>
 <li>저의 무기:</li>
 </ul>
@@ -622,76 +620,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_surv.pdf">생존분석 강의노트</a></p>
 <p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_WGAN.pdf">WGAN</a></p>
 <p><code>-</code> <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_14wk_ts.pdf">시계열교재</a></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">!</span>git add .</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="op">!</span>git commit <span class="op">-</span>m .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[main fb1e998] .
- 2 files changed, 686 insertions(+), 46 deletions(-)
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 5.79 KiB | 5.79 MiB/s, done.
-Total 6 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To https://github.com/guebin/AP2023.git
-   217641c..fb1e998  main -&gt; main
-From https://github.com/guebin/AP2023
- * branch            gh-pages   -&gt; FETCH_HEAD
-Rendering for publish:
-
-[ 1/16] about.qmd
-[ 2/16] posts/I. 측도론/2023-03-14-02wk.ipynb
-[ 3/16] posts/I. 측도론/2023-04-11-06wk.ipynb
-[ 4/16] posts/I. 측도론/2023-03-28-04wk.ipynb
-[ 5/16] posts/I. 측도론/2023-04-05-05wk.ipynb
-[ 6/16] posts/I. 측도론/2023-04-18-07wk.ipynb
-[ 7/16] posts/I. 측도론/2023-03-07-01wk.ipynb
-[ 8/16] posts/I. 측도론/2023-03-21-03wk.ipynb
-[ 9/16] posts/I. 측도론/2023-04-25-08wk.ipynb
-[10/16] posts/II. 확률론기초/2023-05-02-09wk.ipynb
-[11/16] posts/II. 확률론기초/2023-05-09-10wk.ipynb
-[12/16] posts/II. 확률론기초/2023-05-16-11wk.ipynb
-[13/16] posts/II. 확률론기초/2023-05-23-12wk.ipynb
-[14/16] posts/II. 확률론기초/2023-06-06-14wk.ipynb
-[15/16] posts/II. 확률론기초/2023-05-30-13wk.ipynb
-[16/16] index.qmd
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-03-14-02wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-04-11-06wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-03-28-04wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-04-05-05wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-04-18-07wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-03-07-01wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-03-21-03wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/I. 측도론/2023-04-25-08wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-05-02-09wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-05-09-10wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-05-16-11wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-05-23-12wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-06-06-14wk.ipynb in the listing 'listing' contains no metadata.
-WARNING: File /home/cgb2/Dropbox/07_lectures/AP2023/posts/II. 확률론기초/2023-05-30-13wk.ipynb in the listing 'listing' contains no metadata.
-
-Preparing worktree (resetting branch 'gh-pages'; was at 031c5c1)
-Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
-HEAD is now at 031c5c1 Built site for gh-pages
-[gh-pages c63defa] Built site for gh-pages
- 19 files changed, 196 insertions(+), 64 deletions(-)
-origin  https://github.com/guebin/AP2023.git (fetch)
-origin  https://github.com/guebin/AP2023.git (push)
-To https://github.com/guebin/AP2023.git
-   031c5c1..c63defa  HEAD -&gt; gh-pages
-
-NOTE: GitHub Pages sites use caching so you might need to click the refresh
-button within your web browser to see changes after deployment.
-
-[✓] Published to https://guebin.github.io/AP2023/
-
-NOTE: GitHub Pages deployments normally take a few minutes (your site updates
-will be visible once the deploy completes)
-</code></pre>
-</div>
-</div>
 
 
 </section>
@@ -701,15 +629,16 @@ will be visible once the deploy completes)
 
 <ol>
 <li id="fn1"><p><span class="math inline">\(\forall B \in {\cal S}: \mu(B)=\int_B f_X d\#\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>같은 공간에서 정의되어야 <span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span> 혹은 <span class="math inline">\(\tilde{\mu}_X&lt;&lt;\#\)</span>와 같은 개념을 정의할 수 있음, 왜냐하면 <span class="math inline">\(\lambda(B)=0 \Rightarrow \mu_X(B)=0\)</span> 와 같은 조건을 따져야 하는데 <span class="math inline">\(\lambda(B)\)</span>는 정의되지만 <span class="math inline">\(\mu_X(B)\)</span>는 정의할 수 없으면 따짐자체가 성립하지 않기 때문<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>칸토어처럼 이상한 연속함수 말고 상식적인 수준의 연속함수라는 의미<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><span class="math inline">\({\cal R} \cap [0,2\pi) := \{B \cap [0,2\pi): B \in {\cal R}\}\)</span><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>학부의 확률론과 다릅니다<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>“대부분의 통계교재에서 조금 더 엄밀한 내용은 학부과정을 벗어나므로 이 교재에서는 생략한다.”라는식으로 써진경우가 많은데요, 이를 이해하기 위해서 필요한 과목이 확률론입니다<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>countable many?<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>솔직히 데이터분석은 경험인듯. 많이해볼수록 잘함. 현업에서 오래근무한 사람이 교수보다 분석 잘할 수 있음<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>분자, 분모에 들어가는 두개의 메져<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>함수 <span class="math inline">\(\#_X\)</span>은 확률변수 <span class="math inline">\(X\)</span>의 support 에서만 값이 정의되는 카운팅메져라고 생각할 수 있음<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>칸토어처럼 이상한 연속함수 말고 상식적인 수준의 연속함수라는 의미<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><span class="math inline">\({\cal R} \cap [0,2\pi) := \{B \cap [0,2\pi): B \in {\cal R}\}\)</span><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>학부의 확률론과 다릅니다<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>“대부분의 통계교재에서 조금 더 엄밀한 내용은 학부과정을 벗어나므로 이 교재에서는 생략한다.”라는식으로 써진경우가 많은데요, 이를 이해하기 위해서 필요한 과목이 확률론입니다<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>countable many?<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>솔직히 데이터분석은 경험인듯. 많이해볼수록 잘함. 현업에서 오래근무한 사람이 교수보다 분석 잘할 수 있음<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
