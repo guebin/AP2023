@@ -545,6 +545,56 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\mathbb{E}(X)= X(H) \times P(\{H\}) + X(T)\times P(\{T\})\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \int X dP = \int_{\Omega} X dP = \int_{\omega \in \Omega}X(\omega)dP(\omega)\)</span></li>
 </ol>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+위의 2 <span class="math inline">\(\to\)</span> 3에 대한 추가설명.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>아래와 같은 함수 <span class="math inline">\(f(x)\)</span>를 다시 고려하자.</p>
+<p><span class="math display">\[f(x) = \begin{cases} 1 &amp; \mathbb{Q} \cap [0,1] := A_1 \\ 0 &amp; \mathbb{Q}^c \cap [0,1]: =A_2 \end{cases}\]</span></p>
+<p>이 함수의 밑면적을 계산하기 위해서</p>
+<ul>
+<li><span class="math inline">\(\int f \lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
+</ul>
+<p>와 같은 계산을 정의하였다. 이를 다시 평이한 언어로 표현하면</p>
+<ul>
+<li>적분값 = <span class="math inline">\(\big(\)</span> <span class="math inline">\(x \in A_1\)</span>에서의 함수값 <span class="math inline">\(f(x)\)</span> <span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_1\)</span>을 <span class="math inline">\(\lambda\)</span>로 잰 길이<span class="math inline">\(\big)\)</span> + <span class="math inline">\(\big(\)</span> <span class="math inline">\(x \in A_2\)</span>에서의 함수값 <span class="math inline">\(f(x)\)</span><span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_2\)</span>을 <span class="math inline">\(\lambda\)</span>로 잰 길이<span class="math inline">\(\big)\)</span></li>
+</ul>
+<p>와 같은 방식으로 서술할 수 있다. 이제 가측함수 <span class="math inline">\(f\)</span>에 대응하는 가측함수 <span class="math inline">\(X\)</span>와, 메져 <span class="math inline">\(\lambda\)</span>에 대응하는 메져 <span class="math inline">\(P\)</span>를 고려하자. 즉</p>
+<ol type="1">
+<li><span class="math inline">\(f: [0,1] \to \mathbb{R}\)</span> 인 measurable function such that <span class="math inline">\(f(x) = \begin{cases} 1 &amp; \mathbb{Q} \cap [0,1] := A_1 \\ 0 &amp; \mathbb{Q}^c \cap [0,1]: =A_2 \end{cases}\)</span></li>
+<li><span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> 인 measurable function such that <span class="math inline">\(X(\omega) = \begin{cases} 1 &amp; \omega \in \{H\} := A_1 \\ 0 &amp; \omega \in \{T\}: =A_2 \end{cases}\)</span></li>
+<li><span class="math inline">\(\lambda: {\cal R} \cap [0,1] \to [0,\infty]\)</span> 는 measure on <span class="math inline">\(([0,1], {\cal R} \cap [0,1])\)</span>.</li>
+<li><span class="math inline">\(P : {\cal F} \to [0,1]\)</span> 는 measure on <span class="math inline">\((\Omega, {\cal F})\)</span>.</li>
+</ol>
+<p>에서 1대신 2를, 3대신 4를 생각하자는 의미이다. 그렇다면</p>
+<ul>
+<li>적분값 = <span class="math inline">\(\big(\)</span> <span class="math inline">\(x \in A_1\)</span>에서의 함수값 <span class="math inline">\(f(x)\)</span> <span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_1\)</span>을 <span class="math inline">\(\lambda\)</span>로 잰 길이<span class="math inline">\(\big)\)</span> + <span class="math inline">\(\big(\)</span> <span class="math inline">\(x \in A_2\)</span>에서의 함수값 <span class="math inline">\(f(x)\)</span><span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_2\)</span>을 <span class="math inline">\(\lambda\)</span>로 잰 길이<span class="math inline">\(\big)\)</span></li>
+</ul>
+<p>은 아래와 같이 대응하여 바꿀 수 있고</p>
+<ul>
+<li>적분값 = <span class="math inline">\(\big(\)</span> <span class="math inline">\(\omega \in A_1\)</span>에서의 함수값 <span class="math inline">\(X(\omega)\)</span> <span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_1\)</span>을 <span class="math inline">\(P\)</span>로 잰 길이<span class="math inline">\(\big)\)</span> + <span class="math inline">\(\big(\)</span> <span class="math inline">\(\omega \in A_2\)</span>에서의 함수값 <span class="math inline">\(X(\omega)\)</span><span class="math inline">\(\big)\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(\big(\)</span> <span class="math inline">\(A_2\)</span>을 <span class="math inline">\(P\)</span>로 잰 길이<span class="math inline">\(\big)\)</span></li>
+</ul>
+<p>이것은 다시</p>
+<ul>
+<li>적분값 = <span class="math inline">\(X(H)\times P(\{H\}) + X(T)\times P(\{T\})\)</span></li>
+</ul>
+<p>로 쓸 수 있다. 아래의 수식</p>
+<ul>
+<li><span class="math inline">\(\int f \lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
+</ul>
+<p>에 대응하여 다시 상기하면</p>
+<ul>
+<li><span class="math inline">\(\int X dP = X(H)\times P(\{H\}) + X(T)\times P(\{T\})\)</span></li>
+</ul>
+<p>로 쓸 수 있다.</p>
+</div>
+</div>
 <p><code>-</code> 예제2: <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 확률공간이라고 하고 <span class="math inline">\(\Omega=[0,2\pi)\)</span>, <span class="math inline">\({\cal F}={\cal R} \cap [0,2\pi)\)</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, <span class="math inline">\(P([0,x))=\frac{x}{2\pi}\)</span>라고 하자.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 확률변수 <span class="math inline">\(X(\omega)=\omega\)</span>에 대한 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하여 보자.</p>
 <p>(풀이)</p>
 <p>아래와 같이 계산할 수 있다. (고등학교 수준)</p>
