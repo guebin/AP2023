@@ -561,7 +561,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[f(x) = \begin{cases} 1 &amp; \mathbb{Q} \cap [0,1] := A_1 \\ 0 &amp; \mathbb{Q}^c \cap [0,1]: =A_2 \end{cases}\]</span></p>
 <p>이 함수의 밑면적을 계산하기 위해서</p>
 <ul>
-<li><span class="math inline">\(\int f \lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
+<li><span class="math inline">\(\int f d\lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
 </ul>
 <p>와 같은 계산을 정의하였다. 이를 다시 평이한 언어로 표현하면</p>
 <ul>
@@ -588,7 +588,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>로 쓸 수 있다. 아래의 수식</p>
 <ul>
-<li><span class="math inline">\(\int f \lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
+<li><span class="math inline">\(\int f d\lambda = 1 \times \lambda(A_1) + 0 \times \lambda(A_2)\)</span></li>
 </ul>
 <p>에 대응하여 다시 상기하면</p>
 <ul>
@@ -613,6 +613,21 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\mathbb{E}(X)= \int_{\mathbb{R}} xd\mu_X=\int_{[0,2\pi)}xd\mu_X(x)\)</span></li>
 <li><span class="math inline">\(\mathbb{E}(X)= \int_\Omega X(\omega)dP(\omega)=\int X dP\)</span></li>
 </ol>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+위의 1 <span class="math inline">\(\to\)</span> 2, 즉 <span class="math inline">\(\int_{[0,2\pi)} x d\mu_X(x) = \int_\Omega X dP\)</span> 에 대한 이해의 추가설명 (강의에 너무 대충 설명해서..)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>이 예제에서는 <span class="math inline">\(X: [0,2\pi) \to [0,2\pi)\)</span>가 항등함수이므로,</p>
+<p><span class="math display">\[\mu_X:= P \circ X^{-1} = P\]</span></p>
+<p>가 성립하는 특이한 경우이다. 이는 이해를 용이하게 위해서 이 예제에서 특별하게 설정된 상황이다. 하지만 이 성질은 꼭 <span class="math inline">\(X\)</span>가 항등함수가 아닐지라도 일반적으로 성립한다.</p>
+</div>
+</div>
 <p><code>-</code> 정의: <span class="math inline">\(X\)</span>가 확률공간 <span class="math inline">\((\Omega,{\cal F},P)\)</span>에서 정의된 확률변수라고 할때 그 기대값 <span class="math inline">\(\mathbb{E}(X)\)</span>는 아래와 같이 정의한다.</p>
 <p><span class="math display">\[\mathbb{E}(X) = \int_{\Omega} X dP\]</span></p>
 <p>여기에서 <span class="math inline">\(X\)</span>는 이산형, 연속형, 혼합형등 어떠한 형태의 확률변수라도 상관없다. 위의 기대값은 항상 아래와 같이 표현할 수 있다.</p>
