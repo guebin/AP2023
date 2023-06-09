@@ -379,9 +379,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>(해설)</p>
 <ol type="1">
 <li><span class="math inline">\(\tilde{\mu}_X\)</span>, <span class="math inline">\(\#\)</span>는 모두 <span class="math inline">\((S,{\cal S})\)</span> 에서의 <span class="math inline">\(\sigma\)</span>-finite 메져이다.</li>
-<li><span class="math inline">\(\tilde{\mu}_X &lt;&lt; \#\)</span>이 성립한다. 따라서 적당한 <span class="math inline">\({\cal S} \to {\cal S}\)</span> measurable function이 존재하여 라돈니코딤 도함수의 조건을 만족함을 알 수 있다.</li>
-<li>우리가 생각하는 후보는 <span class="math inline">\(f_X\)</span>인데 이것이 만약에 (1) <span class="math inline">\({\cal S} \to {\cal S}\)</span> 가측함수이고 (2) 라돈니코딤 도함수의 조건<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>을 만족한다면 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\mu\)</span>의 거의 유일한 (<strong><em>w.r.t. <span class="math inline">\(\#\)</span></em></strong>) 밀도함수라고 주장할 수 있다.</li>
-<li><span class="math inline">\(f_X\)</span>는 <span class="math inline">\({\cal S} \to {\cal S}\)</span> 가측함수이다.</li>
+<li><span class="math inline">\(\tilde{\mu}_X &lt;&lt; \#\)</span>이 성립한다. 따라서 적당한 <span class="math inline">\({\cal S} - {\cal R}^+\)</span> measurable function이 존재하여 라돈니코딤 도함수의 조건을 만족함을 알 수 있다.</li>
+<li>우리가 생각하는 후보는 <span class="math inline">\(f_X\)</span>인데 이것이 만약에 (1) <span class="math inline">\({\cal S} - {\cal R}^+\)</span> 가측함수이고 (2) 라돈니코딤 도함수의 조건<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>을 만족한다면 <span class="math inline">\(f_X\)</span>는 카운팅메져 <span class="math inline">\(\#\)</span>에 대한 <span class="math inline">\(\mu\)</span>의 거의 유일한 (<strong><em>w.r.t. <span class="math inline">\(\#\)</span></em></strong>) 밀도함수라고 주장할 수 있다.</li>
+<li><span class="math inline">\(f_X\)</span>는 <span class="math inline">\({\cal S} \to {\cal R}^+\)</span> 가측함수이다. (simple function)</li>
 <li><span class="math inline">\(\forall B \in {\cal S}: \mu(B)=\int_B f_X d\#=\sum_{x \in B} f_X(x)\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 를 만족한다.</li>
 </ol>
 <p><code>-</code> 예제1에서 제안한 <span class="math inline">\(f_X\)</span>의 경우 어떠한 의미에서는 <strong>밀도함수</strong>라고 해석할 수 있다.</p>
@@ -399,12 +399,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(\mu_X(\{0,1\})=1\)</span></li>
 <li><span class="math inline">\(\mu_X(B)=0\)</span> , <span class="math inline">\(B \in {\cal R} - \{0,1\} - \{0\} - \{1\}\)</span></li>
 </ul>
-<p><strong><span class="math inline">\(\tilde{\mu}:{\cal S} \to [0,1]\)</span></strong></p>
+<p><strong><span class="math inline">\(\tilde{\mu}_X:{\cal S} \to [0,1]\)</span></strong></p>
 <ul>
-<li><span class="math inline">\(\mu(\emptyset)= 0\)</span></li>
-<li><span class="math inline">\(\mu(\{0\})= \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\mu(\{1\})= \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\mu(\{0,1\})= 1\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\emptyset)= 0\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{0\})= \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{1\})= \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\tilde{\mu}_X(\{0,1\})= 1\)</span></li>
 </ul>
 <p><code>-</code> 찝찝한점2: 예제1에서는 왜 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 고려하지 않고 <span class="math inline">\((S,{\cal S})\)</span>를 고려하였을까?</p>
 <blockquote class="blockquote">
@@ -434,7 +434,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(\delta_X(\{0,1\})=2\)</span></li>
 <li><span class="math inline">\(\delta_X(B)=0\)</span>, <span class="math inline">\(B \in {\cal R}-\{0,1\}-\{0\}-\{1\}\)</span></li>
 </ul>
-<p>이때 함수 <span class="math inline">\(\delta_X\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 에서의 메져가 된다. 이 경우 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span> 가 성립한다. 이제 아래의 함수 <span class="math inline">\(f_X:S \to \mathbb{R}\)</span>를 고려하자.</p>
+<p>이때 함수 <span class="math inline">\(\delta_X\)</span>는 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 에서의 메져가 된다. 이 경우 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span> 가 성립한다. 이제 아래의 함수 <span class="math inline">\(f_X:S \to \mathbb{R}^+\)</span>를 고려하자.</p>
 <ul>
 <li><span class="math inline">\(f_X(0)=\frac{1}{2}\)</span></li>
 <li><span class="math inline">\(f_X(1)=\frac{1}{2}\)</span></li>
@@ -483,7 +483,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li><span class="math inline">\(\nu:= \lambda + \delta_0\)</span> 이라고 정의하자.</li>
 <li><span class="math inline">\(\nu\)</span>는 <span class="math inline">\(\sigma\)</span>-finite 하며 <span class="math inline">\(\mu_X &lt;&lt; \nu\)</span> 를 만족한다.</li>
-<li>함수 <span class="math inline">\(f_X(x)\)</span>는 <span class="math inline">\(\forall B \in {\cal R}\)</span>에 대하여 아래를 만족한다.</li>
+<li>함수 <span class="math inline">\(f_X(x)\)</span>는 가측함수이며 (simple function) <span class="math inline">\(\forall B \in {\cal R}\)</span>에 대하여 아래를 만족한다.</li>
 </ol>
 <p><span class="math display">\[\mu_X(B)=\int_B f_X d\nu =\int_B f_X d(\lambda+\delta_0)=\int_B f_X d\lambda + \int_B f_X d\delta_0\]</span></p>
 <blockquote class="blockquote">
