@@ -794,9 +794,22 @@ x &amp; 0\leq  x \leq  1 \\
 <blockquote class="blockquote">
 <p>위에서 <span class="math inline">\(f\)</span>의 공역이 <span class="math inline">\(\mathbb{R}^+\)</span>인 이유는 <span class="math inline">\(F_X\)</span>가 증가함수라서..</p>
 </blockquote>
-<p><code>-</code> <strong>Thm</strong> (라돈니코딤 정리)<span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019</a>, Thm A.4.8.)</span>: 가측공간 <span class="math inline">\((S,{\cal S})\)</span>를 고려하자. 그리고 <span class="math inline">\(\mu\)</span>와 <span class="math inline">\(\lambda\)</span>가 <span class="math inline">\((S,{\cal S})\)</span>에서의 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 만약에 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 이라면 아래를 만족하는 가측함수 <span class="math inline">\(f:(S,{\cal S}) \to (S,{\cal S})\)</span>가 <strong>거의 유일하게 (w.r.t. <span class="math inline">\(\lambda\)</span>)</strong> 존재한다.</p>
+<p><code>-</code> <strong>Thm</strong> (라돈니코딤 정리)<span class="citation" data-cites="durrett2019probability">(<a href="#ref-durrett2019probability" role="doc-biblioref">Durrett 2019</a>, Thm A.4.8.)</span>: 가측공간 <span class="math inline">\((S,{\cal S})\)</span>를 고려하자. 그리고 <span class="math inline">\(\mu\)</span>와 <span class="math inline">\(\lambda\)</span>가 <span class="math inline">\((S,{\cal S})\)</span>에서의 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 만약에 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 이라면 아래를 만족하는 가측함수 <span class="math inline">\(f:(S,{\cal S}) \to (\mathbb{R}^+,{\cal B}(\mathbb{R}^+))\)</span>가 <strong>거의 유일하게 (w.r.t. <span class="math inline">\(\lambda\)</span>)</strong> 존재한다.</p>
 <p><span class="math display">\[\forall B \in {\cal S}:~ \mu(B) = \int_B f d\lambda.\]</span></p>
 <p>여기에서 <span class="math inline">\(f\)</span>를 <strong><em>Radon-Nikodym derivative of <span class="math inline">\(\mu\)</span> w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 라고 하며, 이러한 의미에서 <span class="math inline">\(f=\frac{d\mu}{d\lambda}\)</span>와 같이 표현하기도 한다.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+강의 오류 정정
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(f: (S,{\cal S}) \to (S, {\cal S})\)</span>를 <span class="math inline">\(f:(S,{\cal S}) \to (\mathbb{R}^+, {\cal B}(\mathbb{R}^+))\)</span>로 정정합니다.</p>
+</div>
+</div>
 <p><code>-</code> 예제1 – 균등분포</p>
 <p>아래와 같은 함수를 고려하자.</p>
 <p><span class="math display">\[F_X(x) = \begin{cases}
