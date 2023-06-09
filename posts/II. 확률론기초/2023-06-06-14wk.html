@@ -263,15 +263,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#강의영상" id="toc-강의영상" class="nav-link active" data-scroll-target="#강의영상">강의영상</a></li>
-  <li><a href="#일반화된-밀도함수" id="toc-일반화된-밀도함수" class="nav-link" data-scroll-target="#일반화된-밀도함수">일반화된 밀도함수</a>
+  <li><a href="#일반화된-밀도함수" id="toc-일반화된-밀도함수" class="nav-link active" data-scroll-target="#일반화된-밀도함수">일반화된 밀도함수</a>
   <ul class="collapse">
   <li><a href="#이산확률변수" id="toc-이산확률변수" class="nav-link" data-scroll-target="#이산확률변수">이산확률변수</a></li>
   <li><a href="#혼합형확률변수" id="toc-혼합형확률변수" class="nav-link" data-scroll-target="#혼합형확률변수">혼합형확률변수</a></li>
   </ul></li>
   <li><a href="#르벡분해정리" id="toc-르벡분해정리" class="nav-link" data-scroll-target="#르벡분해정리">르벡분해정리</a></li>
   <li><a href="#기대값" id="toc-기대값" class="nav-link" data-scroll-target="#기대값">기대값</a></li>
-  <li><a href="#마무리" id="toc-마무리" class="nav-link" data-scroll-target="#마무리">마무리</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
   </ul>
 </nav>
@@ -282,12 +280,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="강의영상" class="level1">
-<h1>강의영상</h1>
-<blockquote class="blockquote">
-<p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-wThZpnzJAP_aOtJzBl1Ij_" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-wThZpnzJAP_aOtJzBl1Ij_</a></p>
-</blockquote>
-</section>
 <section id="일반화된-밀도함수" class="level1">
 <h1>일반화된 밀도함수</h1>
 <p><code>-</code> 라돈니코딤 정리는 꼭 르벡메져일 경우에만 성립하는 것이 아니다.</p>
@@ -627,52 +619,13 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[\mathbb{E}(X) = \int_{\mathbb{R}} x d\mu_X:=\int_{\mathbb{R}} x dF_X\]</span></p>
 <p>만약 <span class="math inline">\(F_X\)</span>가 절대연속인 경우 (즉 <span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span> 인 경우) 아래와 같이 표현가능하다.</p>
 <p><span class="math display">\[\mathbb{E}(X) = \int_{-\infty}^{\infty} xf_X(x)dx\]</span></p>
-<p>만약에 <span class="math inline">\(F_X\)</span>가 countable한 jump로만 구성되어 있다면 <span class="math inline">\(\mu_X\)</span>는 jump point에서 support로 가지는 디렉메져 <span class="math inline">\(\delta_X\)</span>에 대하여 절대연속이 되며 (즉 <span class="math inline">\(\mu_X &lt;&lt; \delta_X\)</span>) 이 경우 기대값은 아래와 같이 표현가능하다.</p>
+<p>만약에 <span class="math inline">\(F_X\)</span>가 countable한 jump로만 구성되어 있다면 <span class="math inline">\(\mu_X\)</span>는 jump point에서 support로 가지는 수정된 카운팅메져 <span class="math inline">\(\#_X\)</span>에 대하여 절대연속이 되며 (즉 <span class="math inline">\(\mu_X &lt;&lt; \#_X\)</span>) 이 경우 기대값은 아래와 같이 표현가능하다.</p>
 <p><span class="math display">\[\mathbb{E}(X) = \sum_{x}x p_X(x)\]</span></p>
-<p>여기에서 <span class="math inline">\(f_X(x)\)</span>와 <span class="math inline">\(p_X(x)\)</span>는 각각 확률변수 <span class="math inline">\(X\)</span>의 pdf, pmf가 된다. (혹은 <span class="math inline">\(\lambda\)</span>와 <span class="math inline">\(\delta_X\)</span>에 대한 라돈니코딤 도함수)</p>
+<p>여기에서 <span class="math inline">\(f_X(x)\)</span>와 <span class="math inline">\(p_X(x)\)</span>는 각각 확률변수 <span class="math inline">\(X\)</span>의 pdf, pmf가 된다. (혹은 <span class="math inline">\(\lambda\)</span>와 <span class="math inline">\(\#_X\)</span>에 대한 라돈니코딤 도함수)</p>
 <p><code>-</code> 요약</p>
 <ul>
 <li>학부수준: 연속형확률변수의 기대값과 이산형확률변수의 기대값이 서로 다르게 정의된다.</li>
 <li>대학원수준: 두 경우 모두 <span class="math inline">\(\mathbb{E}(X) = \int X dP\)</span>로 정의된다.</li>
-</ul>
-</section>
-<section id="마무리" class="level1">
-<h1>마무리</h1>
-<p><code>-</code> 한 학기동안 수고하셨습니다.</p>
-<p><code>-</code> 강의의 의의</p>
-<ol type="1">
-<li><p>확률론<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>은 LLN, CLT 등을 엄밀하게 다루며<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> 이는 다른 통계 모든 과목을 이해하는데 밑바탕이 된다.</p></li>
-<li><p>그런데 그 확률론을 잘 이해하기 위해서는 해석학,실해석학(=측도론)을 중심으로 위상수학, 대수, 집합론 등 수학 전반에 대한 폭넓은 이해가 필요하다. 따라서 확률론을 원활하게 이해하기 위한 예비과정을 선행하기는 수학과 학생이 아니면 거의 불가능하다.</p></li>
-<li><p>본 교과의 목표는 이러한 수학적지식과 기초확률론을 소개함으로써 (1) 통계학과에서 필요한 여러 수학이론을 리뷰하고 (2) 확률, 확률변수, 기대값등을 엄밀한 언어로 재정의한다.</p></li>
-</ol>
-<p><code>-</code> 강의를 만든 진짜 목적: 공부를 할때 필요한 언어를 소개.</p>
-<ul>
-<li>공부를 할 때 내가 이해할 수 있는 언어가 많을 수록 유리함.</li>
-<li>예를들어 한국어만 읽을 수 있고 영어를 전혀 할 줄 모른다면 공부를 하기 힘듦. 내가 R코드만 이해할 수 있고 파이썬코드는 이해할 수 없다면 특정분야의 기술을 습득하는데 한계점이 존재함.</li>
-<li>경험1: 어떠한 증명을 위해서 다른 논문을 참고할 일이 있었는데 제목만 영어로 되어있고 내용을 보니 러시아로 되어있었음. (그래도 식만보면서 울면서 읽었음) 너무 힘들었음.</li>
-<li>경험2: R만 써서 박사학위 받았는데, 다른 연구하려고 참고자료를 찾아보니 다 파이썬으로 구현해놓음. 그래서 R로 구현된 코드를 찾으려 시도했으나 없어서 포기하고 내가 파이썬을 배웠음.</li>
-<li>경험3: 통계학 관련 공부나 연구활동을 할때마다 이상한 수학용어 및 기호때문에 막히는 적이 많았음. 그래서 쉬운언어로 쓰여진 책을 찾아서 공부하려다가 포기하고 내가 수학을 배웠음.</li>
-</ul>
-<p><code>-</code> 경험3의 예시: Appendix</p>
-<ul>
-<li>생존분석 강의노트: 갑자기 라돈니코딤 도함수..</li>
-<li>WGAN: 꼭 이렇게 쓸 필요가 있었을까? 싶음. 그렇지만 이건 논문 쓰는 사람 마음이지 않을까? (이 사람은 이게 편할 수 있으니까)</li>
-<li>시계열교재: 이 한줄 때문에 고생좀 했어요</li>
-<li>기타등등 무수히<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> 많음~</li>
-</ul>
-<p><code>-</code> 학습 및 연구에 필요한 언어를 배우는 것이 어려운점</p>
-<ol type="1">
-<li>시계열분석, 공간자료분석, 텍스트마이닝과 같이 “데이터”가 중심이 되는 다른 교과목과 다르게 독학이 어렵다. 즉 쪽집게처방(pinpoint remedy)을 독학하는 것은 수월하지만 상대적으로 이론교과를 독학하는 것에는 시간이 오래 걸린다.</li>
-<li>독학할 교재가 마땅치 않다. (통계에 잘쓰이는 영어가 따로 있고, 통계에 잘 쓰이는 파이썬 패키지가 따로 있으며, 통계에 잘 쓰이는 수학이 따로 있음) 그래서 여러교재를 참고해야 한다.</li>
-<li>교재들과의 연결, 그리고 본인연구와의 연결은 스스로 해야한다.</li>
-</ol>
-<p><code>-</code> 본인만의 무기: 흡수가능한 것은 무기가 될 수 없음.</p>
-<ul>
-<li>전제: 경쟁상대를 통계학과에서 한정짓지 말것</li>
-<li>경험1: 코드를 못 짜는 사람 -&gt; 잘하는 사람 옆에서 4~5년 지내면 잘해짐</li>
-<li>경험2: 데이터를 읽는 센스 + 시각화에 대한 감각이 없는 사람 -&gt; 잘하는 사람 옆에서 4~5년 지내면 잘해짐<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></li>
-<li>경험3: 논문을 못 읽는 사람 -&gt; 평생 못 읽음. CS출신은 WGAN와 같은 논문을 원문으로는 평생 읽을 수 없다고 생각함.</li>
-<li>저의 무기:</li>
 </ul>
 </section>
 <section id="appendix" class="level1">
@@ -695,10 +648,6 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn5"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p><span class="math inline">\({\cal R} \cap [0,2\pi) := \{B \cap [0,2\pi): B \in {\cal R}\}\)</span><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>이렇게 정의해도 되는 이유는 카라테오도리 확장정리덕분<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>학부의 확률론과 다릅니다<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>“대부분의 통계교재에서 조금 더 엄밀한 내용은 학부과정을 벗어나므로 이 교재에서는 생략한다.”라는식으로 써진경우가 많은데요, 이를 이해하기 위해서 필요한 과목이 확률론입니다<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>countable many?<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>솔직히 데이터분석은 경험인듯. 많이해볼수록 잘함. 현업에서 오래근무한 사람이 교수보다 분석 잘할 수 있음<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
