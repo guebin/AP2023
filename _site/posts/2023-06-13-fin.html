@@ -268,9 +268,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#다음을-읽고-참거짓을-판단하라.-20점" id="toc-다음을-읽고-참거짓을-판단하라.-20점" class="nav-link active" data-scroll-target="#다음을-읽고-참거짓을-판단하라.-20점"><code>1</code>. 다음을 읽고 참거짓을 판단하라. (20점)</a></li>
+  <li><a href="#다음을-읽고-참거짓을-판단하라.-30점" id="toc-다음을-읽고-참거짓을-판단하라.-30점" class="nav-link active" data-scroll-target="#다음을-읽고-참거짓을-판단하라.-30점"><code>1</code>. 다음을 읽고 참거짓을 판단하라. (30점)</a></li>
   <li><a href="#확률-40점" id="toc-확률-40점" class="nav-link" data-scroll-target="#확률-40점"><code>2</code>. 확률 (40점)</a></li>
-  <li><a href="#확률변수-밀도함수-기대값-30점" id="toc-확률변수-밀도함수-기대값-30점" class="nav-link" data-scroll-target="#확률변수-밀도함수-기대값-30점"><code>2</code>. 확률변수, 밀도함수, 기대값 (30점)</a></li>
+  <li><a href="#확률변수-밀도함수-기대값-30점" id="toc-확률변수-밀도함수-기대값-30점" class="nav-link" data-scroll-target="#확률변수-밀도함수-기대값-30점"><code>3</code>. 확률변수, 밀도함수, 기대값 (30점)</a></li>
   </ul>
 </nav>
     </div>
@@ -280,8 +280,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="다음을-읽고-참거짓을-판단하라.-20점" class="level1">
-<h1><code>1</code>. 다음을 읽고 참거짓을 판단하라. (20점)</h1>
+<section id="다음을-읽고-참거짓을-판단하라.-30점" class="level1">
+<h1><code>1</code>. 다음을 읽고 참거짓을 판단하라. (30점)</h1>
 <p><code>(1)</code> 자연수집합 <span class="math inline">\(\mathbb{N}\)</span>와 짝수의집합 <span class="math inline">\(\{2,4,6,\dots\}\)</span>의 cardinality는 동일하다.</p>
 <p><code>(2)</code> 카운팅메져 <span class="math inline">\(\#\)</span>는 가측공간 <span class="math inline">\((\mathbb{N},2^{\mathbb{N}})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite measure이다.</p>
 <p><code>(3)</code></p>
@@ -326,12 +326,12 @@ ul.task-list li input[type="checkbox"] {
 <p><code>2</code>. 유일하게 존재하는 (혹은 존재하지 않는) 이유를 설명하고, 그러한 확률측도를 예시로 제시해야함.</p>
 <p><code>3</code>. 즉 유일하게 존재하는 경우는 아래를 만족하는 <span class="math inline">\(P\)</span>를 제시하고,</p>
 <ol type="1">
-<li><span class="math inline">\(P\)</span> is probability measure on <span class="math inline">\((\Omega,{\cal A})\)</span></li>
+<li><span class="math inline">\(P\)</span> is probability measure on <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span></li>
 <li><span class="math inline">\(\forall A \in {\cal A}: ~ P(A) = \tilde{P}(A)\)</span></li>
 </ol>
 <p>유일하게 존재하지 않는 경우는 아래를 만족하는 서로 다른 2개의 측도 <span class="math inline">\(P_1,P_2\)</span>를 제시해야함.</p>
 <ol type="1">
-<li><span class="math inline">\(P_1,P_2\)</span> are probability measures on <span class="math inline">\((\Omega,{\cal A})\)</span></li>
+<li><span class="math inline">\(P_1,P_2\)</span> are probability measures on <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span></li>
 <li><span class="math inline">\(\forall A \in {\cal A}: ~ P_1(A) =P_2(A) = \tilde{P}(A)\)</span></li>
 <li><span class="math inline">\(\exists B \in \sigma({\cal A}):~ P_1(B) \neq P_2(B)\)</span></li>
 </ol>
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="확률변수-밀도함수-기대값-30점" class="level1">
-<h1><code>2</code>. 확률변수, 밀도함수, 기대값 (30점)</h1>
+<h1><code>3</code>. 확률변수, 밀도함수, 기대값 (30점)</h1>
 <p>아래와 같은 확률공간 <span class="math inline">\((\Omega,{\cal F},P)\)</span>를 고려하라.</p>
 <ul>
 <li><span class="math inline">\(\Omega=[0,2\pi)\)</span></li>
@@ -366,7 +366,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>(1)</code> 함수 <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>을 아래와 같이 정의할때</p>
 <p><span class="math display">\[X(\omega) = \begin{cases} 0 &amp; \omega \in \Omega \cap \mathbb{Q}^c \\ 1 &amp; \omega \in \Omega \cap \mathbb{Q} \end{cases}\]</span></p>
 <p><span class="math inline">\(X\)</span>가 확률변수임을 보여라.</p>
-<p><code>(2)</code> <span class="math inline">\(\mu_X &lt;&lt; \nu\)</span> 를 만족하는 <span class="math inline">\(\sigma\)</span>-finite measure <span class="math inline">\(\nu\)</span> 를 제시하고, <span class="math inline">\(\mu_X\)</span>의 Radon-Nikodym derivative (<strong><em>w.r.t. <span class="math inline">\(\nu\)</span></em></strong>)</p>
+<p><code>(2)</code> <span class="math inline">\(\mu_X &lt;&lt; \nu\)</span> 를 만족하는 <span class="math inline">\(\sigma\)</span>-finite measure <span class="math inline">\(\nu\)</span> 를 가측공간 <span class="math inline">\((\mathbb{R}, {\cal R})\)</span>에서 정의하고, <span class="math inline">\(\mu_X\)</span>의 Radon-Nikodym derivative (<strong><em>w.r.t. <span class="math inline">\(\nu\)</span></em></strong>)</p>
 <p><span class="math display">\[f:=\frac{d\mu_X}{d\nu}\]</span></p>
 <p>를 제시하라. 단, 여기에서 <span class="math inline">\(\mu_X : P \circ X^{-1}\)</span> 이다.</p>
 <p><code>(3)</code> <span class="math inline">\(X\)</span>의 평균을 구하라. 즉 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하라.</p>
