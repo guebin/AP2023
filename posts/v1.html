@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AP2023 – v1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AP2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../about.html" aria-current="page">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/2023-06-13-fin.html" class="sidebar-item-text sidebar-link">15wk: 기말고사</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/v1.html" class="sidebar-item-text sidebar-link active">데이터</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/v2.html" class="sidebar-item-text sidebar-link">데이터</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">I. 측도론</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">II. 확률론기초</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분 (1)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 적분 (2)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">13wk: 밀도함수</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">14wk: 이산형과 연속형의 통합</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#데이터" id="toc-데이터" class="nav-link active" data-scroll-target="#데이터">데이터</a></li>
+  <li><a href="#함수" id="toc-함수" class="nav-link" data-scroll-target="#함수">함수</a></li>
+  <li><a href="#하이퍼파라메터" id="toc-하이퍼파라메터" class="nav-link" data-scroll-target="#하이퍼파라메터">하이퍼파라메터</a></li>
+  <li><a href="#초기값" id="toc-초기값" class="nav-link" data-scroll-target="#초기값">초기값</a></li>
+  <li><a href="#그릇" id="toc-그릇" class="nav-link" data-scroll-target="#그릇">그릇</a></li>
+  <li><a href="#반복" id="toc-반복" class="nav-link" data-scroll-target="#반복">반복</a></li>
+  <li><a href="#평가" id="toc-평가" class="nav-link" data-scroll-target="#평가">평가</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="데이터" class="level2">
+<h2 class="anchored" data-anchor-id="데이터">데이터</h2>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>topic1 <span class="op">=</span> [<span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, </span>
+<span id="cb2-2"><a href="#cb2-2"></a>          <span class="st">'공'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'헤딩'</span>, <span class="st">'심판'</span>, </span>
+<span id="cb2-3"><a href="#cb2-3"></a>          <span class="st">'경기장'</span>, <span class="st">'클럽'</span>, <span class="st">'월드컵'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>          <span class="st">'선수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'중앙미드필더'</span>]</span>
+<span id="cb2-5"><a href="#cb2-5"></a>topic2 <span class="op">=</span> [<span class="st">'통계'</span>, <span class="st">'확률'</span>, <span class="st">'데이터과학'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, </span>
+<span id="cb2-6"><a href="#cb2-6"></a>          <span class="st">'회귀분석'</span>, <span class="st">'분류'</span>, <span class="st">'클러스터링'</span>, <span class="st">'상관관계'</span>, <span class="st">'표본'</span>, </span>
+<span id="cb2-7"><a href="#cb2-7"></a>          <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표준편차'</span>, <span class="st">'평균'</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>          <span class="st">'분산'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'인공지능'</span>, <span class="st">'머신러닝'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>N_DOCS <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>N_WORDS_IN_EACH_DOCS <span class="op">=</span> <span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>D1 <span class="op">=</span> {<span class="st">'doc'</span><span class="op">+</span><span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>):np.random.choice(topic1,size<span class="op">=</span>N_WORDS_IN_EACH_DOCS,replace<span class="op">=</span><span class="va">True</span>).tolist() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(N_DOCS<span class="op">/</span><span class="dv">2</span>))}</span>
+<span id="cb4-2"><a href="#cb4-2"></a>D2 <span class="op">=</span> {<span class="st">'doc'</span><span class="op">+</span><span class="bu">str</span>(i<span class="op">+</span><span class="dv">51</span>):np.random.choice(topic2,size<span class="op">=</span>N_WORDS_IN_EACH_DOCS,replace<span class="op">=</span><span class="va">True</span>).tolist() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(N_DOCS<span class="op">/</span><span class="dv">2</span>))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>_D <span class="op">=</span> {<span class="st">'doc1'</span>: [<span class="st">'선수'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, <span class="st">'공격'</span>, <span class="st">'선수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공'</span>, <span class="st">'골키퍼'</span>, <span class="st">'슈팅'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'선수'</span>, <span class="st">'공격수'</span>, <span class="st">'페널티킥'</span>, <span class="st">'골'</span>, <span class="st">'수비수'</span>, <span class="st">'슈팅'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'경기장'</span>, <span class="st">'심판'</span>, <span class="st">'패스'</span>, <span class="st">'리그'</span>, <span class="st">'패스'</span>, <span class="st">'슈팅'</span>, <span class="st">'월드컵'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>], <span class="st">'doc2'</span>: [<span class="st">'경기장'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'패스'</span>, <span class="st">'리그'</span>, <span class="st">'리그'</span>, <span class="st">'공격'</span>, <span class="st">'수비수'</span>, <span class="st">'월드컵'</span>, <span class="st">'패스'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'수비수'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'수비'</span>, <span class="st">'월드컵'</span>, <span class="st">'경기장'</span>, <span class="st">'수비'</span>, <span class="st">'패스'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'골키퍼'</span>, <span class="st">'경기장'</span>, <span class="st">'공'</span>, <span class="st">'공격'</span>, <span class="st">'리그'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'패스'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격'</span>, <span class="st">'수비'</span>, <span class="st">'경기장'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>], <span class="st">'doc3'</span>: [<span class="st">'헤딩'</span>, <span class="st">'수비'</span>, <span class="st">'심판'</span>, <span class="st">'월드컵'</span>, <span class="st">'수비수'</span>, <span class="st">'골'</span>, <span class="st">'헤딩'</span>, <span class="st">'골'</span>, <span class="st">'클럽'</span>, <span class="st">'심판'</span>, <span class="st">'페널티킥'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골키퍼'</span>, <span class="st">'공격'</span>, <span class="st">'경기장'</span>, <span class="st">'공격수'</span>, <span class="st">'경기장'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'페널티킥'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'공격'</span>, <span class="st">'심판'</span>, <span class="st">'리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'경기장'</span>, <span class="st">'골'</span>, <span class="st">'페널티킥'</span>, <span class="st">'리그'</span>, <span class="st">'클럽'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'패스'</span>, <span class="st">'공격'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'챔피언스리그'</span>], <span class="st">'doc4'</span>: [<span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, <span class="st">'페널티킥'</span>, <span class="st">'심판'</span>, <span class="st">'골'</span>, <span class="st">'페널티킥'</span>, <span class="st">'드리블'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, <span class="st">'골키퍼'</span>, <span class="st">'드리블'</span>, <span class="st">'패스'</span>, <span class="st">'페널티킥'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'드리블'</span>, <span class="st">'공격'</span>, <span class="st">'공격수'</span>, <span class="st">'헤딩'</span>, <span class="st">'페널티킥'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공격수'</span>, <span class="st">'공'</span>, <span class="st">'수비'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'헤딩'</span>, <span class="st">'헤딩'</span>, <span class="st">'패스'</span>, <span class="st">'수비수'</span>, <span class="st">'수비'</span>, <span class="st">'월드컵'</span>, <span class="st">'수비'</span>, <span class="st">'골키퍼'</span>, <span class="st">'패스'</span>, <span class="st">'선수'</span>, <span class="st">'수비수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공'</span>, <span class="st">'공'</span>, <span class="st">'공'</span>, <span class="st">'수비'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'챔피언스리그'</span>], <span class="st">'doc5'</span>: [<span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공'</span>, <span class="st">'드리블'</span>, <span class="st">'선수'</span>, <span class="st">'수비'</span>, <span class="st">'헤딩'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'경기장'</span>, <span class="st">'공격수'</span>, <span class="st">'드리블'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골키퍼'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'드리블'</span>, <span class="st">'헤딩'</span>, <span class="st">'선수'</span>, <span class="st">'클럽'</span>, <span class="st">'수비'</span>, <span class="st">'공'</span>, <span class="st">'슈팅'</span>, <span class="st">'패스'</span>, <span class="st">'심판'</span>, <span class="st">'선수'</span>, <span class="st">'수비'</span>, <span class="st">'클럽'</span>, <span class="st">'클럽'</span>, <span class="st">'수비'</span>, <span class="st">'수비수'</span>, <span class="st">'리그'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'클럽'</span>, <span class="st">'공격수'</span>, <span class="st">'드리블'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'페널티킥'</span>, <span class="st">'페널티킥'</span>, <span class="st">'경기장'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'공'</span>, <span class="st">'클럽'</span>], <span class="st">'doc6'</span>: [<span class="st">'수비'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'수비수'</span>, <span class="st">'공격수'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비수'</span>, <span class="st">'공격수'</span>, <span class="st">'슈팅'</span>, <span class="st">'골'</span>, <span class="st">'클럽'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'공'</span>, <span class="st">'공'</span>, <span class="st">'월드컵'</span>, <span class="st">'공'</span>, <span class="st">'경기장'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'수비수'</span>, <span class="st">'리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'골'</span>, <span class="st">'헤딩'</span>, <span class="st">'드리블'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'공'</span>, <span class="st">'선수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'클럽'</span>, <span class="st">'헤딩'</span>, <span class="st">'경기장'</span>, <span class="st">'드리블'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'경기장'</span>, <span class="st">'패스'</span>, <span class="st">'골'</span>, <span class="st">'수비수'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'선수'</span>, <span class="st">'월드컵'</span>, <span class="st">'클럽'</span>], <span class="st">'doc7'</span>: [<span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'공격'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'공'</span>, <span class="st">'클럽'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'선수'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'리그'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'리그'</span>, <span class="st">'리그'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'패스'</span>, <span class="st">'수비수'</span>, <span class="st">'경기장'</span>, <span class="st">'클럽'</span>, <span class="st">'선수'</span>, <span class="st">'심판'</span>, <span class="st">'경기장'</span>, <span class="st">'클럽'</span>, <span class="st">'수비'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'리그'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'공격수'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격수'</span>, <span class="st">'클럽'</span>, <span class="st">'드리블'</span>, <span class="st">'월드컵'</span>, <span class="st">'수비'</span>, <span class="st">'클럽'</span>], <span class="st">'doc8'</span>: [<span class="st">'리그'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, <span class="st">'드리블'</span>, <span class="st">'경기장'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'클럽'</span>, <span class="st">'페널티킥'</span>, <span class="st">'드리블'</span>, <span class="st">'클럽'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'공격'</span>, <span class="st">'리그'</span>, <span class="st">'수비'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비수'</span>, <span class="st">'수비'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'클럽'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'선수'</span>, <span class="st">'선수'</span>, <span class="st">'수비수'</span>, <span class="st">'심판'</span>, <span class="st">'선수'</span>, <span class="st">'공격수'</span>, <span class="st">'수비'</span>, <span class="st">'골키퍼'</span>, <span class="st">'월드컵'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'클럽'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'선수'</span>, <span class="st">'월드컵'</span>, <span class="st">'경기장'</span>, <span class="st">'골키퍼'</span>, <span class="st">'공격'</span>], <span class="st">'doc9'</span>: [<span class="st">'월드컵'</span>, <span class="st">'월드컵'</span>, <span class="st">'슈팅'</span>, <span class="st">'페널티킥'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'골'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'페널티킥'</span>, <span class="st">'선수'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격수'</span>, <span class="st">'페널티킥'</span>, <span class="st">'페널티킥'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'수비수'</span>, <span class="st">'심판'</span>, <span class="st">'골'</span>, <span class="st">'골키퍼'</span>, <span class="st">'월드컵'</span>, <span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'클럽'</span>, <span class="st">'골'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'슈팅'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공'</span>, <span class="st">'골키퍼'</span>, <span class="st">'페널티킥'</span>, <span class="st">'월드컵'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'골'</span>, <span class="st">'리그'</span>, <span class="st">'리그'</span>, <span class="st">'리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'공격'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'경기장'</span>, <span class="st">'수비'</span>], <span class="st">'doc10'</span>: [<span class="st">'중앙미드필더'</span>, <span class="st">'수비'</span>, <span class="st">'선수'</span>, <span class="st">'수비'</span>, <span class="st">'페널티킥'</span>, <span class="st">'슈팅'</span>, <span class="st">'골'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격수'</span>, <span class="st">'월드컵'</span>, <span class="st">'골'</span>, <span class="st">'리그'</span>, <span class="st">'페널티킥'</span>, <span class="st">'헤딩'</span>, <span class="st">'경기장'</span>, <span class="st">'공격'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'클럽'</span>, <span class="st">'헤딩'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공격수'</span>, <span class="st">'골'</span>, <span class="st">'선수'</span>, <span class="st">'수비수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'클럽'</span>, <span class="st">'심판'</span>, <span class="st">'심판'</span>, <span class="st">'수비'</span>, <span class="st">'슈팅'</span>, <span class="st">'공'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'클럽'</span>, <span class="st">'드리블'</span>, <span class="st">'클럽'</span>, <span class="st">'골키퍼'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'선수'</span>, <span class="st">'선수'</span>, <span class="st">'월드컵'</span>, <span class="st">'드리블'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'경기장'</span>, <span class="st">'중앙미드필더'</span>], <span class="st">'doc11'</span>: [<span class="st">'공'</span>, <span class="st">'공격수'</span>, <span class="st">'경기장'</span>, <span class="st">'선수'</span>, <span class="st">'드리블'</span>, <span class="st">'골키퍼'</span>, <span class="st">'슈팅'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'드리블'</span>, <span class="st">'경기장'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'헤딩'</span>, <span class="st">'드리블'</span>, <span class="st">'수비수'</span>, <span class="st">'공격수'</span>, <span class="st">'월드컵'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'페널티킥'</span>, <span class="st">'심판'</span>, <span class="st">'선수'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공격수'</span>, <span class="st">'클럽'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'경기장'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'경기장'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'심판'</span>, <span class="st">'헤딩'</span>, <span class="st">'리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'심판'</span>, <span class="st">'공격수'</span>, <span class="st">'공격'</span>], <span class="st">'doc12'</span>: [<span class="st">'리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'선수'</span>, <span class="st">'경기장'</span>, <span class="st">'페널티킥'</span>, <span class="st">'드리블'</span>, <span class="st">'수비수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'클럽'</span>, <span class="st">'슈팅'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'공'</span>, <span class="st">'선수'</span>, <span class="st">'심판'</span>, <span class="st">'패스'</span>, <span class="st">'드리블'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'골키퍼'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'월드컵'</span>, <span class="st">'선수'</span>, <span class="st">'드리블'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공격'</span>, <span class="st">'리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격'</span>, <span class="st">'골'</span>, <span class="st">'리그'</span>, <span class="st">'공'</span>, <span class="st">'패스'</span>, <span class="st">'슈팅'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'심판'</span>, <span class="st">'골'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'공격수'</span>, <span class="st">'챔피언스리그'</span>], <span class="st">'doc13'</span>: [<span class="st">'리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'심판'</span>, <span class="st">'수비'</span>, <span class="st">'선수'</span>, <span class="st">'공'</span>, <span class="st">'경기장'</span>, <span class="st">'경기장'</span>, <span class="st">'심판'</span>, <span class="st">'헤딩'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'선수'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비'</span>, <span class="st">'수비수'</span>, <span class="st">'패스'</span>, <span class="st">'심판'</span>, <span class="st">'리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공격'</span>, <span class="st">'헤딩'</span>, <span class="st">'월드컵'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'심판'</span>, <span class="st">'슈팅'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비수'</span>, <span class="st">'헤딩'</span>, <span class="st">'페널티킥'</span>, <span class="st">'페널티킥'</span>, <span class="st">'심판'</span>, <span class="st">'페널티킥'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비수'</span>, <span class="st">'패스'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'월드컵'</span>, <span class="st">'수비수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'수비'</span>, <span class="st">'클럽'</span>, <span class="st">'경기장'</span>, <span class="st">'골'</span>], <span class="st">'doc14'</span>: [<span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격'</span>, <span class="st">'경기장'</span>, <span class="st">'클럽'</span>, <span class="st">'경기장'</span>, <span class="st">'드리블'</span>, <span class="st">'월드컵'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'패스'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'헤딩'</span>, <span class="st">'경기장'</span>, <span class="st">'헤딩'</span>, <span class="st">'드리블'</span>, <span class="st">'수비'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공격'</span>, <span class="st">'월드컵'</span>, <span class="st">'패스'</span>, <span class="st">'수비수'</span>, <span class="st">'월드컵'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'드리블'</span>, <span class="st">'드리블'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'클럽'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'클럽'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'공'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'심판'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'심판'</span>, <span class="st">'페널티킥'</span>, <span class="st">'경기장'</span>, <span class="st">'심판'</span>, <span class="st">'공격'</span>, <span class="st">'경기장'</span>], <span class="st">'doc15'</span>: [<span class="st">'리그'</span>, <span class="st">'월드컵'</span>, <span class="st">'경기장'</span>, <span class="st">'리그'</span>, <span class="st">'경기장'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'리그'</span>, <span class="st">'클럽'</span>, <span class="st">'수비'</span>, <span class="st">'골'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'경기장'</span>, <span class="st">'리그'</span>, <span class="st">'클럽'</span>, <span class="st">'심판'</span>, <span class="st">'공'</span>, <span class="st">'수비수'</span>, <span class="st">'골'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비'</span>, <span class="st">'패스'</span>, <span class="st">'패스'</span>, <span class="st">'경기장'</span>, <span class="st">'수비'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'드리블'</span>, <span class="st">'공'</span>, <span class="st">'공격'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'클럽'</span>, <span class="st">'선수'</span>, <span class="st">'드리블'</span>, <span class="st">'수비수'</span>, <span class="st">'드리블'</span>, <span class="st">'선수'</span>, <span class="st">'헤딩'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'페널티킥'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'골'</span>, <span class="st">'골'</span>], <span class="st">'doc16'</span>: [<span class="st">'심판'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'드리블'</span>, <span class="st">'골키퍼'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골키퍼'</span>, <span class="st">'헤딩'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'심판'</span>, <span class="st">'공'</span>, <span class="st">'공격'</span>, <span class="st">'선수'</span>, <span class="st">'공'</span>, <span class="st">'클럽'</span>, <span class="st">'골키퍼'</span>, <span class="st">'월드컵'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'공'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'수비'</span>, <span class="st">'슈팅'</span>, <span class="st">'리그'</span>, <span class="st">'클럽'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'수비수'</span>, <span class="st">'선수'</span>, <span class="st">'선수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'골'</span>, <span class="st">'수비수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격수'</span>, <span class="st">'슈팅'</span>, <span class="st">'선수'</span>, <span class="st">'공'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'선수'</span>], <span class="st">'doc17'</span>: [<span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'월드컵'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공격수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'드리블'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'패스'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격수'</span>, <span class="st">'드리블'</span>, <span class="st">'패스'</span>, <span class="st">'경기장'</span>, <span class="st">'수비수'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'월드컵'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'수비'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'슈팅'</span>, <span class="st">'페널티킥'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'수비'</span>, <span class="st">'공격수'</span>, <span class="st">'선수'</span>, <span class="st">'심판'</span>, <span class="st">'월드컵'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'수비'</span>, <span class="st">'경기장'</span>, <span class="st">'월드컵'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'공격수'</span>, <span class="st">'선수'</span>, <span class="st">'슈팅'</span>, <span class="st">'골키퍼'</span>], <span class="st">'doc18'</span>: [<span class="st">'공격'</span>, <span class="st">'슈팅'</span>, <span class="st">'월드컵'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'골'</span>, <span class="st">'수비수'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'패스'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'클럽'</span>, <span class="st">'패스'</span>, <span class="st">'수비'</span>, <span class="st">'슈팅'</span>, <span class="st">'패스'</span>, <span class="st">'드리블'</span>, <span class="st">'골키퍼'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'수비수'</span>, <span class="st">'경기장'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'골'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'클럽'</span>, <span class="st">'드리블'</span>, <span class="st">'헤딩'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'심판'</span>, <span class="st">'골키퍼'</span>, <span class="st">'수비'</span>, <span class="st">'클럽'</span>, <span class="st">'슈팅'</span>, <span class="st">'선수'</span>], <span class="st">'doc19'</span>: [<span class="st">'골'</span>, <span class="st">'슈팅'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격'</span>, <span class="st">'페널티킥'</span>, <span class="st">'헤딩'</span>, <span class="st">'경기장'</span>, <span class="st">'리그'</span>, <span class="st">'심판'</span>, <span class="st">'헤딩'</span>, <span class="st">'헤딩'</span>, <span class="st">'클럽'</span>, <span class="st">'드리블'</span>, <span class="st">'수비'</span>, <span class="st">'심판'</span>, <span class="st">'골'</span>, <span class="st">'골키퍼'</span>, <span class="st">'패스'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'경기장'</span>, <span class="st">'페널티킥'</span>, <span class="st">'패스'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'월드컵'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공격'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'월드컵'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'경기장'</span>, <span class="st">'공격'</span>, <span class="st">'수비수'</span>, <span class="st">'월드컵'</span>, <span class="st">'헤딩'</span>], <span class="st">'doc20'</span>: [<span class="st">'중앙미드필더'</span>, <span class="st">'리그'</span>, <span class="st">'공격수'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'패스'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'수비수'</span>, <span class="st">'수비수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'드리블'</span>, <span class="st">'슈팅'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'골'</span>, <span class="st">'수비'</span>, <span class="st">'헤딩'</span>, <span class="st">'수비수'</span>, <span class="st">'경기장'</span>, <span class="st">'공'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'수비수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'클럽'</span>, <span class="st">'선수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'심판'</span>, <span class="st">'리그'</span>, <span class="st">'패스'</span>, <span class="st">'패스'</span>, <span class="st">'선수'</span>, <span class="st">'공격수'</span>, <span class="st">'헤딩'</span>, <span class="st">'클럽'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'클럽'</span>, <span class="st">'공격수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비수'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'수비'</span>, <span class="st">'페널티킥'</span>, <span class="st">'선수'</span>], <span class="st">'doc21'</span>: [<span class="st">'수비'</span>, <span class="st">'골'</span>, <span class="st">'골'</span>, <span class="st">'리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'드리블'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'공'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'선수'</span>, <span class="st">'리그'</span>, <span class="st">'공격수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격수'</span>, <span class="st">'리그'</span>, <span class="st">'패스'</span>, <span class="st">'패스'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'월드컵'</span>, <span class="st">'슈팅'</span>, <span class="st">'월드컵'</span>, <span class="st">'페널티킥'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'리그'</span>, <span class="st">'공'</span>, <span class="st">'월드컵'</span>, <span class="st">'경기장'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'수비수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비'</span>, <span class="st">'헤딩'</span>, <span class="st">'리그'</span>, <span class="st">'헤딩'</span>, <span class="st">'수비'</span>, <span class="st">'골키퍼'</span>, <span class="st">'수비수'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'공격'</span>, <span class="st">'수비'</span>], <span class="st">'doc22'</span>: [<span class="st">'공격수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'슈팅'</span>, <span class="st">'심판'</span>, <span class="st">'패스'</span>, <span class="st">'수비'</span>, <span class="st">'리그'</span>, <span class="st">'공'</span>, <span class="st">'공'</span>, <span class="st">'공'</span>, <span class="st">'헤딩'</span>, <span class="st">'공'</span>, <span class="st">'슈팅'</span>, <span class="st">'선수'</span>, <span class="st">'수비수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'클럽'</span>, <span class="st">'슈팅'</span>, <span class="st">'수비'</span>, <span class="st">'심판'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'드리블'</span>, <span class="st">'패스'</span>, <span class="st">'공격'</span>, <span class="st">'공격수'</span>, <span class="st">'골'</span>, <span class="st">'공격'</span>, <span class="st">'슈팅'</span>, <span class="st">'공격수'</span>, <span class="st">'경기장'</span>, <span class="st">'공격'</span>, <span class="st">'헤딩'</span>, <span class="st">'심판'</span>, <span class="st">'헤딩'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'경기장'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'리그'</span>, <span class="st">'선수'</span>, <span class="st">'월드컵'</span>, <span class="st">'슈팅'</span>, <span class="st">'페널티킥'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'월드컵'</span>, <span class="st">'페널티킥'</span>], <span class="st">'doc23'</span>: [<span class="st">'클럽'</span>, <span class="st">'헤딩'</span>, <span class="st">'페널티킥'</span>, <span class="st">'골'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골'</span>, <span class="st">'공격수'</span>, <span class="st">'골키퍼'</span>, <span class="st">'선수'</span>, <span class="st">'경기장'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'슈팅'</span>, <span class="st">'월드컵'</span>, <span class="st">'골'</span>, <span class="st">'월드컵'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'골키퍼'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'드리블'</span>, <span class="st">'월드컵'</span>, <span class="st">'공격수'</span>, <span class="st">'공격수'</span>, <span class="st">'패스'</span>, <span class="st">'클럽'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'수비'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골키퍼'</span>, <span class="st">'골키퍼'</span>, <span class="st">'심판'</span>, <span class="st">'공격수'</span>, <span class="st">'페널티킥'</span>, <span class="st">'드리블'</span>, <span class="st">'경기장'</span>, <span class="st">'클럽'</span>], <span class="st">'doc24'</span>: [<span class="st">'드리블'</span>, <span class="st">'선수'</span>, <span class="st">'클럽'</span>, <span class="st">'공격'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'드리블'</span>, <span class="st">'공격수'</span>, <span class="st">'심판'</span>, <span class="st">'클럽'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'심판'</span>, <span class="st">'페널티킥'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공'</span>, <span class="st">'헤딩'</span>, <span class="st">'공격'</span>, <span class="st">'공'</span>, <span class="st">'심판'</span>, <span class="st">'경기장'</span>, <span class="st">'공격수'</span>, <span class="st">'드리블'</span>, <span class="st">'공'</span>, <span class="st">'골'</span>, <span class="st">'수비수'</span>, <span class="st">'수비수'</span>, <span class="st">'리그'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'선수'</span>, <span class="st">'수비'</span>, <span class="st">'공격'</span>, <span class="st">'클럽'</span>, <span class="st">'페널티킥'</span>, <span class="st">'리그'</span>, <span class="st">'드리블'</span>, <span class="st">'공격'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'리그'</span>, <span class="st">'골'</span>, <span class="st">'공'</span>, <span class="st">'경기장'</span>, <span class="st">'선수'</span>, <span class="st">'수비'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'패스'</span>, <span class="st">'공'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'챔피언스리그'</span>], <span class="st">'doc25'</span>: [<span class="st">'공'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공격수'</span>, <span class="st">'심판'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'수비'</span>, <span class="st">'공'</span>, <span class="st">'골'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'공격수'</span>, <span class="st">'수비수'</span>, <span class="st">'공'</span>, <span class="st">'페널티킥'</span>, <span class="st">'패스'</span>, <span class="st">'공'</span>, <span class="st">'경기장'</span>, <span class="st">'공'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'심판'</span>, <span class="st">'드리블'</span>, <span class="st">'중앙미드필더'</span>, <span class="st">'패스'</span>, <span class="st">'수비수'</span>, <span class="st">'패스'</span>, <span class="st">'챔피언스리그'</span>, <span class="st">'공격'</span>, <span class="st">'슈팅'</span>, <span class="st">'클럽'</span>, <span class="st">'패스'</span>, <span class="st">'페널티킥'</span>, <span class="st">'월드컵'</span>, <span class="st">'선수'</span>, <span class="st">'수비수'</span>, <span class="st">'경기장'</span>, <span class="st">'슈팅'</span>, <span class="st">'공'</span>, <span class="st">'수비'</span>, <span class="st">'공'</span>, <span class="st">'슈팅'</span>, <span class="st">'드리블'</span>, <span class="st">'드리블'</span>, <span class="st">'페널티킥'</span>, <span class="st">'공'</span>, <span class="st">'공격수'</span>, <span class="st">'리그'</span>], <span class="st">'doc51'</span>: [<span class="st">'머신러닝'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'확률'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표준편차'</span>, <span class="st">'신경망'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터과학'</span>, <span class="st">'분산'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'머신러닝'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분산'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'회귀분석'</span>, <span class="st">'회귀분석'</span>, <span class="st">'모집단'</span>, <span class="st">'표본'</span>, <span class="st">'데이터과학'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'신경망'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'통계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계'</span>, <span class="st">'상관관계'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'평균'</span>], <span class="st">'doc52'</span>: [<span class="st">'상관관계'</span>, <span class="st">'표본'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'신경망'</span>, <span class="st">'딥러닝'</span>, <span class="st">'분류'</span>, <span class="st">'표본'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표본'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'데이터분석'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터과학'</span>, <span class="st">'확률'</span>, <span class="st">'상관관계'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'표준편차'</span>, <span class="st">'확률'</span>, <span class="st">'머신러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'평균'</span>, <span class="st">'상관관계'</span>, <span class="st">'분산'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'상관관계'</span>, <span class="st">'모집단'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계'</span>, <span class="st">'표본'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'신경망'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>], <span class="st">'doc53'</span>: [<span class="st">'신경망'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'평균'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'데이터분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'딥러닝'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'확률'</span>, <span class="st">'머신러닝'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'평균'</span>, <span class="st">'확률'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'딥러닝'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터분석'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'분류'</span>, <span class="st">'회귀분석'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'클러스터링'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'평균'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신경망'</span>, <span class="st">'통계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분산'</span>, <span class="st">'통계'</span>, <span class="st">'신경망'</span>, <span class="st">'확률'</span>, <span class="st">'데이터분석'</span>], <span class="st">'doc54'</span>: [<span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'신경망'</span>, <span class="st">'평균'</span>, <span class="st">'모집단'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분류'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'통계'</span>, <span class="st">'평균'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'평균'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계'</span>, <span class="st">'모집단'</span>, <span class="st">'클러스터링'</span>, <span class="st">'회귀분석'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'확률'</span>, <span class="st">'클러스터링'</span>, <span class="st">'인공지능'</span>, <span class="st">'평균'</span>, <span class="st">'클러스터링'</span>, <span class="st">'인공지능'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'상관관계'</span>, <span class="st">'표본'</span>, <span class="st">'평균'</span>, <span class="st">'표준편차'</span>, <span class="st">'모집단'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'표본'</span>], <span class="st">'doc55'</span>: [<span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'분류'</span>, <span class="st">'표본'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표준편차'</span>, <span class="st">'표본'</span>, <span class="st">'확률'</span>, <span class="st">'클러스터링'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표준편차'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신경망'</span>, <span class="st">'분산'</span>, <span class="st">'데이터과학'</span>, <span class="st">'확률'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'모집단'</span>, <span class="st">'확률'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'분산'</span>, <span class="st">'클러스터링'</span>, <span class="st">'평균'</span>, <span class="st">'데이터과학'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'평균'</span>, <span class="st">'확률'</span>, <span class="st">'신경망'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'분류'</span>, <span class="st">'표본'</span>], <span class="st">'doc56'</span>: [<span class="st">'데이터과학'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'딥러닝'</span>, <span class="st">'상관관계'</span>, <span class="st">'표준편차'</span>, <span class="st">'표준편차'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'회귀분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'분류'</span>, <span class="st">'평균'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'신경망'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분류'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'확률'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'표준편차'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'머신러닝'</span>, <span class="st">'머신러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'평균'</span>, <span class="st">'인공지능'</span>], <span class="st">'doc57'</span>: [<span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'통계'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'데이터과학'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'인공지능'</span>, <span class="st">'확률'</span>, <span class="st">'클러스터링'</span>, <span class="st">'분산'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'데이터과학'</span>, <span class="st">'확률'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터분석'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'데이터과학'</span>, <span class="st">'인공지능'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'통계'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계적 가설검정'</span>], <span class="st">'doc58'</span>: [<span class="st">'표본'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'머신러닝'</span>, <span class="st">'확률'</span>, <span class="st">'분산'</span>, <span class="st">'머신러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신경망'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표준편차'</span>, <span class="st">'딥러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'상관관계'</span>, <span class="st">'표본'</span>, <span class="st">'표준편차'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분산'</span>, <span class="st">'상관관계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계'</span>, <span class="st">'머신러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분류'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'인공지능'</span>], <span class="st">'doc59'</span>: [<span class="st">'확률'</span>, <span class="st">'인공지능'</span>, <span class="st">'분류'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'확률'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'확률'</span>, <span class="st">'분산'</span>, <span class="st">'모집단'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'인공지능'</span>, <span class="st">'딥러닝'</span>, <span class="st">'확률'</span>, <span class="st">'모집단'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'데이터과학'</span>, <span class="st">'분류'</span>, <span class="st">'모집단'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표본'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터과학'</span>, <span class="st">'인공지능'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'확률'</span>, <span class="st">'머신러닝'</span>, <span class="st">'신뢰구간'</span>], <span class="st">'doc60'</span>: [<span class="st">'확률'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'평균'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'신경망'</span>, <span class="st">'확률'</span>, <span class="st">'데이터분석'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'신경망'</span>, <span class="st">'회귀분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'표준편차'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'표준편차'</span>, <span class="st">'데이터분석'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>, <span class="st">'회귀분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'평균'</span>, <span class="st">'상관관계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'상관관계'</span>, <span class="st">'표준편차'</span>, <span class="st">'데이터과학'</span>, <span class="st">'분산'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'확률'</span>, <span class="st">'분산'</span>, <span class="st">'상관관계'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'회귀분석'</span>, <span class="st">'머신러닝'</span>], <span class="st">'doc61'</span>: [<span class="st">'상관관계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분산'</span>, <span class="st">'인공지능'</span>, <span class="st">'상관관계'</span>, <span class="st">'통계'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'표본'</span>, <span class="st">'회귀분석'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표준편차'</span>, <span class="st">'머신러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표본'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'확률'</span>, <span class="st">'평균'</span>, <span class="st">'평균'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'모집단'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'신경망'</span>, <span class="st">'인공지능'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'확률'</span>, <span class="st">'표본'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'회귀분석'</span>], <span class="st">'doc62'</span>: [<span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'신경망'</span>, <span class="st">'확률'</span>, <span class="st">'클러스터링'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'인공지능'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'평균'</span>, <span class="st">'모집단'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>, <span class="st">'확률'</span>, <span class="st">'평균'</span>, <span class="st">'분류'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터과학'</span>, <span class="st">'회귀분석'</span>, <span class="st">'분산'</span>, <span class="st">'상관관계'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계'</span>, <span class="st">'표본'</span>, <span class="st">'확률'</span>, <span class="st">'데이터분석'</span>, <span class="st">'표준편차'</span>, <span class="st">'분산'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'상관관계'</span>, <span class="st">'표준편차'</span>, <span class="st">'회귀분석'</span>, <span class="st">'모집단'</span>, <span class="st">'인공지능'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표본'</span>, <span class="st">'표본'</span>, <span class="st">'표본'</span>], <span class="st">'doc63'</span>: [<span class="st">'머신러닝'</span>, <span class="st">'분류'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표준편차'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'인공지능'</span>, <span class="st">'분류'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'머신러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'분산'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'확률'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'상관관계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'표준편차'</span>, <span class="st">'딥러닝'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'평균'</span>, <span class="st">'딥러닝'</span>, <span class="st">'분류'</span>, <span class="st">'데이터분석'</span>, <span class="st">'표본'</span>, <span class="st">'클러스터링'</span>, <span class="st">'딥러닝'</span>, <span class="st">'모집단'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'확률'</span>, <span class="st">'회귀분석'</span>, <span class="st">'확률'</span>, <span class="st">'딥러닝'</span>], <span class="st">'doc64'</span>: [<span class="st">'확률'</span>, <span class="st">'모집단'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'통계'</span>, <span class="st">'표본'</span>, <span class="st">'표준편차'</span>, <span class="st">'확률'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'평균'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'상관관계'</span>, <span class="st">'분류'</span>, <span class="st">'상관관계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표준편차'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'표본'</span>, <span class="st">'회귀분석'</span>, <span class="st">'모집단'</span>, <span class="st">'인공지능'</span>, <span class="st">'딥러닝'</span>, <span class="st">'모집단'</span>, <span class="st">'통계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신경망'</span>, <span class="st">'표준편차'</span>, <span class="st">'머신러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'회귀분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'클러스터링'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'회귀분석'</span>, <span class="st">'모집단'</span>, <span class="st">'인공지능'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표본'</span>, <span class="st">'분산'</span>], <span class="st">'doc65'</span>: [<span class="st">'로지스틱 회귀'</span>, <span class="st">'표준편차'</span>, <span class="st">'클러스터링'</span>, <span class="st">'딥러닝'</span>, <span class="st">'머신러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'회귀분석'</span>, <span class="st">'평균'</span>, <span class="st">'머신러닝'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'확률'</span>, <span class="st">'평균'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'모집단'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'상관관계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터분석'</span>, <span class="st">'평균'</span>, <span class="st">'통계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'데이터분석'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'인공지능'</span>, <span class="st">'분산'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신경망'</span>, <span class="st">'표본'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표준편차'</span>, <span class="st">'모집단'</span>, <span class="st">'표준편차'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분류'</span>, <span class="st">'신경망'</span>], <span class="st">'doc66'</span>: [<span class="st">'분류'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'모집단'</span>, <span class="st">'확률'</span>, <span class="st">'모집단'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'딥러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'머신러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'회귀분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터분석'</span>, <span class="st">'회귀분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'모집단'</span>, <span class="st">'신경망'</span>, <span class="st">'상관관계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'데이터과학'</span>, <span class="st">'데이터과학'</span>, <span class="st">'분류'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터과학'</span>, <span class="st">'모집단'</span>, <span class="st">'표본'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'회귀분석'</span>, <span class="st">'확률'</span>, <span class="st">'회귀분석'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'머신러닝'</span>, <span class="st">'확률'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>, <span class="st">'딥러닝'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표본'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>], <span class="st">'doc67'</span>: [<span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'확률'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'표준편차'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'상관관계'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표준편차'</span>, <span class="st">'회귀분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'평균'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'모집단'</span>, <span class="st">'표본'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'확률'</span>, <span class="st">'분산'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'확률'</span>, <span class="st">'신경망'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'표본'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'모집단'</span>, <span class="st">'표본'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'인공지능'</span>, <span class="st">'머신러닝'</span>, <span class="st">'신경망'</span>, <span class="st">'머신러닝'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표준편차'</span>, <span class="st">'모집단'</span>, <span class="st">'신경망'</span>, <span class="st">'분산'</span>, <span class="st">'평균'</span>, <span class="st">'상관관계'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'머신러닝'</span>, <span class="st">'평균'</span>, <span class="st">'클러스터링'</span>], <span class="st">'doc68'</span>: [<span class="st">'분산'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'회귀분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'분산'</span>, <span class="st">'회귀분석'</span>, <span class="st">'확률'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'머신러닝'</span>, <span class="st">'상관관계'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표본'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'평균'</span>, <span class="st">'데이터과학'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'분류'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'인공지능'</span>, <span class="st">'머신러닝'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'표준편차'</span>, <span class="st">'표본'</span>, <span class="st">'클러스터링'</span>, <span class="st">'표본'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'상관관계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'평균'</span>, <span class="st">'분산'</span>, <span class="st">'표준편차'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>], <span class="st">'doc69'</span>: [<span class="st">'모집단'</span>, <span class="st">'딥러닝'</span>, <span class="st">'확률'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'모집단'</span>, <span class="st">'분류'</span>, <span class="st">'분류'</span>, <span class="st">'회귀분석'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'모집단'</span>, <span class="st">'회귀분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'모집단'</span>, <span class="st">'평균'</span>, <span class="st">'딥러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'상관관계'</span>, <span class="st">'확률'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'평균'</span>, <span class="st">'표준편차'</span>, <span class="st">'모집단'</span>, <span class="st">'인공지능'</span>, <span class="st">'확률'</span>, <span class="st">'표본'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>, <span class="st">'표준편차'</span>, <span class="st">'신경망'</span>, <span class="st">'통계'</span>, <span class="st">'상관관계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분산'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'클러스터링'</span>, <span class="st">'인공지능'</span>, <span class="st">'표본'</span>, <span class="st">'평균'</span>, <span class="st">'클러스터링'</span>, <span class="st">'데이터분석'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>], <span class="st">'doc70'</span>: [<span class="st">'통계적 가설검정'</span>, <span class="st">'모집단'</span>, <span class="st">'확률'</span>, <span class="st">'분류'</span>, <span class="st">'클러스터링'</span>, <span class="st">'상관관계'</span>, <span class="st">'표준편차'</span>, <span class="st">'표본'</span>, <span class="st">'평균'</span>, <span class="st">'회귀분석'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분류'</span>, <span class="st">'분류'</span>, <span class="st">'딥러닝'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'상관관계'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'분산'</span>, <span class="st">'인공지능'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분류'</span>, <span class="st">'인공지능'</span>, <span class="st">'분산'</span>, <span class="st">'통계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분산'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'평균'</span>, <span class="st">'평균'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'회귀분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'분산'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'딥러닝'</span>, <span class="st">'확률'</span>, <span class="st">'확률'</span>, <span class="st">'분류'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>], <span class="st">'doc71'</span>: [<span class="st">'분류'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'표준편차'</span>, <span class="st">'상관관계'</span>, <span class="st">'머신러닝'</span>, <span class="st">'신경망'</span>, <span class="st">'딥러닝'</span>, <span class="st">'평균'</span>, <span class="st">'분류'</span>, <span class="st">'통계'</span>, <span class="st">'평균'</span>, <span class="st">'인공지능'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계'</span>, <span class="st">'표준편차'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'데이터과학'</span>, <span class="st">'평균'</span>, <span class="st">'확률'</span>, <span class="st">'인공지능'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'상관관계'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'인공지능'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'평균'</span>, <span class="st">'회귀분석'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계'</span>, <span class="st">'신경망'</span>, <span class="st">'확률'</span>, <span class="st">'데이터과학'</span>, <span class="st">'평균'</span>, <span class="st">'인공지능'</span>, <span class="st">'딥러닝'</span>], <span class="st">'doc72'</span>: [<span class="st">'상관관계'</span>, <span class="st">'모집단'</span>, <span class="st">'데이터과학'</span>, <span class="st">'모집단'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'통계'</span>, <span class="st">'머신러닝'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'회귀분석'</span>, <span class="st">'분류'</span>, <span class="st">'클러스터링'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'표본'</span>, <span class="st">'표본'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'모집단'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'모집단'</span>, <span class="st">'클러스터링'</span>, <span class="st">'클러스터링'</span>, <span class="st">'확률'</span>, <span class="st">'확률'</span>, <span class="st">'상관관계'</span>, <span class="st">'신경망'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'분류'</span>, <span class="st">'신경망'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'모집단'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>, <span class="st">'클러스터링'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'분류'</span>, <span class="st">'표준편차'</span>, <span class="st">'머신러닝'</span>, <span class="st">'신뢰구간'</span>], <span class="st">'doc73'</span>: [<span class="st">'통계'</span>, <span class="st">'표본'</span>, <span class="st">'데이터과학'</span>, <span class="st">'모집단'</span>, <span class="st">'머신러닝'</span>, <span class="st">'확률'</span>, <span class="st">'머신러닝'</span>, <span class="st">'상관관계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'표준편차'</span>, <span class="st">'평균'</span>, <span class="st">'표본'</span>, <span class="st">'분산'</span>, <span class="st">'분류'</span>, <span class="st">'신경망'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신경망'</span>, <span class="st">'머신러닝'</span>, <span class="st">'평균'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'분산'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'확률'</span>, <span class="st">'분류'</span>, <span class="st">'클러스터링'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'신경망'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'회귀분석'</span>, <span class="st">'데이터과학'</span>, <span class="st">'확률'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표준편차'</span>, <span class="st">'평균'</span>, <span class="st">'표준편차'</span>, <span class="st">'딥러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'회귀분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'표준편차'</span>, <span class="st">'회귀분석'</span>, <span class="st">'클러스터링'</span>, <span class="st">'분류'</span>], <span class="st">'doc74'</span>: [<span class="st">'분류'</span>, <span class="st">'표본'</span>, <span class="st">'상관관계'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'분류'</span>, <span class="st">'머신러닝'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'표준편차'</span>, <span class="st">'인공지능'</span>, <span class="st">'인공지능'</span>, <span class="st">'표본'</span>, <span class="st">'평균'</span>, <span class="st">'데이터분석'</span>, <span class="st">'데이터분석'</span>, <span class="st">'머신러닝'</span>, <span class="st">'인공지능'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'인공지능'</span>, <span class="st">'신경망'</span>, <span class="st">'딥러닝'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'데이터분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'상관관계'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표준편차'</span>, <span class="st">'확률'</span>, <span class="st">'평균'</span>, <span class="st">'확률'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'모집단'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'분산'</span>, <span class="st">'인공지능'</span>, <span class="st">'신경망'</span>, <span class="st">'표본'</span>, <span class="st">'확률'</span>, <span class="st">'통계'</span>, <span class="st">'평균'</span>, <span class="st">'평균'</span>, <span class="st">'분산'</span>, <span class="st">'상관관계'</span>, <span class="st">'클러스터링'</span>, <span class="st">'신경망'</span>, <span class="st">'신경망'</span>], <span class="st">'doc75'</span>: [<span class="st">'상관관계'</span>, <span class="st">'표준편차'</span>, <span class="st">'상관관계'</span>, <span class="st">'확률'</span>, <span class="st">'상관관계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'표본'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'머신러닝'</span>, <span class="st">'신경망'</span>, <span class="st">'표본'</span>, <span class="st">'통계'</span>, <span class="st">'분류'</span>, <span class="st">'데이터과학'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'표본'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'분산'</span>, <span class="st">'회귀분석'</span>, <span class="st">'통계'</span>, <span class="st">'데이터과학'</span>, <span class="st">'클러스터링'</span>, <span class="st">'회귀분석'</span>, <span class="st">'신경망'</span>, <span class="st">'데이터과학'</span>, <span class="st">'머신러닝'</span>, <span class="st">'통계'</span>, <span class="st">'신경망'</span>, <span class="st">'분류'</span>, <span class="st">'로지스틱 회귀'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'신뢰구간'</span>, <span class="st">'평균'</span>, <span class="st">'데이터분석'</span>, <span class="st">'인공지능'</span>, <span class="st">'모집단'</span>, <span class="st">'딥러닝'</span>, <span class="st">'회귀분석'</span>, <span class="st">'표본'</span>, <span class="st">'데이터분석'</span>, <span class="st">'상관관계'</span>, <span class="st">'데이터분석'</span>, <span class="st">'통계'</span>, <span class="st">'인공지능'</span>, <span class="st">'머신러닝'</span>, <span class="st">'표준편차'</span>, <span class="st">'딥러닝'</span>, <span class="st">'통계적 가설검정'</span>, <span class="st">'통계'</span>]}</span>
+<span id="cb5-2"><a href="#cb5-2"></a>pd.DataFrame(_D)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>D <span class="op">=</span> <span class="bu">list</span>(_D.values())</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#D</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="함수" class="level2">
+<h2 class="anchored" data-anchor-id="함수">함수</h2>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> sample_from(weights):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    total <span class="op">=</span> <span class="bu">sum</span>(weights)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    rnd <span class="op">=</span> total <span class="op">*</span> random.random()       <span class="co"># uniform between 0 and total</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>    <span class="cf">for</span> i, w <span class="kw">in</span> <span class="bu">enumerate</span>(weights):</span>
+<span id="cb6-5"><a href="#cb6-5"></a>        rnd <span class="op">-=</span> w                        <span class="co"># return the smallest i such that</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>        <span class="cf">if</span> rnd <span class="op">&lt;=</span> <span class="dv">0</span>: <span class="cf">return</span> i           <span class="co"># sum(weights[:(i+1)]) &gt;= rnd</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>    <span class="co"># prob = np.array(weights) / sum(weights)</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>    <span class="co"># return np.random.choice(range(N_TOPICS),p=prob)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> p1(topic, doc):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="co">"""the fraction of words in document _d_</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co">    that are assigned to _topic_ (plus some smoothing)"""</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">return</span> ((document_topic_counts[doc][topic] <span class="op">+</span> <span class="fl">0.1</span>) <span class="op">/</span> (document_lengths[doc] <span class="op">+</span> K <span class="op">*</span> <span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> p2(word, topic, beta<span class="op">=</span><span class="fl">0.1</span>):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="co">"""the fraction of words assigned to _topic_</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co">    that equal _word_ (plus some smoothing)"""</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="cf">return</span> ((topic_word_counts[topic][word] <span class="op">+</span> <span class="fl">0.1</span>) <span class="op">/</span> (topic_counts[topic] <span class="op">+</span> N_WORDS <span class="op">*</span> <span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> topic_weight(doc, word, topic):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">"""given a document and a word in that document,</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co">    return the weight for the k-th topic"""</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">return</span> p2(word, topic) <span class="op">*</span> p1(topic, doc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> choose_new_topic(doc, word):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="cf">return</span> sample_from([topic_weight(doc, word, topic) <span class="cf">for</span> topic <span class="kw">in</span> <span class="bu">range</span>(K)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="하이퍼파라메터" class="level2">
+<h2 class="anchored" data-anchor-id="하이퍼파라메터">하이퍼파라메터</h2>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>K <span class="op">=</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="초기값" class="level2">
+<h2 class="anchored" data-anchor-id="초기값">초기값</h2>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">#random.seed(0)</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>_θ <span class="op">=</span> {doc:np.random.choice([<span class="dv">0</span>,<span class="dv">1</span>],size<span class="op">=</span><span class="dv">50</span>).tolist() <span class="cf">for</span> doc <span class="kw">in</span> _D}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>θ <span class="op">=</span> <span class="bu">list</span>(_θ.values())</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="co">#θ</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="그릇" class="level2">
+<h2 class="anchored" data-anchor-id="그릇">그릇</h2>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>document_topic_counts <span class="op">=</span> [Counter() <span class="cf">for</span> _ <span class="kw">in</span> D]</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="co">#document_topic_counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>topic_word_counts <span class="op">=</span> [Counter() <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(K)]</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#topic_word_counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>topic_counts <span class="op">=</span> [<span class="dv">0</span> <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(K)]</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="co">#topic_counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>document_lengths <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="bu">len</span>, D))</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co">#document_lengths</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>distinct_words <span class="op">=</span> <span class="bu">set</span>(word <span class="cf">for</span> doc <span class="kw">in</span> D <span class="cf">for</span> word <span class="kw">in</span> doc)</span>
+<span id="cb18-2"><a href="#cb18-2"></a>N_WORDS <span class="op">=</span> <span class="bu">len</span>(distinct_words)</span>
+<span id="cb18-3"><a href="#cb18-3"></a>N_WORDS</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<pre><code>40</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>N_DOCS <span class="op">=</span> <span class="bu">len</span>(D)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>N_DOCS</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<pre><code>50</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="cf">for</span> doc <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(D)):</span>
+<span id="cb22-2"><a href="#cb22-2"></a>    <span class="cf">for</span> word, topic <span class="kw">in</span> <span class="bu">zip</span>(D[doc], θ[doc]):</span>
+<span id="cb22-3"><a href="#cb22-3"></a>        document_topic_counts[doc][topic] <span class="op">+=</span> <span class="dv">1</span> </span>
+<span id="cb22-4"><a href="#cb22-4"></a>        topic_word_counts[topic][word] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a>        topic_counts[topic] <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="co">#document_topic_counts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="반복" class="level2">
+<h2 class="anchored" data-anchor-id="반복">반복</h2>
+<div class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>plt.matshow(θ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<pre><code>&lt;matplotlib.image.AxesImage at 0x7f27a1ce36a0&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="v1_files/figure-html/cell-23-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb26-2"><a href="#cb26-2"></a>    <span class="cf">for</span> doc <span class="kw">in</span> <span class="bu">range</span>(N_DOCS):</span>
+<span id="cb26-3"><a href="#cb26-3"></a>        <span class="cf">for</span> i, (word, topic) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(D[doc],θ[doc])):</span>
+<span id="cb26-4"><a href="#cb26-4"></a>            <span class="co"># remove this word / topic from the counts</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>            <span class="co"># so that it doesn't influence the weights</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a>            document_topic_counts[doc][topic] <span class="op">-=</span> <span class="dv">1</span> </span>
+<span id="cb26-7"><a href="#cb26-7"></a>            topic_word_counts[topic][word] <span class="op">-=</span> <span class="dv">1</span> </span>
+<span id="cb26-8"><a href="#cb26-8"></a>            topic_counts[topic] <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb26-9"><a href="#cb26-9"></a>            document_lengths[doc] <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb26-10"><a href="#cb26-10"></a></span>
+<span id="cb26-11"><a href="#cb26-11"></a>            <span class="co"># choose a new topic based on the weights</span></span>
+<span id="cb26-12"><a href="#cb26-12"></a>            weights <span class="op">=</span> p1(topic, doc) <span class="op">*</span> p2(word, topic) </span>
+<span id="cb26-13"><a href="#cb26-13"></a>            new_topic <span class="op">=</span> choose_new_topic(doc, word)</span>
+<span id="cb26-14"><a href="#cb26-14"></a>            θ[doc][i] <span class="op">=</span> new_topic</span>
+<span id="cb26-15"><a href="#cb26-15"></a></span>
+<span id="cb26-16"><a href="#cb26-16"></a>            <span class="co"># and now add it back to the counts</span></span>
+<span id="cb26-17"><a href="#cb26-17"></a>            document_topic_counts[doc][new_topic] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb26-18"><a href="#cb26-18"></a>            topic_word_counts[new_topic][word] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb26-19"><a href="#cb26-19"></a>            topic_counts[new_topic] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb26-20"><a href="#cb26-20"></a>            document_lengths[doc] <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">#topic_word_counts[0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="평가" class="level2">
+<h2 class="anchored" data-anchor-id="평가">평가</h2>
+<div class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="cf">for</span> k, word_counts <span class="kw">in</span> <span class="bu">enumerate</span>(topic_word_counts):</span>
+<span id="cb28-2"><a href="#cb28-2"></a>    <span class="cf">for</span> word, count <span class="kw">in</span> word_counts.most_common():</span>
+<span id="cb28-3"><a href="#cb28-3"></a>        <span class="cf">if</span> count <span class="op">&gt;</span> <span class="dv">0</span>: <span class="bu">print</span>(k, word, count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 통계 73
+0 딥러닝 72
+0 신경망 70
+0 분류 70
+0 확률 69
+0 클러스터링 68
+0 인공지능 67
+0 모집단 66
+0 표본 64
+0 회귀분석 62
+0 통계적 가설검정 61
+0 데이터과학 60
+0 상관관계 59
+0 표준편차 58
+0 분산 58
+0 데이터분석 57
+0 로지스틱 회귀 56
+0 머신러닝 54
+0 평균 54
+0 신뢰구간 52
+0 챔피언스리그 1
+0 월드컵 1
+0 수비 1
+0 심판 1
+1 골 82
+1 리그 78
+1 드리블 76
+1 공격 76
+1 클럽 66
+1 공격수 65
+1 챔피언스리그 64
+1 골키퍼 63
+1 수비 63
+1 선수 61
+1 수비수 60
+1 중앙미드필더 59
+1 경기장 58
+1 월드컵 58
+1 공 58
+1 심판 56
+1 페널티킥 55
+1 슈팅 52
+1 패스 51
+1 헤딩 45</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>plt.matshow(θ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="58">
+<pre><code>&lt;matplotlib.image.AxesImage at 0x7f27a0ef0a60&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="v1_files/figure-html/cell-27-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
