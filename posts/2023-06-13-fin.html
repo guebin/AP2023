@@ -433,7 +433,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(P(\{1,2\})=P(\{2,3,4\})=\frac{3}{4}\)</span></li>
 <li><span class="math inline">\(P(\{1,3,4\})=\frac{1}{2}\)</span></li>
 </ul>
-<p><span class="math inline">\(P\)</span>는 <span class="math inline">\((\Omega,{\cal F})\)</span> 에서의 prob-msr 이며, <span class="math inline">\({\cal A}\)</span>는 파이시스템이므로 <span class="math inline">\(P\)</span>의 유일성이 보장된다.</p>
+<p><span class="math inline">\(P\)</span>는 <span class="math inline">\((\Omega,{\cal F})\)</span> 에서의 prob-msr 이다. 이때 <span class="math inline">\({\cal A}\)</span>는 파이시스템이므로 <span class="math inline">\(P\)</span>의 유일성이 보장된다.</p>
 <p><code>(2)</code> <span class="math inline">\(\Omega=\{1,2,3,4\}\)</span> 이라고 하고 <span class="math inline">\({\cal A} = \{\emptyset, \{1,2\},\{2,3\}, \Omega\}\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{P}:{\cal A} \to [0,1]\)</span>를 아래와 같이 정의하자.</p>
 <ul>
 <li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
@@ -449,32 +449,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><span class="math inline">\(\forall A \in {\cal A}:~\tilde{P}_1(A)=\tilde{P}_2(A)=\tilde{P}(A)\)</span></li>
 <li><span class="math inline">\(\tilde{P}_1(\{2\})=a\)</span> and <span class="math inline">\(\tilde{P}_2(\{2\})=b\)</span>, where <span class="math inline">\(a,b \in [0,1/2]\)</span> and <span class="math inline">\(a\neq b\)</span>.</li>
 </ul>
-<p><span class="math inline">\(\tilde{P}_1, \tilde{P}_2\)</span>는 모두 <span class="math inline">\({\cal A}'\)</span>에서 finite msr 이고<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, add를 만족하므로<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 카라테오도리의 확장정리에 의하여 <span class="math inline">\(\tilde{P}_1\)</span>, <span class="math inline">\(\tilde{P}_2\)</span>는 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 유일한 extension <span class="math inline">\(P_1,P_2\)</span>를 가진다. 이러한 그리고 이러한 <span class="math inline">\(P_1,P_2\)</span>는 분명 <span class="math inline">\(A \in {\cal A}\)</span>에서는 일치하지만 <span class="math inline">\(P_1(\{2\})\neq P_2(\{2\})\)</span> 이다.</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-주의사항
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>1</code>. 위의 두 문제는 정답만 쓸 경우 답안으로 인정하지 않음. (1번답: 유일하게 존재함 &lt;– 이러면 0점)</p>
-<p><code>2</code>. 유일하게 존재하는 (혹은 존재하지 않는) 이유를 설명하고, 그러한 확률측도를 예시로 제시해야함.</p>
-<p><code>3</code>. 즉 유일하게 존재하는 경우는 아래를 만족하는 <span class="math inline">\(P\)</span>를 제시하고,</p>
-<ol type="1">
-<li><span class="math inline">\(P\)</span> is probability measure on <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span></li>
-<li><span class="math inline">\(\forall A \in {\cal A}: ~ P(A) = \tilde{P}(A)\)</span></li>
-</ol>
-<p>유일하게 존재하지 않는 경우는 아래를 만족하는 서로 다른 2개의 측도 <span class="math inline">\(P_1,P_2\)</span>를 제시해야함.</p>
-<ol type="1">
-<li><span class="math inline">\(P_1,P_2\)</span> are probability measures on <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span></li>
-<li><span class="math inline">\(\forall A \in {\cal A}: ~ P_1(A) =P_2(A) = \tilde{P}(A)\)</span></li>
-<li><span class="math inline">\(\exists B \in \sigma({\cal A}):~ P_1(B) \neq P_2(B)\)</span></li>
-</ol>
-</div>
-</div>
+<p><span class="math inline">\(\tilde{P}_1, \tilde{P}_2\)</span>는 모두 <span class="math inline">\({\cal A}'\)</span>에서 finite msr 이고<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, add를 만족하므로<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 카라테오도리의 확장정리에 의하여 <span class="math inline">\(\tilde{P}_1\)</span>, <span class="math inline">\(\tilde{P}_2\)</span>는 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 유일한 extension <span class="math inline">\(P_1,P_2\)</span>를 가진다. 그리고 이러한 <span class="math inline">\(P_1,P_2\)</span>는 분명 <span class="math inline">\(A \in {\cal A}\)</span>에서는 일치하지만 <span class="math inline">\(P_1(\{2\})\neq P_2(\{2\})\)</span> 이다.</p>
 </section>
 <section id="확률변수-밀도함수-기대값-30점" class="level1">
 <h1><code>3</code>. 확률변수, 밀도함수, 기대값 (30점)</h1>
@@ -514,7 +489,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega) = 1\})=P(\Omega\cap \mathbb{Q}^c)=1\]</span></p>
 <p>따라서 <span class="math inline">\(X\)</span>에 대응하는 <span class="math inline">\(\mu_X\)</span>와 <span class="math inline">\(F_x\)</span>는 아래와 같다.</p>
 <ul>
-<li><span class="math inline">\(\forall B \in {\cal R}:~\mu_X(B)=\begin{cases} 1 &amp; B =\{0\} \\ 0 &amp; o.w \end{cases}\)</span></li>
+<li><span class="math inline">\(\forall B \in {\cal R}:~\mu_X(B)=\begin{cases} 1 &amp; 0 \in B \\ 0 &amp; o.w \end{cases}\)</span></li>
 <li><span class="math inline">\(F_X(x)= \begin{cases} 0 &amp; x&lt;0 \\ 1 &amp; x\geq 0 \end{cases}\)</span></li>
 </ul>
 <p>따라서 <span class="math inline">\(\nu=\mu_X\)</span> 으로 설정하면 <span class="math inline">\(\mu_X&lt;&lt;\nu\)</span> 가 성립하며 함수</p>
@@ -525,6 +500,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>(3)</code> <span class="math inline">\(X\)</span>의 평균을 구하라. 즉 <span class="math inline">\(\mathbb{E}(X)\)</span>를 계산하라.</p>
 <p><code>(풀이)</code></p>
 <p><span class="math inline">\(\mathbb{E}(X) = \int X dP = \int_{\Omega \cap \mathbb{Q}^c} 0 dP + \int_{\Omega \cap \mathbb{Q}} 1dP =0\)</span></p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">!</span>git add .</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="op">!</span>git commit <span class="op">-</span>m .</span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="op">!</span>git push </span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="op">!</span>quarto pulibsh <span class="op">--</span>no<span class="op">-</span>browser <span class="op">--</span>no<span class="op">-</span>prompt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[main 77ffcaa] .
+ 2 files changed, 6 insertions(+), 58 deletions(-)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 471 bytes | 471.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/guebin/AP2023.git
+   89b9f65..77ffcaa  main -&gt; main
+ERROR: Unknown option "--no-browser". Did you mean option "--version"?</code></pre>
+</div>
+</div>
 
 
 </section>
