@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.193">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -48,6 +48,11 @@ ul.task-list li input[type="checkbox"] {
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,64 +62,73 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">AP2023</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../about.html" aria-current="page">
+    <a class="nav-link active" href="../../about.html" rel="" target="" aria-current="page">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/guebin/AP2023" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">03wk: 측도론 intro (3)</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/2023-06-13-fin.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/I. 측도론/2023-03-07-01wk.html">I. 측도론</a></li><li class="breadcrumb-item"><a href="../../posts/I. 측도론/2023-03-21-03wk.html">03wk: 측도론 intro (3)</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/2023-06-13-fin.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/I. 측도론/2023-03-07-01wk.html">I. 측도론</a></li><li class="breadcrumb-item"><a href="../../posts/I. 측도론/2023-03-21-03wk.html">03wk: 측도론 intro (3)</a></li></ol></nav>
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">03wk: 측도론 intro (3)</h1>
+      <h1 class="title">03wk: 측도론 intro (3)</h1>
                       </div>
   </div>
     
@@ -141,118 +155,137 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Posts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/2023-06-13-fin.html" class="sidebar-item-text sidebar-link">15wk: 기말고사</a>
+  <a href="../../posts/2023-06-13-fin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15wk: 기말고사</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">I. 측도론</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">I. 측도론</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01wk: 측도론 intro (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02wk: 측도론 intro (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link active">03wk: 측도론 intro (3)</a>
+  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">03wk: 측도론 intro (3)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04wk: 측도론 intro (4)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05wk: 측도론 (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06wk: 측도론 (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
+  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">07wk: 측도론 (3)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08wk: 측도론 (4)</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">II. 확률론기초</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">II. 확률론기초</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">09wk: 확률변수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09wk: 확률변수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10wk: 분포, 분포함수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분 (1)</a>
+  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11wk: 적분 (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 적분 (2)</a>
+  <a href="../../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12wk: 적분 (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">13wk: 밀도함수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13wk: 밀도함수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">14wk: 이산형과 연속형의 통합</a>
+  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14wk: 이산형과 연속형의 통합</span></a>
   </div>
 </li>
       </ul>
@@ -262,6 +295,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -278,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -408,7 +442,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="지금까지의-스토리" class="level1">
+<section id="지금까지의-스토리" class="level1 page-columns page-full">
 <h1>지금까지의 스토리</h1>
 <p><code>-</code> 지금까지의 이야기.</p>
 <ul>
@@ -420,10 +454,10 @@ ul.task-list li input[type="checkbox"] {
 <li>따라서 <strong><span class="math inline">\(\Omega\)</span>의 모든 부분집합에 대해서 확률을 “무모순”으로 정의</strong>하는 일은 포기하였다.</li>
 <li>대신에 <strong><span class="math inline">\(\Omega\)</span>의 부분집합 중, 잴 수 있는 집합들에 대해서만 확률을 “무모순”으로 정의</strong>하는 일을 시도하고자 한다.</li>
 </ul>
-<p><code>-</code> 앞으로 <span class="math inline">\(\Omega\)</span>의 부분집합 중, 잴 수 있는 집합들의 모임을 “<span class="math inline">\(\Omega\)</span>에 대한 시그마필드” 라고 하고 기호로는 <span class="math inline">\({\cal F}\)</span>로 정의한다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;동전예제</p></li><li id="fn2"><p><sup>2</sup>&nbsp;바늘이 하나 있는 시계예제</p></li><li id="fn3"><p><sup>3</sup>&nbsp;비탈리집합</p></li></div><p><code>-</code> 앞으로 <span class="math inline">\(\Omega\)</span>의 부분집합 중, 잴 수 있는 집합들의 모임을 “<span class="math inline">\(\Omega\)</span>에 대한 시그마필드” 라고 하고 기호로는 <span class="math inline">\({\cal F}\)</span>로 정의한다.</p>
 <p><code>-</code> 그런데 “잴 수 있는 집합”이 뭐지????</p>
 </section>
-<section id="시그마필드-motivation" class="level1">
+<section id="시그마필드-motivation" class="level1 page-columns page-full">
 <h1>시그마필드 motivation</h1>
 <p><strong>(예제1)</strong> – 잴 수 있는 집합의 모임</p>
 <p><span class="math inline">\(\Omega=\{H,T\}\)</span>라고 하자. 아래집합들은 모두 확률을 정의할 수 있는 집합들이다.</p>
@@ -464,7 +498,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[{\cal F}=\big\{\emptyset, \{6\}, \{1,2,3,4,5\},\Omega \big\}\]</span></p>
 <p>(해설)</p>
 <p>어떠한 특수한 상황을 가정하자. 주사위를 던져야하는데 6이 나오면 살수 있고 6이 나오지 않으면 죽는다고 하자. 따라서 던지는 사람 입장에서는 주사위를 던져서 6이 나오는지 안나오는지만 관심있을 것이다. 이 사람의 머리속에서 순간적으로 떠오르는 확률들은 아래와 같다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<ul>
+<div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;공평한 주사위라고 하자..</p></li></div><ul>
 <li>살수있다 <span class="math inline">\(\to\)</span> 1/6</li>
 <li>죽는다 <span class="math inline">\(\to\)</span> 5/6</li>
 <li>살거나 죽는다 <span class="math inline">\(\to\)</span> 1</li>
@@ -518,14 +552,14 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <p><strong><em>생각의 시간1</em></strong></p>
 <p>우리가 잴 수 있는 집합의 모임들 <span class="math inline">\({\cal F}\)</span>라는 것은 답을 구체적으로 쓸 수는 없으나 현재까지 파악한 직관에 한정하여 아래와 같은 조건<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>들을 만족하는 collection이라고 “일단은” 생각할 수 있다.</p>
-<ol type="1">
+<div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;이 조건들은 수정 및 보완 될 예정임</p></li></div><ol type="1">
 <li><span class="math inline">\(\Omega, \emptyset \in {\cal F}\)</span></li>
 <li><span class="math inline">\(\forall A \subset \Omega: ~ A \in {\cal F} \Rightarrow A^c \in {\cal F}\)</span></li>
 <li><span class="math inline">\(\forall A,B \subset \Omega\)</span> such that <span class="math inline">\(A\cap B =\emptyset\)</span>: <span class="math inline">\(A,B \in {\cal F} \Rightarrow A \cup B \in {\cal F}\)</span></li>
 <li><span class="math inline">\(\forall A,B \subset \Omega\)</span> such that <span class="math inline">\(A \subset B\)</span>: <span class="math inline">\(A,B \in {\cal F} \Rightarrow B-A \in {\cal F}\)</span></li>
 </ol>
 <p>이것은 우리가 “확률”이라는 개념을 올바르게 정의하기 위해서 필요한 최소한의 합의<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>이다.</p>
-<p>여기에서 우리가 따져볼 것은 (1) 시그마필드의 조건으로 1~4이면 충분한지 (더 많은 조건들이 필요한건 아닌지) 그리고 (2) 우리가 있었으면 하는 조건들이 꼭 필요한 조건은 맞는지 (예를들면 한두개의 조건이 다른조건을 암시하는건 아닌지) 이다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;모든 사람들이 인정할 수 밖에 없는 합의</p></li></div><p>여기에서 우리가 따져볼 것은 (1) 시그마필드의 조건으로 1~4이면 충분한지 (더 많은 조건들이 필요한건 아닌지) 그리고 (2) 우리가 있었으면 하는 조건들이 꼭 필요한 조건은 맞는지 (예를들면 한두개의 조건이 다른조건을 암시하는건 아닌지) 이다.</p>
 <p><code>(충분할까?)</code> 조건 1,2,3,4 정도를 만족하는 집합으로 시그마필드를 정의해도 충분할까? 좀 더 많은 조건들이 필요한건 아닐까? 예를들면 아래와 같은 조건들이 필요한건 아닌가?</p>
 <ol start="5" type="1">
 <li><span class="math inline">\(\forall A,B \subset \Omega:~ A,B \in {\cal F} ~ \Rightarrow A\cap B \in {\cal F}\)</span></li>
@@ -542,14 +576,14 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math inline">\(\Omega=(0,2\pi]\)</span> 라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q} \cap \Omega \}\)</span> 이라고 할 때 아래가 성립할까?</p>
 <p><span class="math display">\[\mathbb{Q} \cap \Omega \in \sigma({\cal A})\]</span></p>
 <p>즉 각각의 유리수 한점씩을 잴 수 있을 때<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 유리수 전체의 집합 역시 잴 수 있을까?</p>
-<p>(해설1)</p>
+<div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;<span class="math inline">\(P(\{0\})\)</span>, <span class="math inline">\(P(\{0.21\})\)</span>, <span class="math inline">\(\dots\)</span>를 각각 정의가능할 때</p></li></div><p>(해설1)</p>
 <p>유리수는 셀 수 있는 무한이므로 집합 <span class="math inline">\(\mathbb{Q} \cap \Omega\)</span>의 길이나 확률 따위는 잴 수 있다.</p>
 <p>(해설2)</p>
 <p><a href="https://en.wikipedia.org/wiki/Probability_axioms">확률의 공리</a>중 3을 살펴보면 이미 서로소인 집합의 countable union은 잴 수 있는 대상이라고 생각하고 있다. 이건 마치 “확률은 양수”이어야 한다든가, “전체확률은 1이어야” 한다는 사실처럼 당연한 사실이다.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
-<div class="quarto-figure quarto-figure-center">
+<div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;사실 일반인에게 당연하지 않을 수도 있지만 최소한 수학자들은 당연하게 생각한다. 그래서 우리도 그냥 당연하게 생각하자.</p></li></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-03-21-03wk_files/figure-html/d1bb2edf-1-image.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림1: 위키에서 캡쳐했어요~ 3번째 공리를 살펴보세요</figcaption><p></p>
+<figcaption class="figure-caption">그림1: 위키에서 캡쳐했어요~ 3번째 공리를 살펴보세요</figcaption>
 </figure>
 </div>
 <blockquote class="blockquote">
@@ -598,7 +632,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-03-21-03wk_files/figure-html/eb9220e0-1-image.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림2: 위키에서 긁어온 그림. 길이는 1-4의 성질이 있어야 할 것으로 판단됨</figcaption><p></p>
+<figcaption class="figure-caption">그림2: 위키에서 긁어온 그림. 길이는 1-4의 성질이 있어야 할 것으로 판단됨</figcaption>
 </figure>
 </div>
 <p>교집합을 잴 수 없다는 논리라면, 구간 <span class="math inline">\([a_1,b_1]\)</span>의 길이는 잴 수 있고 구간 <span class="math inline">\([a_2,b_2]\)</span>의 길이는 잴 수 있지만 구간 <span class="math inline">\([a_1,b_1] \cap [a_2,b_2]\)</span>의 길이는 잴 수 없다는 말인데 이는 말이되지 않음.</p>
@@ -622,21 +656,21 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(\forall A_1,A_2,\dots \subset \Omega\)</span>: <span class="math inline">\(A_1,A_2,\dots \in {\cal F} \Rightarrow \cup_{i=1}^{\infty}A_i \in {\cal F}\)</span></li>
 </ol>
 <p>이 8<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>번 규칙은 사실 5<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>, 7<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>번 잘 조합하면 자동으로 이끌어진다. 즉 <span class="math inline">\((5), (7) \Rightarrow (8)\)</span>. 그 외에도 “있었으면 싶은” 규칙은 모두 1-7중 적당한 것을 섞으면 만들 수 있다. 예를들어 아래와 같은 규칙을 고려하자.</p>
-<ol start="9" type="1">
+<div class="no-row-height column-margin column-container"><li id="fn9"><p><sup>9</sup>&nbsp;countable union</p></li><li id="fn10"><p><sup>10</sup>&nbsp;교집합</p></li><li id="fn11"><p><sup>11</sup>&nbsp;서로소의 countable union</p></li></div><ol start="9" type="1">
 <li><span class="math inline">\(\forall A,B \subset \Omega:~ A,B \in {\cal F} \Rightarrow A-B \in {\cal F}\)</span></li>
 <li><span class="math inline">\(\forall A,B,C \subset \Omega: A,B,C \in {\cal F} \Rightarrow A\cup B \cup C \in {\cal F}\)</span></li>
 <li><span class="math inline">\(\forall A_1,A_2,\dots \subset \Omega\)</span>: <span class="math inline">\(A_1,A_2,\dots \in {\cal F} \Rightarrow \cap_{i=1}^{\infty}A_i \in {\cal F}\)</span></li>
 </ol>
 <p>규칙9는 규칙2<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>와 5<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>로 임플라이 할 수 있고, 규칙10은 규칙6<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>의 확장으로 임플라이 할 수 있고, 규칙11은 규칙 2<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>와 7<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>로 임플라이 할 수 있다.</p>
-<blockquote class="blockquote">
+<div class="no-row-height column-margin column-container"><li id="fn12"><p><sup>12</sup>&nbsp;여집합</p></li><li id="fn13"><p><sup>13</sup>&nbsp;교집합</p></li><li id="fn14"><p><sup>14</sup>&nbsp;2개 집합의 합집합</p></li><li id="fn15"><p><sup>15</sup>&nbsp;여집합</p></li><li id="fn16"><p><sup>16</sup>&nbsp;서로소의 countable union</p></li></div><blockquote class="blockquote">
 <p>결론: 규칙 1-8으로 시그마필드를 표현하기에 충분하다.</p>
 </blockquote>
 <p><strong>생각의 시간4</strong></p>
 <p>규칙 1-8중 필요없는 규칙을 제거하자.</p>
 <p><code>1</code>. 규칙2<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>가 있다면, 규칙1에서 공집합은 빼도 될 것 같다.</p>
-<p><code>2</code>. 규칙8<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>이 있다면, 규칙3<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, 규칙6<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>, 규칙7<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>은 필요 없다. 즉 규칙8은 규칙3,6,7의 효과를 모두 가진다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn17"><p><sup>17</sup>&nbsp;여집합</p></li><li id="fn18"><p><sup>18</sup>&nbsp;countable union</p></li><li id="fn19"><p><sup>19</sup>&nbsp;disjoint union of two sets</p></li><li id="fn20"><p><sup>20</sup>&nbsp;2개의 합집합</p></li><li id="fn21"><p><sup>21</sup>&nbsp;countable union of disjoint sets</p></li></div><p><code>2</code>. 규칙8<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>이 있다면, 규칙3<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, 규칙6<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>, 규칙7<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>은 필요 없다. 즉 규칙8은 규칙3,6,7의 효과를 모두 가진다.</p>
 <p><code>3</code>. 규칙2<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>와 규칙6<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>이 있다면, 규칙5<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>는 필요없다. 따라서 규칙2<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>와 규칙8<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>이 있어도 규칙5는 필요없다.</p>
-<p><code>4</code>. 규칙2<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>와 규칙5<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>가 있다면 규칙4<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>는 필요없다. 그런데 규칙5는 규칙2와 규칙8<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>이 임플라이 하므로 결국 규칙2와 규칙8이 있다면 규칙4가 필요없다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn22"><p><sup>22</sup>&nbsp;여집합</p></li><li id="fn23"><p><sup>23</sup>&nbsp;합집합</p></li><li id="fn24"><p><sup>24</sup>&nbsp;교집합</p></li><li id="fn25"><p><sup>25</sup>&nbsp;여집합</p></li><li id="fn26"><p><sup>26</sup>&nbsp;countable union</p></li><li id="fn27"><p><sup>27</sup>&nbsp;여집합</p></li><li id="fn28"><p><sup>28</sup>&nbsp;교집합</p></li><li id="fn29"><p><sup>29</sup>&nbsp;포함관계의 차집합</p></li><li id="fn30"><p><sup>30</sup>&nbsp;countable union</p></li></div><p><code>4</code>. 규칙2<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>와 규칙5<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>가 있다면 규칙4<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>는 필요없다. 그런데 규칙5는 규칙2와 규칙8<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>이 임플라이 하므로 결국 규칙2와 규칙8이 있다면 규칙4가 필요없다.</p>
 <p><code>5</code>. 결론: 규칙1에서 공집합을 제외한 버전, 그리고 규칙2, 규칙8만 있으면 된다.</p>
 </section>
 <section id="시그마필드의-정의" class="level1">
@@ -645,7 +679,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-03-21-03wk_files/figure-html/73a9e952-1-cf2e33ce-3af7-4926-859a-98e92811920c.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림3: Durret교재에서 긁어온 시그마필드의 정의, 드래그한 부분이 정의임</figcaption><p></p>
+<figcaption class="figure-caption">그림3: Durret교재에서 긁어온 시그마필드의 정의, 드래그한 부분이 정의임</figcaption>
 </figure>
 </div>
 <p><code>-</code> 교재에는 <span class="math inline">\(\Omega \in {\cal F}\)</span>이라는 조건이 빠져있는데, <span class="math inline">\(\Omega \in {\cal F}\)</span>이라는 조건을 포함하여 기억하는 것이 편리하다. (<a href="https://en.wikipedia.org/wiki/Σ-algebra">위키</a>등에서 일반적으로 정의할때는 <span class="math inline">\(\Omega \in {\cal F}\)</span> 조건을 포함한다) 즉 위키와 Durret을 적당히 혼합하여 아래와 같이 정의하고 기억하는게 좋다.</p>
@@ -669,41 +703,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>동전예제<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>바늘이 하나 있는 시계예제<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>비탈리집합<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>공평한 주사위라고 하자..<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>이 조건들은 수정 및 보완 될 예정임<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>모든 사람들이 인정할 수 밖에 없는 합의<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p><span class="math inline">\(P(\{0\})\)</span>, <span class="math inline">\(P(\{0.21\})\)</span>, <span class="math inline">\(\dots\)</span>를 각각 정의가능할 때<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>사실 일반인에게 당연하지 않을 수도 있지만 최소한 수학자들은 당연하게 생각한다. 그래서 우리도 그냥 당연하게 생각하자.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>countable union<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>교집합<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>서로소의 countable union<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn12"><p>여집합<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn13"><p>교집합<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn14"><p>2개 집합의 합집합<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn15"><p>여집합<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn16"><p>서로소의 countable union<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn17"><p>여집합<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn18"><p>countable union<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn19"><p>disjoint union of two sets<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn20"><p>2개의 합집합<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn21"><p>countable union of disjoint sets<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn22"><p>여집합<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn23"><p>합집합<a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn24"><p>교집합<a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn25"><p>여집합<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn26"><p>countable union<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn27"><p>여집합<a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn28"><p>교집합<a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn29"><p>포함관계의 차집합<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn30"><p>countable union<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -731,9 +731,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -769,10 +783,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -782,8 +795,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -798,6 +820,147 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -838,6 +1001,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
