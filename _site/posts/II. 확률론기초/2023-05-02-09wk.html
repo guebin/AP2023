@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.193">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -48,6 +48,11 @@ ul.task-list li input[type="checkbox"] {
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,64 +62,73 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">AP2023</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../about.html" aria-current="page">
+    <a class="nav-link active" href="../../about.html" rel="" target="" aria-current="page">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/guebin/AP2023"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/guebin/AP2023" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">09wk: 확률변수</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/2023-06-13-fin.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/II. 확률론기초/2023-05-02-09wk.html">II. 확률론기초</a></li><li class="breadcrumb-item"><a href="../../posts/II. 확률론기초/2023-05-02-09wk.html">09wk: 확률변수</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/2023-06-13-fin.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/II. 확률론기초/2023-05-02-09wk.html">II. 확률론기초</a></li><li class="breadcrumb-item"><a href="../../posts/II. 확률론기초/2023-05-02-09wk.html">09wk: 확률변수</a></li></ol></nav>
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">09wk: 확률변수</h1>
+      <h1 class="title">09wk: 확률변수</h1>
                       </div>
   </div>
     
@@ -141,118 +155,137 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Posts</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Posts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/2023-06-13-fin.html" class="sidebar-item-text sidebar-link">15wk: 기말고사</a>
+  <a href="../../posts/2023-06-13-fin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15wk: 기말고사</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">I. 측도론</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">I. 측도론</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">01wk: 측도론 intro (1)</a>
+  <a href="../../posts/I. 측도론/2023-03-07-01wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01wk: 측도론 intro (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">02wk: 측도론 intro (2)</a>
+  <a href="../../posts/I. 측도론/2023-03-14-02wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02wk: 측도론 intro (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">03wk: 측도론 intro (3)</a>
+  <a href="../../posts/I. 측도론/2023-03-21-03wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03wk: 측도론 intro (3)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">04wk: 측도론 intro (4)</a>
+  <a href="../../posts/I. 측도론/2023-03-28-04wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04wk: 측도론 intro (4)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">05wk: 측도론 (1)</a>
+  <a href="../../posts/I. 측도론/2023-04-05-05wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05wk: 측도론 (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">06wk: 측도론 (2)</a>
+  <a href="../../posts/I. 측도론/2023-04-11-06wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06wk: 측도론 (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">07wk: 측도론 (3)</a>
+  <a href="../../posts/I. 측도론/2023-04-18-07wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">07wk: 측도론 (3)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">08wk: 측도론 (4)</a>
+  <a href="../../posts/I. 측도론/2023-04-25-08wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08wk: 측도론 (4)</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">II. 확률론기초</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">II. 확률론기초</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link active">09wk: 확률변수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-02-09wk.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">09wk: 확률변수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">10wk: 분포, 분포함수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-09-10wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10wk: 분포, 분포함수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">11wk: 적분 (1)</a>
+  <a href="../../posts/II. 확률론기초/2023-05-16-11wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11wk: 적분 (1)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">12wk: 적분 (2)</a>
+  <a href="../../posts/II. 확률론기초/2023-05-23-12wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12wk: 적분 (2)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">13wk: 밀도함수</a>
+  <a href="../../posts/II. 확률론기초/2023-05-30-13wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13wk: 밀도함수</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">14wk: 이산형과 연속형의 통합</a>
+  <a href="../../posts/II. 확률론기초/2023-06-06-14wk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14wk: 이산형과 연속형의 통합</span></a>
   </div>
 </li>
       </ul>
@@ -262,6 +295,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -288,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -299,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <p>youtube: <a href="https://youtube.com/playlist?list=PLQqh36zP38-yGgU_c-5m38ONMFujHvYLf" class="uri">https://youtube.com/playlist?list=PLQqh36zP38-yGgU_c-5m38ONMFujHvYLf</a></p>
 </blockquote>
 </section>
-<section id="확률변수-오개념-정리" class="level1">
+<section id="확률변수-오개념-정리" class="level1 page-columns page-full">
 <h1>확률변수 오개념 정리</h1>
 <section id="확률공간과-용어들" class="level2">
 <h2 class="anchored" data-anchor-id="확률공간과-용어들">확률공간과 용어들</h2>
@@ -314,11 +348,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-05-02-09wk_files/figure-html/2c6bc936-3c67-4e00-a2ec-c0598d4e42f9-1-c8a4b443-0b7b-401a-87d9-a17a1c13f6d0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림1: 확률을 위한 기본용어</figcaption><p></p>
+<figcaption class="figure-caption">그림1: 확률을 위한 기본용어</figcaption>
 </figure>
 </div>
 </section>
-<section id="확률변수의-불완전한-정의" class="level2">
+<section id="확률변수의-불완전한-정의" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="확률변수의-불완전한-정의">확률변수의 불완전한 정의</h2>
 <p><code>-</code> 확률변수: <span class="math inline">\(X:\Omega \to \mathbb{R}\)</span>인 <strong>조금 특별한 성질을 가진</strong> 함수</p>
 <ul>
@@ -327,9 +361,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>(예제1)</strong> 동전예제</p>
 <p><code>1</code>. outcomes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: <span class="math inline">\(H\)</span>,<span class="math inline">\(T\)</span>.</p>
-<p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{H,T\}\)</span></p>
+<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;outcome 자체는 집합을 의미하는게 아님</p></li></div><p><code>2</code>. sample space: <span class="math inline">\(\Omega = \{H,T\}\)</span></p>
 <p><code>3</code>. event<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\{H\}\)</span>, <span class="math inline">\(\{T\}\)</span>, <span class="math inline">\(\{H,T\}\)</span>.</p>
-<p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=2^\Omega\)</span></p>
+<div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;event는 집합을 의미</p></li></div><p><code>4</code>. <span class="math inline">\(\sigma\)</span>-field: <span class="math inline">\({\cal F}=2^\Omega\)</span></p>
 <p><code>5</code>. probability measure function: <span class="math inline">\(P: {\cal F} \to [0,1]\)</span> such that</p>
 <ul>
 <li><span class="math inline">\(P(\emptyset) = 0\)</span></li>
@@ -348,10 +382,10 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(X(\omega_2)=0\)</span></li>
 </ul>
 </section>
-<section id="헷갈려-1-star" class="level2">
+<section id="헷갈려-1-star" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="헷갈려-1-star">헷갈려 (1) (<span class="math inline">\(\star\)</span>)</h2>
 <p><code>-</code> 질문1: 아래의 표현 중 옳은 것은?<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<ol type="1">
+<div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;1,2,3,5 가 옳은표현</p></li></div><ol type="1">
 <li><span class="math inline">\(X(H)=0\)</span></li>
 <li><span class="math inline">\(P(\{H\})=\frac{1}{2}\)</span></li>
 <li><span class="math inline">\(P(\{\omega_1\})=\frac{1}{2}\)</span>^</li>
@@ -377,14 +411,14 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
 <p>이 된다. 따라서 옳은 표현이다.</p>
 </section>
-<section id="확률변수에-대한-통찰" class="level2">
+<section id="확률변수에-대한-통찰" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="확률변수에-대한-통찰">확률변수에 대한 통찰</h2>
 <p><code>-</code> 아래와 같은 표현을 다시 관찰하자.</p>
 <p><span class="math display">\[P(X=1)=P(\{\omega: X(\omega)=1\})=P(\{H\})\]</span></p>
 <p><code>통찰1</code>. 확률변수가 “함수”라는 사실을 떠올리고 <span class="math inline">\(1\)</span>이라는 값이 확률변수의 “상(image)” 라는 사실을 떠올리면, <span class="math inline">\(\{\omega: X(\omega)=1\}\)</span>은 1에 대한 “역상(inverse image)”이라고 해석할 수 있다.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<p><code>통찰2</code>. 확률변수의 상은 <span class="math inline">\(\mathbb{R}\)</span>에 맺히게 되고, 확률변수의 역상은 <span class="math inline">\(\Omega\)</span>의 부분집합 중 하나에 맺히게 된다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;참고로 image는 수학책에서 3가지 뜻으로 혼용해서 쓰이는데, 이 문맥에서는 “Image of an element”를 의미함. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">ref</a></p></li></div><p><code>통찰2</code>. 확률변수의 상은 <span class="math inline">\(\mathbb{R}\)</span>에 맺히게 되고, 확률변수의 역상은 <span class="math inline">\(\Omega\)</span>의 부분집합 중 하나에 맺히게 된다.</p>
 <p><code>통찰3</code>. 문제는 확률변수의 역상이 잴 수 있는 집합<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>에 맺힌다는 보장이 있냐라는 것이다… 즉 이 예제로 한정하면</p>
-<p><span class="math display">\[\{\omega: X(\omega)=1\} \in {\cal F}\]</span></p>
+<div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;<span class="math inline">\({\cal F}\)</span>-measurable</p></li></div><p><span class="math display">\[\{\omega: X(\omega)=1\} \in {\cal F}\]</span></p>
 <p>임을 보장해야 한다는 것이다.</p>
 <p><code>통찰4</code>. 당연히 이러한 보장을 할 수는 없어보인다. 따라서 <span class="math inline">\(X\)</span>를 단지 그냥</p>
 <ul>
@@ -394,10 +428,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><span class="math inline">\(X: \Omega \to \mathbb{R}\)</span>로 가는 함수 &amp; 역상이 항상 잴 수 있는 집합<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>이어야 함.</li>
 </ul>
-<p>이라는 조건이 필요하다.</p>
+<div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;<span class="math inline">\({\cal F}\)</span>-measurable</p></li></div><p>이라는 조건이 필요하다.</p>
 <p><code>-</code> 역상이 잴 수 있는 집합인 함수를 간단히 잴 수 있는 함수 (measurable function) 라고 한다.</p>
 </section>
-<section id="헷갈려-2-star-확률변수에-대한-오해" class="level2">
+<section id="헷갈려-2-star-확률변수에-대한-오해" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="헷갈려-2-star-확률변수에-대한-오해">헷갈려 (2) (<span class="math inline">\(\star\)</span>) – 확률변수에 대한 오해</h2>
 <p><code>오해1</code>: 학률변수 = 값이 랜덤으로 바뀌는 변수??</p>
 <ul>
@@ -405,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
 <li>확률변수: <span class="math inline">\(x=X(\omega)\)</span>, <span class="math inline">\(X\)</span>: function, <span class="math inline">\(\omega\)</span>: outcome<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, <span class="math inline">\(x\)</span>: realization</li>
 <li>확률변수는 함수이지만 보통 <span class="math inline">\(X(\omega)\)</span>와 같이 쓰지 않고 <span class="math inline">\(X\)</span>라고 쓴다. <span class="math inline">\(\Rightarrow\)</span> 혼란의 이유</li>
 </ul>
-<p><code>오해2</code>: 확률변수는 결과가 랜덤으로 변하는 함수??</p>
+<div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;입력인데 outcome임, 여기서부터 너무 헷갈려!!</p></li></div><p><code>오해2</code>: 확률변수는 결과가 랜덤으로 변하는 함수??</p>
 <ul>
 <li>확률변수는 함수일 뿐임. 입력이 정해지면 출력이 고정임!</li>
 <li>동전예제: 입력이 <span class="math inline">\(\omega=H\)</span>이면 출력은 <span class="math inline">\(X(\omega)=1\)</span>, 입력이 <span class="math inline">\(\omega=T\)</span>이면 출력은 <span class="math inline">\(X(\omega)=0\)</span>으로 고정임!</li>
@@ -432,7 +466,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="확률변수" class="level1">
+<section id="확률변수" class="level1 page-columns page-full">
 <h1>확률변수</h1>
 <section id="확률변수의-엄밀한-정의" class="level2">
 <h2 class="anchored" data-anchor-id="확률변수의-엄밀한-정의">확률변수의 엄밀한 정의</h2>
@@ -443,7 +477,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Note: <span class="math inline">\(\{\omega:X(\omega)\in B \} \in {\cal F}\)</span> for all <span class="math inline">\(B \in {\cal R}\)</span> 이라 쓰기도 함. 쓰는사람 마음~</p>
 </blockquote>
 </section>
-<section id="정의에-대한-비판" class="level2">
+<section id="정의에-대한-비판" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="정의에-대한-비판">정의에 대한 비판</h2>
 <p><code>-</code> 왜 정의가 아래와 같지 않을까?</p>
 <p><span class="math display">\[\forall B \subset \mathbb{R}: X^{-1}(B) = \{\omega:X(\omega)\in B \} \in {\cal F}\]</span></p>
@@ -456,7 +490,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>5</code>. probability measure function: <span class="math inline">\(P\)</span> such that</p>
 <p><span class="math display">\[P([a,b)) = \frac{b-a}{2\pi}\]</span></p>
 <p>where <span class="math inline">\(0\leq a&lt;b&lt;2\pi\)</span>.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
-<p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that <span class="math inline">\(X(\omega)=\omega\)</span><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;<span class="math inline">\(P\)</span>를 <span class="math inline">\([a,b)\)</span>에서만 정의했는데도 어떻게 <span class="math inline">\((\Omega,{\cal F})\)</span>에서의 메져라고 주장하냐고? 카라테오도리의 확장정리!</p></li><li id="fn9"><p><sup>9</sup>&nbsp;사실 <span class="math inline">\(X: [0,2\pi) \to [0,2\pi)\)</span> 임. 즉 <span class="math inline">\(X\)</span>는 항등함수</p></li></div><p><code>6</code>. random variable: <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span> such that <span class="math inline">\(X(\omega)=\omega\)</span><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 <ul>
 <li>6을 주목하자. 만약에 비탈리집합 <span class="math inline">\(V \subset [0,1] \subset [0,2\pi)\)</span>에 대한 inverse image는 비탈리집합 그 자체가 된다. 따라서 아래와 같이 된다.</li>
 </ul>
@@ -474,7 +508,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-05-02-09wk_files/figure-html/cc6ad753-ddaf-4c85-a8d7-f8180dc732a5-1-72ca667e-06cc-4236-98d9-6fdd8cf5e190.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림2: Durret에서 긁어온 확률변수의 정의</figcaption><p></p>
+<figcaption class="figure-caption">그림2: Durret에서 긁어온 확률변수의 정의</figcaption>
 </figure>
 </div>
 <ul>
@@ -486,7 +520,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2023-05-02-09wk_files/figure-html/b30dbdf1-b0e2-40f7-aad6-94048a98c299-1-12848e5a-dc22-4b3c-8694-ffafcde27d2b.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">그림3: Durret에서 긁어온 확률변수의 정의2</figcaption><p></p>
+<figcaption class="figure-caption">그림3: Durret에서 긁어온 확률변수의 정의2</figcaption>
 </figure>
 </div>
 <ul>
@@ -577,20 +611,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>outcome 자체는 집합을 의미하는게 아님<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>event는 집합을 의미<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>1,2,3,5 가 옳은표현<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>참고로 image는 수학책에서 3가지 뜻으로 혼용해서 쓰이는데, 이 문맥에서는 “Image of an element”를 의미함. <a href="https://en.wikipedia.org/wiki/Image_(mathematics)">ref</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><span class="math inline">\({\cal F}\)</span>-measurable<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p><span class="math inline">\({\cal F}\)</span>-measurable<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>입력인데 outcome임, 여기서부터 너무 헷갈려!!<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p><span class="math inline">\(P\)</span>를 <span class="math inline">\([a,b)\)</span>에서만 정의했는데도 어떻게 <span class="math inline">\((\Omega,{\cal F})\)</span>에서의 메져라고 주장하냐고? 카라테오도리의 확장정리!<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>사실 <span class="math inline">\(X: [0,2\pi) \to [0,2\pi)\)</span> 임. 즉 <span class="math inline">\(X\)</span>는 항등함수<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -618,9 +639,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -656,10 +691,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -669,8 +703,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -685,6 +728,147 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -725,6 +909,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
