@@ -13,3 +13,7 @@ cap-location: margin
 reference-location: margin
 citation-location: margin
 bibliography: ref.bib
+
+format: 
+  html: default
+  ipynb: default
